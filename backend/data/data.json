@@ -1,0 +1,5685 @@
+{
+  "lastRun": "2025-12-03T13:35:07.437Z",
+  "devices": [
+    {
+      "name": "https://10.12.86.135",
+      "url": "https://10.12.86.135",
+      "timestamp": "2025-12-03T13:32:22.362Z",
+      "location": "Rio Claro",
+      "status": "ok",
+      "statusCode": 200,
+      "title": "HP » Device Status",
+      "deviceName": "RCL006 | SALA DE OPERACOES",
+      "deviceIp": "10.12.86.135",
+      "machineStatus": "Sleep mode on",
+      "supplies": [
+        {
+          "name": "Cartucho Preto",
+          "level": "10%*"
+        },
+        {
+          "name": "Kit do Alimentador de Documentos",
+          "level": "100%*"
+        }
+      ],
+      "type": "mono",
+      "trays": [
+        {
+          "name": "Tray 1",
+          "status": "Empty",
+          "capacity": "100 sheets",
+          "size": "Any Size",
+          "type": "Any Type"
+        },
+        {
+          "name": "Tray 2",
+          "status": "OK",
+          "capacity": "550 sheets",
+          "size": "A4 (210x297 mm)",
+          "type": "Plain"
+        },
+        {
+          "name": "Standard bin",
+          "status": "OK",
+          "capacity": "250 sheets",
+          "size": "N/A",
+          "type": "N/A"
+        }
+      ]
+    },
+    {
+      "name": "https://10.12.86.136",
+      "url": "https://10.12.86.136",
+      "timestamp": "2025-12-03T13:32:22.313Z",
+      "location": "Rio Claro",
+      "status": "ok",
+      "statusCode": 200,
+      "title": "HP » Device Status",
+      "deviceName": "RCL011 | ALMOXARIFADO A F1",
+      "deviceIp": "10.12.86.136",
+      "machineStatus": "Sleep mode on",
+      "supplies": [
+        {
+          "name": "Não Original HP Cartucho Preto",
+          "level": "10%*"
+        }
+      ],
+      "type": "mono",
+      "trays": [
+        {
+          "name": "Tray 1",
+          "status": "Empty",
+          "capacity": "100 sheets",
+          "size": "Any Size",
+          "type": "Any Type"
+        },
+        {
+          "name": "Tray 2",
+          "status": "OK",
+          "capacity": "550 sheets",
+          "size": "A4",
+          "type": "Any Type"
+        },
+        {
+          "name": "Standard bin",
+          "status": "OK",
+          "capacity": "250 sheets",
+          "size": "N/A",
+          "type": "N/A"
+        }
+      ]
+    },
+    {
+      "name": "https://10.12.86.137",
+      "url": "https://10.12.86.137",
+      "timestamp": "2025-12-03T13:32:22.852Z",
+      "location": "Rio Claro",
+      "status": "ok",
+      "statusCode": 200,
+      "title": "HP » Device Status",
+      "deviceName": "RCL008 | SALA DE ETIQUETAS F2",
+      "deviceIp": "10.12.86.137",
+      "machineStatus": "Sleep mode on",
+      "supplies": [
+        {
+          "name": "Cartucho Preto",
+          "level": "<10%*"
+        }
+      ],
+      "type": "mono",
+      "trays": [
+        {
+          "name": "Tray 1",
+          "status": "Empty",
+          "capacity": "100 sheets",
+          "size": "Any Size",
+          "type": "Any Type"
+        },
+        {
+          "name": "Tray 2",
+          "status": "OK",
+          "capacity": "550 sheets",
+          "size": "A4",
+          "type": "Plain"
+        },
+        {
+          "name": "Standard bin",
+          "status": "OK",
+          "capacity": "250 sheets",
+          "size": "N/A",
+          "type": "N/A"
+        }
+      ]
+    },
+    {
+      "name": "https://10.12.86.138",
+      "url": "https://10.12.86.138",
+      "timestamp": "2025-12-03T13:32:22.383Z",
+      "location": "Rio Claro",
+      "status": "ok",
+      "statusCode": 200,
+      "title": "HP » Device Status",
+      "deviceName": "RCL009 | RECEBIMENTO FISCAL",
+      "deviceIp": "10.12.86.138",
+      "machineStatus": "Sleep mode on",
+      "supplies": [
+        {
+          "name": "Cartucho Preto",
+          "level": "70%*"
+        },
+        {
+          "name": "Kit do Alimentador de Documentos",
+          "level": "90%*"
+        }
+      ],
+      "type": "mono",
+      "trays": [
+        {
+          "name": "Tray 1",
+          "status": "Empty",
+          "capacity": "100 sheets",
+          "size": "Any Size",
+          "type": "Any Type"
+        },
+        {
+          "name": "Tray 2",
+          "status": "OK",
+          "capacity": "550 sheets",
+          "size": "A4 (210x297 mm)",
+          "type": "Plain"
+        },
+        {
+          "name": "Standard bin",
+          "status": "OK",
+          "capacity": "250 sheets",
+          "size": "N/A",
+          "type": "N/A"
+        }
+      ]
+    },
+    {
+      "name": "https://10.12.86.139",
+      "url": "https://10.12.86.139",
+      "timestamp": "2025-12-03T13:32:22.238Z",
+      "location": "Rio Claro",
+      "status": "ok",
+      "statusCode": 200,
+      "title": "HP » Device Status",
+      "deviceName": "RCL010 | CDF EXPEDICAO | ZR57",
+      "deviceIp": "10.12.86.139",
+      "machineStatus": "Ready",
+      "supplies": [
+        {
+          "name": "Cartucho Preto",
+          "level": "80%*"
+        },
+        {
+          "name": "Kit de Manutenção",
+          "level": "90%*"
+        }
+      ],
+      "type": "mono",
+      "trays": [
+        {
+          "name": "Tray 1",
+          "status": "Empty",
+          "capacity": "100 sheets",
+          "size": "Any Size",
+          "type": "Any Type"
+        },
+        {
+          "name": "Tray 2",
+          "status": "OK",
+          "capacity": "550 sheets",
+          "size": "A4",
+          "type": "Any Type"
+        },
+        {
+          "name": "Front bins",
+          "status": "OK",
+          "capacity": "1300 sheets",
+          "size": "N/A",
+          "type": "N/A"
+        }
+      ]
+    },
+    {
+      "name": "https://10.12.86.140",
+      "url": "https://10.12.86.140",
+      "timestamp": "2025-12-03T13:32:22.273Z",
+      "location": "Rio Claro",
+      "status": "ok",
+      "statusCode": 200,
+      "title": "HP » Device Status",
+      "deviceName": "RCL007 | ALMOXARIFADO A F1",
+      "deviceIp": "10.12.86.140",
+      "machineStatus": "Sleep mode on",
+      "supplies": [
+        {
+          "name": "Cartucho Preto",
+          "level": "<10%*"
+        }
+      ],
+      "type": "mono",
+      "trays": [
+        {
+          "name": "Tray 1",
+          "status": "Empty",
+          "capacity": "100 sheets",
+          "size": "Any Size",
+          "type": "Any Type"
+        },
+        {
+          "name": "Tray 2",
+          "status": "OK",
+          "capacity": "550 sheets",
+          "size": "A4",
+          "type": "Plain"
+        },
+        {
+          "name": "Standard bin",
+          "status": "OK",
+          "capacity": "250 sheets",
+          "size": "N/A",
+          "type": "N/A"
+        }
+      ]
+    },
+    {
+      "name": "https://10.12.86.141",
+      "url": "https://10.12.86.141",
+      "timestamp": "2025-12-03T13:32:22.464Z",
+      "location": "Rio Claro",
+      "status": "ok",
+      "statusCode": 200,
+      "title": "HP » Device Status",
+      "deviceName": "RCL012 | RECURSOS HUMANOS",
+      "deviceIp": "10.12.86.141",
+      "machineStatus": "Sleep mode on",
+      "supplies": [
+        {
+          "name": "Não Original HP Cartucho Preto",
+          "level": "90%*"
+        },
+        {
+          "name": "Kit do Alimentador de Documentos",
+          "level": "70%*"
+        }
+      ],
+      "type": "mono",
+      "trays": [
+        {
+          "name": "Tray 1",
+          "status": "Empty",
+          "capacity": "100 sheets",
+          "size": "Any Size",
+          "type": "Any Type"
+        },
+        {
+          "name": "Tray 2",
+          "status": "OK",
+          "capacity": "550 sheets",
+          "size": "A4 (210x297 mm)",
+          "type": "Plain"
+        },
+        {
+          "name": "Standard bin",
+          "status": "OK",
+          "capacity": "250 sheets",
+          "size": "N/A",
+          "type": "N/A"
+        }
+      ]
+    },
+    {
+      "name": "https://10.12.86.142",
+      "url": "https://10.12.86.142",
+      "timestamp": "2025-12-03T13:32:22.376Z",
+      "location": "Rio Claro",
+      "status": "ok",
+      "statusCode": 200,
+      "title": "HP » Device Status",
+      "deviceName": "RCL013 | RECEBIMENTO FISCAL",
+      "deviceIp": "10.12.86.142",
+      "machineStatus": "Sleep mode on",
+      "supplies": [
+        {
+          "name": "Cartucho Preto",
+          "level": "40%*"
+        },
+        {
+          "name": "Kit do Alimentador de Documentos",
+          "level": "80%*"
+        }
+      ],
+      "type": "mono",
+      "trays": [
+        {
+          "name": "Tray 1",
+          "status": "Empty",
+          "capacity": "100 sheets",
+          "size": "Any Size",
+          "type": "Any Type"
+        },
+        {
+          "name": "Tray 2",
+          "status": "OK",
+          "capacity": "550 sheets",
+          "size": "A4 (210x297 mm)",
+          "type": "Plain"
+        },
+        {
+          "name": "Standard bin",
+          "status": "OK",
+          "capacity": "250 sheets",
+          "size": "N/A",
+          "type": "N/A"
+        }
+      ]
+    },
+    {
+      "name": "https://10.12.86.143",
+      "url": "https://10.12.86.143",
+      "timestamp": "2025-12-03T13:32:22.514Z",
+      "location": "Rio Claro",
+      "status": "ok",
+      "statusCode": 200,
+      "title": "HP » Device Status",
+      "deviceName": "RCL014 | ALMOXARIFADO A F1",
+      "deviceIp": "10.12.86.143",
+      "machineStatus": "Ready",
+      "supplies": [
+        {
+          "name": "Cartucho Preto",
+          "level": "80%*"
+        },
+        {
+          "name": "Kit do Alimentador de Documentos",
+          "level": "90%*"
+        }
+      ],
+      "type": "mono",
+      "trays": [
+        {
+          "name": "Tray 1",
+          "status": "Empty",
+          "capacity": "100 sheets",
+          "size": "Any Size",
+          "type": "Any Type"
+        },
+        {
+          "name": "Tray 2",
+          "status": "OK",
+          "capacity": "550 sheets",
+          "size": "A4 (210x297 mm)",
+          "type": "Plain"
+        },
+        {
+          "name": "Standard bin",
+          "status": "OK",
+          "capacity": "250 sheets",
+          "size": "N/A",
+          "type": "N/A"
+        }
+      ]
+    },
+    {
+      "name": "https://10.12.86.144",
+      "url": "https://10.12.86.144",
+      "timestamp": "2025-12-03T13:32:22.324Z",
+      "location": "Rio Claro",
+      "status": "ok",
+      "statusCode": 200,
+      "title": "HP » Device Status",
+      "deviceName": "RCL015 | ALMOXARIFADO A F1",
+      "deviceIp": "10.12.86.144",
+      "machineStatus": "Ready",
+      "supplies": [
+        {
+          "name": "Cartucho Preto",
+          "level": "40%*"
+        },
+        {
+          "name": "Kit do Alimentador de Documentos",
+          "level": "100%*"
+        }
+      ],
+      "type": "mono",
+      "trays": [
+        {
+          "name": "Tray 1",
+          "status": "Empty",
+          "capacity": "100 sheets",
+          "size": "Any Size",
+          "type": "Any Type"
+        },
+        {
+          "name": "Tray 2",
+          "status": "OK",
+          "capacity": "550 sheets",
+          "size": "A4 (210x297 mm)",
+          "type": "Plain"
+        },
+        {
+          "name": "Standard bin",
+          "status": "OK",
+          "capacity": "250 sheets",
+          "size": "N/A",
+          "type": "N/A"
+        }
+      ]
+    },
+    {
+      "name": "https://10.12.86.145",
+      "url": "https://10.12.86.145",
+      "timestamp": "2025-12-03T13:32:22.347Z",
+      "location": "Rio Claro",
+      "status": "ok",
+      "statusCode": 200,
+      "title": "HP » Device Status",
+      "deviceName": "RCL016 | ADM AMBULATORIO",
+      "deviceIp": "10.12.86.145",
+      "machineStatus": "Sleep mode on",
+      "supplies": [
+        {
+          "name": "Não Original HP Cartucho Preto",
+          "level": "40%*"
+        },
+        {
+          "name": "Kit do Alimentador de Documentos",
+          "level": "10%*"
+        }
+      ],
+      "type": "mono",
+      "trays": [
+        {
+          "name": "Tray 1",
+          "status": "Empty",
+          "capacity": "100 sheets",
+          "size": "Any Size",
+          "type": "Any Type"
+        },
+        {
+          "name": "Tray 2",
+          "status": "OK",
+          "capacity": "550 sheets",
+          "size": "A4 (210x297 mm)",
+          "type": "Plain"
+        },
+        {
+          "name": "Standard bin",
+          "status": "OK",
+          "capacity": "250 sheets",
+          "size": "N/A",
+          "type": "N/A"
+        }
+      ]
+    },
+    {
+      "name": "https://10.12.86.146",
+      "url": "https://10.12.86.146",
+      "timestamp": "2025-12-03T13:32:22.288Z",
+      "location": "Rio Claro",
+      "status": "ok",
+      "statusCode": 200,
+      "title": "HP » Device Status",
+      "deviceName": "RCL017 | RECEPCAO",
+      "deviceIp": "10.12.86.146",
+      "machineStatus": "Sleep mode on",
+      "supplies": [
+        {
+          "name": "Cartucho Preto",
+          "level": "100%*"
+        }
+      ],
+      "type": "mono",
+      "trays": [
+        {
+          "name": "Tray 1",
+          "status": "Empty",
+          "capacity": "100 sheets",
+          "size": "Any Size",
+          "type": "Any Type"
+        },
+        {
+          "name": "Tray 2",
+          "status": "OK",
+          "capacity": "550 sheets",
+          "size": "Letter",
+          "type": "Any Type"
+        },
+        {
+          "name": "Standard bin",
+          "status": "OK",
+          "capacity": "250 sheets",
+          "size": "N/A",
+          "type": "N/A"
+        }
+      ]
+    },
+    {
+      "name": "https://10.12.86.148",
+      "url": "https://10.12.86.148",
+      "timestamp": "2025-12-03T13:32:22.318Z",
+      "location": "Rio Claro",
+      "status": "ok",
+      "statusCode": 200,
+      "title": "HP » Device Status",
+      "deviceName": "RCL019 | ALMOXARIFADO B F1",
+      "deviceIp": "10.12.86.148",
+      "machineStatus": "Sleep mode on",
+      "supplies": [
+        {
+          "name": "Cartucho Preto",
+          "level": "50%*"
+        }
+      ],
+      "type": "mono",
+      "trays": [
+        {
+          "name": "Tray 1",
+          "status": "Empty",
+          "capacity": "100 sheets",
+          "size": "Any Size",
+          "type": "Any Type"
+        },
+        {
+          "name": "Tray 2",
+          "status": "OK",
+          "capacity": "550 sheets",
+          "size": "A4",
+          "type": "Plain"
+        },
+        {
+          "name": "Standard bin",
+          "status": "OK",
+          "capacity": "250 sheets",
+          "size": "N/A",
+          "type": "N/A"
+        }
+      ]
+    },
+    {
+      "name": "https://10.12.86.149",
+      "url": "https://10.12.86.149",
+      "timestamp": "2025-12-03T13:32:22.254Z",
+      "location": "Rio Claro",
+      "status": "ok",
+      "statusCode": 200,
+      "title": "HP » Device Status",
+      "deviceName": "RCL020 | WPS CCM SALA METAIS F1",
+      "deviceIp": "10.12.86.149",
+      "machineStatus": "Sleep mode on",
+      "supplies": [
+        {
+          "name": "Cartucho Preto",
+          "level": "10%*"
+        }
+      ],
+      "type": "mono",
+      "trays": [
+        {
+          "name": "Tray 1",
+          "status": "Empty",
+          "capacity": "100 sheets",
+          "size": "Any Size",
+          "type": "Any Type"
+        },
+        {
+          "name": "Tray 2",
+          "status": "OK",
+          "capacity": "550 sheets",
+          "size": "A4",
+          "type": "Plain"
+        },
+        {
+          "name": "Standard bin",
+          "status": "OK",
+          "capacity": "250 sheets",
+          "size": "N/A",
+          "type": "N/A"
+        }
+      ]
+    },
+    {
+      "name": "https://10.12.86.150",
+      "url": "https://10.12.86.150",
+      "timestamp": "2025-12-03T13:32:22.578Z",
+      "location": "Rio Claro",
+      "status": "ok",
+      "statusCode": 200,
+      "title": "HP » Device Status",
+      "deviceName": "RCL021 | PCPM F1",
+      "deviceIp": "10.12.86.150",
+      "machineStatus": "Sleep mode on",
+      "supplies": [
+        {
+          "name": "Cartucho Preto",
+          "level": "70%*"
+        },
+        {
+          "name": "Kit do Alimentador de Documentos",
+          "level": "100%*"
+        }
+      ],
+      "type": "mono",
+      "trays": [
+        {
+          "name": "Tray 1",
+          "status": "Empty",
+          "capacity": "100 sheets",
+          "size": "Any Size",
+          "type": "Any Type"
+        },
+        {
+          "name": "Tray 2",
+          "status": "OK",
+          "capacity": "550 sheets",
+          "size": "A4 (210x297 mm)",
+          "type": "Plain"
+        },
+        {
+          "name": "Standard bin",
+          "status": "OK",
+          "capacity": "250 sheets",
+          "size": "N/A",
+          "type": "N/A"
+        }
+      ]
+    },
+    {
+      "name": "https://10.12.86.151",
+      "url": "https://10.12.86.151",
+      "timestamp": "2025-12-03T13:32:22.609Z",
+      "location": "Rio Claro",
+      "status": "ok",
+      "statusCode": 200,
+      "title": "HP » Device Status",
+      "deviceName": "RCL022 | PORTARIA CENTRAL",
+      "deviceIp": "10.12.86.151",
+      "machineStatus": "Sleep mode on",
+      "supplies": [
+        {
+          "name": "Cartucho Preto",
+          "level": "90%*"
+        },
+        {
+          "name": "Kit do Alimentador de Documentos",
+          "level": "100%*"
+        }
+      ],
+      "type": "mono",
+      "trays": [
+        {
+          "name": "Tray 1",
+          "status": "Empty",
+          "capacity": "100 sheets",
+          "size": "Any Size",
+          "type": "Any Type"
+        },
+        {
+          "name": "Tray 2",
+          "status": "OK",
+          "capacity": "550 sheets",
+          "size": "A4 (210x297 mm)",
+          "type": "Plain"
+        },
+        {
+          "name": "Standard bin",
+          "status": "OK",
+          "capacity": "250 sheets",
+          "size": "N/A",
+          "type": "N/A"
+        }
+      ]
+    },
+    {
+      "name": "https://10.12.86.152",
+      "url": "https://10.12.86.152",
+      "timestamp": "2025-12-03T13:32:22.615Z",
+      "location": "Rio Claro",
+      "status": "ok",
+      "statusCode": 200,
+      "title": "HP » Device Status",
+      "deviceName": "RCL023 | ENGENHARIA INDUSTRIAL",
+      "deviceIp": "10.12.86.152",
+      "machineStatus": "Sleep mode on",
+      "supplies": [
+        {
+          "name": "Cartucho Preto",
+          "level": "<10%*"
+        },
+        {
+          "name": "Kit do Alimentador de Documentos",
+          "level": "100%*"
+        }
+      ],
+      "type": "mono",
+      "trays": [
+        {
+          "name": "Tray 1",
+          "status": "Empty",
+          "capacity": "100 sheets",
+          "size": "Any Size",
+          "type": "Any Type"
+        },
+        {
+          "name": "Tray 2",
+          "status": "OK",
+          "capacity": "550 sheets",
+          "size": "A4 (210x297 mm)",
+          "type": "Plain"
+        },
+        {
+          "name": "Standard bin",
+          "status": "OK",
+          "capacity": "250 sheets",
+          "size": "N/A",
+          "type": "N/A"
+        }
+      ]
+    },
+    {
+      "name": "https://10.12.86.153",
+      "url": "https://10.12.86.153",
+      "timestamp": "2025-12-03T13:32:22.757Z",
+      "location": "Rio Claro",
+      "status": "ok",
+      "statusCode": 200,
+      "title": "HP » Device Status",
+      "deviceName": "RCL024 | ENGENHARIA INDUSTRIAL",
+      "deviceIp": "10.12.86.153",
+      "machineStatus": "Sleep mode on",
+      "supplies": [
+        {
+          "name": "Cartucho Amarelo",
+          "level": "40%*"
+        },
+        {
+          "name": "Cartucho Magenta",
+          "level": "100%*"
+        },
+        {
+          "name": "Não Original HP Cartucho Ciano",
+          "level": "90%*"
+        },
+        {
+          "name": "Cartucho Preto",
+          "level": "90%*"
+        },
+        {
+          "name": "Kit Fusor",
+          "level": "90%*"
+        },
+        {
+          "name": "Kit do Alimentador de Documentos",
+          "level": "100%*"
+        }
+      ],
+      "type": "color",
+      "trays": [
+        {
+          "name": "Tray 1",
+          "status": "Empty",
+          "capacity": "100 sheets",
+          "size": "Any Size",
+          "type": "Any Type"
+        },
+        {
+          "name": "Tray 2",
+          "status": "OK",
+          "capacity": "550 sheets",
+          "size": "A4 (210x297 mm)",
+          "type": "Any Type"
+        },
+        {
+          "name": "Standard bin",
+          "status": "OK",
+          "capacity": "250 sheets",
+          "size": "N/A",
+          "type": "N/A"
+        }
+      ]
+    },
+    {
+      "name": "https://10.12.86.154",
+      "url": "https://10.12.86.154",
+      "timestamp": "2025-12-03T13:32:22.602Z",
+      "location": "Rio Claro",
+      "status": "ok",
+      "statusCode": 200,
+      "title": "HP » Device Status",
+      "deviceName": "RCL025 | SALA DE OPERACOES",
+      "deviceIp": "10.12.86.154",
+      "machineStatus": "Ready",
+      "supplies": [
+        {
+          "name": "Cartucho Amarelo",
+          "level": "90%*"
+        },
+        {
+          "name": "Cartucho Magenta",
+          "level": "80%*"
+        },
+        {
+          "name": "Cartucho Ciano",
+          "level": "<10%*"
+        },
+        {
+          "name": "Cartucho Preto",
+          "level": "40%*"
+        },
+        {
+          "name": "Cilindro 1",
+          "level": "40%*"
+        },
+        {
+          "name": "Cilindro 2",
+          "level": "40%*"
+        },
+        {
+          "name": "Cilindro 3",
+          "level": "40%*"
+        },
+        {
+          "name": "Cilindro 4",
+          "level": "20%*"
+        },
+        {
+          "name": "Kit de Transferência",
+          "level": "50%*"
+        },
+        {
+          "name": "Kit Fusor",
+          "level": "40%*"
+        }
+      ],
+      "type": "color",
+      "trays": [
+        {
+          "name": "Tray 1",
+          "status": "Empty",
+          "capacity": "100 sheets",
+          "size": "Any Size",
+          "type": "Any Type"
+        },
+        {
+          "name": "Tray 2",
+          "status": "< 10%",
+          "capacity": "550 sheets",
+          "size": "A4",
+          "type": "Plain"
+        },
+        {
+          "name": "Tray 3",
+          "status": "< 10%",
+          "capacity": "550 sheets",
+          "size": "A3",
+          "type": "Plain"
+        },
+        {
+          "name": "Tray 4",
+          "status": "< 10%",
+          "capacity": "550 sheets",
+          "size": "A3",
+          "type": "Any Type"
+        },
+        {
+          "name": "Standard bin",
+          "status": "OK",
+          "capacity": "500 sheets",
+          "size": "N/A",
+          "type": "N/A"
+        }
+      ]
+    },
+    {
+      "name": "https://10.12.86.155",
+      "url": "https://10.12.86.155",
+      "timestamp": "2025-12-03T13:32:22.795Z",
+      "location": "Rio Claro",
+      "status": "ok",
+      "statusCode": 200,
+      "title": "HP » Device Status",
+      "deviceName": "RCL026 | QUALIDADE",
+      "deviceIp": "10.12.86.155",
+      "machineStatus": "Sleep mode on",
+      "supplies": [
+        {
+          "name": "Cartucho Amarelo",
+          "level": "90%*"
+        },
+        {
+          "name": "Cartucho Magenta",
+          "level": "100%*"
+        },
+        {
+          "name": "Cartucho Ciano",
+          "level": "60%*"
+        },
+        {
+          "name": "Cartucho Preto",
+          "level": "40%*"
+        },
+        {
+          "name": "Kit Fusor",
+          "level": "60%*"
+        },
+        {
+          "name": "Kit do Alimentador de Documentos",
+          "level": "100%*"
+        }
+      ],
+      "type": "color",
+      "trays": [
+        {
+          "name": "Tray 1",
+          "status": "Empty",
+          "capacity": "100 sheets",
+          "size": "Any Size",
+          "type": "Any Type"
+        },
+        {
+          "name": "Tray 2",
+          "status": "OK",
+          "capacity": "550 sheets",
+          "size": "A4 (210x297 mm)",
+          "type": "Plain"
+        },
+        {
+          "name": "Standard bin",
+          "status": "OK",
+          "capacity": "250 sheets",
+          "size": "N/A",
+          "type": "N/A"
+        }
+      ]
+    },
+    {
+      "name": "https://10.12.86.156",
+      "url": "https://10.12.86.156",
+      "timestamp": "2025-12-03T13:32:22.771Z",
+      "location": "Rio Claro",
+      "status": "ok",
+      "statusCode": 200,
+      "title": "HP » Device Status",
+      "deviceName": "RCL027 | MEZANINO F2",
+      "deviceIp": "10.12.86.156",
+      "machineStatus": "Sleep mode on",
+      "supplies": [
+        {
+          "name": "Cartucho Amarelo",
+          "level": "100%*"
+        },
+        {
+          "name": "Cartucho Magenta",
+          "level": "70%*"
+        },
+        {
+          "name": "Cartucho Ciano",
+          "level": "60%*"
+        },
+        {
+          "name": "Cartucho Preto",
+          "level": "70%*"
+        }
+      ],
+      "type": "color",
+      "trays": [
+        {
+          "name": "Tray 1",
+          "status": "Empty",
+          "capacity": "100 sheets",
+          "size": "Any Size",
+          "type": "Any Type"
+        },
+        {
+          "name": "Tray 2",
+          "status": "< 30%",
+          "capacity": "520 sheets",
+          "size": "A4 (210x297 mm)",
+          "type": "Plain"
+        },
+        {
+          "name": "Tray 3",
+          "status": "< 30%",
+          "capacity": "520 sheets",
+          "size": "A3 (297x420 mm)",
+          "type": "Plain"
+        },
+        {
+          "name": "Standard bin",
+          "status": "OK",
+          "capacity": "500 sheets",
+          "size": "N/A",
+          "type": "N/A"
+        }
+      ]
+    },
+    {
+      "name": "https://10.12.86.157",
+      "url": "https://10.12.86.157",
+      "timestamp": "2025-12-03T13:32:22.668Z",
+      "location": "Rio Claro",
+      "status": "ok",
+      "statusCode": 200,
+      "title": "HP » Device Status",
+      "deviceName": "RCL028 | MEZANINO F2",
+      "deviceIp": "10.12.86.157",
+      "machineStatus": "48.A1.01 Job accounting service error",
+      "supplies": [
+        {
+          "name": "Cartucho Preto",
+          "level": "100%*"
+        }
+      ],
+      "type": "mono",
+      "trays": [
+        {
+          "name": "Tray 1",
+          "status": "Empty",
+          "capacity": "100 sheets",
+          "size": "Any Size",
+          "type": "Any Type"
+        },
+        {
+          "name": "Tray 2",
+          "status": "OK",
+          "capacity": "550 sheets",
+          "size": "A4",
+          "type": "Plain"
+        },
+        {
+          "name": "Standard bin",
+          "status": "OK",
+          "capacity": "250 sheets",
+          "size": "N/A",
+          "type": "N/A"
+        }
+      ]
+    },
+    {
+      "name": "https://10.12.86.160",
+      "url": "https://10.12.86.160",
+      "timestamp": "2025-12-03T13:32:23.180Z",
+      "location": "Rio Claro",
+      "status": "ok",
+      "statusCode": 200,
+      "title": "HP » Device Status",
+      "deviceName": "RCL031 | INJET COLOCATION F4",
+      "deviceIp": "10.12.86.160",
+      "machineStatus": "Sleep mode on",
+      "supplies": [
+        {
+          "name": "Cartucho Preto",
+          "level": "100%*"
+        }
+      ],
+      "type": "mono",
+      "trays": [
+        {
+          "name": "Tray 1",
+          "status": "Empty",
+          "capacity": "100 sheets",
+          "size": "Any Size",
+          "type": "Any Type"
+        },
+        {
+          "name": "Tray 2",
+          "status": "OK",
+          "capacity": "550 sheets",
+          "size": "A4",
+          "type": "Plain"
+        },
+        {
+          "name": "Standard bin",
+          "status": "OK",
+          "capacity": "250 sheets",
+          "size": "N/A",
+          "type": "N/A"
+        }
+      ]
+    },
+    {
+      "name": "https://10.12.86.161",
+      "url": "https://10.12.86.161",
+      "timestamp": "2025-12-03T13:32:23.710Z",
+      "location": "Rio Claro",
+      "status": "ok",
+      "statusCode": 200,
+      "title": "HP » Device Status",
+      "deviceName": "RCL032 | MANUTENCAO OFICINAS",
+      "deviceIp": "10.12.86.161",
+      "machineStatus": "Sleep mode on",
+      "supplies": [
+        {
+          "name": "Não Original HP Cartucho Preto",
+          "level": "30%*"
+        },
+        {
+          "name": "Kit do Alimentador de Documentos",
+          "level": "50%*"
+        }
+      ],
+      "type": "mono",
+      "trays": [
+        {
+          "name": "Tray 1",
+          "status": "Empty",
+          "capacity": "100 sheets",
+          "size": "Any Size",
+          "type": "Any Type"
+        },
+        {
+          "name": "Tray 2",
+          "status": "OK",
+          "capacity": "550 sheets",
+          "size": "A4 (210x297 mm)",
+          "type": "Plain"
+        },
+        {
+          "name": "Standard bin",
+          "status": "OK",
+          "capacity": "250 sheets",
+          "size": "N/A",
+          "type": "N/A"
+        }
+      ]
+    },
+    {
+      "name": "https://10.12.86.162",
+      "url": "https://10.12.86.162",
+      "timestamp": "2025-12-03T13:32:22.856Z",
+      "location": "Rio Claro",
+      "status": "ok",
+      "statusCode": 200,
+      "title": "HP » Device Status",
+      "deviceName": "RCL033 | ADM CONTROLADORIA",
+      "deviceIp": "10.12.86.162",
+      "machineStatus": "Sleep mode on",
+      "supplies": [
+        {
+          "name": "Cartucho Preto",
+          "level": "70%*"
+        },
+        {
+          "name": "Kit do Alimentador de Documentos",
+          "level": "100%*"
+        }
+      ],
+      "type": "mono",
+      "trays": [
+        {
+          "name": "Tray 1",
+          "status": "Empty",
+          "capacity": "100 sheets",
+          "size": "Any Size",
+          "type": "Any Type"
+        },
+        {
+          "name": "Tray 2",
+          "status": "OK",
+          "capacity": "550 sheets",
+          "size": "Any Size",
+          "type": "Any Type"
+        },
+        {
+          "name": "Standard bin",
+          "status": "OK",
+          "capacity": "250 sheets",
+          "size": "N/A",
+          "type": "N/A"
+        }
+      ]
+    },
+    {
+      "name": "https://10.12.86.163",
+      "url": "https://10.12.86.163",
+      "timestamp": "2025-12-03T13:32:23.024Z",
+      "location": "Rio Claro",
+      "status": "ok",
+      "statusCode": 200,
+      "title": "HP » Device Status",
+      "deviceName": "RCL034 | ADM LAP COCCAO",
+      "deviceIp": "10.12.86.163",
+      "machineStatus": "Sleep mode on",
+      "supplies": [
+        {
+          "name": "Cartucho Amarelo",
+          "level": "50%*"
+        },
+        {
+          "name": "Cartucho Magenta",
+          "level": "80%*"
+        },
+        {
+          "name": "Cartucho Ciano",
+          "level": "60%*"
+        },
+        {
+          "name": "Cartucho Preto",
+          "level": "10%*"
+        },
+        {
+          "name": "Kit Fusor",
+          "level": "100%*"
+        },
+        {
+          "name": "Kit do Alimentador de Documentos",
+          "level": "100%*"
+        }
+      ],
+      "type": "color",
+      "trays": [
+        {
+          "name": "Tray 1",
+          "status": "Empty",
+          "capacity": "100 sheets",
+          "size": "Any Size",
+          "type": "Any Type"
+        },
+        {
+          "name": "Tray 2",
+          "status": "OK",
+          "capacity": "550 sheets",
+          "size": "A4 (210x297 mm)",
+          "type": "Plain"
+        },
+        {
+          "name": "Standard bin",
+          "status": "OK",
+          "capacity": "250 sheets",
+          "size": "N/A",
+          "type": "N/A"
+        }
+      ]
+    },
+    {
+      "name": "https://10.12.86.164",
+      "url": "https://10.12.86.164",
+      "timestamp": "2025-12-03T13:32:23.046Z",
+      "location": "Rio Claro",
+      "status": "ok",
+      "statusCode": 200,
+      "title": "HP » Device Status",
+      "deviceName": "RCL035 | CDF",
+      "deviceIp": "10.12.86.164",
+      "machineStatus": "Sleep mode on",
+      "supplies": [
+        {
+          "name": "Cartucho Preto",
+          "level": "<10%*"
+        },
+        {
+          "name": "Kit do Alimentador de Documentos",
+          "level": "100%*"
+        }
+      ],
+      "type": "mono",
+      "trays": [
+        {
+          "name": "Tray 1",
+          "status": "Empty",
+          "capacity": "100 sheets",
+          "size": "Any Size",
+          "type": "Any Type"
+        },
+        {
+          "name": "Tray 2",
+          "status": "OK",
+          "capacity": "550 sheets",
+          "size": "A4 (210x297 mm)",
+          "type": "Plain"
+        },
+        {
+          "name": "Standard bin",
+          "status": "OK",
+          "capacity": "250 sheets",
+          "size": "N/A",
+          "type": "N/A"
+        }
+      ]
+    },
+    {
+      "name": "https://10.12.86.165",
+      "url": "https://10.12.86.165",
+      "timestamp": "2025-12-03T13:32:22.998Z",
+      "location": "Rio Claro",
+      "status": "ok",
+      "statusCode": 200,
+      "title": "HP » Device Status",
+      "deviceName": "RCL036 | ENTRE FABRICAS",
+      "deviceIp": "10.12.86.165",
+      "machineStatus": "Sleep mode on",
+      "supplies": [
+        {
+          "name": "Cartucho Preto",
+          "level": "50%*"
+        },
+        {
+          "name": "Kit do Alimentador de Documentos",
+          "level": "90%*"
+        }
+      ],
+      "type": "mono",
+      "trays": [
+        {
+          "name": "Tray 1",
+          "status": "Empty",
+          "capacity": "100 sheets",
+          "size": "Any Size",
+          "type": "Any Type"
+        },
+        {
+          "name": "Tray 2",
+          "status": "OK",
+          "capacity": "550 sheets",
+          "size": "A4 (210x297 mm)",
+          "type": "Plain"
+        },
+        {
+          "name": "Standard bin",
+          "status": "OK",
+          "capacity": "250 sheets",
+          "size": "N/A",
+          "type": "N/A"
+        }
+      ]
+    },
+    {
+      "name": "https://10.12.86.166",
+      "url": "https://10.12.86.166",
+      "timestamp": "2025-12-03T13:32:22.861Z",
+      "location": "Rio Claro",
+      "status": "ok",
+      "statusCode": 200,
+      "title": "HP » Device Status",
+      "deviceName": "RCL037 | CLICK RH",
+      "deviceIp": "10.12.86.166",
+      "machineStatus": "Sleep mode on",
+      "supplies": [
+        {
+          "name": "Cartucho Preto",
+          "level": "60%*"
+        }
+      ],
+      "type": "mono",
+      "trays": [
+        {
+          "name": "Tray 1",
+          "status": "Empty",
+          "capacity": "100 sheets",
+          "size": "Any Size",
+          "type": "Any Type"
+        },
+        {
+          "name": "Tray 2",
+          "status": "OK",
+          "capacity": "550 sheets",
+          "size": "A4",
+          "type": "Plain"
+        },
+        {
+          "name": "Standard bin",
+          "status": "OK",
+          "capacity": "250 sheets",
+          "size": "N/A",
+          "type": "N/A"
+        }
+      ]
+    },
+    {
+      "name": "https://10.12.86.167",
+      "url": "https://10.12.86.167",
+      "timestamp": "2025-12-03T13:32:22.937Z",
+      "location": "Rio Claro",
+      "status": "ok",
+      "statusCode": 200,
+      "title": "HP » Device Status",
+      "deviceName": "RCL079 | SALA DE E.P.I",
+      "deviceIp": "10.12.86.167",
+      "machineStatus": "Ready",
+      "supplies": [
+        {
+          "name": "Cartucho Preto",
+          "level": "100%*"
+        },
+        {
+          "name": "Kit do Alimentador de Documentos",
+          "level": "100%*"
+        }
+      ],
+      "type": "mono",
+      "trays": [
+        {
+          "name": "Tray 1",
+          "status": "Empty",
+          "capacity": "100 sheets",
+          "size": "Any Size",
+          "type": "Any Type"
+        },
+        {
+          "name": "Tray 2",
+          "status": "OK",
+          "capacity": "550 sheets",
+          "size": "Any Size",
+          "type": "Any Type"
+        },
+        {
+          "name": "Standard bin",
+          "status": "OK",
+          "capacity": "250 sheets",
+          "size": "N/A",
+          "type": "N/A"
+        }
+      ]
+    },
+    {
+      "name": "https://10.12.86.168",
+      "url": "https://10.12.86.168",
+      "timestamp": "2025-12-03T13:32:23.173Z",
+      "location": "Rio Claro",
+      "status": "ok",
+      "statusCode": 200,
+      "title": "HP » Device Status",
+      "deviceName": "RCL039 | ADM CTL LABORATORIO",
+      "deviceIp": "10.12.86.168",
+      "machineStatus": "Sleep mode on",
+      "supplies": [
+        {
+          "name": "Cartucho Preto",
+          "level": "80%*"
+        },
+        {
+          "name": "Kit do Alimentador de Documentos",
+          "level": "100%*"
+        }
+      ],
+      "type": "mono",
+      "trays": [
+        {
+          "name": "Tray 1",
+          "status": "Empty",
+          "capacity": "100 sheets",
+          "size": "Any Size",
+          "type": "Any Type"
+        },
+        {
+          "name": "Tray 2",
+          "status": "OK",
+          "capacity": "550 sheets",
+          "size": "A4 (210x297 mm)",
+          "type": "Plain"
+        },
+        {
+          "name": "Standard bin",
+          "status": "OK",
+          "capacity": "250 sheets",
+          "size": "N/A",
+          "type": "N/A"
+        }
+      ]
+    },
+    {
+      "name": "https://10.12.86.169",
+      "url": "https://10.12.86.169",
+      "timestamp": "2025-12-03T13:32:23.125Z",
+      "location": "Rio Claro",
+      "status": "ok",
+      "statusCode": 200,
+      "title": "HP » Device Status",
+      "deviceName": "RCL040 | ALMOXARIFADO INDIRETO",
+      "deviceIp": "10.12.86.169",
+      "machineStatus": "Sleep mode on",
+      "supplies": [
+        {
+          "name": "Cartucho Preto",
+          "level": "30%*"
+        },
+        {
+          "name": "Kit do Alimentador de Documentos",
+          "level": "100%*"
+        }
+      ],
+      "type": "mono",
+      "trays": [
+        {
+          "name": "Tray 1",
+          "status": "Empty",
+          "capacity": "100 sheets",
+          "size": "Any Size",
+          "type": "Any Type"
+        },
+        {
+          "name": "Tray 2",
+          "status": "OK",
+          "capacity": "550 sheets",
+          "size": "A4 (210x297 mm)",
+          "type": "Plain"
+        },
+        {
+          "name": "Standard bin",
+          "status": "OK",
+          "capacity": "250 sheets",
+          "size": "N/A",
+          "type": "N/A"
+        }
+      ]
+    },
+    {
+      "name": "https://10.12.86.170",
+      "url": "https://10.12.86.170",
+      "timestamp": "2025-12-03T13:32:23.464Z",
+      "location": "Rio Claro",
+      "status": "ok",
+      "statusCode": 200,
+      "title": "HP » Device Status",
+      "deviceName": "RCL068 | BERCARIO",
+      "deviceIp": "10.12.86.170",
+      "machineStatus": "31.03.42 ADF length sensor blocked",
+      "supplies": [
+        {
+          "name": "Cartucho Amarelo",
+          "level": "<10%*"
+        },
+        {
+          "name": "Cartucho Magenta",
+          "level": "20%*"
+        },
+        {
+          "name": "Cartucho Ciano",
+          "level": "10%*"
+        },
+        {
+          "name": "Cartucho Preto",
+          "level": "10%*"
+        },
+        {
+          "name": "Cilindro Amarelo",
+          "level": "100%*"
+        },
+        {
+          "name": "Cilindro Magenta",
+          "level": "100%*"
+        },
+        {
+          "name": "Cilindro Ciano",
+          "level": "100%*"
+        },
+        {
+          "name": "Cilindro Preto",
+          "level": "100%*"
+        },
+        {
+          "name": "Kit Fusor",
+          "level": "100%*"
+        },
+        {
+          "name": "Kit do Alimentador de Documentos",
+          "level": "100%*"
+        }
+      ],
+      "type": "color",
+      "trays": [
+        {
+          "name": "Tray 1",
+          "status": "Empty",
+          "capacity": "100 sheets",
+          "size": "Any Size",
+          "type": "Any Type"
+        },
+        {
+          "name": "Tray 2",
+          "status": "10 - 20%",
+          "capacity": "550 sheets",
+          "size": "A4 (210x297 mm)",
+          "type": "Plain"
+        },
+        {
+          "name": "Standard bin",
+          "status": "OK",
+          "capacity": "250 sheets",
+          "size": "N/A",
+          "type": "N/A"
+        }
+      ]
+    },
+    {
+      "name": "https://10.12.86.171",
+      "url": "https://10.12.86.171",
+      "timestamp": "2025-12-03T13:32:23.266Z",
+      "location": "Rio Claro",
+      "status": "ok",
+      "statusCode": 200,
+      "title": "HP » Device Status",
+      "deviceName": "RCL042 | ADMNISTRATIVO CTL",
+      "deviceIp": "10.12.86.171",
+      "machineStatus": "Tray 3 empty: Plain, A4 ▭",
+      "supplies": [
+        {
+          "name": "Cartucho Preto",
+          "level": "80%*"
+        }
+      ],
+      "type": "mono",
+      "trays": [
+        {
+          "name": "Tray 1",
+          "status": "Empty",
+          "capacity": "100 sheets",
+          "size": "Any Size",
+          "type": "Any Type"
+        },
+        {
+          "name": "Tray 2",
+          "status": "< 30%",
+          "capacity": "520 sheets",
+          "size": "A4 ▭ (210x297 mm)",
+          "type": "Plain"
+        },
+        {
+          "name": "Tray 3",
+          "status": "Empty",
+          "capacity": "520 sheets",
+          "size": "A4 ▭ (210x297 mm)",
+          "type": "Plain"
+        },
+        {
+          "name": "Tray 4",
+          "status": "70 - 100%",
+          "capacity": "520 sheets",
+          "size": "A3 (297x420 mm)",
+          "type": "Plain"
+        },
+        {
+          "name": "Tray 5",
+          "status": "30 - 70%",
+          "capacity": "520 sheets",
+          "size": "A3 (297x420 mm)",
+          "type": "Plain"
+        },
+        {
+          "name": "Standard bin",
+          "status": "OK",
+          "capacity": "500 sheets",
+          "size": "N/A",
+          "type": "N/A"
+        }
+      ]
+    },
+    {
+      "name": "https://10.12.86.173",
+      "url": "https://10.12.86.173",
+      "timestamp": "2025-12-03T13:32:23.216Z",
+      "location": "Rio Claro",
+      "status": "ok",
+      "statusCode": 200,
+      "title": "HP » Device Status",
+      "deviceName": "RCL044 | CENTRAL DE RESIDUOS",
+      "deviceIp": "10.12.86.173",
+      "machineStatus": "Sleep mode on",
+      "supplies": [
+        {
+          "name": "Cartucho Preto",
+          "level": "10%*"
+        },
+        {
+          "name": "Kit do Alimentador de Documentos",
+          "level": "70%*"
+        }
+      ],
+      "type": "mono",
+      "trays": [
+        {
+          "name": "Tray 1",
+          "status": "Empty",
+          "capacity": "100 sheets",
+          "size": "Any Size",
+          "type": "Any Type"
+        },
+        {
+          "name": "Tray 2",
+          "status": "OK",
+          "capacity": "550 sheets",
+          "size": "A4 (210x297 mm)",
+          "type": "Plain"
+        },
+        {
+          "name": "Standard bin",
+          "status": "OK",
+          "capacity": "250 sheets",
+          "size": "N/A",
+          "type": "N/A"
+        }
+      ]
+    },
+    {
+      "name": "https://10.12.86.174",
+      "url": "https://10.12.86.174",
+      "timestamp": "2025-12-03T13:32:23.200Z",
+      "location": "Rio Claro",
+      "status": "ok",
+      "statusCode": 200,
+      "title": "HP » Device Status",
+      "deviceName": "RCL045 | CDF EXPEDICAO | ZR51",
+      "deviceIp": "10.12.86.174",
+      "machineStatus": "Sleep mode on",
+      "supplies": [
+        {
+          "name": "Cartucho Preto",
+          "level": "40%*"
+        },
+        {
+          "name": "Kit de Manutenção",
+          "level": "70%*"
+        }
+      ],
+      "type": "mono",
+      "trays": [
+        {
+          "name": "Tray 1",
+          "status": "Empty",
+          "capacity": "100 sheets",
+          "size": "Any Size",
+          "type": "Any Type"
+        },
+        {
+          "name": "Tray 2",
+          "status": "OK",
+          "capacity": "550 sheets",
+          "size": "A4",
+          "type": "Plain"
+        },
+        {
+          "name": "Front bins",
+          "status": "OK",
+          "capacity": "1300 sheets",
+          "size": "N/A",
+          "type": "N/A"
+        }
+      ]
+    },
+    {
+      "name": "https://10.12.86.175",
+      "url": "https://10.12.86.175",
+      "timestamp": "2025-12-03T13:32:24.508Z",
+      "location": "Rio Claro",
+      "status": "ok",
+      "statusCode": 200,
+      "title": "HP » Device Status",
+      "deviceName": "RCL046 | ADM AMBULATORIO",
+      "deviceIp": "10.12.86.175",
+      "machineStatus": "Sleep mode on",
+      "supplies": [
+        {
+          "name": "Cartucho Preto",
+          "level": "<10%*"
+        },
+        {
+          "name": "Kit do Alimentador de Documentos",
+          "level": "100%*"
+        }
+      ],
+      "type": "mono",
+      "trays": [
+        {
+          "name": "Tray 1",
+          "status": "Empty",
+          "capacity": "100 sheets",
+          "size": "Any Size",
+          "type": "Any Type"
+        },
+        {
+          "name": "Tray 2",
+          "status": "OK",
+          "capacity": "550 sheets",
+          "size": "A4 (210x297 mm)",
+          "type": "Plain"
+        },
+        {
+          "name": "Standard bin",
+          "status": "OK",
+          "capacity": "250 sheets",
+          "size": "N/A",
+          "type": "N/A"
+        }
+      ]
+    },
+    {
+      "name": "https://10.12.86.177",
+      "url": "https://10.12.86.177",
+      "timestamp": "2025-12-03T13:32:23.412Z",
+      "location": "Rio Claro",
+      "status": "ok",
+      "statusCode": 200,
+      "title": "HP » Device Status",
+      "deviceName": "RCL048 | ADM SUPRIMENTOS",
+      "deviceIp": "10.12.86.177",
+      "machineStatus": "Sleep mode on",
+      "supplies": [
+        {
+          "name": "Cartucho Preto",
+          "level": "20%*"
+        },
+        {
+          "name": "Kit do Alimentador de Documentos",
+          "level": "100%*"
+        }
+      ],
+      "type": "mono",
+      "trays": [
+        {
+          "name": "Tray 1",
+          "status": "Empty",
+          "capacity": "100 sheets",
+          "size": "Any Size",
+          "type": "Any Type"
+        },
+        {
+          "name": "Tray 2",
+          "status": "OK",
+          "capacity": "550 sheets",
+          "size": "A4 (210x297 mm)",
+          "type": "Plain"
+        },
+        {
+          "name": "Standard bin",
+          "status": "OK",
+          "capacity": "250 sheets",
+          "size": "N/A",
+          "type": "N/A"
+        }
+      ]
+    },
+    {
+      "name": "https://10.12.86.178",
+      "url": "https://10.12.86.178",
+      "timestamp": "2025-12-03T13:32:23.471Z",
+      "location": "Rio Claro",
+      "status": "ok",
+      "statusCode": 200,
+      "title": "HP » Device Status",
+      "deviceName": "RCL049 | TEC. INFORMACAO",
+      "deviceIp": "10.12.86.178",
+      "machineStatus": "Scanning page 24",
+      "supplies": [
+        {
+          "name": "Cartucho Preto",
+          "level": "50%*"
+        },
+        {
+          "name": "Kit do Alimentador de Documentos",
+          "level": "100%*"
+        }
+      ],
+      "type": "mono",
+      "trays": [
+        {
+          "name": "Tray 1",
+          "status": "Empty",
+          "capacity": "100 sheets",
+          "size": "Any Size",
+          "type": "Any Type"
+        },
+        {
+          "name": "Tray 2",
+          "status": "OK",
+          "capacity": "550 sheets",
+          "size": "A4 (210x297 mm)",
+          "type": "Plain"
+        },
+        {
+          "name": "Standard bin",
+          "status": "OK",
+          "capacity": "250 sheets",
+          "size": "N/A",
+          "type": "N/A"
+        }
+      ]
+    },
+    {
+      "name": "https://10.12.86.179",
+      "url": "https://10.12.86.179",
+      "timestamp": "2025-12-03T13:32:23.649Z",
+      "location": "Rio Claro",
+      "status": "ok",
+      "statusCode": 200,
+      "title": "HP » Device Status",
+      "deviceName": "RCL050 | CTL PROTOTIPOS",
+      "deviceIp": "10.12.86.179",
+      "machineStatus": "Sleep mode on",
+      "supplies": [
+        {
+          "name": "Cartucho Preto",
+          "level": "80%*"
+        },
+        {
+          "name": "Kit do Alimentador de Documentos",
+          "level": "100%*"
+        }
+      ],
+      "type": "mono",
+      "trays": [
+        {
+          "name": "Tray 1",
+          "status": "Empty",
+          "capacity": "100 sheets",
+          "size": "Any Size",
+          "type": "Any Type"
+        },
+        {
+          "name": "Tray 2",
+          "status": "OK",
+          "capacity": "550 sheets",
+          "size": "A4 (210x297 mm)",
+          "type": "Plain"
+        },
+        {
+          "name": "Standard bin",
+          "status": "OK",
+          "capacity": "250 sheets",
+          "size": "N/A",
+          "type": "N/A"
+        }
+      ]
+    },
+    {
+      "name": "https://10.12.86.180",
+      "url": "https://10.12.86.180",
+      "timestamp": "2025-12-03T13:32:23.657Z",
+      "location": "Rio Claro",
+      "status": "ok",
+      "statusCode": 200,
+      "title": "HP » Status do dispositivo",
+      "deviceName": "RCL051 | ADM GERENCIA GERAL",
+      "deviceIp": "10.12.86.180",
+      "machineStatus": "Consumo reduzido\nativado",
+      "supplies": [
+        {
+          "name": "Amarelo",
+          "level": "70%*"
+        },
+        {
+          "name": "Magenta",
+          "level": "<10%*"
+        },
+        {
+          "name": "Ciano",
+          "level": "70%*"
+        },
+        {
+          "name": "Preto",
+          "level": "80%*"
+        },
+        {
+          "name": "Kit do fusor",
+          "level": "90%*"
+        },
+        {
+          "name": "Kit do alimentador de documentos",
+          "level": "100%*"
+        }
+      ],
+      "type": "color",
+      "trays": [
+        {
+          "name": "Bandeja 1",
+          "status": "Vazio",
+          "capacity": "100 folhas",
+          "size": "Qualquer tamanho",
+          "type": "Qualquer tipo"
+        },
+        {
+          "name": "Bandeja 2",
+          "status": "OK",
+          "capacity": "550 folhas",
+          "size": "A4 (210x297 mm)",
+          "type": "Comum"
+        },
+        {
+          "name": "Compart. padrão",
+          "status": "OK",
+          "capacity": "250 folhas",
+          "size": "N/D",
+          "type": "N/D"
+        }
+      ]
+    },
+    {
+      "name": "https://10.12.86.181",
+      "url": "https://10.12.86.181",
+      "timestamp": "2025-12-03T13:32:24.645Z",
+      "location": "Rio Claro",
+      "status": "ok",
+      "statusCode": 200,
+      "title": "HP » Device Status",
+      "deviceName": "RCL052 | ADM CTL",
+      "deviceIp": "10.12.86.181",
+      "machineStatus": "Ready",
+      "supplies": [
+        {
+          "name": "Cartucho Amarelo",
+          "level": "70%*"
+        },
+        {
+          "name": "Cartucho Magenta",
+          "level": "--%*"
+        },
+        {
+          "name": "Cartucho Ciano",
+          "level": "20%*"
+        },
+        {
+          "name": "Cartucho Preto",
+          "level": "40%*"
+        },
+        {
+          "name": "Kit Fusor",
+          "level": "80%*"
+        },
+        {
+          "name": "Kit do Alimentador de Documentos",
+          "level": "100%*"
+        }
+      ],
+      "type": "color",
+      "trays": [
+        {
+          "name": "Tray 1",
+          "status": "Empty",
+          "capacity": "100 sheets",
+          "size": "Any Size",
+          "type": "Any Type"
+        },
+        {
+          "name": "Tray 2",
+          "status": "OK",
+          "capacity": "550 sheets",
+          "size": "A4 (210x297 mm)",
+          "type": "Plain"
+        },
+        {
+          "name": "Standard bin",
+          "status": "OK",
+          "capacity": "250 sheets",
+          "size": "N/A",
+          "type": "N/A"
+        }
+      ]
+    },
+    {
+      "name": "https://10.12.86.182",
+      "url": "https://10.12.86.182",
+      "timestamp": "2025-12-03T13:32:23.509Z",
+      "location": "Rio Claro",
+      "status": "ok",
+      "statusCode": 200,
+      "title": "HP » Device Status",
+      "deviceName": "RCL053 | RECEBIMENTO F1",
+      "deviceIp": "10.12.86.182",
+      "machineStatus": "Sleep mode on",
+      "supplies": [
+        {
+          "name": "Cartucho Preto",
+          "level": "<10%*"
+        }
+      ],
+      "type": "mono",
+      "trays": [
+        {
+          "name": "Tray 1",
+          "status": "Empty",
+          "capacity": "100 sheets",
+          "size": "Any Size",
+          "type": "Any Type"
+        },
+        {
+          "name": "Tray 2",
+          "status": "OK",
+          "capacity": "550 sheets",
+          "size": "A4",
+          "type": "Plain"
+        },
+        {
+          "name": "Standard bin",
+          "status": "OK",
+          "capacity": "250 sheets",
+          "size": "N/A",
+          "type": "N/A"
+        }
+      ]
+    },
+    {
+      "name": "https://10.12.86.183",
+      "url": "https://10.12.86.183",
+      "timestamp": "2025-12-03T13:32:23.686Z",
+      "location": "Rio Claro",
+      "status": "ok",
+      "statusCode": 200,
+      "title": "HP » Device Status",
+      "deviceName": "RCL054 | RECURSOS HUMANOS",
+      "deviceIp": "10.12.86.183",
+      "machineStatus": "Sleep mode on",
+      "supplies": [
+        {
+          "name": "Cartucho Amarelo",
+          "level": "10%*"
+        },
+        {
+          "name": "Cartucho Magenta",
+          "level": "10%*"
+        },
+        {
+          "name": "Não Original HP Cartucho Ciano",
+          "level": "80%*"
+        },
+        {
+          "name": "Cartucho Preto",
+          "level": "90%*"
+        },
+        {
+          "name": "Kit Fusor",
+          "level": "80%*"
+        },
+        {
+          "name": "Kit do Alimentador de Documentos",
+          "level": "100%*"
+        }
+      ],
+      "type": "color",
+      "trays": [
+        {
+          "name": "Tray 1",
+          "status": "Empty",
+          "capacity": "100 sheets",
+          "size": "Any Size",
+          "type": "Any Type"
+        },
+        {
+          "name": "Tray 2",
+          "status": "OK",
+          "capacity": "550 sheets",
+          "size": "A4 (210x297 mm)",
+          "type": "Plain"
+        },
+        {
+          "name": "Standard bin",
+          "status": "OK",
+          "capacity": "250 sheets",
+          "size": "N/A",
+          "type": "N/A"
+        }
+      ]
+    },
+    {
+      "name": "https://10.12.86.184",
+      "url": "https://10.12.86.184",
+      "timestamp": "2025-12-03T13:32:24.477Z",
+      "location": "Rio Claro",
+      "status": "ok",
+      "statusCode": 200,
+      "title": "HP » Device Status",
+      "deviceName": "RCL055 | ADM GERENCIA GERAL",
+      "deviceIp": "10.12.86.184",
+      "machineStatus": "Sleep mode on",
+      "supplies": [
+        {
+          "name": "Não Original HP Cartucho Preto",
+          "level": "100%*"
+        },
+        {
+          "name": "Kit do Alimentador de Documentos",
+          "level": "100%*"
+        }
+      ],
+      "type": "mono",
+      "trays": [
+        {
+          "name": "Tray 1",
+          "status": "Empty",
+          "capacity": "100 sheets",
+          "size": "Any Size",
+          "type": "Any Type"
+        },
+        {
+          "name": "Tray 2",
+          "status": "OK",
+          "capacity": "550 sheets",
+          "size": "A4 (210x297 mm)",
+          "type": "Plain"
+        },
+        {
+          "name": "Standard bin",
+          "status": "OK",
+          "capacity": "250 sheets",
+          "size": "N/A",
+          "type": "N/A"
+        }
+      ]
+    },
+    {
+      "name": "https://10.12.86.185",
+      "url": "https://10.12.86.185",
+      "timestamp": "2025-12-03T13:32:23.783Z",
+      "location": "Rio Claro",
+      "status": "ok",
+      "statusCode": 200,
+      "title": "HP » Device Status",
+      "deviceName": "RCL056 | ADM AMBULATORIO",
+      "deviceIp": "10.12.86.185",
+      "machineStatus": "Sleep mode on",
+      "supplies": [
+        {
+          "name": "Cartucho Preto",
+          "level": "40%*"
+        },
+        {
+          "name": "Kit do Alimentador de Documentos",
+          "level": "100%*"
+        }
+      ],
+      "type": "mono",
+      "trays": [
+        {
+          "name": "Tray 1",
+          "status": "Empty",
+          "capacity": "100 sheets",
+          "size": "Any Size",
+          "type": "Any Type"
+        },
+        {
+          "name": "Tray 2",
+          "status": "OK",
+          "capacity": "550 sheets",
+          "size": "A4 (210x297 mm)",
+          "type": "Plain"
+        },
+        {
+          "name": "Standard bin",
+          "status": "OK",
+          "capacity": "250 sheets",
+          "size": "N/A",
+          "type": "N/A"
+        }
+      ]
+    },
+    {
+      "name": "https://10.12.86.186",
+      "url": "https://10.12.86.186",
+      "timestamp": "2025-12-03T13:32:23.750Z",
+      "location": "Rio Claro",
+      "status": "ok",
+      "statusCode": 200,
+      "title": "HP » Device Status",
+      "deviceName": "RCL057 | PORTARIA CAMINHOES 2",
+      "deviceIp": "10.12.86.186",
+      "machineStatus": "Sleep mode on",
+      "supplies": [
+        {
+          "name": "Cartucho Preto",
+          "level": "100%*"
+        }
+      ],
+      "type": "mono",
+      "trays": [
+        {
+          "name": "Tray 1",
+          "status": "Empty",
+          "capacity": "100 sheets",
+          "size": "Any Size",
+          "type": "Any Type"
+        },
+        {
+          "name": "Tray 2",
+          "status": "OK",
+          "capacity": "550 sheets",
+          "size": "A4",
+          "type": "Plain"
+        },
+        {
+          "name": "Standard bin",
+          "status": "OK",
+          "capacity": "250 sheets",
+          "size": "N/A",
+          "type": "N/A"
+        }
+      ]
+    },
+    {
+      "name": "https://10.12.86.187",
+      "url": "https://10.12.86.187",
+      "timestamp": "2025-12-03T13:32:23.760Z",
+      "location": "Rio Claro",
+      "status": "ok",
+      "statusCode": 200,
+      "title": "HP » Device Status",
+      "deviceName": "RCL058 | DOPP F1",
+      "deviceIp": "10.12.86.187",
+      "machineStatus": "Sleep mode on",
+      "supplies": [
+        {
+          "name": "Cartucho Preto",
+          "level": "<10%*"
+        }
+      ],
+      "type": "mono",
+      "trays": [
+        {
+          "name": "Tray 1",
+          "status": "Empty",
+          "capacity": "100 sheets",
+          "size": "Any Size",
+          "type": "Any Type"
+        },
+        {
+          "name": "Tray 2",
+          "status": "OK",
+          "capacity": "550 sheets",
+          "size": "A4",
+          "type": "Plain"
+        },
+        {
+          "name": "Standard bin",
+          "status": "OK",
+          "capacity": "250 sheets",
+          "size": "N/A",
+          "type": "N/A"
+        }
+      ]
+    },
+    {
+      "name": "https://10.12.86.188",
+      "url": "https://10.12.86.188",
+      "timestamp": "2025-12-03T13:32:23.908Z",
+      "location": "Rio Claro",
+      "status": "ok",
+      "statusCode": 200,
+      "title": "HP » Device Status",
+      "deviceName": "RCL060 | PORTARIA DE CAMINHOES 5",
+      "deviceIp": "10.12.86.188",
+      "machineStatus": "Sleep mode on",
+      "supplies": [
+        {
+          "name": "Cartucho Preto",
+          "level": "80%*"
+        }
+      ],
+      "type": "mono",
+      "trays": [
+        {
+          "name": "Tray 1",
+          "status": "Empty",
+          "capacity": "100 sheets",
+          "size": "Any Size",
+          "type": "Any Type"
+        },
+        {
+          "name": "Tray 2",
+          "status": "OK",
+          "capacity": "550 sheets",
+          "size": "A4",
+          "type": "Plain"
+        },
+        {
+          "name": "Standard bin",
+          "status": "OK",
+          "capacity": "250 sheets",
+          "size": "N/A",
+          "type": "N/A"
+        }
+      ]
+    },
+    {
+      "name": "https://10.12.86.190",
+      "url": "https://10.12.86.190",
+      "timestamp": "2025-12-03T13:32:24.437Z",
+      "location": "Rio Claro",
+      "status": "ok",
+      "statusCode": 200,
+      "title": "HP » Device Status",
+      "deviceName": "RCL061 | METROLOGIA F2",
+      "deviceIp": "10.12.86.190",
+      "machineStatus": "Sleep mode on",
+      "supplies": [
+        {
+          "name": "Cartucho Preto",
+          "level": "30%*"
+        }
+      ],
+      "type": "mono",
+      "trays": [
+        {
+          "name": "Tray 1",
+          "status": "Empty",
+          "capacity": "100 sheets",
+          "size": "Any Size",
+          "type": "Any Type"
+        },
+        {
+          "name": "Tray 2",
+          "status": "OK",
+          "capacity": "550 sheets",
+          "size": "A4",
+          "type": "Plain"
+        },
+        {
+          "name": "Standard bin",
+          "status": "OK",
+          "capacity": "250 sheets",
+          "size": "N/A",
+          "type": "N/A"
+        }
+      ]
+    },
+    {
+      "name": "https://10.12.86.191",
+      "url": "https://10.12.86.191",
+      "timestamp": "2025-12-03T13:32:23.790Z",
+      "location": "Rio Claro",
+      "status": "ok",
+      "statusCode": 200,
+      "title": "HP » Device Status",
+      "deviceName": "RCL069",
+      "deviceIp": "10.12.86.191",
+      "machineStatus": "Ready",
+      "supplies": [
+        {
+          "name": "Cartucho Amarelo",
+          "level": "100%*"
+        },
+        {
+          "name": "Cartucho Magenta",
+          "level": "100%*"
+        },
+        {
+          "name": "Cartucho Ciano",
+          "level": "90%*"
+        },
+        {
+          "name": "Cartucho Preto",
+          "level": "80%*"
+        },
+        {
+          "name": "Kit do Alimentador de Documentos",
+          "level": "100%*"
+        }
+      ],
+      "type": "color",
+      "trays": [
+        {
+          "name": "Tray 1",
+          "status": "Empty",
+          "capacity": "100 sheets",
+          "size": "Any Size",
+          "type": "Any Type"
+        },
+        {
+          "name": "Tray 2",
+          "status": "< 30%",
+          "capacity": "520 sheets",
+          "size": "A4 (210x297 mm)",
+          "type": "Plain"
+        },
+        {
+          "name": "Tray 3",
+          "status": "30 - 70%",
+          "capacity": "520 sheets",
+          "size": "A3 (297x420 mm)",
+          "type": "Plain"
+        },
+        {
+          "name": "Standard bin",
+          "status": "OK",
+          "capacity": "500 sheets",
+          "size": "N/A",
+          "type": "N/A"
+        }
+      ]
+    },
+    {
+      "name": "https://10.12.86.192",
+      "url": "https://10.12.86.192",
+      "timestamp": "2025-12-03T13:32:23.983Z",
+      "location": "Rio Claro",
+      "status": "ok",
+      "statusCode": 200,
+      "title": "HP » Device Status",
+      "deviceName": "RCL063 | RECEBIMENTO FISCAL",
+      "deviceIp": "10.12.86.192",
+      "machineStatus": "Sleep mode on",
+      "supplies": [
+        {
+          "name": "Cartucho Preto",
+          "level": "100%*"
+        },
+        {
+          "name": "Kit de Manutenção",
+          "level": "50%*"
+        }
+      ],
+      "type": "mono",
+      "trays": [
+        {
+          "name": "Tray 1",
+          "status": "Empty",
+          "capacity": "100 sheets",
+          "size": "Any Size",
+          "type": "Any Type"
+        },
+        {
+          "name": "Tray 2",
+          "status": "OK",
+          "capacity": "550 sheets",
+          "size": "A4",
+          "type": "Plain"
+        },
+        {
+          "name": "Tray 3",
+          "status": "OK",
+          "capacity": "550 sheets",
+          "size": "A4",
+          "type": "Plain"
+        },
+        {
+          "name": "Standard bin",
+          "status": "OK",
+          "capacity": "500 sheets",
+          "size": "N/A",
+          "type": "N/A"
+        }
+      ]
+    },
+    {
+      "name": "https://10.12.86.193",
+      "url": "https://10.12.86.193",
+      "timestamp": "2025-12-03T13:32:24.224Z",
+      "location": "Rio Claro",
+      "status": "ok",
+      "statusCode": 200,
+      "title": "HP » Device Status",
+      "deviceName": "RCL065 | SUPERVISAO CDF",
+      "deviceIp": "10.12.86.193",
+      "machineStatus": "Sleep mode on",
+      "supplies": [
+        {
+          "name": "Cartucho Amarelo",
+          "level": "100%*"
+        },
+        {
+          "name": "Cartucho Magenta",
+          "level": "100%*"
+        },
+        {
+          "name": "Cartucho Ciano",
+          "level": "100%*"
+        },
+        {
+          "name": "Não Original HP Cartucho Preto",
+          "level": "70%*"
+        },
+        {
+          "name": "Kit Fusor",
+          "level": "20%*"
+        },
+        {
+          "name": "Kit do Alimentador de Documentos",
+          "level": "100%*"
+        }
+      ],
+      "type": "color",
+      "trays": [
+        {
+          "name": "Tray 1",
+          "status": "Empty",
+          "capacity": "100 sheets",
+          "size": "Any Size",
+          "type": "Any Type"
+        },
+        {
+          "name": "Tray 2",
+          "status": "OK",
+          "capacity": "550 sheets",
+          "size": "A4 (210x297 mm)",
+          "type": "Plain"
+        },
+        {
+          "name": "Standard bin",
+          "status": "OK",
+          "capacity": "250 sheets",
+          "size": "N/A",
+          "type": "N/A"
+        }
+      ]
+    },
+    {
+      "name": "https://10.12.86.195",
+      "url": "https://10.12.86.195",
+      "timestamp": "2025-12-03T13:32:23.840Z",
+      "location": "Rio Claro",
+      "status": "ok",
+      "statusCode": 200,
+      "title": null
+    },
+    {
+      "name": "https://10.12.63.135",
+      "url": "https://10.12.63.135",
+      "timestamp": "2025-12-03T13:32:24.789Z",
+      "location": "Joinville",
+      "status": "ok",
+      "statusCode": 200,
+      "title": "HP » Device Status",
+      "deviceName": "JOI005 | Logística ZJ25",
+      "deviceIp": "10.12.63.135",
+      "machineStatus": "Maintenance Kit very low",
+      "supplies": [
+        {
+          "name": "Cartucho Preto",
+          "level": "60%*"
+        },
+        {
+          "name": "Kit de Manutenção",
+          "level": "--%*"
+        }
+      ],
+      "type": "mono",
+      "trays": [
+        {
+          "name": "Tray 1",
+          "status": "Empty",
+          "capacity": "100 sheets",
+          "size": "Any Size",
+          "type": "Any Type"
+        },
+        {
+          "name": "Tray 2",
+          "status": "OK",
+          "capacity": "550 sheets",
+          "size": "A4",
+          "type": "Plain"
+        },
+        {
+          "name": "Tray 3",
+          "status": "Empty",
+          "capacity": "550 sheets",
+          "size": "B5 (JIS)",
+          "type": "Plain"
+        },
+        {
+          "name": "Front bins",
+          "status": "OK",
+          "capacity": "1300 sheets",
+          "size": "N/A",
+          "type": "N/A"
+        }
+      ]
+    },
+    {
+      "name": "https://10.12.63.136",
+      "url": "https://10.12.63.136",
+      "timestamp": "2025-12-03T13:32:24.758Z",
+      "location": "Joinville",
+      "status": "ok",
+      "statusCode": 200,
+      "title": "HP » Device Status",
+      "deviceName": "JOI007 | Recepção Fiscal",
+      "deviceIp": "10.12.63.136",
+      "machineStatus": "Ready",
+      "supplies": [
+        {
+          "name": "Cartucho Preto",
+          "level": "100%*"
+        }
+      ],
+      "type": "mono",
+      "trays": [
+        {
+          "name": "Tray 1",
+          "status": "Empty",
+          "capacity": "100 sheets",
+          "size": "Any Size",
+          "type": "Any Type"
+        },
+        {
+          "name": "Tray 2",
+          "status": "OK",
+          "capacity": "550 sheets",
+          "size": "A4",
+          "type": "Plain"
+        },
+        {
+          "name": "Standard bin",
+          "status": "OK",
+          "capacity": "250 sheets",
+          "size": "N/A",
+          "type": "N/A"
+        }
+      ]
+    },
+    {
+      "name": "https://10.12.63.137",
+      "url": "https://10.12.63.137",
+      "timestamp": "2025-12-03T13:32:25.060Z",
+      "location": "Joinville",
+      "status": "ok",
+      "statusCode": 200,
+      "title": "HP » Device Status",
+      "deviceName": "JOI008 | Recepção Fiscal 02",
+      "deviceIp": "10.12.63.137",
+      "machineStatus": "Sleep mode on",
+      "supplies": [
+        {
+          "name": "Cartucho Preto",
+          "level": "30%*"
+        },
+        {
+          "name": "Kit do Alimentador de Documentos",
+          "level": "100%*"
+        }
+      ],
+      "type": "mono",
+      "trays": [
+        {
+          "name": "Tray 1",
+          "status": "Empty",
+          "capacity": "100 sheets",
+          "size": "Any Size",
+          "type": "Any Type"
+        },
+        {
+          "name": "Tray 2",
+          "status": "OK",
+          "capacity": "550 sheets",
+          "size": "A4 (210x297 mm)",
+          "type": "Plain"
+        },
+        {
+          "name": "Standard bin",
+          "status": "OK",
+          "capacity": "250 sheets",
+          "size": "N/A",
+          "type": "N/A"
+        }
+      ]
+    },
+    {
+      "name": "https://10.12.63.138",
+      "url": "https://10.12.63.138",
+      "timestamp": "2025-12-03T13:32:25.263Z",
+      "location": "Joinville",
+      "status": "ok",
+      "statusCode": 200,
+      "title": "HP » Device Status",
+      "deviceName": "JOI009 | Logistica",
+      "deviceIp": "10.12.63.138",
+      "machineStatus": "Ready",
+      "supplies": [
+        {
+          "name": "Cartucho Preto",
+          "level": "<10%*"
+        },
+        {
+          "name": "Kit do Alimentador de Documentos",
+          "level": "100%*"
+        }
+      ],
+      "type": "mono",
+      "trays": [
+        {
+          "name": "Tray 1",
+          "status": "Empty",
+          "capacity": "100 sheets",
+          "size": "Any Size",
+          "type": "Any Type"
+        },
+        {
+          "name": "Tray 2",
+          "status": "OK",
+          "capacity": "550 sheets",
+          "size": "A4 (210x297 mm)",
+          "type": "Plain"
+        },
+        {
+          "name": "Standard bin",
+          "status": "OK",
+          "capacity": "250 sheets",
+          "size": "N/A",
+          "type": "N/A"
+        }
+      ]
+    },
+    {
+      "name": "https://10.12.63.139",
+      "url": "https://10.12.63.139",
+      "timestamp": "2025-12-03T13:32:26.341Z",
+      "location": "Joinville",
+      "status": "ok",
+      "statusCode": 200,
+      "title": "HP » Device Status",
+      "deviceName": "JOI010 | TI",
+      "deviceIp": "10.12.63.139",
+      "machineStatus": "30.03.30 Scanner failure",
+      "supplies": [
+        {
+          "name": "Cartucho Preto",
+          "level": "50%*"
+        },
+        {
+          "name": "Kit do Alimentador de Documentos",
+          "level": "100%*"
+        }
+      ],
+      "type": "mono",
+      "trays": [
+        {
+          "name": "Tray 1",
+          "status": "Empty",
+          "capacity": "100 sheets",
+          "size": "Any Size",
+          "type": "Any Type"
+        },
+        {
+          "name": "Tray 2",
+          "status": "OK",
+          "capacity": "550 sheets",
+          "size": "A4 (210x297 mm)",
+          "type": "Plain"
+        },
+        {
+          "name": "Standard bin",
+          "status": "OK",
+          "capacity": "250 sheets",
+          "size": "N/A",
+          "type": "N/A"
+        }
+      ]
+    },
+    {
+      "name": "https://10.12.63.140",
+      "url": "https://10.12.63.140",
+      "timestamp": "2025-12-03T13:32:25.956Z",
+      "location": "Joinville",
+      "status": "ok",
+      "statusCode": 200,
+      "title": "HP » Device Status",
+      "deviceName": "JOI011 | F2 Engenharia COR",
+      "deviceIp": "10.12.63.140",
+      "machineStatus": "Tray 2 lifting",
+      "supplies": [
+        {
+          "name": "Cartucho Amarelo",
+          "level": "10%*"
+        },
+        {
+          "name": "Cartucho Magenta",
+          "level": "90%*"
+        },
+        {
+          "name": "Cartucho Ciano",
+          "level": "60%*"
+        },
+        {
+          "name": "Cartucho Preto",
+          "level": "80%*"
+        },
+        {
+          "name": "Cilindro 1",
+          "level": "20%*"
+        },
+        {
+          "name": "Cilindro 2",
+          "level": "20%*"
+        },
+        {
+          "name": "Cilindro 3",
+          "level": "20%*"
+        },
+        {
+          "name": "Cilindro 4",
+          "level": "90%*"
+        },
+        {
+          "name": "Kit de Transferência",
+          "level": "60%*"
+        },
+        {
+          "name": "Kit Fusor",
+          "level": "20%*"
+        }
+      ],
+      "type": "color",
+      "trays": [
+        {
+          "name": "Tray 1",
+          "status": "Empty",
+          "capacity": "100 sheets",
+          "size": "Any Size",
+          "type": "Any Type"
+        },
+        {
+          "name": "Tray 2",
+          "status": "Empty",
+          "capacity": "550 sheets",
+          "size": "A4",
+          "type": "Plain"
+        },
+        {
+          "name": "Standard bin",
+          "status": "OK",
+          "capacity": "500 sheets",
+          "size": "N/A",
+          "type": "N/A"
+        }
+      ]
+    },
+    {
+      "name": "https://10.12.63.141",
+      "url": "https://10.12.63.141",
+      "timestamp": "2025-12-03T13:32:25.598Z",
+      "location": "Joinville",
+      "status": "ok",
+      "statusCode": 200,
+      "title": "HP » Device Status",
+      "deviceName": "JOI012 | Ambulatório Fono 02",
+      "deviceIp": "10.12.63.141",
+      "machineStatus": "Sleep mode on",
+      "supplies": [
+        {
+          "name": "Não Original HP Cartucho Preto",
+          "level": "80%*"
+        }
+      ],
+      "type": "mono",
+      "trays": [
+        {
+          "name": "Tray 1",
+          "status": "Empty",
+          "capacity": "100 sheets",
+          "size": "Any Size",
+          "type": "Any Type"
+        },
+        {
+          "name": "Tray 2",
+          "status": "OK",
+          "capacity": "550 sheets",
+          "size": "A4",
+          "type": "Plain"
+        },
+        {
+          "name": "Standard bin",
+          "status": "OK",
+          "capacity": "250 sheets",
+          "size": "N/A",
+          "type": "N/A"
+        }
+      ]
+    },
+    {
+      "name": "https://10.12.63.142",
+      "url": "https://10.12.63.142",
+      "timestamp": "2025-12-03T13:32:26.077Z",
+      "location": "Joinville",
+      "status": "ok",
+      "statusCode": 200,
+      "title": "HP » Device Status",
+      "deviceName": "JOI013 | F2 Reoperação",
+      "deviceIp": "10.12.63.142",
+      "machineStatus": "Sleep mode on",
+      "supplies": [
+        {
+          "name": "Cartucho Preto",
+          "level": "<10%*"
+        },
+        {
+          "name": "Kit do Alimentador de Documentos",
+          "level": "100%*"
+        }
+      ],
+      "type": "mono",
+      "trays": [
+        {
+          "name": "Tray 1",
+          "status": "Empty",
+          "capacity": "100 sheets",
+          "size": "Any Size",
+          "type": "Any Type"
+        },
+        {
+          "name": "Tray 2",
+          "status": "OK",
+          "capacity": "550 sheets",
+          "size": "A4 (210x297 mm)",
+          "type": "Plain"
+        },
+        {
+          "name": "Standard bin",
+          "status": "OK",
+          "capacity": "250 sheets",
+          "size": "N/A",
+          "type": "N/A"
+        }
+      ]
+    },
+    {
+      "name": "https://10.12.63.143",
+      "url": "https://10.12.63.143",
+      "timestamp": "2025-12-03T13:32:26.406Z",
+      "location": "Joinville",
+      "status": "ok",
+      "statusCode": 200,
+      "title": "HP » Device Status",
+      "deviceName": "JOI014 | Recursos Humanos",
+      "deviceIp": "10.12.63.143",
+      "machineStatus": "Sleep mode on",
+      "supplies": [
+        {
+          "name": "Cartucho Preto",
+          "level": "30%*"
+        },
+        {
+          "name": "Kit do Alimentador de Documentos",
+          "level": "50%*"
+        }
+      ],
+      "type": "mono",
+      "trays": [
+        {
+          "name": "Tray 1",
+          "status": "Empty",
+          "capacity": "100 sheets",
+          "size": "Any Size",
+          "type": "Any Type"
+        },
+        {
+          "name": "Tray 2",
+          "status": "OK",
+          "capacity": "550 sheets",
+          "size": "A4 (210x297 mm)",
+          "type": "Plain"
+        },
+        {
+          "name": "Standard bin",
+          "status": "OK",
+          "capacity": "250 sheets",
+          "size": "N/A",
+          "type": "N/A"
+        }
+      ]
+    },
+    {
+      "name": "https://10.12.63.144",
+      "url": "https://10.12.63.144",
+      "timestamp": "2025-12-03T13:32:26.523Z",
+      "location": "Joinville",
+      "status": "ok",
+      "statusCode": 200,
+      "title": "HP » Device Status",
+      "deviceName": "JOI015 | Logística Acerto",
+      "deviceIp": "10.12.63.144",
+      "machineStatus": "Sleep mode on",
+      "supplies": [
+        {
+          "name": "Cartucho Preto",
+          "level": "10%*"
+        }
+      ],
+      "type": "mono",
+      "trays": [
+        {
+          "name": "Tray 1",
+          "status": "Empty",
+          "capacity": "100 sheets",
+          "size": "Any Size",
+          "type": "Any Type"
+        },
+        {
+          "name": "Tray 2",
+          "status": "OK",
+          "capacity": "550 sheets",
+          "size": "A4",
+          "type": "Plain"
+        },
+        {
+          "name": "Standard bin",
+          "status": "OK",
+          "capacity": "250 sheets",
+          "size": "N/A",
+          "type": "N/A"
+        }
+      ]
+    },
+    {
+      "name": "https://10.12.63.145",
+      "url": "https://10.12.63.145",
+      "timestamp": "2025-12-03T13:32:26.722Z",
+      "location": "Joinville",
+      "status": "ok",
+      "statusCode": 200,
+      "title": "HP » Device Status",
+      "deviceName": "JOI016 | F2 Cent. Etiquetas",
+      "deviceIp": "10.12.63.145",
+      "machineStatus": "Sleep mode on",
+      "supplies": [
+        {
+          "name": "Cartucho Preto",
+          "level": "<10%*"
+        },
+        {
+          "name": "Kit do Alimentador de Documentos",
+          "level": "70%*"
+        }
+      ],
+      "type": "mono",
+      "trays": [
+        {
+          "name": "Tray 1",
+          "status": "Empty",
+          "capacity": "100 sheets",
+          "size": "Any Size",
+          "type": "Any Type"
+        },
+        {
+          "name": "Tray 2",
+          "status": "OK",
+          "capacity": "550 sheets",
+          "size": "A4 (210x297 mm)",
+          "type": "Plain"
+        },
+        {
+          "name": "Standard bin",
+          "status": "OK",
+          "capacity": "250 sheets",
+          "size": "N/A",
+          "type": "N/A"
+        }
+      ]
+    },
+    {
+      "name": "https://10.12.63.146",
+      "url": "https://10.12.63.146",
+      "timestamp": "2025-12-03T13:32:27.221Z",
+      "location": "Joinville",
+      "status": "ok",
+      "statusCode": 200,
+      "title": "HP » Device Status",
+      "deviceName": "JOI017 | F2 Termoformagem",
+      "deviceIp": "10.12.63.146",
+      "machineStatus": "Sleep mode on",
+      "supplies": [
+        {
+          "name": "Cartucho Amarelo",
+          "level": "10%*"
+        },
+        {
+          "name": "Cartucho Magenta",
+          "level": "70%*"
+        },
+        {
+          "name": "Cartucho Ciano",
+          "level": "<10%*"
+        },
+        {
+          "name": "Cartucho Preto",
+          "level": "100%*"
+        },
+        {
+          "name": "Kit do Alimentador de Documentos",
+          "level": "100%*"
+        }
+      ],
+      "type": "color",
+      "trays": [
+        {
+          "name": "Tray 1",
+          "status": "Empty",
+          "capacity": "100 sheets",
+          "size": "Any Size",
+          "type": "Any Type"
+        },
+        {
+          "name": "Tray 2",
+          "status": "< 30%",
+          "capacity": "520 sheets",
+          "size": "A4 (210x297 mm)",
+          "type": "Plain"
+        },
+        {
+          "name": "Tray 3",
+          "status": "70 - 100%",
+          "capacity": "520 sheets",
+          "size": "A3 (297x420 mm)",
+          "type": "Plain"
+        },
+        {
+          "name": "Standard bin",
+          "status": "OK",
+          "capacity": "500 sheets",
+          "size": "N/A",
+          "type": "N/A"
+        }
+      ]
+    },
+    {
+      "name": "https://10.12.63.147",
+      "url": "https://10.12.63.147",
+      "timestamp": "2025-12-03T13:32:26.966Z",
+      "location": "Joinville",
+      "status": "ok",
+      "statusCode": 200,
+      "title": "HP » Device Status",
+      "deviceName": "JOI018 | PCPM",
+      "deviceIp": "10.12.63.147",
+      "machineStatus": "Sleep mode on",
+      "supplies": [
+        {
+          "name": "Cartucho Preto",
+          "level": "90%*"
+        },
+        {
+          "name": "Kit do Alimentador de Documentos",
+          "level": "100%*"
+        }
+      ],
+      "type": "mono",
+      "trays": [
+        {
+          "name": "Tray 1",
+          "status": "Empty",
+          "capacity": "100 sheets",
+          "size": "Any Size",
+          "type": "Any Type"
+        },
+        {
+          "name": "Tray 2",
+          "status": "OK",
+          "capacity": "550 sheets",
+          "size": "A4 (210x297 mm)",
+          "type": "Plain"
+        },
+        {
+          "name": "Standard bin",
+          "status": "OK",
+          "capacity": "250 sheets",
+          "size": "N/A",
+          "type": "N/A"
+        }
+      ]
+    },
+    {
+      "name": "https://10.12.63.148",
+      "url": "https://10.12.63.148",
+      "timestamp": "2025-12-03T13:32:26.933Z",
+      "location": "Joinville",
+      "status": "ok",
+      "statusCode": 200,
+      "title": "HP » Device Status",
+      "deviceName": "JOI019 | Logística ZJ26",
+      "deviceIp": "10.12.63.148",
+      "machineStatus": "Tray 3 empty: Plain, A4",
+      "supplies": [
+        {
+          "name": "Cartucho Preto",
+          "level": "60%*"
+        },
+        {
+          "name": "Kit de Manutenção",
+          "level": "60%*"
+        }
+      ],
+      "type": "mono",
+      "trays": [
+        {
+          "name": "Tray 1",
+          "status": "Empty",
+          "capacity": "100 sheets",
+          "size": "Any Size",
+          "type": "Any Type"
+        },
+        {
+          "name": "Tray 2",
+          "status": "OK",
+          "capacity": "550 sheets",
+          "size": "A4",
+          "type": "Plain"
+        },
+        {
+          "name": "Tray 3",
+          "status": "Empty",
+          "capacity": "550 sheets",
+          "size": "A4",
+          "type": "Plain"
+        },
+        {
+          "name": "Front bins",
+          "status": "OK",
+          "capacity": "1300 sheets",
+          "size": "N/A",
+          "type": "N/A"
+        }
+      ]
+    },
+    {
+      "name": "https://10.12.63.149",
+      "url": "https://10.12.63.149",
+      "timestamp": "2025-12-03T13:32:27.398Z",
+      "location": "Joinville",
+      "status": "ok",
+      "statusCode": 200,
+      "title": "HP » Device Status",
+      "deviceName": "JOI089 | Engenharia Ind.",
+      "deviceIp": "10.12.63.149",
+      "machineStatus": "Sleep mode on",
+      "supplies": [
+        {
+          "name": "Cartucho Amarelo",
+          "level": "70%*"
+        },
+        {
+          "name": "Cartucho Magenta",
+          "level": "60%*"
+        },
+        {
+          "name": "Cartucho Ciano",
+          "level": "70%*"
+        },
+        {
+          "name": "Cartucho Preto",
+          "level": "30%*"
+        }
+      ],
+      "type": "color",
+      "trays": [
+        {
+          "name": "Tray 1",
+          "status": "Empty",
+          "capacity": "100 sheets",
+          "size": "Any Size",
+          "type": "Any Type"
+        },
+        {
+          "name": "Tray 2",
+          "status": "< 30%",
+          "capacity": "520 sheets",
+          "size": "A4 (210x297 mm)",
+          "type": "Plain"
+        },
+        {
+          "name": "Tray 3",
+          "status": "< 30%",
+          "capacity": "520 sheets",
+          "size": "A3 (297x420 mm)",
+          "type": "Plain"
+        },
+        {
+          "name": "Standard bin",
+          "status": "OK",
+          "capacity": "500 sheets",
+          "size": "N/A",
+          "type": "N/A"
+        }
+      ]
+    },
+    {
+      "name": "https://10.12.63.150",
+      "url": "https://10.12.63.150",
+      "timestamp": "2025-12-03T13:32:27.236Z",
+      "location": "Joinville",
+      "status": "ok",
+      "statusCode": 200,
+      "title": "HP » Device Status",
+      "deviceName": "JOI021 | Bl3 Laboratório",
+      "deviceIp": "10.12.63.150",
+      "machineStatus": "Tray 3 open",
+      "supplies": [
+        {
+          "name": "Cartucho Preto",
+          "level": "60%*"
+        }
+      ],
+      "type": "mono",
+      "trays": [
+        {
+          "name": "Tray 1",
+          "status": "Empty",
+          "capacity": "100 sheets",
+          "size": "Any Size",
+          "type": "Any Type"
+        },
+        {
+          "name": "Tray 2",
+          "status": "70 - 100%",
+          "capacity": "520 sheets",
+          "size": "A4 (210x297 mm)",
+          "type": "Plain"
+        },
+        {
+          "name": "Tray 3",
+          "status": "",
+          "capacity": "520 sheets",
+          "size": "Letter (8.5x11)",
+          "type": "Plain"
+        },
+        {
+          "name": "Standard bin",
+          "status": "OK",
+          "capacity": "500 sheets",
+          "size": "N/A",
+          "type": "N/A"
+        }
+      ]
+    },
+    {
+      "name": "https://10.12.63.151",
+      "url": "https://10.12.63.151",
+      "timestamp": "2025-12-03T13:32:27.623Z",
+      "location": "Joinville",
+      "status": "ok",
+      "statusCode": 200,
+      "title": "HP » Device Status",
+      "deviceName": "JOI022 | Bl. Terc. Sodexo",
+      "deviceIp": "10.12.63.151",
+      "machineStatus": "Ready",
+      "supplies": [
+        {
+          "name": "Cartucho Preto",
+          "level": "70%*"
+        },
+        {
+          "name": "Kit do Alimentador de Documentos",
+          "level": "90%*"
+        }
+      ],
+      "type": "mono",
+      "trays": [
+        {
+          "name": "Tray 1",
+          "status": "Empty",
+          "capacity": "100 sheets",
+          "size": "Any Size",
+          "type": "Any Type"
+        },
+        {
+          "name": "Tray 2",
+          "status": "OK",
+          "capacity": "550 sheets",
+          "size": "A4 (210x297 mm)",
+          "type": "Plain"
+        },
+        {
+          "name": "Standard bin",
+          "status": "OK",
+          "capacity": "250 sheets",
+          "size": "N/A",
+          "type": "N/A"
+        }
+      ]
+    },
+    {
+      "name": "https://10.12.63.152",
+      "url": "https://10.12.63.152",
+      "timestamp": "2025-12-03T13:32:27.599Z",
+      "location": "Joinville",
+      "status": "ok",
+      "statusCode": 200,
+      "title": "HP » Device Status",
+      "deviceName": "JOI023 | Recepção Fiscal 03",
+      "deviceIp": "10.12.63.152",
+      "machineStatus": "Sleep mode on",
+      "supplies": [
+        {
+          "name": "Cartucho Preto",
+          "level": "80%*"
+        }
+      ],
+      "type": "mono",
+      "trays": [
+        {
+          "name": "Tray 1",
+          "status": "Empty",
+          "capacity": "100 sheets",
+          "size": "Any Size",
+          "type": "Any Type"
+        },
+        {
+          "name": "Tray 2",
+          "status": "OK",
+          "capacity": "550 sheets",
+          "size": "A4",
+          "type": "Plain"
+        },
+        {
+          "name": "Standard bin",
+          "status": "OK",
+          "capacity": "250 sheets",
+          "size": "N/A",
+          "type": "N/A"
+        }
+      ]
+    },
+    {
+      "name": "https://10.12.63.154",
+      "url": "https://10.12.63.154",
+      "timestamp": "2025-12-03T13:32:28.336Z",
+      "location": "Joinville",
+      "status": "ok",
+      "statusCode": 200,
+      "title": "HP » Device Status",
+      "deviceName": "JOI025 | F3 Injetoras",
+      "deviceIp": "10.12.63.154",
+      "machineStatus": "Sleep mode on",
+      "supplies": [
+        {
+          "name": "Cartucho Amarelo",
+          "level": "<10%*"
+        },
+        {
+          "name": "Cartucho Magenta",
+          "level": "30%*"
+        },
+        {
+          "name": "Cartucho Ciano",
+          "level": "50%*"
+        },
+        {
+          "name": "Cartucho Preto",
+          "level": "80%*"
+        },
+        {
+          "name": "Kit Fusor",
+          "level": "90%*"
+        }
+      ],
+      "type": "color",
+      "trays": [
+        {
+          "name": "Tray 1",
+          "status": "Empty",
+          "capacity": "100 sheets",
+          "size": "Any Size",
+          "type": "Any Type"
+        },
+        {
+          "name": "Tray 2",
+          "status": "< 10%",
+          "capacity": "550 sheets",
+          "size": "A4",
+          "type": "Plain"
+        },
+        {
+          "name": "Standard bin",
+          "status": "OK",
+          "capacity": "250 sheets",
+          "size": "N/A",
+          "type": "N/A"
+        }
+      ]
+    },
+    {
+      "name": "https://10.12.63.155",
+      "url": "https://10.12.63.155",
+      "timestamp": "2025-12-03T13:32:27.946Z",
+      "location": "Joinville",
+      "status": "ok",
+      "statusCode": 200,
+      "title": "HP » Device Status",
+      "deviceName": "JOI026 | F2 Inventário Rotativo",
+      "deviceIp": "10.12.63.155",
+      "machineStatus": "Sleep mode on",
+      "supplies": [
+        {
+          "name": "Cartucho Preto",
+          "level": "60%*"
+        }
+      ],
+      "type": "mono",
+      "trays": [
+        {
+          "name": "Tray 1",
+          "status": "Empty",
+          "capacity": "100 sheets",
+          "size": "Any Size",
+          "type": "Any Type"
+        },
+        {
+          "name": "Tray 2",
+          "status": "OK",
+          "capacity": "550 sheets",
+          "size": "A4",
+          "type": "Plain"
+        },
+        {
+          "name": "Standard bin",
+          "status": "OK",
+          "capacity": "250 sheets",
+          "size": "N/A",
+          "type": "N/A"
+        }
+      ]
+    },
+    {
+      "name": "https://10.12.63.156",
+      "url": "https://10.12.63.156",
+      "timestamp": "2025-12-03T13:32:30.461Z",
+      "location": "Joinville",
+      "status": "ok",
+      "statusCode": 200,
+      "title": "HP » Device Status",
+      "deviceName": "JOI027 | F2 Engenharia",
+      "deviceIp": "10.12.63.156",
+      "machineStatus": "Sleep mode on",
+      "supplies": [
+        {
+          "name": "Cartucho Preto",
+          "level": "10%*"
+        }
+      ],
+      "type": "mono",
+      "trays": [
+        {
+          "name": "Tray 1",
+          "status": "Empty",
+          "capacity": "100 sheets",
+          "size": "Any Size",
+          "type": "Any Type"
+        },
+        {
+          "name": "Tray 2",
+          "status": "< 30%",
+          "capacity": "520 sheets",
+          "size": "A4 (210x297 mm)",
+          "type": "Plain"
+        },
+        {
+          "name": "Tray 3",
+          "status": "< 30%",
+          "capacity": "520 sheets",
+          "size": "A3 (297x420 mm)",
+          "type": "Plain"
+        },
+        {
+          "name": "Output bin 1",
+          "status": "OK",
+          "capacity": "550 sheets",
+          "size": "N/A",
+          "type": "N/A"
+        },
+        {
+          "name": "Alternate bin",
+          "status": "OK",
+          "capacity": "50 sheets",
+          "size": "N/A",
+          "type": "N/A"
+        }
+      ]
+    },
+    {
+      "name": "https://10.12.63.157",
+      "url": "https://10.12.63.157",
+      "timestamp": "2025-12-03T13:32:28.687Z",
+      "location": "Joinville",
+      "status": "ok",
+      "statusCode": 200,
+      "title": "HP » Device Status",
+      "deviceName": "JOI028 | Bl. Terc. | Devolução",
+      "deviceIp": "10.12.63.157",
+      "machineStatus": "Sleep mode on",
+      "supplies": [
+        {
+          "name": "Cartucho Preto",
+          "level": "<10%*"
+        }
+      ],
+      "type": "mono",
+      "trays": [
+        {
+          "name": "Tray 1",
+          "status": "Empty",
+          "capacity": "100 sheets",
+          "size": "Any Size",
+          "type": "Any Type"
+        },
+        {
+          "name": "Tray 2",
+          "status": "OK",
+          "capacity": "550 sheets",
+          "size": "A4",
+          "type": "Plain"
+        },
+        {
+          "name": "Standard bin",
+          "status": "OK",
+          "capacity": "250 sheets",
+          "size": "N/A",
+          "type": "N/A"
+        }
+      ]
+    },
+    {
+      "name": "https://10.12.63.158",
+      "url": "https://10.12.63.158",
+      "timestamp": "2025-12-03T13:32:29.002Z",
+      "location": "Joinville",
+      "status": "ok",
+      "statusCode": 200,
+      "title": "HP » Device Status",
+      "deviceName": "JOI029 | F2 Alm A/C Joinville 1",
+      "deviceIp": "10.12.63.158",
+      "machineStatus": "Sleep mode on",
+      "supplies": [
+        {
+          "name": "Cartucho Preto",
+          "level": "100%*"
+        }
+      ],
+      "type": "mono",
+      "trays": [
+        {
+          "name": "Tray 1",
+          "status": "Empty",
+          "capacity": "100 sheets",
+          "size": "Any Size",
+          "type": "Any Type"
+        },
+        {
+          "name": "Tray 2",
+          "status": "OK",
+          "capacity": "550 sheets",
+          "size": "A4",
+          "type": "Any Type"
+        },
+        {
+          "name": "Standard bin",
+          "status": "OK",
+          "capacity": "250 sheets",
+          "size": "N/A",
+          "type": "N/A"
+        }
+      ]
+    },
+    {
+      "name": "https://10.12.63.161",
+      "url": "https://10.12.63.161",
+      "timestamp": "2025-12-03T13:32:29.816Z",
+      "location": "Joinville",
+      "status": "ok",
+      "statusCode": 200,
+      "title": "HP » Device Status",
+      "deviceName": "JOI032 | F2 Pintura",
+      "deviceIp": "10.12.63.161",
+      "machineStatus": "Clean the document feeder area",
+      "supplies": [
+        {
+          "name": "Cartucho Amarelo",
+          "level": "90%*"
+        },
+        {
+          "name": "Cartucho Magenta",
+          "level": "80%*"
+        },
+        {
+          "name": "Cartucho Ciano",
+          "level": "80%*"
+        },
+        {
+          "name": "Cartucho Preto",
+          "level": "60%*"
+        },
+        {
+          "name": "Kit Fusor",
+          "level": "20%*"
+        },
+        {
+          "name": "Kit do Alimentador de Documentos",
+          "level": "100%*"
+        }
+      ],
+      "type": "color",
+      "trays": [
+        {
+          "name": "Tray 1",
+          "status": "Empty",
+          "capacity": "100 sheets",
+          "size": "Any Size",
+          "type": "Any Type"
+        },
+        {
+          "name": "Tray 2",
+          "status": "OK",
+          "capacity": "550 sheets",
+          "size": "A4 (210x297 mm)",
+          "type": "Plain"
+        },
+        {
+          "name": "Standard bin",
+          "status": "OK",
+          "capacity": "250 sheets",
+          "size": "N/A",
+          "type": "N/A"
+        }
+      ]
+    },
+    {
+      "name": "https://10.12.63.162",
+      "url": "https://10.12.63.162",
+      "timestamp": "2025-12-03T13:32:29.867Z",
+      "location": "Joinville",
+      "status": "ok",
+      "statusCode": 200,
+      "title": "HP » Device Status",
+      "deviceName": "JOI033 | F2 Seg. Trabalho",
+      "deviceIp": "10.12.63.162",
+      "machineStatus": "Sleep mode on",
+      "supplies": [
+        {
+          "name": "Cartucho Preto",
+          "level": "50%*"
+        },
+        {
+          "name": "Kit do Alimentador de Documentos",
+          "level": "60%*"
+        }
+      ],
+      "type": "mono",
+      "trays": [
+        {
+          "name": "Tray 1",
+          "status": "Empty",
+          "capacity": "100 sheets",
+          "size": "Any Size",
+          "type": "Any Type"
+        },
+        {
+          "name": "Tray 2",
+          "status": "OK",
+          "capacity": "550 sheets",
+          "size": "A4 (210x297 mm)",
+          "type": "Plain"
+        },
+        {
+          "name": "Standard bin",
+          "status": "OK",
+          "capacity": "250 sheets",
+          "size": "N/A",
+          "type": "N/A"
+        }
+      ]
+    },
+    {
+      "name": "https://10.12.63.163",
+      "url": "https://10.12.63.163",
+      "timestamp": "2025-12-03T13:32:31.270Z",
+      "location": "Joinville",
+      "status": "ok",
+      "statusCode": 200,
+      "title": "HP » Device Status",
+      "deviceName": "JOI087 | F2 LAP",
+      "deviceIp": "10.12.63.163",
+      "machineStatus": "Sleep mode on",
+      "supplies": [
+        {
+          "name": "Cartucho Amarelo",
+          "level": "70%*"
+        },
+        {
+          "name": "Cartucho Magenta",
+          "level": "50%*"
+        },
+        {
+          "name": "Cartucho Ciano",
+          "level": "60%*"
+        },
+        {
+          "name": "Cartucho Preto",
+          "level": "10%*"
+        }
+      ],
+      "type": "color",
+      "trays": [
+        {
+          "name": "Tray 1",
+          "status": "Empty",
+          "capacity": "100 sheets",
+          "size": "Any Size",
+          "type": "Any Type"
+        },
+        {
+          "name": "Tray 2",
+          "status": "70 - 100%",
+          "capacity": "520 sheets",
+          "size": "A4 (210x297 mm)",
+          "type": "Plain"
+        },
+        {
+          "name": "Tray 3",
+          "status": "30 - 70%",
+          "capacity": "520 sheets",
+          "size": "A3 (297x420 mm)",
+          "type": "Plain"
+        },
+        {
+          "name": "Standard bin",
+          "status": "OK",
+          "capacity": "500 sheets",
+          "size": "N/A",
+          "type": "N/A"
+        }
+      ]
+    },
+    {
+      "name": "https://10.12.63.164",
+      "url": "https://10.12.63.164",
+      "timestamp": "2025-12-03T13:32:30.484Z",
+      "location": "Joinville",
+      "status": "ok",
+      "statusCode": 200,
+      "title": "HP » Device Status",
+      "deviceName": "JOI035 | Manut. Utilidades",
+      "deviceIp": "10.12.63.164",
+      "machineStatus": "Tray 4 empty: Plain, A4",
+      "supplies": [
+        {
+          "name": "Cartucho Amarelo",
+          "level": "70%*"
+        },
+        {
+          "name": "Cartucho Magenta",
+          "level": "80%*"
+        },
+        {
+          "name": "Cartucho Ciano",
+          "level": "70%*"
+        },
+        {
+          "name": "Cartucho Preto",
+          "level": "20%*"
+        },
+        {
+          "name": "Kit do Alimentador de Documentos",
+          "level": "100%*"
+        }
+      ],
+      "type": "color",
+      "trays": [
+        {
+          "name": "Tray 1",
+          "status": "Empty",
+          "capacity": "100 sheets",
+          "size": "Any Size",
+          "type": "Any Type"
+        },
+        {
+          "name": "Tray 2",
+          "status": "< 30%",
+          "capacity": "520 sheets",
+          "size": "A4 ▭ (210x297 mm)",
+          "type": "Plain"
+        },
+        {
+          "name": "Tray 3",
+          "status": "30 - 70%",
+          "capacity": "520 sheets",
+          "size": "A4 (210x297 mm)",
+          "type": "Plain"
+        },
+        {
+          "name": "Tray 4",
+          "status": "Empty",
+          "capacity": "520 sheets",
+          "size": "A4 (210x297 mm)",
+          "type": "Plain"
+        },
+        {
+          "name": "Tray 5",
+          "status": "30 - 70%",
+          "capacity": "520 sheets",
+          "size": "A3 (297x420 mm)",
+          "type": "Plain"
+        },
+        {
+          "name": "Standard bin",
+          "status": "OK",
+          "capacity": "500 sheets",
+          "size": "N/A",
+          "type": "N/A"
+        }
+      ]
+    },
+    {
+      "name": "https://10.12.63.165",
+      "url": "https://10.12.63.165",
+      "timestamp": "2025-12-03T13:32:30.324Z",
+      "location": "Joinville",
+      "status": "ok",
+      "statusCode": 200,
+      "title": "HP » Device Status",
+      "deviceName": "JOIPRT036 | Bombeiros | Brigada",
+      "deviceIp": "10.12.63.165",
+      "machineStatus": "Sleep mode on",
+      "supplies": [
+        {
+          "name": "Cartucho Preto",
+          "level": "70%*"
+        },
+        {
+          "name": "Kit do Alimentador de Documentos",
+          "level": "60%*"
+        }
+      ],
+      "type": "mono",
+      "trays": [
+        {
+          "name": "Tray 1",
+          "status": "Empty",
+          "capacity": "100 sheets",
+          "size": "Any Size",
+          "type": "Any Type"
+        },
+        {
+          "name": "Tray 2",
+          "status": "OK",
+          "capacity": "550 sheets",
+          "size": "A4 (210x297 mm)",
+          "type": "Plain"
+        },
+        {
+          "name": "Standard bin",
+          "status": "OK",
+          "capacity": "250 sheets",
+          "size": "N/A",
+          "type": "N/A"
+        }
+      ]
+    },
+    {
+      "name": "https://10.12.63.166",
+      "url": "https://10.12.63.166",
+      "timestamp": "2025-12-03T13:32:30.176Z",
+      "location": "Joinville",
+      "status": "ok",
+      "statusCode": 200,
+      "title": "HP » Device Status",
+      "deviceName": "JOI082 | Logística Interna",
+      "deviceIp": "10.12.63.166",
+      "machineStatus": "Ready",
+      "supplies": [
+        {
+          "name": "Cartucho Amarelo",
+          "level": "100%*"
+        },
+        {
+          "name": "Cartucho Magenta",
+          "level": "100%*"
+        },
+        {
+          "name": "Cartucho Ciano",
+          "level": "80%*"
+        },
+        {
+          "name": "Cartucho Preto",
+          "level": "10%*"
+        },
+        {
+          "name": "Kit do Alimentador de Documentos",
+          "level": "100%*"
+        }
+      ],
+      "type": "color",
+      "trays": [
+        {
+          "name": "Tray 1",
+          "status": "Empty",
+          "capacity": "100 sheets",
+          "size": "Any Size",
+          "type": "Any Type"
+        },
+        {
+          "name": "Tray 2",
+          "status": "< 30%",
+          "capacity": "520 sheets",
+          "size": "A4 (210x297 mm)",
+          "type": "Plain"
+        },
+        {
+          "name": "Tray 3",
+          "status": "< 30%",
+          "capacity": "520 sheets",
+          "size": "A3 (297x420 mm)",
+          "type": "Plain"
+        },
+        {
+          "name": "Standard bin",
+          "status": "OK",
+          "capacity": "500 sheets",
+          "size": "N/A",
+          "type": "N/A"
+        }
+      ]
+    },
+    {
+      "name": "https://10.12.63.167",
+      "url": "https://10.12.63.167",
+      "timestamp": "2025-12-03T13:32:30.512Z",
+      "location": "Joinville",
+      "status": "ok",
+      "statusCode": 200,
+      "title": "HP » Device Status",
+      "deviceName": "Click RH | Quiosque 04",
+      "deviceIp": "10.12.63.167",
+      "machineStatus": "Sleep mode on",
+      "supplies": [
+        {
+          "name": "Cartucho Preto",
+          "level": "50%*"
+        }
+      ],
+      "type": "mono",
+      "trays": [
+        {
+          "name": "Tray 1",
+          "status": "Empty",
+          "capacity": "100 sheets",
+          "size": "Any Size",
+          "type": "Any Type"
+        },
+        {
+          "name": "Tray 2",
+          "status": "OK",
+          "capacity": "550 sheets",
+          "size": "A4",
+          "type": "Plain"
+        },
+        {
+          "name": "Standard bin",
+          "status": "OK",
+          "capacity": "250 sheets",
+          "size": "N/A",
+          "type": "N/A"
+        }
+      ]
+    },
+    {
+      "name": "https://10.12.63.168",
+      "url": "https://10.12.63.168",
+      "timestamp": "2025-12-03T13:32:31.188Z",
+      "location": "Joinville",
+      "status": "ok",
+      "statusCode": 200,
+      "title": "HP » Device Status",
+      "deviceName": "JOI039 | Ambulatório Consul. 03",
+      "deviceIp": "10.12.63.168",
+      "machineStatus": "Sleep mode on",
+      "supplies": [
+        {
+          "name": "Cartucho Preto",
+          "level": "40%*"
+        },
+        {
+          "name": "Kit do Alimentador de Documentos",
+          "level": "100%*"
+        }
+      ],
+      "type": "mono",
+      "trays": [
+        {
+          "name": "Tray 1",
+          "status": "Empty",
+          "capacity": "100 sheets",
+          "size": "Any Size",
+          "type": "Any Type"
+        },
+        {
+          "name": "Tray 2",
+          "status": "OK",
+          "capacity": "550 sheets",
+          "size": "A4 (210x297 mm)",
+          "type": "Plain"
+        },
+        {
+          "name": "Standard bin",
+          "status": "OK",
+          "capacity": "250 sheets",
+          "size": "N/A",
+          "type": "N/A"
+        }
+      ]
+    },
+    {
+      "name": "https://10.12.63.169",
+      "url": "https://10.12.63.169",
+      "timestamp": "2025-12-03T13:32:31.260Z",
+      "location": "Joinville",
+      "status": "ok",
+      "statusCode": 200,
+      "title": "HP » Device Status",
+      "deviceName": "Click RH | Quiosque 02",
+      "deviceIp": "10.12.63.169",
+      "machineStatus": "Sleep mode on",
+      "supplies": [
+        {
+          "name": "Não Original HP Cartucho Preto",
+          "level": "20%*"
+        }
+      ],
+      "type": "mono",
+      "trays": [
+        {
+          "name": "Tray 1",
+          "status": "Empty",
+          "capacity": "100 sheets",
+          "size": "Any Size",
+          "type": "Any Type"
+        },
+        {
+          "name": "Tray 2",
+          "status": "OK",
+          "capacity": "550 sheets",
+          "size": "A4",
+          "type": "Any Type"
+        },
+        {
+          "name": "Standard bin",
+          "status": "OK",
+          "capacity": "250 sheets",
+          "size": "N/A",
+          "type": "N/A"
+        }
+      ]
+    },
+    {
+      "name": "https://10.12.63.170",
+      "url": "https://10.12.63.170",
+      "timestamp": "2025-12-03T13:32:30.977Z",
+      "location": "Joinville",
+      "status": "ok",
+      "statusCode": 200,
+      "title": "HP » Device Status",
+      "deviceName": "JOI041 | F2 RM e Componentes",
+      "deviceIp": "10.12.63.170",
+      "machineStatus": "Sleep mode on",
+      "supplies": [
+        {
+          "name": "Cartucho Preto",
+          "level": "80%*"
+        }
+      ],
+      "type": "mono",
+      "trays": [
+        {
+          "name": "Tray 1",
+          "status": "Empty",
+          "capacity": "100 sheets",
+          "size": "Any Size",
+          "type": "Any Type"
+        },
+        {
+          "name": "Tray 2",
+          "status": "OK",
+          "capacity": "550 sheets",
+          "size": "A4",
+          "type": "Plain"
+        },
+        {
+          "name": "Standard bin",
+          "status": "OK",
+          "capacity": "250 sheets",
+          "size": "N/A",
+          "type": "N/A"
+        }
+      ]
+    },
+    {
+      "name": "https://10.12.63.171",
+      "url": "https://10.12.63.171",
+      "timestamp": "2025-12-03T13:32:30.931Z",
+      "location": "Joinville",
+      "status": "ok",
+      "statusCode": 200,
+      "title": "HP » Device Status",
+      "deviceName": "JOI042 | Seg. Patrimonial",
+      "deviceIp": "10.12.63.171",
+      "machineStatus": "Sleep mode on",
+      "supplies": [
+        {
+          "name": "Cartucho Preto",
+          "level": "10%*"
+        },
+        {
+          "name": "Kit do Alimentador de Documentos",
+          "level": "--%*"
+        }
+      ],
+      "type": "mono",
+      "trays": [
+        {
+          "name": "Tray 1",
+          "status": "Empty",
+          "capacity": "100 sheets",
+          "size": "Any Size",
+          "type": "Any Type"
+        },
+        {
+          "name": "Tray 2",
+          "status": "OK",
+          "capacity": "550 sheets",
+          "size": "A4 (210x297 mm)",
+          "type": "Plain"
+        },
+        {
+          "name": "Standard bin",
+          "status": "OK",
+          "capacity": "250 sheets",
+          "size": "N/A",
+          "type": "N/A"
+        }
+      ]
+    },
+    {
+      "name": "https://10.12.63.172",
+      "url": "https://10.12.63.172",
+      "timestamp": "2025-12-03T13:32:31.463Z",
+      "location": "Joinville",
+      "status": "ok",
+      "statusCode": 200,
+      "title": "HP » Device Status",
+      "deviceName": "JOI043 | F3 Esc. Central | Mezan",
+      "deviceIp": "10.12.63.172",
+      "machineStatus": "Sleep mode on",
+      "supplies": [
+        {
+          "name": "Cartucho Amarelo",
+          "level": "20%*"
+        },
+        {
+          "name": "Cartucho Magenta",
+          "level": "30%*"
+        },
+        {
+          "name": "Cartucho Ciano",
+          "level": "<10%*"
+        },
+        {
+          "name": "Cartucho Preto",
+          "level": "20%*"
+        },
+        {
+          "name": "Cilindro Amarelo",
+          "level": "90%*"
+        },
+        {
+          "name": "Cilindro Magenta",
+          "level": "90%*"
+        },
+        {
+          "name": "Cilindro Ciano",
+          "level": "90%*"
+        },
+        {
+          "name": "Cilindro Preto",
+          "level": "90%*"
+        },
+        {
+          "name": "Kit Fusor",
+          "level": "100%*"
+        },
+        {
+          "name": "Kit do Alimentador de Documentos",
+          "level": "100%*"
+        }
+      ],
+      "type": "color",
+      "trays": [
+        {
+          "name": "Tray 1",
+          "status": "Empty",
+          "capacity": "100 sheets",
+          "size": "Any Size",
+          "type": "Any Type"
+        },
+        {
+          "name": "Tray 2",
+          "status": "20 - 40%",
+          "capacity": "550 sheets",
+          "size": "A4 (210x297 mm)",
+          "type": "Plain"
+        },
+        {
+          "name": "Standard bin",
+          "status": "OK",
+          "capacity": "250 sheets",
+          "size": "N/A",
+          "type": "N/A"
+        }
+      ]
+    },
+    {
+      "name": "https://10.12.63.173",
+      "url": "https://10.12.63.173",
+      "timestamp": "2025-12-03T13:32:31.180Z",
+      "location": "Joinville",
+      "status": "ok",
+      "statusCode": 200,
+      "title": "HP » Device Status",
+      "deviceName": "JOI044 | Bl3 LDAP",
+      "deviceIp": "10.12.63.173",
+      "machineStatus": "Sleep mode on",
+      "supplies": [
+        {
+          "name": "Cartucho Preto",
+          "level": "60%*"
+        }
+      ],
+      "type": "mono",
+      "trays": [
+        {
+          "name": "Tray 1",
+          "status": "Empty",
+          "capacity": "100 sheets",
+          "size": "Any Size",
+          "type": "Any Type"
+        },
+        {
+          "name": "Tray 2",
+          "status": "< 30%",
+          "capacity": "520 sheets",
+          "size": "A4 (210x297 mm)",
+          "type": "Plain"
+        },
+        {
+          "name": "Tray 3",
+          "status": "< 30%",
+          "capacity": "520 sheets",
+          "size": "A3 (297x420 mm)",
+          "type": "Plain"
+        },
+        {
+          "name": "Standard bin",
+          "status": "OK",
+          "capacity": "500 sheets",
+          "size": "N/A",
+          "type": "N/A"
+        }
+      ]
+    },
+    {
+      "name": "https://10.12.63.174",
+      "url": "https://10.12.63.174",
+      "timestamp": "2025-12-03T13:32:31.195Z",
+      "location": "Joinville",
+      "status": "ok",
+      "statusCode": 200,
+      "title": "HP » Device Status",
+      "deviceName": "JOI045 | F2 | Man. Plásticos",
+      "deviceIp": "10.12.63.174",
+      "machineStatus": "Sleep mode on",
+      "supplies": [
+        {
+          "name": "Cartucho Preto",
+          "level": "50%*"
+        }
+      ],
+      "type": "mono",
+      "trays": [
+        {
+          "name": "Tray 1",
+          "status": "Empty",
+          "capacity": "100 sheets",
+          "size": "Any Size",
+          "type": "Any Type"
+        },
+        {
+          "name": "Tray 2",
+          "status": "OK",
+          "capacity": "550 sheets",
+          "size": "A4",
+          "type": "Plain"
+        },
+        {
+          "name": "Standard bin",
+          "status": "OK",
+          "capacity": "250 sheets",
+          "size": "N/A",
+          "type": "N/A"
+        }
+      ]
+    },
+    {
+      "name": "https://10.12.63.175",
+      "url": "https://10.12.63.175",
+      "timestamp": "2025-12-03T13:32:31.246Z",
+      "location": "Joinville",
+      "status": "ok",
+      "statusCode": 200,
+      "title": "HP » Device Status",
+      "deviceName": "Click RH | Quiosque 06",
+      "deviceIp": "10.12.63.175",
+      "machineStatus": "Sleep mode on",
+      "supplies": [
+        {
+          "name": "Cartucho Preto",
+          "level": "70%*"
+        }
+      ],
+      "type": "mono",
+      "trays": [
+        {
+          "name": "Tray 1",
+          "status": "Empty",
+          "capacity": "100 sheets",
+          "size": "Any Size",
+          "type": "Any Type"
+        },
+        {
+          "name": "Tray 2",
+          "status": "OK",
+          "capacity": "550 sheets",
+          "size": "A4",
+          "type": "Plain"
+        },
+        {
+          "name": "Standard bin",
+          "status": "OK",
+          "capacity": "250 sheets",
+          "size": "N/A",
+          "type": "N/A"
+        }
+      ]
+    },
+    {
+      "name": "https://10.12.63.176",
+      "url": "https://10.12.63.176",
+      "timestamp": "2025-12-03T13:32:31.329Z",
+      "location": "Joinville",
+      "status": "ok",
+      "statusCode": 200,
+      "title": "HP » Device Status",
+      "deviceName": "HP LaserJet MFP E52645",
+      "deviceIp": "10.12.63.176",
+      "machineStatus": "48.A1.01 Job accounting service error",
+      "supplies": [
+        {
+          "name": "Cartucho Preto",
+          "level": "40%*"
+        },
+        {
+          "name": "Kit do Alimentador de Documentos",
+          "level": "100%*"
+        }
+      ],
+      "type": "mono",
+      "trays": [
+        {
+          "name": "Tray 1",
+          "status": "Empty",
+          "capacity": "100 sheets",
+          "size": "Any Size",
+          "type": "Any Type"
+        },
+        {
+          "name": "Tray 2",
+          "status": "OK",
+          "capacity": "550 sheets",
+          "size": "A4 (210x297 mm)",
+          "type": "Plain"
+        },
+        {
+          "name": "Standard bin",
+          "status": "OK",
+          "capacity": "250 sheets",
+          "size": "N/A",
+          "type": "N/A"
+        }
+      ]
+    },
+    {
+      "name": "https://10.12.63.177",
+      "url": "https://10.12.63.177",
+      "timestamp": "2025-12-03T13:32:31.542Z",
+      "location": "Joinville",
+      "status": "ok",
+      "statusCode": 200,
+      "title": "HP » Device Status",
+      "deviceName": "Click RH | Quiosque 03",
+      "deviceIp": "10.12.63.177",
+      "machineStatus": "Sleep mode on",
+      "supplies": [
+        {
+          "name": "Cartucho Preto",
+          "level": "100%*"
+        }
+      ],
+      "type": "mono",
+      "trays": [
+        {
+          "name": "Tray 1",
+          "status": "Empty",
+          "capacity": "100 sheets",
+          "size": "Any Size",
+          "type": "Any Type"
+        },
+        {
+          "name": "Tray 2",
+          "status": "OK",
+          "capacity": "550 sheets",
+          "size": "A4",
+          "type": "Plain"
+        },
+        {
+          "name": "Standard bin",
+          "status": "OK",
+          "capacity": "250 sheets",
+          "size": "N/A",
+          "type": "N/A"
+        }
+      ]
+    },
+    {
+      "name": "https://10.12.63.178",
+      "url": "https://10.12.63.178",
+      "timestamp": "2025-12-03T13:32:31.506Z",
+      "location": "Joinville",
+      "status": "ok",
+      "statusCode": 200,
+      "title": "HP » Device Status",
+      "deviceName": "JOI049 | Nivel 05 Comunicação",
+      "deviceIp": "10.12.63.178",
+      "machineStatus": "Tray 2 empty: Plain, A4",
+      "supplies": [
+        {
+          "name": "Cartucho Amarelo",
+          "level": "80%*"
+        },
+        {
+          "name": "Cartucho Magenta",
+          "level": "100%*"
+        },
+        {
+          "name": "Cartucho Ciano",
+          "level": "40%*"
+        },
+        {
+          "name": "Cartucho Preto",
+          "level": "30%*"
+        },
+        {
+          "name": "Kit Fusor",
+          "level": "100%*"
+        },
+        {
+          "name": "Kit do Alimentador de Documentos",
+          "level": "100%*"
+        }
+      ],
+      "type": "color",
+      "trays": [
+        {
+          "name": "Tray 1",
+          "status": "OK",
+          "capacity": "100 sheets",
+          "size": "Any Size",
+          "type": "Any Type"
+        },
+        {
+          "name": "Tray 2",
+          "status": "Empty",
+          "capacity": "550 sheets",
+          "size": "A4 (210x297 mm)",
+          "type": "Plain"
+        },
+        {
+          "name": "Standard bin",
+          "status": "OK",
+          "capacity": "250 sheets",
+          "size": "N/A",
+          "type": "N/A"
+        }
+      ]
+    },
+    {
+      "name": "https://10.12.63.179",
+      "url": "https://10.12.63.179",
+      "timestamp": "2025-12-03T13:32:31.593Z",
+      "location": "Joinville",
+      "status": "ok",
+      "statusCode": 200,
+      "title": "HP » Device Status",
+      "deviceName": "JOI050 | F3 Manutenção Ind.",
+      "deviceIp": "10.12.63.179",
+      "machineStatus": "Sleep mode on",
+      "supplies": [
+        {
+          "name": "Cartucho Preto",
+          "level": "10%*"
+        },
+        {
+          "name": "Kit do Alimentador de Documentos",
+          "level": "100%*"
+        }
+      ],
+      "type": "mono",
+      "trays": [
+        {
+          "name": "Tray 1",
+          "status": "Empty",
+          "capacity": "100 sheets",
+          "size": "Any Size",
+          "type": "Any Type"
+        },
+        {
+          "name": "Tray 2",
+          "status": "OK",
+          "capacity": "550 sheets",
+          "size": "A4 (210x297 mm)",
+          "type": "Plain"
+        },
+        {
+          "name": "Standard bin",
+          "status": "OK",
+          "capacity": "250 sheets",
+          "size": "N/A",
+          "type": "N/A"
+        }
+      ]
+    },
+    {
+      "name": "https://10.12.63.180",
+      "url": "https://10.12.63.180",
+      "timestamp": "2025-12-03T13:32:31.773Z",
+      "location": "Joinville",
+      "status": "ok",
+      "statusCode": 200,
+      "title": "HP » Device Status",
+      "deviceName": "JOI051 | Adm N4",
+      "deviceIp": "10.12.63.180",
+      "machineStatus": "Sleep mode on",
+      "supplies": [
+        {
+          "name": "Cartucho Preto",
+          "level": "40%*"
+        },
+        {
+          "name": "Kit do Alimentador de Documentos",
+          "level": "100%*"
+        }
+      ],
+      "type": "mono",
+      "trays": [
+        {
+          "name": "Tray 1",
+          "status": "Empty",
+          "capacity": "100 sheets",
+          "size": "Any Size",
+          "type": "Any Type"
+        },
+        {
+          "name": "Tray 2",
+          "status": "OK",
+          "capacity": "550 sheets",
+          "size": "A4 (210x297 mm)",
+          "type": "Plain"
+        },
+        {
+          "name": "Standard bin",
+          "status": "OK",
+          "capacity": "250 sheets",
+          "size": "N/A",
+          "type": "N/A"
+        }
+      ]
+    },
+    {
+      "name": "https://10.12.63.182",
+      "url": "https://10.12.63.182",
+      "timestamp": "2025-12-03T13:32:31.556Z",
+      "location": "Joinville",
+      "status": "ok",
+      "statusCode": 200,
+      "title": "HP » Device Status",
+      "deviceName": "JOI053 | Grêmio",
+      "deviceIp": "10.12.63.182",
+      "machineStatus": "Sleep mode on",
+      "supplies": [
+        {
+          "name": "Cartucho Preto",
+          "level": "20%*"
+        }
+      ],
+      "type": "mono",
+      "trays": [
+        {
+          "name": "Tray 1",
+          "status": "Empty",
+          "capacity": "100 sheets",
+          "size": "Any Size",
+          "type": "Any Type"
+        },
+        {
+          "name": "Tray 2",
+          "status": "OK",
+          "capacity": "550 sheets",
+          "size": "A4",
+          "type": "Plain"
+        },
+        {
+          "name": "Standard bin",
+          "status": "OK",
+          "capacity": "250 sheets",
+          "size": "N/A",
+          "type": "N/A"
+        }
+      ]
+    },
+    {
+      "name": "https://10.12.63.183",
+      "url": "https://10.12.63.183",
+      "timestamp": "2025-12-03T13:32:31.633Z",
+      "location": "Joinville",
+      "status": "ok",
+      "statusCode": 200,
+      "title": "HP » Device Status",
+      "deviceName": "JOI054 | F2 Almoxarifado Ind",
+      "deviceIp": "10.12.63.183",
+      "machineStatus": "Sleep mode on",
+      "supplies": [
+        {
+          "name": "Cartucho Preto",
+          "level": "20%*"
+        },
+        {
+          "name": "Kit do Alimentador de Documentos",
+          "level": "100%*"
+        }
+      ],
+      "type": "mono",
+      "trays": [
+        {
+          "name": "Tray 1",
+          "status": "Empty",
+          "capacity": "100 sheets",
+          "size": "Any Size",
+          "type": "Any Type"
+        },
+        {
+          "name": "Tray 2",
+          "status": "OK",
+          "capacity": "550 sheets",
+          "size": "A4 (210x297 mm)",
+          "type": "Plain"
+        },
+        {
+          "name": "Standard bin",
+          "status": "OK",
+          "capacity": "250 sheets",
+          "size": "N/A",
+          "type": "N/A"
+        }
+      ]
+    },
+    {
+      "name": "https://10.12.63.184",
+      "url": "https://10.12.63.184",
+      "timestamp": "2025-12-03T13:32:31.576Z",
+      "location": "Joinville",
+      "status": "ok",
+      "statusCode": 200,
+      "title": "HP » Device Status",
+      "deviceName": "JOI055 | Adm N2 Cocção",
+      "deviceIp": "10.12.63.184",
+      "machineStatus": "Ready",
+      "supplies": [
+        {
+          "name": "Cartucho Preto",
+          "level": "10%*"
+        }
+      ],
+      "type": "mono",
+      "trays": [
+        {
+          "name": "Tray 1",
+          "status": "Empty",
+          "capacity": "100 sheets",
+          "size": "Any Size",
+          "type": "Any Type"
+        },
+        {
+          "name": "Tray 2",
+          "status": "30 - 70%",
+          "capacity": "520 sheets",
+          "size": "A4 ▭ (210x297 mm)",
+          "type": "Plain"
+        },
+        {
+          "name": "Tray 3",
+          "status": "< 30%",
+          "capacity": "520 sheets",
+          "size": "Ledger (11x17)",
+          "type": "Plain"
+        },
+        {
+          "name": "Standard bin",
+          "status": "OK",
+          "capacity": "500 sheets",
+          "size": "N/A",
+          "type": "N/A"
+        }
+      ]
+    },
+    {
+      "name": "https://10.12.63.185",
+      "url": "https://10.12.63.185",
+      "timestamp": "2025-12-03T13:32:31.656Z",
+      "location": "Joinville",
+      "status": "ok",
+      "statusCode": 200,
+      "title": "HP » Device Status",
+      "deviceName": "JOI056 | Adm N5 Communication",
+      "deviceIp": "10.12.63.185",
+      "machineStatus": "Sleep mode on",
+      "supplies": [
+        {
+          "name": "Cartucho Preto",
+          "level": "80%*"
+        },
+        {
+          "name": "Kit do Alimentador de Documentos",
+          "level": "100%*"
+        }
+      ],
+      "type": "mono",
+      "trays": [
+        {
+          "name": "Tray 1",
+          "status": "Empty",
+          "capacity": "100 sheets",
+          "size": "Any Size",
+          "type": "Any Type"
+        },
+        {
+          "name": "Tray 2",
+          "status": "OK",
+          "capacity": "550 sheets",
+          "size": "A4 (210x297 mm)",
+          "type": "Plain"
+        },
+        {
+          "name": "Standard bin",
+          "status": "OK",
+          "capacity": "250 sheets",
+          "size": "N/A",
+          "type": "N/A"
+        }
+      ]
+    },
+    {
+      "name": "https://10.12.63.186",
+      "url": "https://10.12.63.186",
+      "timestamp": "2025-12-03T13:32:32.156Z",
+      "location": "Joinville",
+      "status": "ok",
+      "statusCode": 200,
+      "title": "HP » Device Status",
+      "deviceName": "JOI057 | F3 Supervisao Pintura",
+      "deviceIp": "10.12.63.186",
+      "machineStatus": "Sleep mode on",
+      "supplies": [
+        {
+          "name": "Cartucho Amarelo",
+          "level": "90%*"
+        },
+        {
+          "name": "Cartucho Magenta",
+          "level": "90%*"
+        },
+        {
+          "name": "Cartucho Ciano",
+          "level": "90%*"
+        },
+        {
+          "name": "Cartucho Preto",
+          "level": "70%*"
+        },
+        {
+          "name": "Kit Fusor",
+          "level": "100%*"
+        }
+      ],
+      "type": "color",
+      "trays": [
+        {
+          "name": "Tray 1",
+          "status": "Empty",
+          "capacity": "100 sheets",
+          "size": "Any Size",
+          "type": "Any Type"
+        },
+        {
+          "name": "Tray 2",
+          "status": "10 - 20%",
+          "capacity": "550 sheets",
+          "size": "A4",
+          "type": "Plain"
+        },
+        {
+          "name": "Standard bin",
+          "status": "OK",
+          "capacity": "250 sheets",
+          "size": "N/A",
+          "type": "N/A"
+        }
+      ]
+    },
+    {
+      "name": "https://10.12.63.187",
+      "url": "https://10.12.63.187",
+      "timestamp": "2025-12-03T13:32:35.150Z",
+      "location": "Joinville",
+      "status": "ok",
+      "statusCode": 200,
+      "title": "HP » Device Status",
+      "deviceName": "JOI030 | Portaria Caminhões",
+      "deviceIp": "10.12.63.187",
+      "machineStatus": "Ready",
+      "supplies": [
+        {
+          "name": "Cartucho Preto",
+          "level": "100%*"
+        },
+        {
+          "name": "Kit do Alimentador de Documentos",
+          "level": "80%*"
+        }
+      ],
+      "type": "mono",
+      "trays": [
+        {
+          "name": "Tray 1",
+          "status": "Empty",
+          "capacity": "100 sheets",
+          "size": "Any Size",
+          "type": "Any Type"
+        },
+        {
+          "name": "Tray 2",
+          "status": "OK",
+          "capacity": "550 sheets",
+          "size": "A4 (210x297 mm)",
+          "type": "Plain"
+        },
+        {
+          "name": "Standard bin",
+          "status": "OK",
+          "capacity": "250 sheets",
+          "size": "N/A",
+          "type": "N/A"
+        }
+      ]
+    },
+    {
+      "name": "https://10.12.63.188",
+      "url": "https://10.12.63.188",
+      "timestamp": "2025-12-03T13:32:31.769Z",
+      "location": "Joinville",
+      "status": "ok",
+      "statusCode": 200,
+      "title": "HP » Device Status",
+      "deviceName": "JOI059 | F3 | Componentes",
+      "deviceIp": "10.12.63.188",
+      "machineStatus": "Sleep mode on",
+      "supplies": [
+        {
+          "name": "Cartucho Preto",
+          "level": "<10%*"
+        }
+      ],
+      "type": "mono",
+      "trays": [
+        {
+          "name": "Tray 1",
+          "status": "Empty",
+          "capacity": "100 sheets",
+          "size": "Any Size",
+          "type": "Any Type"
+        },
+        {
+          "name": "Tray 2",
+          "status": "OK",
+          "capacity": "550 sheets",
+          "size": "A4",
+          "type": "Plain"
+        },
+        {
+          "name": "Standard bin",
+          "status": "OK",
+          "capacity": "250 sheets",
+          "size": "N/A",
+          "type": "N/A"
+        }
+      ]
+    },
+    {
+      "name": "https://10.12.63.189",
+      "url": "https://10.12.63.189",
+      "timestamp": "2025-12-03T13:32:31.978Z",
+      "location": "Joinville",
+      "status": "ok",
+      "statusCode": 200,
+      "title": "HP » Device Status",
+      "deviceName": "JOI060 | F2 Qualidade Insp. Rec.",
+      "deviceIp": "10.12.63.189",
+      "machineStatus": "Sleep mode on",
+      "supplies": [
+        {
+          "name": "Cartucho Preto",
+          "level": "10%*"
+        }
+      ],
+      "type": "mono",
+      "trays": [
+        {
+          "name": "Tray 1",
+          "status": "Empty",
+          "capacity": "100 sheets",
+          "size": "Any Size",
+          "type": "Any Type"
+        },
+        {
+          "name": "Tray 2",
+          "status": "OK",
+          "capacity": "550 sheets",
+          "size": "A4",
+          "type": "Plain"
+        },
+        {
+          "name": "Standard bin",
+          "status": "OK",
+          "capacity": "250 sheets",
+          "size": "N/A",
+          "type": "N/A"
+        }
+      ]
+    },
+    {
+      "name": "https://10.12.63.190",
+      "url": "https://10.12.63.190",
+      "timestamp": "2025-12-03T13:32:31.993Z",
+      "location": "Joinville",
+      "status": "ok",
+      "statusCode": 200,
+      "title": "HP » Device Status",
+      "deviceName": "JOI061 | Ambulatório Consul. 01",
+      "deviceIp": "10.12.63.190",
+      "machineStatus": "Sleep mode on",
+      "supplies": [
+        {
+          "name": "Cartucho Preto",
+          "level": "30%*"
+        },
+        {
+          "name": "Kit do Alimentador de Documentos",
+          "level": "80%*"
+        }
+      ],
+      "type": "mono",
+      "trays": [
+        {
+          "name": "Tray 1",
+          "status": "Empty",
+          "capacity": "100 sheets",
+          "size": "Any Size",
+          "type": "Any Type"
+        },
+        {
+          "name": "Tray 2",
+          "status": "OK",
+          "capacity": "550 sheets",
+          "size": "A4 (210x297 mm)",
+          "type": "Plain"
+        },
+        {
+          "name": "Standard bin",
+          "status": "OK",
+          "capacity": "250 sheets",
+          "size": "N/A",
+          "type": "N/A"
+        }
+      ]
+    },
+    {
+      "name": "https://10.12.63.191",
+      "url": "https://10.12.63.191",
+      "timestamp": "2025-12-03T13:32:32.004Z",
+      "location": "Joinville",
+      "status": "ok",
+      "statusCode": 200,
+      "title": "HP » Device Status",
+      "deviceName": "JOI062 | F2 DOPP",
+      "deviceIp": "10.12.63.191",
+      "machineStatus": "Sleep mode on",
+      "supplies": [
+        {
+          "name": "Cartucho Preto",
+          "level": "50%*"
+        },
+        {
+          "name": "Kit do Alimentador de Documentos",
+          "level": "100%*"
+        }
+      ],
+      "type": "mono",
+      "trays": [
+        {
+          "name": "Tray 1",
+          "status": "Empty",
+          "capacity": "100 sheets",
+          "size": "Any Size",
+          "type": "Any Type"
+        },
+        {
+          "name": "Tray 2",
+          "status": "OK",
+          "capacity": "550 sheets",
+          "size": "A4 (210x297 mm)",
+          "type": "Plain"
+        },
+        {
+          "name": "Standard bin",
+          "status": "OK",
+          "capacity": "250 sheets",
+          "size": "N/A",
+          "type": "N/A"
+        }
+      ]
+    },
+    {
+      "name": "https://10.12.63.192",
+      "url": "https://10.12.63.192",
+      "timestamp": "2025-12-03T13:32:31.822Z",
+      "location": "Joinville",
+      "status": "ok",
+      "statusCode": 200,
+      "title": "HP » Device Status",
+      "deviceName": "JOI063 | F2 Alm A/C Joinville 2",
+      "deviceIp": "10.12.63.192",
+      "machineStatus": "Sleep mode on",
+      "supplies": [
+        {
+          "name": "Cartucho Preto",
+          "level": "100%*"
+        }
+      ],
+      "type": "mono",
+      "trays": [
+        {
+          "name": "Tray 1",
+          "status": "Empty",
+          "capacity": "100 sheets",
+          "size": "Any Size",
+          "type": "Any Type"
+        },
+        {
+          "name": "Tray 2",
+          "status": "OK",
+          "capacity": "550 sheets",
+          "size": "A4",
+          "type": "Plain"
+        },
+        {
+          "name": "Standard bin",
+          "status": "OK",
+          "capacity": "250 sheets",
+          "size": "N/A",
+          "type": "N/A"
+        }
+      ]
+    },
+    {
+      "name": "https://10.12.63.193",
+      "url": "https://10.12.63.193",
+      "timestamp": "2025-12-03T13:32:34.705Z",
+      "location": "Joinville",
+      "status": "ok",
+      "statusCode": 200,
+      "title": "HP » Device Status",
+      "deviceName": "Click RH | Recepcao",
+      "deviceIp": "10.12.63.193",
+      "machineStatus": "Ready",
+      "supplies": [
+        {
+          "name": "Cartucho Preto",
+          "level": "60%*"
+        },
+        {
+          "name": "Kit do Alimentador de Documentos",
+          "level": "100%*"
+        }
+      ],
+      "type": "mono",
+      "trays": [
+        {
+          "name": "Tray 1",
+          "status": "Empty",
+          "capacity": "100 sheets",
+          "size": "Any Size",
+          "type": "Any Type"
+        },
+        {
+          "name": "Tray 2",
+          "status": "OK",
+          "capacity": "550 sheets",
+          "size": "A4 (210x297 mm)",
+          "type": "Plain"
+        },
+        {
+          "name": "Standard bin",
+          "status": "OK",
+          "capacity": "250 sheets",
+          "size": "N/A",
+          "type": "N/A"
+        }
+      ]
+    },
+    {
+      "name": "https://10.12.63.194",
+      "url": "https://10.12.63.194",
+      "timestamp": "2025-12-03T13:32:31.988Z",
+      "location": "Joinville",
+      "status": "ok",
+      "statusCode": 200,
+      "title": "HP » Device Status",
+      "deviceName": "Click RH | Quiosque 01",
+      "deviceIp": "10.12.63.194",
+      "machineStatus": "Sleep mode on",
+      "supplies": [
+        {
+          "name": "Não Original HP Cartucho Preto",
+          "level": "30%*"
+        }
+      ],
+      "type": "mono",
+      "trays": [
+        {
+          "name": "Tray 1",
+          "status": "Empty",
+          "capacity": "100 sheets",
+          "size": "Any Size",
+          "type": "Any Type"
+        },
+        {
+          "name": "Tray 2",
+          "status": "OK",
+          "capacity": "550 sheets",
+          "size": "A4",
+          "type": "Plain"
+        },
+        {
+          "name": "Standard bin",
+          "status": "OK",
+          "capacity": "250 sheets",
+          "size": "N/A",
+          "type": "N/A"
+        }
+      ]
+    },
+    {
+      "name": "https://10.12.63.195",
+      "url": "https://10.12.63.195",
+      "timestamp": "2025-12-03T13:32:32.020Z",
+      "location": "Joinville",
+      "status": "ok",
+      "statusCode": 200,
+      "title": "HP » Device Status",
+      "deviceName": "JOI066 | Bloco 3 | Eletronica",
+      "deviceIp": "10.12.63.195",
+      "machineStatus": "Ready",
+      "supplies": [
+        {
+          "name": "Cartucho Preto",
+          "level": "100%*"
+        }
+      ],
+      "type": "mono",
+      "trays": [
+        {
+          "name": "Tray 1",
+          "status": "Empty",
+          "capacity": "100 sheets",
+          "size": "Any Size",
+          "type": "Any Type"
+        },
+        {
+          "name": "Tray 2",
+          "status": "30 - 70%",
+          "capacity": "520 sheets",
+          "size": "A4 ▭ (210x297 mm)",
+          "type": "Plain"
+        },
+        {
+          "name": "Tray 3",
+          "status": "< 30%",
+          "capacity": "520 sheets",
+          "size": "A3 (297x420 mm)",
+          "type": "Plain"
+        },
+        {
+          "name": "Standard bin",
+          "status": "OK",
+          "capacity": "500 sheets",
+          "size": "N/A",
+          "type": "N/A"
+        }
+      ]
+    },
+    {
+      "name": "https://10.12.63.196",
+      "url": "https://10.12.63.196",
+      "timestamp": "2025-12-03T13:32:32.118Z",
+      "location": "Joinville",
+      "status": "ok",
+      "statusCode": 200,
+      "title": "HP » Device Status",
+      "deviceName": "JOI067 | Adm N3 Direct Purchase",
+      "deviceIp": "10.12.63.196",
+      "machineStatus": "Sleep mode on",
+      "supplies": [
+        {
+          "name": "Cartucho Preto",
+          "level": "80%*"
+        },
+        {
+          "name": "Kit do Alimentador de Documentos",
+          "level": "100%*"
+        }
+      ],
+      "type": "mono",
+      "trays": [
+        {
+          "name": "Tray 1",
+          "status": "Empty",
+          "capacity": "100 sheets",
+          "size": "Any Size",
+          "type": "Any Type"
+        },
+        {
+          "name": "Tray 2",
+          "status": "OK",
+          "capacity": "550 sheets",
+          "size": "A4 (210x297 mm)",
+          "type": "Plain"
+        },
+        {
+          "name": "Standard bin",
+          "status": "OK",
+          "capacity": "250 sheets",
+          "size": "N/A",
+          "type": "N/A"
+        }
+      ]
+    },
+    {
+      "name": "https://10.12.63.198",
+      "url": "https://10.12.63.198",
+      "timestamp": "2025-12-03T13:32:32.240Z",
+      "location": "Joinville",
+      "status": "ok",
+      "statusCode": 200,
+      "title": "HP » Device Status",
+      "deviceName": "JOI069 | Adm N1 Supplies",
+      "deviceIp": "10.12.63.198",
+      "machineStatus": "Sleep mode on",
+      "supplies": [
+        {
+          "name": "Cartucho Preto",
+          "level": "60%*"
+        },
+        {
+          "name": "Kit do Alimentador de Documentos",
+          "level": "100%*"
+        }
+      ],
+      "type": "mono",
+      "trays": [
+        {
+          "name": "Tray 1",
+          "status": "Empty",
+          "capacity": "100 sheets",
+          "size": "Any Size",
+          "type": "Any Type"
+        },
+        {
+          "name": "Tray 2",
+          "status": "OK",
+          "capacity": "550 sheets",
+          "size": "A4 (210x297 mm)",
+          "type": "Plain"
+        },
+        {
+          "name": "Standard bin",
+          "status": "OK",
+          "capacity": "250 sheets",
+          "size": "N/A",
+          "type": "N/A"
+        }
+      ]
+    },
+    {
+      "name": "https://10.12.63.199",
+      "url": "https://10.12.63.199",
+      "timestamp": "2025-12-03T13:32:32.771Z",
+      "location": "Joinville",
+      "status": "ok",
+      "statusCode": 200,
+      "title": "HP » Device Status",
+      "deviceName": "JOI070 | ADM | N3 Refrigeracao",
+      "deviceIp": "10.12.63.199",
+      "machineStatus": "48.A1.01 Job accounting service error",
+      "supplies": [
+        {
+          "name": "Cartucho Preto",
+          "level": "90%*"
+        }
+      ],
+      "type": "mono",
+      "trays": [
+        {
+          "name": "Tray 1",
+          "status": "Empty",
+          "capacity": "100 sheets",
+          "size": "Any Size",
+          "type": "Any Type"
+        },
+        {
+          "name": "Tray 2",
+          "status": "< 30%",
+          "capacity": "520 sheets",
+          "size": "A4 (210x297 mm)",
+          "type": "Plain"
+        },
+        {
+          "name": "Tray 3",
+          "status": "< 30%",
+          "capacity": "520 sheets",
+          "size": "A3 (297x420 mm)",
+          "type": "Plain"
+        },
+        {
+          "name": "Standard bin",
+          "status": "OK",
+          "capacity": "500 sheets",
+          "size": "N/A",
+          "type": "N/A"
+        }
+      ]
+    },
+    {
+      "name": "https://10.12.64.159",
+      "url": "https://10.12.64.159",
+      "timestamp": "2025-12-03T13:32:42.189Z",
+      "location": "USP",
+      "status": "ok",
+      "statusCode": 200,
+      "title": null
+    },
+    {
+      "name": "https://10.12.111.141",
+      "url": "https://10.12.111.141",
+      "timestamp": "2025-12-03T13:33:33.109Z",
+      "location": "Rio Claro",
+      "status": "ok",
+      "statusCode": 200,
+      "title": "HP » Device Status",
+      "deviceName": "RCL041 | CLICK RH",
+      "deviceIp": "10.12.111.141",
+      "machineStatus": "Sleep mode on",
+      "supplies": [
+        {
+          "name": "Cartucho Preto",
+          "level": "30%*"
+        }
+      ],
+      "type": "mono",
+      "trays": [
+        {
+          "name": "Tray 1",
+          "status": "Empty",
+          "capacity": "100 sheets",
+          "size": "Any Size",
+          "type": "Any Type"
+        },
+        {
+          "name": "Tray 2",
+          "status": "OK",
+          "capacity": "550 sheets",
+          "size": "A4",
+          "type": "Plain"
+        },
+        {
+          "name": "Standard bin",
+          "status": "OK",
+          "capacity": "250 sheets",
+          "size": "N/A",
+          "type": "N/A"
+        }
+      ]
+    },
+    {
+      "name": "https://10.12.111.142",
+      "url": "https://10.12.111.142",
+      "timestamp": "2025-12-03T13:33:33.392Z",
+      "location": "Rio Claro",
+      "status": "ok",
+      "statusCode": 200,
+      "title": "HP » Device Status",
+      "deviceName": "RCL043 | CLICK RH",
+      "deviceIp": "10.12.111.142",
+      "machineStatus": "Sleep mode on",
+      "supplies": [
+        {
+          "name": "Cartucho Preto",
+          "level": "10%*"
+        }
+      ],
+      "type": "mono",
+      "trays": [
+        {
+          "name": "Tray 1",
+          "status": "Empty",
+          "capacity": "100 sheets",
+          "size": "Any Size",
+          "type": "Any Type"
+        },
+        {
+          "name": "Tray 2",
+          "status": "OK",
+          "capacity": "550 sheets",
+          "size": "A4",
+          "type": "Plain"
+        },
+        {
+          "name": "Standard bin",
+          "status": "OK",
+          "capacity": "250 sheets",
+          "size": "N/A",
+          "type": "N/A"
+        }
+      ]
+    }
+  ]
+}
