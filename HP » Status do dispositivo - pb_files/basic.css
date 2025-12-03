@@ -1,0 +1,6691 @@
+/******************************************************************************
+IE CSS hacks
+attr:value; > All browsers
+attr:value !important; > All browsers but IE6
+_attr:value; > Only works in IE6
+*attr:value; > IE6, IE7
++attr:value; > Only works in IE7
+*+attr:value; > Only works in IE7
+attr:value\9; > IE6, IE7, IE8, IE9
+attr:value\0; > IE8, IE9
+attr:value\9\0; > Only works in IE9
+******************************************************************************/
+
+/******************************************************************************
+ Font embedding
+******************************************************************************/
+@font-face
+{
+    font-family:HPSimplified;
+    font-style:normal;
+    font-weight:normal;
+    src:url("fonts/latin-e-regular-eot.eot");
+    src:
+        url('fonts/latin-e-regular-eot.eot?#iefix') format('embedded-opentype'), 
+        url('fonts/latin-e-regular-woff.woff') format('-woff.woff'),
+        url('fonts/latin-e-regular-ttf.ttf') format('truetype');
+}
+
+@font-face
+{
+    font-family:HPSimplified;
+    font-style:normal;
+    font-weight:bold;
+    src:url('fonts/latin-e-bold-eot.eot');
+    src:
+        url('fonts/latin-e-bold-eot.eot?#iefix') format('embedded-opentype'), 
+        url('fonts/latin-e-bold-woff.woff') format('-woff.woff'), 
+        url('fonts/latin-e-bold-ttf.ttf') format('truetype');
+}
+
+@font-face
+{
+    font-family:HPSimplified;
+    font-style:italic;
+    font-weight:normal;
+    src:url('fonts/latin-e-regular-italic-eot.eot');
+    src:
+        url('fonts/latin-e-regular-italic-eot.eot?#iefix') format('embedded-opentype'), 
+        url('fonts/latin-e-regular-italic-woff.woff') format('-woff.woff'), 
+        url('fonts/latin-e-regular-italic-ttf.ttf') format('truetype');
+}
+
+@font-face
+{
+    font-family:HPSimplified;
+    font-style:italic;
+    font-weight:bold;
+    src:url('fonts/latin-e-regular-bold-italic-eot.eot');
+    src:
+        url('fonts/latin-e-regular-bold-italic-eot.eot?#iefix') format('embedded-opentype'), 
+        url('fonts/latin-e-regular-bold-italic-woff.woff') format('-woff.woff'), 
+        url('fonts/latin-e-regular-bold-italic-ttf.ttf') format('truetype');
+}
+
+@font-face
+{
+    font-family:HPSimplified;
+    font-style:normal;
+    font-weight:200;
+    src:url('fonts/latin-e-light-eot.eot');
+    src:
+        url('fonts/latin-e-light-eot.eot?#iefix') format('embedded-opentype'), 
+        url('fonts/latin-e-light-woff.woff') format('-woff.woff'), 
+        url('fonts/latin-e-light-ttf.ttf') format('truetype');
+}
+
+@font-face
+{
+    font-family:HPSimplified;
+    font-style:italic;
+    font-weight:200;
+    src:url('fonts/latin-e-light-italic-eot.eot');
+    src:
+        url('fonts/latin-e-light-italic-eot.eot?#iefix') format('embedded-opentype'), 
+        url('fonts/latin-e-light-italic-woff.woff') format('-woff.woff'), 
+        url('fonts/latin-e-light-italic-ttf.ttf') format('truetype');
+}
+/******************************************************************************
+ * GLOBAL
+ *****************************************************************************/
+*
+{
+    padding: 0;
+    margin: 0;
+}
+html
+{
+    _filter: expression(document.execCommand("backgroundImageCache", false, true));
+}
+body
+{
+    background: #fff;
+    font-size: 14px;
+    color: #000;
+}
+a img
+{
+    border: 0;
+}
+a
+{
+    color: #5a5a5a;
+    padding: 1px 8px;
+    border-width: 1px;
+    border-color: #878787;
+    text-decoration: none;
+}
+a:hover,
+a:focus
+{
+    color: #fff;
+    background-color: #0096d6;
+    border-width: 1px;
+    padding: 1px 8px;
+    border-color: #0096d6;
+}
+em
+{
+    font-style: normal;
+}
+/******************************************************************************
+ * BASIC
+ *****************************************************************************/
+body, input, button, select, textarea, a, p, ul, ol, li, span, h1, h2, h3, h4, h5, div, dl, dd, dt, table, thead, tbody, tfoot, tr, th, td
+{
+    font-family: HPSimplified, Arial, Helvetica, Sans-Serif;
+    outline: none;
+    /* box sizing makes all elements respect the same rule when setting their dimensions */
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+table
+{
+    font-size: 1em;
+}
+input, select, textarea, button, a
+{
+    font-size: 1em;
+    border-width: 1px;
+    border-color: #878787;
+    border-style: solid;
+}
+/* forces controls to have no default behavior for rendering... all renders as a solid box */
+body.js div.control input, 
+body.js div.control select, 
+body.js div.control textarea,
+body.js div input[type=text]
+{
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    border-radius: 0;
+    -moz-border-radius: 0;
+    -webkit-border-radius: 0;
+}
+/* Used to separate code portions for accessibility pourposes */
+hr
+{
+    display: none;
+}
+::-ms-clear
+{
+    height: 0;
+    width: 0;
+}
+/******************************************************************************
+ * HEADER
+
+div#header
++----------------------------------------------------------------+
+| div.product                                                    |
+| +-----------+ +---------------------------------+ +----------+ |
+| |           | | strong.product                  | | div.user | |
+| | p.brand a | +---------------------------------+ |          | |
+| |           | | p#HomeDeviceName p#HomeDeviceId | |          | |
+| +-----------+ +---------------------------------+ +----------+ |
++----------------------------------------------------------------+
+| div#menuTabs                                                   |
++----------------------------------------------------------------+
+
+<div#header>
+    <div.product>
+        <div.user>
+            <div.user-content>
+                <p#HomeUserName> User: NAME </p>
+                <p>
+                    <a#HomeLink.home> Home </a>
+                    |
+                    <a#EwsLogoff.logoff> Sign Out </a>
+                </p>
+
++--------------------------------------------------+
+| div.user                                         |
+| +----------------------------------------------+ |
+| | p.user-content                               | |
+| | +------------------------------------------+ | |
+| | | p#HomeUserName                           | | |
+| | +------------------------------------------+ | |
+| | | p                                        | | |
+| | | +--------------------------------------+ | | |
+| | | | a#HomeLink.home | a#EwsLogoff.logoff | | | |
+| | | +--------------------------------------+ | | |
+| | +------------------------------------------+ | |
+| +----------------------------------------------+ |
++--------------------------------------------------+
+
+                OR
+
+                <p#WelcomeHeader> WELCOME </p>
+                <p>
+                    <a#EwsLogin.logoff> Sign In </a>
+                </p>
+
++-------------------------------+
+| div.user                      |
+| +---------------------------+ |
+| | p.user-content            | |
+| | +-----------------------+ | |
+| | | p#WelcomeHeader       | | |
+| | +-----------------------+ | |
+| | | p                     | | |
+| | | +-------------------+ | | |
+| | | | a#EwsLogin.logoff | | | |
+| | | +-------------------+ | | |
+| | +-----------------------+ | |
+| +---------------------------+ |
++-------------------------------+
+
+            </div>
+        </div>
+
+        <p#brandLink.brand>
+            <a> http://www.hp.com </a>
+            <strong.product> PRODUCT NAME </strong>
+        </p>
+
+        <div.info>
+            <p#HomeDeviceName.device-name> DEVICE NAME </p>
+            <p#HomeDeviceId.ip-address> ADDRESS </p>
+        </div>
+
+        <div#menuTabs.tabs>
+            ...
+        </div>
+    </div>
+</div>
+
+*****************************************************************************/
+
+#page, #header
+{
+    position: fixed;
+    left: 0;
+}
+#page
+{
+    z-index: 1;    
+    top: 125px;
+    bottom: 50px;
+    right: 0;
+}
+#header
+{
+    top: 0;
+    width: 100%;
+    height: 125px;
+    z-index: 10;
+}
+/* The product information and the login */
+#header div.product
+{
+    position: relative;
+    background: #fff;
+    padding: 0;
+    height: 89px;
+    color: #000;
+    border-top: 5px solid #0096d6;
+    display: block;
+}
+/* The brand link of the HP logo */
+#header p.brand a
+{
+    position: absolute;
+    top: 18px;
+    left: 30px;
+    background: url(img/hp_logo.png) no-repeat;
+    text-decoration: none;
+    text-indent: -1000em;
+    height: 48px;
+    width: 50px;
+    border: none;
+}
+#header div.info strong
+{
+    top: 12px;
+    left: 108px;
+    font-size: 2.3em;
+    right: 200px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;    
+}
+/* The login and header image */
+#header div.user
+{
+    position: fixed;
+    right: 30px;
+    top: 22px;
+    text-align: right;
+    z-index: 11;
+    width: 29%;
+    min-width: 330px;
+}
+#header div.user-content
+{
+    margin: 0;
+    font-weight: bold;
+    display: block;
+}
+#header div.UserInteractions
+{
+    white-space: nowrap;
+}
+#header div.user-content a,
+#header div.user-content span
+{
+    color: #000;
+    line-height: 1.85em;
+    vertical-align: middle;
+    margin-left: 10px;
+}
+#header div.user-content a:hover,
+#header div.user-content a:focus
+{
+    color: #fff;
+}
+/* The description of the product and IP */
+#header div.info
+{
+    position: fixed;
+    top: 12px;
+    left: 108px;
+    right: 360px;
+    height: 5em;
+    font-weight: lighter;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+#header div.p-info
+{
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+body.safari #header div.p-info
+{
+    margin-top: 10px;
+}
+#header div.info p
+{
+    display: inline;    
+    font-size: 1.5em;
+}
+#header div.info p.ip-address
+{
+    padding-left: 1em;
+}
+#header div.user-content #HomeUserName
+{
+    width: 100%;
+	white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+	display: inline-block;
+}
+#header div.user-content a.home,
+#header div.user-content span.msg-center 
+{
+    width:17px;
+    height:1.85em;
+	background-position: 0px 5px;
+	background-repeat: no-repeat;
+	text-decoration: none;
+	text-indent: -1000em;
+	display: inline-block;
+	text-align: left;
+	border: none;
+}
+#header div.user-content a.home:hover,
+#header div.user-content a.home:focus
+{
+	background-position: 0px -95px;
+	background-color: transparent;
+}
+
+/******************************************************************************
+ * SEARCH ON HEADER
+ *****************************************************************************/
+#header div.searchBox
+{
+    position: relative;
+    white-space:nowrap;
+    display: inline-block;
+    vertical-align: bottom;
+    font-weight: normal;
+    width:auto;
+    max-width: 18em;
+    min-width:3em;
+}
+#header div.searchBox div.text
+{
+    position: relative;
+    background-color: #fff;
+}
+
+#header div.searchBox div.text,
+#header div.searchBox div.text input[type=text]
+{
+    width:100%;
+    float:right;
+    height:1.85em;
+    line-height:1.85em;
+}
+
+#header div.searchBox div.text input[type=text]
+{
+    padding-right: 26px;
+    background-color: transparent;
+    z-index: 3;
+    position: relative;
+    float: right;
+    right: 0;
+}
+
+#header div.searchBox div.text input[type=submit]
+{
+    border: 0;
+    position: absolute;
+    right:2px;
+    width:22px;
+    height:22px;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: 0px 2px;
+    cursor: pointer;
+    z-index: 4;
+    text-indent: -1000em;
+}
+
+#header div.searchBox div.text input.magnifier
+{
+    top:2px;
+    background-image: url(img/magnifier.png);
+}
+
+#header div.searchBox div.text input.progress
+{
+    top:4px;
+    background-image: url(img/snake_transparent.gif);
+}
+
+#header div.searchBox div.text input[type=text]:hover + input.magnifier,
+#header div.searchBox div.text input[type=text]:focus + input.magnifier,
+#header div.searchBox div.text input[type=text] + input.magnifier:hover
+{
+    background-position: 0px -98px;
+}
+    
+/******************************************************************************
+ * AUTOCOMPLETE ON SEARCH
+ *****************************************************************************/
+ul.ui-autocomplete 
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	cursor: default;
+    width: 18em;
+    border: 1px solid #5a5a5a;
+    background-color: #ffffff;
+    z-index: 100;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: block;
+    outline: none;
+}
+ul.ui-autocomplete li.ui-menu-item
+{
+    position: relative;
+    margin: 0;
+    padding: 7px;
+    cursor: pointer;
+    font-size: 14px; 
+    color: #5a5a5a;
+    text-decoration: none;
+}
+ul.ui-autocomplete li.ui-menu-item a:hover
+{
+    text-decoration: underline;
+}
+ul.ui-autocomplete li.ui-menu-item a 
+{
+    font-weight: bold;
+    color: #5a5a5a;
+    display: block;
+}
+ul.ui-autocomplete li.ui-menu-item label
+{
+  display: block;
+}
+ul.ui-autocomplete div.all-results
+{
+    border-top: 1px solid #5a5a5a;
+    line-height: 22px;
+    text-align: center;
+}
+ul.ui-autocomplete div.all-results a 
+{
+    cursor: pointer;
+    text-decoration: underline;
+}
+ul.ui-autocomplete div.all-results a:hover 
+{
+    text-decoration: none;
+}
+/******************************************************************************
+ * MESSAGE CENTER: ICON AND STYLIZED TOOLTIP
+ *****************************************************************************/
+#header div.user-content span.msg-center
+{
+    background-image: url(img/msg-center.png);
+}
+#header div.user-content span.msg-center.message
+{
+	background-position: 0px -95px;
+}
+#header div.user-content span.msg-center.warning
+{
+	background-position: 0px -195px;
+}
+#header div.user-content span.msg-center.error
+{
+	background-position: 0px -295px;
+}
+#header div.user-content a.home 
+{
+    background-image: url(img/home.png);
+}
+.tooltip div.body ul.fancy,
+#mobile-message-center div.body ul.fancy
+{
+    list-style: none;
+	margin: 0;
+	padding: 0;
+}
+.tooltip div.body ul.fancy li,
+#mobile-message-center div.body ul.fancy li
+{
+	background-image: url(img/msg-center.png);
+	background-position: 0px 0px;
+	background-repeat: no-repeat;
+	text-decoration: none;
+	padding-left: 24px;
+	margin: 8px 0;
+}
+body.mac .tooltip div.body ul.fancy li
+{
+    height: 16px;
+    padding-top: 2px;
+}
+.tooltip div.body ul.fancy li.message,
+#mobile-message-center div.body ul.fancy li.message
+{
+	background-position: 0px -98px;
+}
+body.mac .tooltip div.body ul.fancy li.message
+{
+	background-position: 0px -101px;
+}
+.tooltip div.body ul.fancy li.warning,
+#mobile-message-center div.body ul.fancy li.warning
+{
+	background-position: 0px -200px;
+}
+body.mac .tooltip div.body ul.fancy li.warning
+{
+	background-position: 0px -202px;
+}
+.tooltip div.body ul.fancy li.error,
+#mobile-message-center div.body ul.fancy li.error
+{
+	background-position: 0px -300px;
+	line-height: 20px;
+}
+body.mac .tooltip div.body ul.fancy li.error
+{
+	background-position: 0px -301px;	
+}
+/******************************************************************************
+ * CONTROL - TABS
+ *****************************************************************************/
+/* floating hacks */
+div.tabs,
+div.tabs ul,
+div.content div#menuTabs,
+div.content div#menuTabs ul
+{
+    zoom:1;
+    _height: 1%;
+}
+div.tabs,
+div.content div#menuTabs
+{
+    display: block;
+    margin: 0!important;
+    border-collapse: collapse;
+    position: relative;
+    background-color: #5a5a5a;
+    padding: 0 0 0 1em!important;
+    height: 36px;
+}
+div.tabs ul,
+div.content div#menuTabs ul
+{
+    margin: 0;
+    display: table-row;
+    *padding: 0;
+    white-space: nowrap;
+    cursor: pointer;
+}
+div.tabs li,
+div.content div#menuTabs li
+{
+    margin: 0;
+    display: table-cell;
+    vertical-align: center;
+    border: 0;
+    text-decoration: none;
+    text-align: center;
+    *float: none;
+    *position: relative;
+    *margin: 0;
+    *zoom: 1;
+}
+div.tabs a,
+div.tabs span,
+.buttonTab,
+div.content div#menuTabs a,
+div.content div#menuTabs span
+{
+    padding: 0 1em;
+    display: inline-block;
+    font-weight: bold;
+    text-decoration: none;
+    color: #fff;
+    float: none;
+    *float: left;
+    clear: both;
+    height: 36px;
+    line-height: 36px;
+    font-size: 1.3em;
+}
+div.tabs input.buttonTab
+{
+    *padding: 0;
+}
+div.tabs a
+{
+    *float: none;
+    border: none;
+}
+div.tabs a:hover,
+div.tabs a:focus,
+.buttonTab:hover,
+.buttonTab:focus,
+div.content div#menuTabs a:hover,
+div.content div#menuTabs a:focus
+{
+    background-color: #767676;
+}
+div.tabs li.current a:hover,
+div.tabs li.current a:focus,
+div.tabs li.current span:hover,
+div.content div#menuTabs li.current a:hover,
+div.content div#menuTabs li.current a:focus,
+div.content div#menuTabs li.current span:hover
+{
+    background-color: #006699;
+}
+/* The menu tab is inside of "a" and the others in "li -> span" */
+div.tabs li.current span,
+div.tabs li.current a,
+div.content div#menuTabs li.current a,
+div.content div#menuTabs li.current span
+{
+    background-color: #0096d6;
+    border: 0;
+    white-space: nowrap;
+}
+.buttonTab
+{
+    border: none;
+    text-align: center;
+    cursor: pointer;
+    background-color: transparent;
+}
+.buttonTab2 {
+    border: none;
+    text-align: left;
+    cursor: pointer;
+    background-color: transparent;
+}
+div.tabs li.current
+{
+    *padding-bottom: 0;
+    *border-bottom-width: 0;
+}
+/* The border in the page of the tab */
+div.tab-content
+{
+    margin: 0;
+}
+
+#menuTabs
+{
+    position: absolute;
+    top: 89px;
+    left: 0;
+    width: 100%;
+    box-shadow: 0 3px 6px 0 #ccc;
+    -moz-box-shadow: 0 3px 6px 0 #ccc;
+    -webkit-box-shadow: 0 3px 6px 0 #ccc;
+}
+
+div.sections div.tabs,
+div.content div#menuTabs
+{
+    margin: 0 -30px 30px -30px!important;
+    overflow: hidden;
+}
+div.content div#menuTabs
+{
+	top: 0px!important;
+	width: auto;
+}
+/******************************************************************************
+ * COLUMNS
+ *****************************************************************************/
+/* floating hacks */
+div.columns, div.columns-content, div.content, div.column-menu, div.column-content
+{
+    zoom: 1;
+    _height: 1%;
+}
+div.columns:after, div.columns-content:after, div.content:after, div.column-menu:after, div.column-content:after
+{
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+div.columns, 
+div.columns-content, 
+div.column-content,
+div.column-menu,
+#mobile-menu-content,
+div.column-menu ul#localMenu
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+#mobile-menu-content
+{
+    right: auto;
+    width: 230px;
+}
+div.column-content
+{
+    left: 230px;   
+    bottom: 50px;
+}
+div.column-menu ul#localMenu
+{
+    padding: 26px 8px 8px 14px;
+    border-right: 1px solid #ccc;
+    overflow-y: auto;
+}
+
+/******************************************************************************
+ * MENUS
+ *****************************************************************************/
+/* Other Links */
+div.other-links
+{
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 50px;
+    *height: 40px;
+    border-top: 1px solid #ccc;
+    background-color: #f2f2f2;
+    padding: 5px 30px;
+    color: #5a5a5a;
+}
+div.other-links h3
+{
+    display: none;
+}
+div.other-links ul
+{
+    float: right;
+    text-align: right;
+    display: table-row;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    white-space: nowrap;
+}
+div.other-links li
+{
+    display: table-cell;
+}
+div.other-links li+li
+{
+    border-left: 1px solid #5a5a5a;
+}
+div.other-links a
+{
+    color: #5a5a5a;
+    display: inline-block;
+    font-weight: normal;
+    padding: 0 6px;
+    text-decoration: none;
+    font-size: .9em;
+    white-space: nowrap;
+    max-width: 150px;
+    width: auto;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: center;
+}
+div.other-links a:hover,
+div.other-links a:focus
+{
+    color: #fff;
+}
+#footer div.copyright
+{
+    position: fixed;
+	bottom: 4px;
+	right: 30px;
+    font-size: .9em;
+    white-space: nowrap;
+}
+/* Navigation
+ * Global - horizontal menu
+ * Local - vertical menu */
+/* floating hacks */
+ul.nav-global, 
+ul.nav-local
+{
+    zoom: 1;
+    _height: 1%;
+}
+ul.nav-global:after, 
+ul.nav-local:after
+{
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+ul.nav-local a.state, 
+ul.nav-local span.state, 
+ul.nav-local li.state a,
+ul.nav-local li.state span
+{
+    padding-left: 20px;
+    background: url(img/status-icons.png) no-repeat 0px 2px;
+}
+ul.nav-local
+{
+    list-style: none;
+    margin: 0;
+    border: none;
+    padding: 0;
+    display: block;
+}
+ul.nav-local li
+{
+    float: left;
+    clear: both;
+    width: 100%;
+    padding: 0;
+}
+ul.nav-local li a,
+ul.nav-local li span
+{
+    display: block;
+    padding: 4px 8px 4px 16px;
+    font-weight: normal;
+    color: #878787;
+    text-decoration: none;
+    border: none;
+}
+ul.nav-local li.parent-menu a,
+ul.nav-local li.parent-menu span
+{
+    padding-left: 42px;
+}
+ul.nav-local li a:hover,
+ul.nav-local li span:hover,
+ul.nav-local li a:focus,
+ul.nav-local li a.open,
+ul.nav-local li span.open
+{
+    color: #fff;
+    background-color: #0096d6;
+    border-width: 1px;
+    border-color: #0096d6;
+}
+ul.nav-local li.title
+{
+    color: #BCCEDF;
+    letter-spacing: 1px;
+    padding: 5px 5px 3px 15px;
+    text-transform: uppercase;
+    border-bottom: 1px solid #007dba;
+    border-color: #EEE;
+}
+ul.nav-local li.current:not(.parent-menu) > a
+{
+    /* HOVER CHANGES TEXT COLOR */
+    color: #007dba;
+    font-weight: bold;
+    /* HOVER CHANGES TEXT COLOR AND BACKGROUND
+    color: #fff;
+    background-color: #0096d6; /**/
+}
+ul.nav-local li.current > a:hover,
+ul.nav-local li.current > a:focus
+{
+    /* HOVER CHANGES TEXT COLOR */
+    color: #fff;
+    background-color: #0096d6;
+    border-width: 1px;
+    border-color: #0096d6;
+    /* HOVER CHANGES TEXT COLOR AND BACKGROUND
+    color: #fff;
+    background-color: #006699; /**/
+}
+ul.nav-local li.sub-menu
+{
+    border-top: 1px solid #fff;
+    border-bottom: none;
+}
+ul.nav-local li.parent-menu span.TreeIcon
+{
+    background-image: url(img/treeview.png);
+    background-repeat: no-repeat;
+    background-position: 0 -151px;
+    background-color: Transparent;
+    padding-left: 26px;
+    cursor: pointer;
+    height: 26px;
+    position: absolute;
+    left: 30px;
+}
+ul.nav-local li.parent-menu span.collapsed
+{
+    background-position: 0 -99px;
+}
+ul.nav-local li.parent-menu ul
+{
+    list-style: none;
+}
+ul.nav-local li.sub-menu a
+{
+    background-image: none;
+    font-weight: normal;
+}
+ul.nav-local li.state a,
+ul.nav-local li.state.sub-menu a
+{
+    background-position: 0 2px;
+    background-image: url(img/status-icons.png);
+    background-repeat: no-repeat;
+}
+/******************************************************************************
+ * PAGE HEADER
+ *****************************************************************************/
+
+div.page-header
+{
+    position: fixed;
+    top: 125px;
+    left: 230px;
+    right: 0;
+    height: 76px;
+    *height: 24px;
+    padding: 30px 30px 22px 30px;
+    background-image: url(img/header_separator.png);
+    background-repeat: repeat-x;
+    background-position: 0 bottom;
+}
+div.page-header h1
+{
+    font-size: 1.4em;
+    font-weight: bold;
+    color: #5a5a5a;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+/** Link Help */
+div.page-header a.help
+{
+    float: right;
+    margin: -20px 0 0 0;
+    _position: relative;
+    _display: block;
+}
+/******************************************************************************
+ * PAGE CONTENT
+ *****************************************************************************/
+
+div#content
+{
+    position: fixed;
+    top: 202px;
+    left: 230px;
+    right: 0;
+    bottom: 50px;
+    overflow: auto;
+    padding: 30px 30px 8px 30px;
+}
+div#content > form
+{
+    min-width: 800px;
+}
+div#content.fixed
+{
+    bottom: 96px;
+}
+div.content p.page-description
+{
+    margin: 0 0 10px 0;
+}
+
+body.mac.safari div#content.fixed
+{
+    bottom: 50px;
+    padding-bottom: 64px;
+}
+/******************************************************************************
+ * width <= 1024px responsive solution
+ * Vertical menu expands on hover
+ *****************************************************************************/
+        
+@media (max-width: 1024px) /*non-mobile version*/
+{    
+    #page div.columns div.columns-content div.column.column-content,
+    #page div.columns div.columns-content div.column.column-content div.sections div.buttons.bottom.fixed, 
+    #page div.columns div.columns-content div.column.column-content div.buttons.fixed
+    {
+        left: 0px;
+    }
+    
+    #page div.columns div.columns-content div.column.column-menu ul#localMenu
+    {
+        background-color: #fff;
+        background-image: url(img/menu-arrow-blue-r.png);
+        background-repeat: no-repeat;
+        padding: 0;
+        -webkit-box-shadow: 3px 0 6px 0 #ccc;
+        -moz-box-shadow: 3px 0 6px 0 #ccc;
+        box-shadow: 3px 0 6px 0 #ccc;
+        overflow: hidden;
+        z-index: 3000;
+        left: 0;
+        background-position: center;
+        border-radius: 0 8px 8px 0;
+        top: 50%;
+        bottom: 50%;
+        margin: -50px 0;
+        width: 25px;
+    }
+    #page div.columns div.columns-content div.column.column-menu ul#localMenu:hover
+    {
+        background-image: none;
+        overflow-y: auto;
+        border-radius: 0;
+        top: 0;
+        bottom: 0;
+        margin: 0;
+        padding: 26px 8px 8px 14px;
+        width: 230px;
+    }
+    /* Vertical menu items are "invisible" when the menu is off */
+    body:not(.mobile):not(.tablet) #page div.columns div.columns-content div.column.column-menu ul#localMenu li
+    {
+        opacity: 0;
+        -moz-opacity: 0;
+        filter: alpha(opacity=0);
+    }
+    body:not(.mobile):not(.tablet) #page div.columns div.columns-content div.column.column-menu ul#localMenu:hover li
+    {
+        opacity: 1;
+        -moz-opacity: 1;
+        filter: alpha(opacity=100);
+    }
+    /**************************************************************************
+     * Horizontal menu turns into a drop down menu 
+     *************************************************************************/
+    body:not(.mobile) div.sections div.tabs
+    {
+        overflow: visible;
+    }
+    body:not(.mobile) div.tabs ul li.current
+    {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        display: block;
+    }
+    body:not(.mobile) div.tabs ul li.current a,
+    body:not(.mobile) div.tabs ul li.current span
+    {
+        background-color: #5a5a5a!important;
+        background-image: url(img/menu-buttons.png);
+        background-repeat: no-repeat;
+        background-position: 13px 11px;
+        background-attachment: scroll;
+        padding-left: 48px;
+    }
+    body:not(.mobile) div.tabs ul:hover li.current a,
+    body:not(.mobile) div.tabs ul:hover li.current span,
+    body:not(.mobile) div.tabs ul li.current a:hover
+    {
+        background-position: 13px -39px;
+    }
+    body:not(.mobile) div.tabs ul
+    {
+        height: 0px;
+        width: 0px;
+        -webkit-box-shadow: 3px 3px 6px 0 #ccc;
+        -moz-box-shadow: 3px 3px 6px 0 #ccc;
+        box-shadow: 3px 3px 6px 0 #ccc;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        display: block;
+        overflow: visible;
+    }
+    body:not(.mobile) div.tabs ul:hover
+    {
+        left: 30px;
+        background-color: #5a5a5a;
+        height: auto;
+        min-width: 230px;
+        width: auto;
+        margin-top: 36px;
+        z-index: 2000;
+    }
+    body:not(.mobile) div.tabs ul li
+    {
+        display: none;
+    }
+    body:not(.mobile) div.tabs ul:hover li.current
+    {
+        top: -36px;
+        left: -30px;
+        min-width: 260px;
+    }
+    body:not(.mobile) div.tabs ul:hover li
+    {
+        display: block;
+    }
+    body:not(.mobile) div.tabs ul li a,
+    body:not(.mobile) div.tabs ul li input,
+    body:not(.mobile) div.tabs ul li span
+    {
+        width: 100%;
+        display: block;
+        text-align: left;
+    }
+    body:not(.mobile) div.tabs ul li a:hover,
+    body:not(.mobile) div.tabs ul li input:hover,
+    body:not(.mobile) div.tabs ul li span:hover
+    {
+        background-color: #0096d6;
+    }
+    /* Page header */
+    body:not(.mobile) div.page-header
+    {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    /* Page content */
+    body:not(.mobile) div#content
+    {
+        left: 0;
+    }
+    
+    body:not(.mobile) div.thin-width-column span.button input
+    {
+        max-width:60px;
+    } 
+    body:not(.mobile) #header div.searchBox
+    {
+        top: 93px;
+        right: 30px;
+        position: fixed!important;
+    }
+    body:not(.mobile) #header div.info
+    {
+        right: 210px;
+    }
+    body:not(.mobile) #header div.user
+    {
+        width: 15%;
+        min-width: 180px;
+    }
+}
+/******************************************************************************
+ * width <= 1280px responsive solution
+ *****************************************************************************/
+@media (max-width: 1280px)
+{
+    div.thin-width-column span.button input
+    {
+        max-width:60px;
+    } 
+}
+/******************************************************************************
+ * MODULE SECTIONS
+ *****************************************************************************/
+/* floating hacks */
+div.sections, div.sections div.body
+{
+    zoom: 1;
+    _height: 1%;
+}
+div.sections:after, div.sections div.body:after
+{
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+div.sections div.title
+{
+    background: #f2f2f2;
+    color: #5a5a5a;
+    padding: .25em 30px;
+    margin: 0 -30px .75em -30px;
+}
+div.sections div.title h2
+{
+    display: inline;
+    font-size: 1em;
+    border: 0;
+}
+div.sections div.body
+{
+    padding: 0 0 .75em 0;
+    clear: both;
+}
+
+div.dss-bound,
+div.module-locked
+{
+    display: none;
+}
+/******************************************************************************
+ * FORMS
+ *****************************************************************************/
+/* Give the ability to the user to uses the [ENTER] for submiting and sending 
+the right button. This is places right after the form beggining. */
+form span.FormButtonSubmitBaseFocus
+{
+    position: absolute;
+    left: -1000em;
+    top: -1000em;
+}
+div.form p
+{
+    margin: 0 0 5px 0;
+}
+/* a line to group control elements */
+div.line
+{
+    clear: both;
+    margin: 0;
+}
+/* floating hacks */
+div.form,
+div.form div.group,
+div.form div.line,
+div.form div.control
+{
+    zoom: 1;
+    _height: 1%;
+}
+div.form:after,
+div.form div.group:after,
+div.form div.line:after,
+div.form div.control:after
+{
+    content: " ";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+div.form h3
+{
+    border-bottom: 1px solid #DADADA;
+    padding: 3px 0;
+    margin: 0 0 5px 0;
+    font-size: 1em;
+    color: #5a5a5a;
+}
+/******************************************************************************
+ * TOOLTIP
+ * jquery's Ballon widget 
+<div.tooltip> 
+    <h3>TITLE</h3>
+    <div.body>TEXT</div>
+    <div.arrow></div>
+</div>
+ *****************************************************************************/
+div.tooltip
+{
+    position: absolute;
+    z-index: 3000;
+    max-width: 400px;
+    min-width: 100px;
+    margin: 15px;
+    background-color: #fff;
+    border: 2px solid #ccc;
+}
+.tooltip div.body,
+#mobile-message-center div.body
+{
+	margin: 0;
+    font-size: .9em;
+    font-weight: normal;
+    padding: 1.45em;
+    word-break: break-word;
+}
+.tooltip h3,
+#mobile-message-center h3
+{
+	margin: 0;
+    font-size: 1em;
+    font-weight: bold;
+    border-bottom: 1px solid #ccc;
+    padding: .75em 1.45em;
+}
+.tooltip div.arrow
+{
+    display: block!important;
+    border: 0;
+    float: none!important;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    background-image: url(img/tooltip.png);
+	background-repeat: no-repeat;
+	background-position: left bottom;
+    height: 15px;
+    width: 30px;
+}
+.tooltip ul
+{
+    margin: 0;
+    padding: 0 0 0 15px;
+}
+.tooltip ul li
+{
+    word-break: break-word;
+}
+.tooltip div.arrow.left
+{
+	right: 15px;
+}
+.tooltip div.arrow.right,
+.tooltip div.arrow.left.top
+{
+    left: 15px;
+}
+.tooltip div.arrow.top
+{
+	top: -15px;
+}
+.tooltip div.arrow.bottom
+{
+    background-position: left top;
+}
+.tooltip div.arrow.center
+{
+    left: 50%;
+    margin-left: -15px;
+}
+/******************************************************************************
+ * CONTROLS - COMMON STYLES
+ *****************************************************************************/
+div.control
+{
+    padding: 1.3em 1.3em 1em 0;
+    float: left;
+    position: relative;
+}
+.right div.control,
+div.control.right
+{
+    padding: 1.3em 0 1em 1.3em;
+}
+div.control label
+{
+    color: #5a5a5a;
+    display: block;
+    font-weight: bold;
+    line-height: 1.45em;
+    margin: -1.4em 0 0 0;
+}
+div.light-label div.control label
+{
+    font-weight: normal;
+}
+div.control label.disabled
+{
+    color: #ccc;
+}
+div.control a
+{
+    line-height: 1.85em;
+}
+div.SIPHeader
+  {
+    margin: 0px;
+    left: 230px;
+    right: 0px;
+    height: 40px;
+    padding: 0px 0px 0px 0px;
+    background-image: url(img/header_separator.png);
+    margin: 0 -30px 0px -30px;
+    background-repeat: repeat-x;
+    background-position: 0 bottom;
+}
+div.SIPHeaderText
+{
+    padding: .25em 30px 0px 40px;
+    width: 400px;
+    float: left;
+    font-size: 1.34em;
+    font-weight: bold;
+    color: #5a5a5a;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+body.mobile div.SIPHeaderText
+{
+    padding: .25em 30px 0px 35px;
+    width: 100%;
+    float: left;
+    font-size: 1.34em;
+    font-weight: bold;
+    color: #5a5a5a;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+div.SIPSettingSection
+{
+    display: block;
+    top: 0%;
+    bottom: 0%;
+}
+ body:not(.mobile) div.PrimarySection
+ {
+    position: relative;
+    float: left;
+    top: 0%;
+    bottom: 0%;
+    width: 405px;
+    color: #5a5a5a;
+    padding: 15px 30px 30px 30px;
+    margin: 0 58px -30px -30px;
+    height: auto;
+}
+body:not(.mobile) div.SecondarySection
+{
+    position: relative;
+    top: 0%;
+    bottom: 0%;
+    float: left;
+    color: #5a5a5a;
+    padding: 15px 30px 0px 35px;
+    margin: 0 -30px -30px -55px;
+    border-left: 1px solid #ccc;
+    height: auto;
+}
+div.SectionHeader {
+    background: #f2f2f2;
+    font-weight: bold;
+    color: #5a5a5a;
+    padding: .25em 30px;
+    margin: 0 -30px .75em -30px;
+    width: 320px;
+}
+body.mobile div.SectionHeader {
+    background: #f2f2f2;
+    font-weight: bold;
+    color: #5a5a5a;
+    padding: 4px 10px 5px 10px;
+    margin: 10px -30px .75em 0px;
+    width: 100%;
+}
+body.mobile #SecondaryHeaderText
+{
+    display:none;
+}
+body:not(.mobile) #MobileSecondaryHeader
+{
+    display:none;
+}
+table a
+{
+    color: #007dba;
+    border: none;
+    background-color: Transparent;
+    text-decoration: underline;
+}
+table a:hover,
+table a:focus
+{
+    color: #fff;
+    background-color: #0096d6;
+}
+em.desc, p.desc,
+em.note, p.note, div.note,
+em.example, p.example,
+em.help, p.help
+{
+    padding-top: .2em;
+    clear: both;
+    color: #767676;
+    display: block;
+    font-style: normal;
+    line-height: 1.3em;
+}
+em.note.custom-width-unit,
+em.note.custom-height-unit
+{
+    display: inline;
+    line-height: 1.6em;
+}
+em.note.custom-width-range,
+em.note.custom-height-range
+{
+    display: inline;
+    padding-left: .6em;
+}
+/* same width for all form elements */
+div.text,
+div.textarea,
+div.password,
+div.select,
+div.select1,
+div.radio,
+div.checkbox,
+div.data,
+div.file,
+div.action-list,
+div.action-list h3 div.control-column
+{
+    width: 19.3em;
+    *width: 18.3em;
+}
+/* CR133638 - Blocked Fax List on Printable Reports and Pages doesn't align properly in French on Chrome v59.0. We
+ * can fix it by making the checkbox width slightly larger.
+ */
+div[class*=" PIP_IP_"]
+{
+    width: 20.3em;
+}
+div.text input,
+div.textarea textarea,
+div.password input,
+div.select select,
+div.select1 select,
+div.data p,
+div.action-list input.add-input,
+div.spinner .spinner-hack
+{
+    width: 18em;
+    *width: 17.3em;
+    margin: 0;
+    line-height: 1.5em;
+}
+div.file input
+{
+    width: 18.3em;
+    margin: 0;
+    line-height: 1.5em;
+}
+div.data p,
+div.text input,
+div.password input,
+div.action-list input.add-input,
+a.button span
+{
+    *height: 1.5em!important; /* IE 7 */
+}
+body.js div.control input[type=radio]
+{
+    position: absolute;
+    top:0px;
+    left:0px;
+    z-index: -1;
+    opacity: 0;
+    filter: alpha(opacity=0);
+}
+body.js div.control input[type=checkbox]
+{
+    position: relative;
+    width:0px;
+    height:0px;
+    top:0px;
+    left:0px;
+    z-index: -1;
+    opacity: 0;
+    filter: alpha(opacity=0);
+}
+/******************************************************************************
+ * CONTROLS - TEXT FIELDS
+<div.control.text/password/file/textarea.ID>
+    <label[for=ID]>TEXT</label>
+    <input[type=text/password/file]/textarea#ID>
+    <em.note>NOTE</em>
+</div>
+ * CONTROL - DATA LITERAL FIELDS
+<div.control.data>
+    <label>TEXT</label>
+    <p>VALUE</p>
+    <em.note>NOTE</em>
+</div>
+******************************************************************************/
+div.data.inline
+{
+    width: auto!important;
+}
+div.data.inline label
+{
+    display: inline;
+}
+div.data.inline p
+{
+    border: none!important;
+    display: inline!important;
+}
+div.text input[type=text],
+div.text input[type=date],
+div.text input[type=time],
+div.password input[type=password],
+div.textarea textarea,
+div.select1 select,
+div.select select,
+div.action-list input.add-input
+{
+    border: 2px solid #ccc;
+}
+body.safari div.text input[type=date],
+body.safari div.text input[type=time]
+{
+    height: 28px!important;
+}
+div.file input[type=file]
+{
+    border: none;
+}
+div.data p,
+div.text input[type=text],
+div.password input[type=password],
+div.file input[type=file],
+div.action-list input.add-input
+{
+    height: 1.85em;
+    padding: 0 .35em;
+}
+div.file input[type=file]
+{
+    padding: 0;
+    margin: 0;
+}
+div.textarea textarea
+{
+    height: 4.71em;
+    padding: 0 .35em;
+    resize: none;
+    overflow-y: scroll;
+}
+div.data p
+{
+    border: 2px solid #f2f2f2;
+    background-color: #f2f2f2;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 1.5em;
+}
+/* hover and focus */
+div.text input[type=text]:hover,
+div.text input[type=text]:focus,
+div.text label:hover + input[type=text], 
+div.text label:focus + input[type=text], 
+div.password input[type=password]:hover,
+div.password input[type=password]:focus,
+div.password label:hover + input[type=password], 
+div.password label:focus + input[type=password], 
+div.textarea textarea:hover,
+div.textarea textarea:focus,
+div.select1 select:hover,
+div.select select:hover,
+div.select1 select:focus,
+div.select select:focus,
+div.action-list input.add-input:hover,
+div.action-list input.add-input:focus
+{
+	border-color: #767676;
+}
+/* disabled */
+div.text input[type=text][disabled=disabled],
+div.text input[type=date][disabled=disabled],
+div.text input[type=time][disabled=disabled],
+div.text label:hover + input[type=text][disabled=disabled],
+div.disabled.text input[type=text],
+div.disabled.text label:hover + input[type=text],
+div.disabled.password input[type=password],
+div.disabled.password label:hover + input[type=password],
+div.disabled.textarea textarea,
+div.disabled.textarea label:hover + textarea,
+div.select1 select[disabled=disabled],
+div.select select[disabled=disabled],
+div.select1.disabled select,
+div.select.disabled select
+{
+    border-color: #b9b8b8; 
+    background-color: #e5e8e8; 
+    color: #b9b8b8;
+    -webkit-text-fill-color: #B9B8B8;
+}
+/* error */
+div.control.error a select,
+div.control.error div.replace input + a.menu,
+div.control.error a select + a,
+div.control.error input,
+div.control.error textarea,
+div.select-hack.error span,
+div.control.action-list.error ul
+{
+	border-color: #ff0000 !important;
+}
+div.select-hack.error span.select-hack-button
+{
+	background-position: -1px -56px !important;
+}
+/* error with focus and hover */
+div.control.error a select:hover,
+div.control.error a select:focus,
+div.control.error div.replace input:hover + a.menu,
+div.control.error div.replace input:focus + a.menu,
+div.control.error a:hover select + a,
+div.control.error a:focus select + a,
+div.control.error input:hover,
+div.control.error input:focus,
+div.control.error textarea:hover,
+div.control.error textarea:focus,
+div.control.action-list.error ul:hover,
+div.control.action-list.error ul:focus
+{
+    border-color:#bc0000 !important;
+}
+/******************************************************************************
+ * CONTROLS - DROPDOWN LISTS
+<div.select/select1.select1-minimal.ID>
+    <label[for=ID]>TEXT</label>
+    <a>
+	    <select#ID>
+		    <option>TEXT</option>
+	    </select>
+        <a></a> ========> a styled button to cover the drop down default button
+    </a>
+    <em.note>NOTE</em>
+</div>
+-- or -------------------------------------------------------------------------
+<div.select/select1.select1-full.ID>
+	<label[for=ID]>TEXT</label>
+    <ul>
+        <li>
+            <label[for=IDn]>
+                <input[type=checkbox/radio][name=ID]#IDn/>
+				TEXT
+            </label>
+        </li>
+    </ul>
+</div>
+ ******************************************************************************
+ * CONTROL - CUSTOM DROPDOWN LIST
+ * Text Replace widget used on macro fields
+ * works with jquery.ui.text.replace.js
+ ******************************************************************************
+<div.text.text-replace.ID>
+    <label[for=ID]>TEXT</label>
+    <div.replace>
+        <input#ID/>
+        <a.menu>#</a>
+    </div>
+    <em.note>NOTE</em>
+</div>
+<body>
+...
+<ul.text-replace>
+    <li>
+        <a>TEXT</a>
+    </li>
+    ...
+</ul>
+</body>
+******************************************************************************/
+ul.text-replace
+{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    border: 1px solid #CCC;
+    background: #fff;
+    position: fixed;
+    z-index: 1000;
+}
+ul.text-replace a,
+ul.text-replace a:visited
+{
+    color: #007dba;
+    text-decoration: none;
+    display: block;
+    padding: 3px 10px;
+    white-space: nowrap;
+}
+ul.text-replace a:hover
+{
+    background-color: #dbedff!important;
+    color: #000;
+}
+/*****************************************************************************/
+div.select1 select,
+div.select select
+{
+    height: 1.85em;
+	text-indent: .15em;
+    margin: 0;
+	padding: 0;
+	padding: 0 .15em\9;
+}
+/* select width adjustment */
+div.control.select select,
+div.control.select1 select
+{
+    *width: 18.1em;
+}
+div.select1 select option,
+div.select select option
+{
+    padding: .28em .3em;
+}
+div.select1 ul,
+div.select ul,
+div.list ul
+{
+    padding: 0px;
+    margin: 0px;
+    list-style: none;
+}
+div.select1 ul li
+{
+    display: block;
+}
+div.select1-compact select,
+div.select-compact select
+{
+    height: auto;
+    height: 8em !important\9;
+}
+
+div.text-replace div.replace,
+div.text-replace a.menu,
+div.select1 a,
+div.select a
+{
+	position: relative;
+	display: inline-block;
+}
+div.text-replace div.replace input[type=text]
+{
+	padding-right: 1.5em;
+}
+div.text-replace a.menu,
+div.control a select + a
+{
+    text-indent: -1000em;
+	background-color:#fff;
+	background-repeat:no-repeat;
+	padding:0;
+	margin:0;
+	width:1.85em;
+	height:1.85em;
+	position:absolute;
+	right:0px;
+	top:0px;
+	cursor:pointer;
+	border: 2px solid #ccc;
+	border-left: 1px solid #ccc;
+}
+div.control a select + a
+{
+	pointer-events: none; /* clicks on the link will pass trought via css */
+}
+div.text-replace div.replace:hover input,
+div.text-replace div.replace:hover a.menu,
+div.text-replace input:hover + a.menu,
+div.text-replace input:focus + a.menu,
+div.text-replace input:active + a.menu,
+div.control a select:hover,
+div.control a select:focus,
+div.control a select:active,
+div.control a select:hover + a,
+div.control a select:focus + a,
+div.control a select:active + a,
+div.control a:hover select,
+div.control a:focus select,
+div.control a:active select,
+div.control a:hover select + a,
+div.control a:focus select + a,
+div.control a:active select + a,
+div.control a:hover a,
+div.control a:focus a,
+div.control a:active a
+{
+	border-color: #767676;
+}
+div.control.disabled a select,
+div.text-replace.disabled div.replace:hover input,
+div.text-replace.disabled div.replace:hover input + a.menu,
+div.control.disabled div.replace input + a.menu,
+div.control.disabled a select + a
+{
+	background-color: #e5e8e8;
+	border-color: #b9b8b8;
+}
+div.text-replace div.replace input + a.menu
+{
+	background-position: -1px -2px;
+	background-image: url(img/adds.png);
+}
+div.text-replace.error div.replace input:hover + a.menu,
+div.text-replace.error div.replace input:focus + a.menu
+{
+	background-position: -1px -110px;
+	background-image: url(img/adds.png);
+}
+div.control a select + a
+{
+	background-position: -1px -29px;
+	background-image: url(img/selects.png);
+}
+div.text-replace div.replace input + a.menu:hover,
+div.text-replace div.replace input + a.menu:focus,
+div.text-replace div.replace input + a.menu:active,
+div.control a select:hover + a,
+div.control a select:focus + a,
+div.control a select:active + a,
+div.control a:hover select + a,
+div.control a:focus select + a,
+div.control a:active select + a
+{
+	background-position: -1px -29px;
+}
+div.control.disabled div.replace input + a.menu,
+div.control.disabled a select + a
+{
+	background-position: -1px -83px;
+}
+div.control.error div.replace input + a.menu,
+div.control.error a select + a
+{
+	background-position: -1px -56px;
+}
+/* text replace (custom drop down list) */
+div.text-replace input
+{
+    *width: 15.8em!important; /* IE 7 */
+}
+div.text-replace a.menu
+{
+	*width: 1.65em; /* IE 7 */
+    *right: .2em;
+	*top: .1em;
+	*height: 1.5em;
+}
+/******************************************************************************
+ * CONTROLS - CHECKBOXES AND RADIOBUTTONS
+<div.checkbox/radio.ID>
+    <input[type=checkbox/radio]#ID>
+    <label[for=ID]>TEXT</label>
+</div>
+******************************************************************************/
+div.select li label,
+div.select1 li label,
+div.checkbox label,
+div.radio label
+{
+    margin: 0;
+	line-height: 1.85em;
+	display: inline-block;
+}
+div.select1-full ul label,
+div.select-full ul label
+{
+    font-weight: normal;
+}
+div.checkbox,
+div.radio
+{ 
+    padding: 1.3em 1.3em 1em 0;
+}
+div.select div.checkbox,
+div.select1 div.radio
+{
+    padding: 0 1.3em .43em 0;
+}
+body.js div.select1 li label,
+body.js div.select li label,
+body.js div.checkbox label,
+body.js div.radio label
+{
+    padding: 0 0 1px 21px;
+    *display: inline-block;
+}
+div.select li label.disabled,
+div.checkbox.disabled label,
+div.select1 li label.disabled,
+div.radio label.disabled,
+div.radio.disabled label
+{
+    color: #CCC;
+}
+/**********************************************
+ * CHECKBOX and SELECT 
+ * important because in rare cases checkbox must override radio button classes when combined in select lists
+ **********************************************/
+/* starting state */
+body.js div.checkbox  input+label,
+body.js div.select li label
+{
+    background-repeat: no-repeat !important;
+    background-image: url(img/checkboxes.png) !important;
+    background-position: left 3px !important;
+}
+/* hover/focus */
+body.js div.select li label:hover,
+body.js div.select li input:focus + label,
+body.js div.checkbox label:hover,
+body.js div.checkbox input:focus + label
+{
+    background-position: left -105px !important;
+}
+/* disabled */
+body.js div.select li label.disabled,
+body.js div.checkbox label.disabled,
+body.js div.checkbox label.disabled:hover,
+body.js div.checkbox input:focus + label.disabled
+{
+    background-position: left -320px !important;
+}
+/* checked */
+body.js div.select li label.checked,
+body.js div.checkbox label.checked
+{
+    background-position: left -213px !important;
+}
+/* error */
+body.js div.select li label.error,
+body.js div.select li input:focus + label.error,
+body.js div.checkbox.error label,
+body.js div.checkbox.error input:focus + label
+{
+    background-position: left -428px !important;
+}
+/* checked + hover/focus */
+body.js div.select li label.checked:hover,
+body.js div.select li input:focus + label.checked,
+body.js div.checkbox label.checked:hover,
+body.js div.checkbox input:focus + label.checked
+{
+    background-position: left -536px !important;
+}
+/* checked + disabled */
+body.js div.select li label.checked.disabled,
+body.js div.select li input:focus + label.checked.disabled,
+body.js div.checkbox label.checked.disabled,
+body.js div.checkbox input:focus + label.checked.disabled
+{
+    background-position: left -644px !important;
+}
+/* checked + error */
+body.js div.select li label.checked.error,
+body.js div.select li input:focus + label.checked.error,
+body.js div.checkbox.error label.checked,
+body.js div.checkbox.error input:focus + label.checked
+{
+    background-position: left -753px !important;
+}
+/**********************************************
+ * RADIO BUTTON and SELECT1 
+ **********************************************/
+/* starting state */
+body.js div.radio label,
+body.js div.select1 li label
+{ 
+    background-repeat: no-repeat; 
+    background-image: url(img/radiobuttons.png);
+    background-position: left 4px;
+}
+/* hover/focus */
+body.js div.select1 li label:hover,
+body.js div.radio label:hover,
+body.js div.select1 li input:focus + label,
+body.js div.radio input:focus + label
+{
+    background-position: left -101px;
+}
+/* disabled */
+body.js div.select1 li label.disabled,
+body.js div.radio label.disabled
+{
+    background-position: left -308px;
+}
+/* checked/selected */
+body.js div.select1 li label.checked,
+body.js div.radio label.checked
+{
+    background-position: left -205px;
+}
+/* error */
+body.js div.select1 li label.error,
+body.js div.radio label.error
+{
+    background-position: left -413px;
+}
+/* checked/selected + hover */
+body.js div.select1 li label.checked:hover,
+body.js div.radio label.checked:hover,
+body.js div.select1 li input:focus + label.checked,
+body.js div.radio input:focus + label.checked
+{
+    background-position: left -519px;
+}
+/* checked/selected + disabled */
+body.js div.select1 li label.checked.disabled,
+body.js div.radio label.checked.disabled,
+body.js div.select1 li input:focus + label.checked.disabled,
+body.js div.radio input:focus + label.checked.disabled
+{
+    background-position: left -626px;
+}
+/* checked/selected + error */
+body.js div.select1 li label.checked.error,
+body.js div.select1 li input:focus + label.checked.error,
+body.js div.radio label.checked.error,
+body.js div.radio input:focus + label.checked.error
+{
+    background-position: left -733px;
+}
+/******************************************************************************
+ * CONTROL - BUTTONS
+ *****************************************************************************/
+/* floating hacks */
+div.buttons
+{
+    zoom: 1;
+    height: 1%;
+}
+div.buttons:after
+{
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+/* buttons after the sections can be fixed in the bottom of the page */
+div.buttons,
+div.sections div.section div.buttons.bottom
+{
+    border-top: 1px solid #ccc;
+    background-color: #fff;
+}
+div.sections div.section div.buttons.bottom.fixed,
+div.buttons.fixed
+{
+    position: fixed;
+    bottom: 50px!important;
+    left: 230px;
+    right: 0px;
+    height: 46px;
+    *height: 26px;
+    margin: 0;
+    border-top: 1px solid #ccc;
+    background-color: #fff;
+    text-align: right;
+    padding-right: 30px;
+    z-index: 5;
+}
+div.buttons
+{
+    padding: 10px 10px 10px 30px;
+    margin: 0 -30px 0 -30px;
+}
+/* buttons inside sections have no border and top margin */
+div.sections div.section div.buttons
+{
+    position: inherit;
+    border: 0;
+    padding: 10px 30px 0 30px;
+    *padding-bottom: 10px;
+    text-align: left;
+    height: auto;
+    top: inherit;
+    right: inherit;
+    bottom: inherit;
+    left: inherit;
+}
+/* inside the buttons line, we have an extra bottom margin */
+div.sections div.section div.buttons span.button,
+div.sections div.section div.buttons a.button
+{
+    margin: 0 1.3em 1em 0;
+}
+
+/* button advanced outside sections are aligned to the left */
+div.buttons.fixed span.button.action.left,
+div.buttons.fixed a.button.action.left
+{
+    margin: 0 1.1em 0 0!important;
+}
+
+/* buttons line outside sections are aligned to the right */
+div.buttons.fixed span.button,
+div.buttons.fixed a.button
+{
+    margin: 0 0 0 1.1em!important;
+}
+/* left margin if aligned to the right */
+div.sections div.section div.buttons span.button.right,
+div.sections div.section div.buttons a.button.right
+{
+    margin: 0 2.15em 1em 1.3em;
+}
+/* a button inside a control have no margin, it relies on the control padding */
+div.control a.button,
+div.control span.button
+{
+    margin: 0;
+}
+a.control.button,
+span.control.button
+{
+    padding: 1.3em 1.3em 1em 0;
+    margin: 0;
+}
+/* common button appearance */
+a.button span,
+span.button input
+{
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    height: 1.85em;
+    line-height:1.1em;
+    border: 0;
+    color: #FFF;
+    overflow: hidden;
+    margin: 0;
+    white-space: nowrap;
+    padding: 0 .75em;
+    display: block;
+    background: #767676;
+    width:auto;
+    text-align: center;
+    border-radius: 0 4px;
+}
+/* default button have margin to the right */
+a.button,
+span.button
+{
+    display: -moz-inline-block;
+    display: -moz-inline-box;
+    display: inline-block;
+    margin: 0 1.3em 0 0;
+    white-space: nowrap;
+}
+/* except when they are aligned to the right */
+.right span.button,
+a.button.right,
+span.button.right
+{
+    margin: 0 0 0 1.3em;
+}
+/* hover/focus */
+a.button:hover span,
+a.button:focus span,
+span.button input:hover,
+span.button input:focus
+{
+    background-color: #5a5a5a;
+}
+a.button:active span,
+span.button:active input,
+a.button:focus span,
+a.default span,
+span.default input
+{
+    background-color: #0096d6;
+}
+a.default:hover span,
+a.default:focus span,
+span.default input:hover,
+span.default input:focus
+{
+    background-color: #006699;
+}
+/* special RED button */
+a.button.red span,
+span.button.red input
+{
+    background-color: #d7410b;
+}
+/* hover/focus/active */
+a.button.red:hover span,
+a.button.red:focus span,
+a.button.red:active span,
+span.button.red input:hover,
+span.button.red input:focus,
+span.button.red input:active
+{
+    background-color: #c1401a;
+}
+/* Disabling the button */
+a.disabled,
+span.disabled,
+a.disabled:hover,
+a.disabled:focus,
+a.disabled:active
+{
+    cursor: default;
+}
+a.disabled span,
+span.disabled input,
+a.disabled:hover span,
+span.disabled input:hover,
+a.disabled:focus span,
+span.disabled input:focus,
+a.disabled:active span,
+span.disabled input:active
+{
+    background-color: #e5e8e8;
+}
+a.button
+{
+    float: left;
+    text-decoration: none;
+    cursor: default;
+    background-color: Transparent;
+    border: none;
+}
+a.button span
+{
+    padding-top: .3em;
+}
+/* Button next to div.control, keep the same margin-top */
+span.control
+{
+    padding-top: 1.3em;
+}
+/******************************************************************************
+ * CONTROL - GRID
++-------+------+-------+
+| COL1  | COL2 | COLN  |
+| CHECK |      |       |
++-------+------+-------+
+| CHECK | TEXT | TEXT  |
+| RADIO | [+]  | INPUT |
+| [+]   | [-]  |       |
+| [-]   |      |       |
++-------+------+-------+
+The control grid is the standard for grids in the system.
+It consists of a table inside a div.control.grid.
+The header line should be inside a thead, while the rest of the rows should
+be inside a tbody.
+<div.control.grid>
+    <table>
+        <colgroup>
+            <col[width=?]/>
+        </colgroup>
+        <thead>
+            <tr>
+                <th>TITLE</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>CONTENT</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
++---------+
+|\TITLE\\\|
++---------+
+| CONTENT |
++---------+
+A script running from basic.js will apply the class "alternate" to every odd
+row inside the tbody.
+To create a subgroup inside the grid, add the class "sub" to the tr. That will
+make the line darker and without hover effect.
+<tr class="sub">
+    <td>CONTENT</td>
+</tr>
++---------+
+|/CONTENT/|
++---------+
+To put a checkbox or radio in the first column of the grid, you must add the
+class "command" to the td.
+<tr>
+    <td class="command">CHECK</td>
+</tr>
++-----+
+| [ ] |
++-----+
+Sometimes you might want to make a line collapseable, having an image in front
+of the text ([+] when it is collapsed or [-] when it is expanded). To make it
+so, you must add the class "leaf" to the column where you want the image [-]
+to appear. To make the [+] appear, add the extra class "closed" to the same
+column.
+When the line is collapsed, you should hide its children rows by adding the
+class "hidden" to the tr. Remove the "hidden" class to make the children visible
+again.
+You might also want to align the text on the lines under a collapseable line.
+To make it so, add the class "child" to the columns you want aligned correctly.
+-------------------------------------------------------------------------------
+<tbody>                                               +---------+-------------+
+    <tr class="sub">                                  |/CONTENT/|/[+]/CONTENT/|
+        <td>CONTENT</td>                              +---------+-------------+
+        <td class="leaf">CONTENT</td>
+    </tr>
+    <tr class="hidden">
+        <td>CONTENT</td>
+        <td class="child">CONTENT</td>
+    </tr>
+    ...
+</tbody>
+- OR --------------------------------------------------------------------------
+<tbody>                                               +---------+-------------+
+    <tr class="sub">                                  |/CONTENT/|/[-]/CONTENT/|
+        <td>CONTENT</td>                              +---------+-------------+
+        <td class="leaf closed">CONTENT</td>          | CONTENT |     CONTENT |
+    </tr>                                             +---------+-------------+
+    <tr>
+        <td>CONTENT</td>
+        <td class="child">CONTENT</td>
+    </tr>
+</tbody>
+ *****************************************************************************/
+div.grid
+{
+    padding: 0;
+    float: none;
+    position: relative;
+}
+div.grid table
+{
+    clear: both;
+    border: 1px solid #B9B8B8;
+    width: 100%;
+    border-collapse: collapse;
+}
+div.grid th
+{
+    background: #767676;
+    text-align: left;
+    color: #FFF;
+    padding: 2px 3px;
+}
+div.grid th,
+div.grid td
+{
+	height: 2.5em;
+	line-height: 1.85em;
+    *position: relative;
+}
+div.grid th.command,
+div.grid td.command
+{
+    text-align: center;
+    width: 10px;
+}
+div.grid table div.control
+{
+    padding-bottom: 0;
+    padding-right: 0;
+}
+div.grid th.command div.control,
+div.grid td.command div.control,
+div.grid table div.radio,
+div.grid table div.checkbox,
+div.grid table div.radio label,
+div.grid table div.checkbox label
+{
+    height: 1.85em;
+	line-height: 1.85em;
+    width: 20px;
+}
+div.grid table div.checkbox label
+{
+    padding-left: 0;
+}
+div.control.radio label,
+div.control.checkbox label
+{
+    min-height: 1.85em;
+	line-height: 1.85em;
+    min-width: 20px;
+}
+div.grid table tr.child-1 div.checkbox label,
+div.grid table tr.child-1 div.checkbox:checked label,
+div.grid table tr.child-1 div.checkbox:hover label,
+div.grid table tr.child-2 div.checkbox label,
+div.grid table tr.child-2 div.checkbox:checked label,
+div.grid table tr.child-2 div.checkbox:hover label
+{
+    height: 1.85em;
+    line-height: 1.85em;
+    width: auto;
+    margin-left: 30px;
+    text-align: left;
+    padding-left: 30px;
+    font-weight: normal;
+    color: #000;
+    float: left;
+}
+div.grid table tr.child-2 div.checkbox label,
+div.grid table tr.child-2 div.checkbox:checked label,
+div.grid table tr.child-2 div.checkbox:hover label
+{
+    margin-left: 60px;
+}
+div.grid th.command div.control input,
+div.grid td.command div.control input,
+div.grid table div.radio input,
+div.grid table div.checkbox input,
+div.grid table div.radio label input,
+div.grid table div.checkbox label input
+{
+    padding: 0 !important;
+    margin: 0px 4px 0 0 !important;
+}
+body.js div.grid table div.checkbox
+{
+    *float: none!important;
+}
+body.js div.grid table div.checkbox label span
+{
+    *margin: 8px 0 0 -1px !important;
+}
+div.grid table th.command div.control label input,
+div.grid table td.command div.control label input
+{
+    float: right;
+    margin: 7px 4px 0 0 !important;
+}
+div.grid tr
+{
+    background-color: #fff;
+}
+div.grid tr.alternate
+{
+    background-color: #f2f2f2;
+}
+div.grid.no-hover tr:hover
+{
+    background-color:#fff!important;
+}
+div.grid.no-hover tr.alternate:hover
+{
+    background-color:#f2f2f2!important;
+}
+/* automatic alternate wont work for all browsers
+div.grid tbody tr:not(.sub):nth-child(odd)
+{
+    background-color: #EFEFEF;
+} */
+div.grid tr.sub td
+{
+    font-weight: bold;
+    background-color: #efefef;
+}
+div.grid.static tr.sub td
+{
+    background-color: #fff;
+}
+body.js div.grid tr td.leaf
+{
+    font-weight: bold;
+    background-image: url(img/treeview.png);
+    background-repeat: no-repeat;
+    background-position: 10px -147px;
+}
+body.js div.grid tr td.leaf.closed
+{
+    background-position: 10px -95px;
+}
+div.grid tr td.leaf,
+div.grid tr td.child
+{
+    padding-left: 40px;
+}
+div.grid.static tr td
+{
+    border-bottom: 1px solid #B9B8B8;
+}
+div.grid tbody tr.child-1 td.leaf,
+div.grid tbody tr.child-1 td.leaf.closed
+{
+    background-position-x: 40px;
+}
+div.grid tbody tr.child-1 td.title span,
+div.grid tbody tr.child-1 td.leaf span
+{
+    margin-left: 30px;
+}
+div.grid tbody tr.child-2 td.title span,
+div.grid tbody tr.child-2 td.leaf span
+{
+    margin-left: 60px;
+}
+div.grid tbody tr.child-hidden
+{
+    display: none !important;
+}
+div.grid tr.selected
+{
+    background-color: #99CCFF;
+}
+/* tr:hover */
+div.grid tr:hover,
+div.grid.static tr td:hover
+{
+	background-color:#dbedff!important;
+}
+div.grid tr.selected
+{
+    background-color: #99CCFF;
+}
+/* tr.selected:hover */
+div.grid tr.selected:hover
+{
+	background:#7ebdfc!important;
+}
+div.grid div.control
+{
+    padding: 0;
+    margin: 0;
+}
+div.grid div.empty
+{
+    clear: both;
+    border: 1px solid #B9B8B8;
+    padding: 10px 10px;
+    color: #767676;
+}
+div.grid tr.empty td
+{
+    text-align: center;
+    background: #FFF;
+}
+div.grid td,
+div.grid th
+{
+    cursor: default;
+    padding: 0 0 0 .75em;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+div.grid .center
+{
+    text-align: center;
+}
+/* EM inside a grid should be gray */
+div.grid em
+{
+    color: #767676;
+}
+/* Grid with error */
+div.grid.error div
+{
+    border: 2px solid #ff0000;
+    color: #ff0000;
+}
+/* Grid hover and focus with error */
+div.grid.error:focus div,
+div.grid.error:hover div
+{
+    border: 2px solid #bc0000;
+    color: #bc0000;
+}
+div.table a
+{
+    color: #007dba;
+    border: none;
+    text-decoration: underline;
+}
+div.table a:hover,
+div.table a:focus
+{
+    color: #fff;
+}
+/******************************************************************************
+ * INLINE STATUS ICONS
+ *****************************************************************************/
+span.status,
+span.status-inline,
+div.control.data.status p
+{
+    background-color: transparent;
+    background-image: url(img/status-icons.png);
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: 0 0;
+}
+span.status
+{
+    display: inline-block;
+    text-indent: -1000em;
+    width: 20px;
+    *width: 0px;
+    *padding-left: 20px;
+    *text-indent: 0px!important;
+    *overflow: hidden;
+    height:22px;
+    line-height: 1.85em;
+    vertical-align: middle;
+}
+span.status-inline
+{
+    float:left;
+	margin-right:5px;
+	text-indent:0;
+	width:auto;
+	height:auto;
+	padding-left:20px;
+}
+div.control.data.status p
+{
+	padding-left:21px;
+}
+div.control.data.disabled p
+{
+    border-color: #6d6d6d;
+    background-color: #ddd;
+    color: #6d6d6d;
+}
+div.double-width.control.data.status p
+{
+	*width: 35.7em!important;
+}
+ul.status-list
+{
+    list-style: none;
+}
+ul.status-list li,
+ul.status-list li.tooltip strong
+{
+	background-image: url(img/status-icons.png);
+	background-repeat: no-repeat;
+	padding:0 0 0 20px;
+}
+/* yellow sign with white exclamation point */
+span.status-alert,
+span.status-warning,
+ul.status-list li.warning
+{
+    background-position: 0px 4px;
+}
+/* blue sign with white letter i */
+span.status-information
+{
+    background-position: 0px -396px;
+}
+/* status inside the strong tag of a ul.status-list li.tooltip aligned different */
+ul.status-list li.tooltip strong
+{
+    background-position: 0px -400px;
+}
+/* green sign with a white "V" (check sign) */
+span.status-normal,
+span.status-success,
+span.status-on,
+ul.status-list li,
+span.status-yes
+{
+    background-position: 0px -596px;
+    line-height: 1.85em;
+}
+/* gray sign with a white "V" (check sign) */
+span.status-normal-gray,
+span.status-success-gray,
+span.status-factory
+{
+    background-position: 0px -696px;
+}
+/* red sign with a white "X" */
+span.status-error,
+span.status-no
+{
+    background-position: 0px -196px;
+}
+/* gray sign with a white "X" */
+span.status-error-gray
+{
+    background-position: 0px -296px;
+}
+/* white sign with a gray "X" */
+span.status-error-disabled,
+span.status-error-white,
+span.status-off
+{
+    background-position: 0px -796px;
+}
+/* gray sign with lock icon */
+span.status-lock
+{
+    background-position: 0px -1196px;
+}
+
+/* warning sign inside .control.data */
+div.control.data.status-warning p
+{
+    background-position: 2px 3px;
+}
+/* inside the .control.data the status-on has different positioning */
+div.control.data.status-on p
+{
+    background-position: 2px -597px;
+}
+/* inside the .control.data the status-off looks like an status-error-gray */
+div.control.data.status-off p
+{
+    background-position: 2px -297px;
+}
+
+/* gray circle that rotates*/
+span.status-progress
+{
+	background-image: url(img/snake_transparent.gif)!important;
+}
+/* text that is next to the status icon */
+span.status-text
+{
+    text-indent: 0;
+    width: auto;
+    padding-left: 20px;
+}
+/* the warning icon (yellow sign with black exclamation point) in a note */
+em.note-warning, 
+p.note-warning
+{
+    background-color: transparent;
+    background-image: url(img/status-icons.png);
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    padding: 0 5px 0 20px;
+}
+/* the information icon (blue sign with white letter i) in a note */
+em.note-information, 
+p.note-information
+{
+    background: transparent url(img/status-icons.png) no-repeat 1px -397px;
+    padding: 1px 5px 5px 20px;
+}
+em.note-warning,
+em.note-information
+{
+    margin-top: 5px;
+}
+
+/* (i)nformation icon */
+span.information-icon
+{
+	background:url(img/status-icons.png) no-repeat 0 -400px;
+	display:inline-block;
+	width:18px;
+	height:22px;
+	margin: 0 0 0 10px;
+	vertical-align:bottom;
+}
+/******************************************************************************
+ * CONTROL - MODAL DIALOG
+ * jquery-ui-custom-dialog.min.js
+*******************************************************************************
+JQUERY DIALOG
+<div.ui-dialog>
+    <div.ui-dialog-titlebar>
+        <span.ui-dialog-title>TITLE</span>
+        <button.ui-dialog-titlebar-close>
+            <span.ui-icon-closethick/>
+            <span.ui-button-text>CLOSE</span>
+        </button>
+    </div>
+    [ MODAL MESSAGE DIALOG ]
+</div>
+*******************************************************************************
+MODAL MESSAGE DIALOG
+<div.ui-dialog-content>
+    <div.icon/>
+    <div.modalContent>
+        [ MESSAGE ]
+    </div>
+    <div.modalFooter>
+        <div.modalButtons>
+            VELOCITY BUTTONS
+        </div>
+    </div>
+</div>
+ *****************************************************************************/
+#modal
+{
+    display: none;
+}
+/* Overlays */
+.ui-widget-overlay
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000 50% 50% repeat-x;
+    opacity: .6;
+    filter: Alpha(Opacity=60);
+    z-index: 20;
+}
+/* This affects the look-and-feel of tooltip popups generated by jQuery-UI
+.ui-widget-shadow
+{
+    margin: -8px 0 0 -8px;
+    padding: 8px;
+    background: #aaaaaa 50% 50% repeat-x;
+    opacity: .3;
+    filter: Alpha(Opacity=30);
+    -moz-border-radius: 8px;
+    -webkit-border-radius: 8px;
+}
+*/
+/* Dialog */
+.ui-dialog
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 0;
+    width: 300px;
+    background-color: #fff;
+    z-index: 21;
+    border: 2px solid #ccc;
+    width: 335px!important;
+}
+/* Title */
+.ui-dialog .ui-dialog-titlebar
+{
+    height: 25px;
+    padding: 3px 10px;
+    background-color: #5a5a5a;
+    position: relative;
+}
+.ui-dialog .ui-dialog-title
+{
+    color: #FFF;
+    font-weight: bold;
+    word-break: break-word;
+}
+.ui-dialog .ui-dialog-titlebar-close
+{
+    display: none;
+}
+/* Content */
+.ui-dialog .ui-dialog-content
+{
+    min-height: 90px!important;
+    height: auto!important;
+    position: relative;
+}
+.ui-dialog .ui-dialog-content .icon
+{
+    background-image: url(img/message-icon.png);
+    background-repeat: no-repeat;
+    width: 45px;
+    height: 45px;
+    position: absolute;
+    top: 17px;
+    left: 17px;
+    display: none;
+}
+.ui-dialog .ui-dialog-content.message-warning .icon,
+.ui-dialog .ui-dialog-content.message-error .icon,
+.ui-dialog .ui-dialog-content.message-information .icon,
+.ui-dialog .ui-dialog-content.message-success .icon
+{
+    display: block;
+}
+.ui-dialog .ui-dialog-content .modalContent
+{
+    padding: 17px 10px 10px 10px;
+    min-height: 90px;
+    word-wrap: break-word;
+}
+.ui-dialog .ui-dialog-content .modalContent .barber-pole
+{
+    background: url(img/progress-bar.gif) no-repeat left center;
+    margin: 10px 0;
+    width: 310px;
+    height: 11px;
+    text-indent: -1000em;
+}
+.ui-dialog .ui-dialog-content.message-warning .modalContent,
+.ui-dialog .ui-dialog-content.message-error .modalContent,
+.ui-dialog .ui-dialog-content.message-information .modalContent,
+.ui-dialog .ui-dialog-content.message-success .modalContent
+{
+    padding: 17px 10px 10px 79px;
+}
+.ui-dialog .ui-dialog-content.message-warning .barber-pole,
+.ui-dialog .ui-dialog-content.message-error .barber-pole,
+.ui-dialog .ui-dialog-content.message-information .barber-pole,
+.ui-dialog .ui-dialog-content.message-success .barber-pole
+{
+    width: 242px!important;
+}
+/* Footer */
+.ui-dialog .ui-dialog-content .modalFooter
+{
+    bottom: 0px;
+    right: 0px;
+    width: 100%;
+}
+.ui-dialog .ui-dialog-content .modalButtons
+{
+    border-top: 1px solid #ccc;
+    background-color: #fff;
+    text-align: right;
+    padding: 10px;
+}
+.ui-dialog .ui-dialog-content .modalButtons .button
+{
+    margin: 0 0 0 10px!important;
+}
+/******************************************************************************
+ * CONTROL - MESSAGES
++--------------------------------+
+| +------+ +-------------------+ |
+| | ICON | | CONTENT           | |
+| +------+ | [ TITLE ]         | |
+|          | [ DESCRIPTION ]   | |
+|          | [ ITEMS ]         | |
+|          +-------------------+ |
++--------------------------------+
+<div#ID.message.message-TYPE>
+    <div.icon/>
+    <div.content>
+        <h2>TITLE</h2>
+        <p>DESCRIPTION</p>
+        <ol>
+            <li>
+                <label#IDitem[for=IDfield]>ITEM</label>
+            </li>
+            { li's }
+        </ol>
+    </div>
+</div>
+ *****************************************************************************/
+/* floating hacks */
+div.message, div.message div.content
+{
+    zoom: 1;
+    _height: 1%;
+}
+div.message:after, div.message div.content:after
+{
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+div.message
+{
+    clear: both;
+    margin-bottom: 30px;
+    background-color: #fff;
+    position: relative;
+    border-radius: 0;
+    border: none;
+    border-left-width: 4px;
+    border-left-style: solid;
+    z-index: 2999;
+}
+div.message div.icon
+{
+    background-image: url(img/message-icon.png);
+    background-repeat: no-repeat;
+    width: 45px;
+    height: 45px;
+    position: absolute;
+    top: 21px;
+    left: 21px;
+}
+div.message div.content
+{
+    float: none;
+    position: relative;
+    padding: 0 10px 0 89px;
+    margin: 0;
+    word-wrap: break-word;
+    min-height: 89px;
+}
+div.message ol
+{
+    padding: 0 0 20px 1.5em;
+}
+div.message label
+{
+    background: transparent;
+    padding: 0;
+    cursor: text;
+}
+div.message h2,
+div.message h3
+{
+    padding-top: 20px;
+    font-size: 1em;
+    border: 0;
+}
+div.message div.items
+{
+    margin: 10px 10px 10px 0;
+}
+div.message div.items span.number
+{
+    float: left;
+    font-weight: bold;
+}
+div.message div.items li
+{
+    margin: 0;
+}
+div.message div.items ul
+{
+    margin: 0 0 10px 0;
+    padding: 0 0 0 12px;
+    list-style-position: inside;
+}
+div.message div.buttons
+{
+    background-color: #fff;
+    padding: 10px 0 10px 5em;
+    border: 0;
+}
+/* INFORMATION */
+div.message-information
+{
+    background-color: #f4f8fa; /* bootstrap color */
+    border-color: #007dba; /* onevoice color */
+}
+div.message-information div.icon
+{
+    background-position: center -1px;
+}
+div.message-information h2,
+div.message-information h3
+{
+    color: #007dba; /* onevoice color */
+}
+/* WARNING */
+div.message-warning,
+div.message-state,
+div.message-dssbound
+{
+    background-color: #fcf8f2; /* bootstrap color */
+    border-color: #f0ad4e; /* bootstrap color */
+}
+div.message-warning div.icon
+{
+    background-position: center -47px;
+}
+div.message-warning h2,
+div.message-warning h3,
+div.message-state h2,
+div.message-state h3,
+div.message-dssbound h2,
+div.message-dssbound h3
+{
+    color: #f0ad4e; /* bootstrap color */
+}
+/* SUCCESS */
+div.message-success
+{
+    background-color: #f4ffef; /* onevoice color */
+    border-color: #008428; /* onevoice color */
+}
+div.message-success div.icon
+{
+    background-position: center -92px;
+}
+div.message-success h2,
+div.message-success h3
+{
+    color: #008428; /* onevoice color */
+}
+/* ERROR */
+div.message-error
+{
+    background-color: #f7d7d7; /* official onevoice color */
+    background-color: #fdf7f7; /* onevoice (from bootstrap) color */
+    border-color: #ff0000; /* onevoice color */
+}
+div.message-error div.icon
+{
+    background-position: center -137px;
+}
+div.message-error h2,
+div.message-error h3
+{
+    color: #ff0000; /* onevoice color */
+}
+div.message-error li label.link
+{
+    cursor: pointer;
+}
+div.message-error li label.link:hover,
+div.message-error li label.link:focus
+{
+    text-decoration:underline;
+}
+/* STATE */
+div.message-state div.icon
+{
+    background-position: center -180px;
+}
+div.message-state ol
+{
+    margin: 5px 0;
+    padding-left: 1.5em;
+}
+/* DSSBOUND */
+div.message-dssbound div.icon
+{
+    background-position: center -223px;
+    width: 50px;
+}
+div.message-dssbound ol
+{
+    list-style: disc;
+    padding: 0 0 0 15px;
+}
+/******************************************************************************
+ * CONTROL - PROGRESS BAR
+ ******************************************************************************
+regular progress is a box on the top of the page, much like the summary is
+MESSAGE is optional, since the TITLE is enough on most cases
+CANCEL is optional, since not all operations can be cancelled
+CANCEL can be rendered using NVelocity.Button method
++----------------------------------+
+| TITLE                            |
++----------------------------------+
+| MESSAGE                          |
+| [ barber pole image ] [ CANCEL ] |
++----------------------------------+
+<div#ID1.message.message-progress>
+	<h2#ID2>TITLE</h2>
+	<div.content>
+		<p>MESSAGE</p>
+        <div.barber-pole></div>
+        <span.button.action>
+            <input[type=submit]#IDcancel/>
+        </span>
+	</div>
+</div>
+*/
+div.message-progress,
+div.message-progress-inline
+{
+    border: none;
+}
+div.message-progress
+{
+    margin: 0!important;
+}
+div.message-progress div.content div.barber-pole
+{
+    background: url(img/progress-bar.gif) no-repeat left center;
+    float: left;
+    margin: 6px 0;
+    width: 100%;
+    height: 11px;
+    text-indent: -1000em;
+}
+
+/* when rendered inside an "ui-dialog", progress modal has some differences:
+TITLE has no background.
+[ barber pole ] appears first.
+MESSAGE appears under the barber pole. */
+.ui-dialog div.ui-dialog-content.message-progress
+{
+    border: none;
+    padding: 10px 30px;
+}
+.ui-dialog div.ui-dialog-content.message-progress h2
+{
+    display: block;
+    background: transparent;
+    color: #000;
+    border: none;
+    padding: 0 0 10px 0;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+.ui-dialog div.ui-dialog-content.message-progress div.content
+{
+    border: none;
+    padding: 0;
+}
+.ui-dialog div.ui-dialog-content.message-progress div.content div.barber-pole
+{
+    width: 100%;
+    background-position: center;
+    float: none;
+    margin: 0;
+}
+.ui-dialog div.ui-dialog-content.message-progress div.content p
+{
+    padding: 10px 0 0 0;
+    margin: 0;
+}
+/* progress inline is a box floating to left
+MESSAGE is optional, since the TITLE is enough on most cases
+CANCEL is optional, since not all operations can be cancelled
+CANCEL can be rendered using NVelocity.Button method
++----------------------------------+
+| TITLE                            |
++----------------------------------+
+| MESSAGE                          |
+| [ barber pole image ] [ CANCEL ] |
++----------------------------------+
+<div#ID1.message.message-progress-inline>
+    <h2#ID2>TITLE</h2>
+	<div.content>
+		<p>MESSAGE</p>
+        <div.barber-pole></div>
+        <span.button.action>
+            <input[type=submit]#IDcancel/>
+        </span>
+	</div>
+</div>
+*/
+div.message-progress-inline
+{
+    float: left;
+    clear: none;
+    margin: 0;
+}
+div.message-progress h2,
+div.message-progress-inline h2
+{
+    display: block;
+    background-color: #5a5a5a;
+    color: #fff;
+    padding: 5px 10px;
+}
+div.message-progress div.content,
+div.message-progress-inline div.content
+{
+    margin: 0;
+    padding: 10px;
+    min-height: inherit;
+    border: 2px solid #ccc;
+    border-top: none;
+}
+div.message-progress div.content p,
+div.message-progress-inline div.content p
+{
+    margin: 0 0 10px 0;
+}
+div.message-progress-inline div.content div.barber-pole
+{
+    background: url(img/progress-bar.gif) no-repeat left center;
+    float: left;
+    margin: 6px 0;
+    width: 337px;
+    height: 11px;
+    text-indent: -1000em;
+}
+div.message-progress div.content span.button,
+div.message-progress-inline div.content span.button
+{
+    margin: 0 0 0 10px;
+}
+/******************************************************************************
+ * CONTROL - PAGINATION
+ *****************************************************************************/
+/* floating hacks */
+div.pagination
+{
+    zoom: 1;
+    _height: 1%;
+}
+div.pagination:after
+{
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+div.pagination
+{
+    margin: 0;
+    float: right;
+    white-space: nowrap;
+}
+div.pagination label
+{
+    float: left;
+    margin: 0 3px 0 0;
+    display: block;
+    position: relative;
+    overflow: hidden;
+}
+div.pagination label input
+{
+    height: 1.85em;
+    line-height: 1.85em;
+    border: 1px solid #e5e8e8;
+    color: #007dba;
+    margin: 0;
+    padding: 0 5px;
+    display: block;
+    background-color: #fff;
+}
+div.pagination label input:hover,
+div.pagination label input:focus
+{
+    background-color: #e5e8e8;
+}
+div.pagination span.ellipsis
+{
+    float: left;
+    margin: 0 3px 0 0;
+    padding: 1px 1px 0 1px;
+    line-height: 1.85em;
+    display: block;
+}
+div.pagination label.prev input,
+div.pagination label.next input
+{
+    font-weight: bold;
+}
+div.pagination label.disabled input,
+div.pagination label.disabled input:hover,
+div.pagination label.current input,
+div.pagination label.current input:hover,
+div.pagination label.current input:focus
+{
+    background-color: #fff;
+    border-color: #fff;
+    color: #000;
+    font-weight: bold;
+}
+div.pagination div.select1
+{
+    width: auto!important;
+    float: left;
+    margin: 0;
+    padding: 0;
+}
+div.pagination div.select1 select
+{
+    min-width: 0em !important;
+    width: 60px !important;
+    padding: 0;
+    margin: 0;
+}
+div.pagination div.select1 div.select-hack,
+div.pagination div.select1 div.select-hack span.select-hack-text
+{
+	width: 60px;
+}
+div.pagination div.select1 label
+{
+	margin: -1.45em 0 0 0;
+}
+/******************************************************************************
+ * CONTROL - ACTION LISTS
+ * Action lists can be used in several ways
+ ******************************************************************************
+ * USE #1: list of items with a trash button for each
+
++-----------------+
+| ITEM          T | => delete (trash) button
+|                 |
+|                 |
++-----------------+
+
+<div.control.action-list>
+    <ul>
+        <li>
+            <span.actions>
+                <label.action.remove[for=IDRemove_n]>
+                    <input#IDRemove_n[type=submit][name=IDRemove][value=Remove]/>
+                </label>
+            </span>
+            <span#IDn.item>
+                ITEM
+            </span>
+        </li>
+    </ul>
+</div>
+
+ ******************************************************************************
+ * USE #2: same as #1, but with a title that looks like the header of a grid
+
++-----------------+
+| TITLE           | => title is like the grid title
++-----------------+
+| ITEM          T | => delete (trash) button
+|                 |
+|                 |
++-----------------+
+
+<div.control.action-list>
+    <h3>
+        TITLE
+    </h3>
+    <ul>
+    ... and so on
+
+ ******************************************************************************
+ * USE #3: list of items with move up, down and trash button for each
+ * you can see this case on LdapDataBaseSearchSettingsView.vm
+ * the action list actually replaces a text field, the original content
+ * is a list separated by pipes ("|") and it is viewed as a list for the
+ * sake of user experience
+
+LABEL => label as every other control label
+[                 ] [ ADD ] => a textbox followed by an add button
++-----------------+
+| ITEM      U D T | => move up, down and trash buttons
+|                 |
+|                 |
++-----------------+
+
+<div.control.action-list>
+    <label[for=ID]>
+        LABEL
+    </label>
+    <input#ID[type=text][name=ID]/> => this input is invisible, it contains the actual list separated by pipes
+    <div.add-group>
+        <input#ID-Js.add-input[type=text]/> => this input is for 
+        <span.button.action.add>
+            <input#ID-AddButton[type=submit][name=add-button][value=ADD]/>
+        </span>
+    </div>
+    <ul>
+        <li>
+            <span.actions>
+                <label.action.move-up.disabled[for=IDMoveUp_n]> => first move up is disabled
+                    <input#IDMoveUp_n[type=submit][value=Move Up][disabled=disabled]/>
+                </label>
+                <label.action.move-down.disabled[for=IDMoveDown_n]> => last move down is disabled
+                    <input#IDMoveDown_n[type=submit][value=Mode Down][disabled=disabled]/>
+                </label>
+                <label.action.remove[for=IDRemove_n]>
+                    <input#IDRemove_n[type=submit][value=Remove]/>
+                </label>
+            </span>
+            <span#IDn.item>
+                ITEM
+            </span>
+        </li>
+    </ul>
+</div>
+
+ ******************************************************************************
+ * USE #4: action list with title, but with checkboxes as items
+ * Such action lists have no "action" actually (the button on the right) and
+ * because of that they wont have the span.actions nor span.item.
+ * The checkbox control will be directly inside the li.
+
++-----------------+
+| TITLE           | => title is like the grid title
++-----------------+
+| [ ] ITEM        | => checkbox
+|                 |
+|                 |
++-----------------+
+
+ ******************************************************************************
+ * USE #5: action list with extra formatting in the items
+ * The content of the li span.item don't need to be plain text, you can add
+ * whatever html you want. See Fax Send Setup > Quick Sets, the left action list
+ ******************************************************************************
+ * USE #6: action list with checkboxes and formated content as items
+ * You can use css classes to render differently a checkbox, inside an
+ * .action-list li you can use:
+ *   .item-bold => to force bold to the text
+ *   .item-highlight => to force a bold blue highlighted color to the text
+ *   .item-normal => to enforce the regular text appearance
+ * See Fax Send Setup > Quick Sets, the right action list
+ ******************************************************************************
+ * USE #7: action list as a grid
+ * It is possible to use an action list to appear as a grid (at least for one
+ * or two columns). The reasoning for using an action list as a grid is because
+ * the action list can have its content scrolled (and that is tricky in a pure
+ * grid).
+ * Use div.control-column inside the h3 (the grid header) to enforce the columns
+ * in the title with the same default width of a control.
+ * Use any (we tested checkboxes and dropdown lists without labels) control as the
+ * columns inside the li's.
+ * See General > Control Panel Customization > Control Panel Language and Keyboard
+ * Layout section. There you can see action lists with one or two columns.
+ *****************************************************************************/
+div.action-list ul,
+div.action-list li
+{
+    zoom:1;
+    _height:1%;
+}
+div.action-list ul:after,
+div.action-list li:after
+{
+    content:" ";
+    display:block;
+    height:0;
+    clear:both;
+    visibility:hidden;
+}
+div.action-list
+{
+    padding: 0;
+    float: left;
+    margin: 0;
+    clear: both;
+    width:100%;
+}
+/* when the list is empty the default rendering (mvc control) will contain a div.empty
+otherwise, ul will appear simply as an empty box */
+div.action-list div.empty
+{
+    
+}
+/* label for the action list with jquery ui string list plugin */
+div.action-list label.action-label
+{
+    margin: 0;
+}
+/* title for the action list (optional) */
+div.action-list h3
+{
+    border: none;
+    line-height: 1.85em;
+    padding: 5px 5px 5px 10px;
+}
+
+div.action-list h3,
+div.action-list h3 div.checkbox,
+div.action-list h3 label
+{
+    background-color:#767676;
+    color:#fff;
+    margin:0;
+    float:none;
+    clear:both;
+    display:block;
+}
+div.action-list h3 div.control-column
+{
+    padding: 0;
+    position: relative;
+    display: inline-block;
+}
+div.action-list h3 div.checkbox
+{
+    padding: 3px 0;
+}
+/* the actual list and its items */
+div.action-list ul
+{
+    overflow: auto;
+    padding: 0;
+    border: 2px solid #ccc;
+    height: 154px;
+    margin: 0;
+    display: block;
+    clear: both;
+	position: relative;
+}
+div.action-list h3 + ul
+{
+    border-top: none;
+}
+div.action-list li
+{
+    height: 2.5em;
+    line-height: 1.85em;
+    margin: 0;
+    clear: both;
+    list-style: none;
+}
+div.action-list li:hover
+{
+    background-color: #dbedff!important;
+}
+div.action-list li.alternate
+{
+    background-color: #F2F2F2;
+}
+/* the text for the item */
+div.action-list span.item
+{
+    padding: 5px 0 5px 0;
+    margin: 0 0 0 7px;
+    display: block;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+/* all action buttons are inside this area */
+div.action-list span.actions
+{
+    float: right;
+}
+/* basic definition for the action button */
+div.action-list label.action
+{
+    float: left;
+    width: 20px;
+    height: 20px;
+	background-color:transparent;
+	background-repeat:no-repeat;
+	position: relative;
+	margin: 7px 2px 0 2px;
+}
+div.action-list label.action:hover
+{
+    background-color:#007dba;
+}
+div.action-list label.action:active
+{
+    background-color:#000;
+}
+div.action-list label.action.disabled
+{
+    background-color:transparent!important;
+}
+/* action input CANNOT use display block or some browsers wont submit */
+div.action-list label.action input
+{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: block!important;
+    opacity: 0;
+    -moz-opacity: 0;
+    filter: alpha(opacity=0);
+}
+/* specific definition for a remove (trash), move-up and down use buttons */
+div.action-list .remove,
+div.action-list .move-up,
+div.action-list .move-down
+{
+	background-image:url(img/action-list-buttons.png);
+}
+/* background images offset */
+div.action-list .move-up
+{
+	background-position:3px 0px;
+}
+div.action-list .move-up:hover,
+div.action-list .move-up:active
+{
+	background-position:3px -20px;
+}		
+div.action-list .move-up.disabled
+{
+	background-position:3px -40px!important;
+}
+div.action-list .move-down
+{
+	background-position:3px -60px;
+}
+div.action-list .move-down:hover,
+div.action-list .move-down:active
+{
+	background-position:3px -80px;
+}	
+div.action-list .move-down.disabled
+{
+	background-position:3px -100px!important;
+}
+div.action-list .remove
+{
+   	background-position:3px -120px;
+}
+div.action-list .remove:hover,
+div.action-list .remove:active
+{
+   	background-position:3px -140px;
+}
+div.action-list .remove.disabled
+{
+   	background-position:3px -160px!important;
+}
+/* special case #1: a checkbox as an item and action */
+div.action-list li div.control
+{
+    padding:5px 0 4px 7px;
+}
+div.action-list li div.control.checkbox label,
+div.action-list li div.control.radio label
+{
+    font-weight: normal;
+}
+/* special case #2: force an item to be bold */
+div.action-list li .item-bold
+{
+    font-weight: bold!important;
+}
+/* special case #3: force an item to be highlighted blue and bold */
+div.action-list li .item-highlight
+{
+    font-weight: bold!important;
+    color: #007dba!important;
+}
+/* special case #3: force an item to be normal */
+div.action-list li .item-normal
+{
+    font-weight: normal!important;
+}
+/******************************************************************************
+ * ACTION LIST using jquery plugin
+ * jquery.ui.string.list.js
+The action list used with the string list plugin is very much like the 
+regular action list, with some extra elements like a label with a search box 
+and an add button on top of it.
+It starts with a simple text box, that is transformed using javascript in a
+whole new group of html elements as follows.
+*/
+div.action-list div.add-group
+{
+    float: left;
+    width: auto!important;
+    white-space: nowrap;
+    padding-bottom: 5px;
+}
+/* hide the original input text (actually all inputs are hidden) */
+div.action-list input
+{
+    display: none!important;
+}
+/* display only these inputs */
+div.action-list input.add-input,
+div.action-list span.add input,
+div.action-list div.checkbox input,
+div.action-list div.radio input
+{
+    display: inline!important;
+}
+div.action-list input.add-input,
+div.action-list span.add
+{
+	float:left;
+}
+div.action-list span.add
+{
+	margin:0 0 0 1.3em;
+}
+/******************************************************************************
+ * CONTROL - DATE AND TIME PICKERS
+ * jquery Date and time pickers
+ *****************************************************************************/
+.ui-datepicker
+{
+    width: 17em;
+    padding: .2em .2em 0;
+    color: #5A5A5A;
+}
+.ui-datepicker .ui-datepicker-header
+{
+    position: relative;
+    padding: .2em 0;
+}
+.ui-datepicker .ui-datepicker-prev,
+.ui-datepicker .ui-datepicker-next
+{
+    position: absolute;
+    top: 2px;
+    width: 1.8em;
+    height: 1.8em;
+}
+.ui-datepicker .ui-datepicker-prev
+{
+    left: 2px;
+}
+.ui-datepicker .ui-datepicker-next
+{
+    right: 2px;
+}
+.ui-datepicker .ui-datepicker-prev span,
+.ui-datepicker .ui-datepicker-next span
+{
+    display: block;
+    position: absolute;
+    left: 50%;
+    margin-left: -8px;
+    top: 50%;
+    margin-top: -8px;
+}
+.ui-datepicker .ui-datepicker-title
+{
+    margin: 0 2.3em;
+    line-height: 1.8em;
+    text-align: center;
+}
+.ui-datepicker .ui-datepicker-title select
+{
+    float: left;
+    font-size: 1em;
+    margin: 1px 0;
+}
+.ui-datepicker select.ui-datepicker-month-year
+{
+    width: 100%;
+}
+.ui-datepicker select.ui-datepicker-month,
+.ui-datepicker select.ui-datepicker-year
+{
+    width: 49%;
+}
+.ui-datepicker .ui-datepicker-title select.ui-datepicker-year
+{
+    float: right;
+}
+.ui-datepicker table
+{
+    width: 100%;
+    font-size: .9em;
+    border-collapse: collapse;
+    margin: 0 0 .4em;
+}
+.ui-datepicker th
+{
+    padding: .7em .3em;
+    text-align: center;
+    font-weight: bold;
+    border: 0;
+}
+.ui-datepicker td
+{
+    border: 0;
+    padding: 1px;
+}
+.ui-datepicker td span,
+.ui-datepicker td a
+{
+    display: block;
+    padding: .2em;
+    text-align: center;
+    text-decoration: none;
+}
+.ui-datepicker .ui-datepicker-buttonpane
+{
+    background-image: none;
+    margin: .7em 0 0 0;
+    padding: 0 .2em;
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 0;
+}
+.ui-datepicker .ui-datepicker-buttonpane button
+{
+    float: right;
+    margin: .5em .2em .4em;
+    cursor: pointer;
+    padding: .2em .6em .3em .6em;
+    width: auto;
+    overflow: visible;
+}
+.ui-datepicker .ui-datepicker-buttonpane button.ui-datepicker-current
+{
+    float: left;
+}
+.ui-datepicker
+{
+    display: none;
+    background: #FFF;
+    border: 1px solid #ccc;
+    font-size: 1.2em;
+    -moz-box-shadow: 5px 5px 10px #000;
+     z-index: 10!important;
+}
+.ui-datepicker .ui-datepicker-header
+{
+    border-bottom: 1px solid #E5E8E8;
+    padding: 0;
+}
+.ui-datepicker .ui-datepicker-header .ui-datepicker-prev,
+.ui-datepicker .ui-datepicker-header .ui-datepicker-next
+{
+    margin: 7px 5px;
+    text-indent: -1000em;
+    height: 19px;
+    width: 20px;
+    background: url(img/datepicker-controls.png) no-repeat;
+}
+.ui-datepicker .ui-datepicker-header .ui-datepicker-prev:hover
+{
+    background-position: 0 -19px;
+}
+.ui-datepicker .ui-datepicker-header .ui-datepicker-prev:active
+{
+    background-position: 0 -38px;
+}
+.ui-datepicker .ui-datepicker-header .ui-datepicker-next
+{
+    background-position: -20px 0;
+}
+.ui-datepicker .ui-datepicker-header .ui-datepicker-next:hover
+{
+    background-position: -20px -19px;
+}
+.ui-datepicker .ui-datepicker-header .ui-datepicker-next:active
+{
+    background-position: -20px -38px;
+}
+.ui-datepicker .ui-datepicker-title
+{
+    font-weight: bold;
+    font-size: 1.3em;
+}
+.ui-datepicker .ui-datepicker-today a
+{
+    background: #F2F2F2;
+    color: #5A5A5A;
+}
+.ui-datepicker .ui-state-default
+{
+    background: #0096D6;
+    border: 1px solid #007DBA;
+    color: #FFF;
+    outline-color: -moz-use-text-color;
+    outline-style: none;
+    outline-width: medium;
+}
+.ui-datepicker .ui-state-default:hover
+{
+    background-color: #006699!important;  
+    color: #FFF;
+}
+/* selected day */
+.ui-datepicker .ui-datepicker-current-day a
+{
+    background: #FFF;
+    color: #5A5A5A;
+}
+/* IE6 IFRAME FIX (taken from datepicker 1.5.3) */
+.ui-datepicker-cover
+{
+    display: none; /*sorry for IE5*/
+    display: /**/ block; /*sorry for IE5*/
+    position: absolute; /*must have*/
+    z-index: -1; /*must have*/
+    filter: mask(); /*must have*/
+    top: -4px; /*must have*/
+    left: -4px; /*must have*/
+    width: 200px; /*must have*/
+    height: 200px; /*must have*/
+}
+.ui-timepicker
+{
+    -moz-box-shadow: 5px 5px 10px #000;
+    border: 1px solid #ccc;
+    overflow: auto;
+    height: 150px;
+    width: 8.35em;
+    background: #FFF;
+    position: fixed;
+    z-index: 10!important;
+}
+.ui-timepicker dl
+{
+    display:block;
+}
+.ui-timepicker a
+{
+    display: block;
+    padding: 3px 8px;
+    text-decoration: none;
+}
+.ui-timepicker a:hover
+{
+    background-color: #DBEDFF!important;
+    color: #000;
+}
+/******************************************************************************
+ * FORMATTING COLUMNS
+ *****************************************************************************/
+/* Put two columns side-by-side - automatic */
+.auto-width-column,
+.custom-width-colum
+{
+    float: left;
+    width: auto;
+}
+/* Put two columns side-by-side - 45% */
+.half-width-column
+{
+    float: left;
+    width: 45% !important;
+}
+/* A thin column to use between 2 half width columns - 10% */
+.thin-width-column
+{
+    float:left;
+    width:10%;
+    text-align:center;
+}
+.thin-width-column .button input
+{
+    min-width: inherit!important;
+    max-width: 120px;
+    text-overflow:ellipsis;
+}
+/******************************************************************************
+ * CONTACTS
+ *****************************************************************************/
+div.half-width-column div.action-list div.addressbook,
+div.half-width-column div.action-list span.information span.icon,
+div.grid tr td.command div.addressbook,
+div.grid tr td span.information span.icon
+{
+    background-image: url(img/contacts-icons.png);
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+}
+div.half-width-column div.action-list div.addressbook,
+div.grid tr td.command div.addressbook
+{
+    width: auto;
+    float: none;
+    white-space: nowrap;
+    position: static;
+}
+
+div.half-width-column div.action-list div.addressbook
+{
+    padding: 5px 0 4px 7px;
+}
+div.half-width-column div.action-list div.control.addressbook label
+{
+    padding: 0 0 0 50px;
+}
+div.half-width-column div.action-list div.addressbook label
+{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding-left:25px;
+    display: block;
+}
+div.half-width-column div.action-list span.information
+{
+    float:right;
+    margin: 5px 7px 0 0;
+}
+div.half-width-column div.action-list span.information span.icon,
+div.grid tr td span.information span.icon
+{
+    display: inline-block;
+    width: 20px;
+    height:20px;
+    vertical-align: middle;
+}
+div.grid tr td span.information span.icon
+{
+    margin-bottom: 6px;
+}
+div.half-width-column div.action-list span.information span.icon
+{
+    float: left;
+    margin-left: 5px;
+}
+div.action-list span.information label.action
+{
+    margin: 2px -5px 0 5px;
+}
+div.half-width-column div.action-list div.control.addressbook.group
+{
+    background-position: 30px -89px;
+}
+div.grid tr.group td.command div.control.addressbook
+{
+    background-position: 22px -94px;
+}
+div.half-width-column div.action-list div.control.addressbook.contact
+{
+    background-position: 30px 9px;
+}
+div.grid tr.contact td.command div.control.addressbook
+{
+    background-position: 22px 4px;
+}
+div.half-width-column div.action-list div.addressbook.group
+{
+    background-position: 6px -90px;
+}
+div.half-width-column div.action-list div.addressbook.contact
+{
+    background-position: 6px 9px;
+}
+div.grid tr td span.information span.icon.contact
+{
+    background-position: 0px 4px;
+}
+div.grid tr.group td span.information span.icon.contact
+{
+    background-position: 0px -94px;
+}
+div.half-width-column div.action-list span.information span.icon.email,
+div.grid tr td span.information span.icon.email
+{
+    background-position: 0px -191px;
+}
+div.half-width-column div.action-list span.information span.icon.email.disabled,
+div.grid tr td span.information span.icon.email.disabled
+{
+    background-position: 0px -291px;
+}
+div.half-width-column div.action-list span.information span.icon.fax,
+div.grid tr td span.information span.icon.fax
+{
+    background-position: 0px -392px;
+}
+div.half-width-column div.action-list span.information span.icon.fax.disabled,
+div.grid tr td span.information span.icon.fax.disabled
+{
+    background-position: 0px -491px;
+}
+div.half-width-column div.action-list span.information span.icon.network-folder,
+div.grid tr td span.information span.icon.network-folder
+{
+    background-position: 0px -591px;
+}
+div.half-width-column div.action-list span.information span.icon.network-folder.disabled,
+div.grid tr td span.information span.icon.network-folder.disabled
+{
+    background-position: 0px -691px;
+}
+div.half-width-column div.action-list span.information span.icon.sharepoint,
+div.grid tr td span.information span.icon.sharepoint
+{
+    background-position: 0px -787px;
+}
+div.half-width-column div.action-list span.information span.icon.sharepoint.disabled,
+div.grid tr td span.information span.icon.sharepoint.disabled
+{
+    background-position: 0px -887px;
+}
+div.half-width-column div.action-list span.information span.icon.onedrive,
+div.grid tr td span.information span.icon.onedrive
+{
+    background-position: 0px -787px;
+}
+div.half-width-column div.action-list span.information span.icon.onedrive.disabled,
+div.grid tr td span.information span.icon.onedrive.disabled
+{
+    background-position: 0px -887px;
+}
+div.half-width-column div.action-list span.information span.icon.usb,
+div.grid tr td span.information span.icon.usb
+{
+    background-position: 0px -985px;
+}
+div.half-width-column div.action-list span.information span.icon.usb.disabled,
+div.grid tr td span.information span.icon.usb.disabled
+{
+    background-position: 0px -1085px;
+}
+div.half-width-column div.action-list span.information span.icon.jobstorage,
+div.grid tr td span.information span.icon.jobstorage {
+    background-position: 0px -1185px;
+}
+div.half-width-column div.action-list span.information span.icon.jobstorage.disabled,
+div.grid tr td span.information span.icon.jobstorage.disabled
+{
+    background-position: 0px -1285px;
+}
+div.half-width-column div.action-list span.information span.icon.printedcopy,
+div.grid tr td span.information span.icon.printedcopy {
+    background-position: 0px -1387px;
+}
+div.half-width-column div.action-list span.information span.icon.printedcopy.disabled,
+div.grid tr td span.information span.icon.printedcopy.disabled {
+    background-position: 0px -1487px;
+}
+
+div.half-width-column div.action-list div.speeddial,
+div.grid tr td.command div.speeddial
+{
+    width: auto;
+    float: none;
+    white-space: nowrap;
+    position: static;
+}
+div.half-width-column div.action-list div.speeddial label
+{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding-left:25px;
+    display: inline-block;
+}
+
+/******************************************************************************
+ * EXTRA FORMATTING
+ *****************************************************************************/
+/* forces a left spacing before notes in a control.
+useful for notes that act like units for the control.
+example: on alerts, threshold appears as follows
++----------------------+
+| LABEL                |
++----------------------+
+| [INPUT TEXT]<NOTE>   |
++----------------------+
+adding the inline-note class to a control makes a small spacing before the
+note
++----------------------+
+| LABEL                |
++----------------------+
+| [INPUT TEXT]  <NOTE> |
++----------------------+ */
+div.control.inline-note em,
+em.note.inline
+{
+    display: inline!important;
+    padding-left: 7px!important;
+}
+/* Padding formatting */
+.padding-left
+{
+    padding-left: 15px!important;
+}
+.padding-right
+{
+    padding-right: 15px!important;
+}
+.padding-top
+{
+    padding-top: 30px!important;    
+}
+.half-padding-top
+{
+    padding-top: 15px!important;
+}
+.no-padding-vert
+{
+    padding-top: 0!important;
+    padding-bottom: 0!important;
+}
+.small-padding-vert
+{
+    padding-top: 5px!important;
+    padding-bottom: 5px!important;
+}
+.padding-vert
+{
+    padding-top: 10px!important;
+    padding-bottom: 10px!important;
+}
+.control-padding-vert
+{
+    padding-top:15px!important;
+    padding-bottom:10px!important;
+}
+.no-padding-top,
+.no-padding-top .control
+{
+    padding-top: 0!important;
+}
+.no-padding-bottom
+{
+    padding-bottom: 0!important;
+}
+.extra-padding
+{
+    padding-top: 18px!important;
+}
+.small-padding-bottom
+{
+    padding-bottom:10px!important;
+}
+/* Margin formatting */
+.no-margin-vert
+{
+    margin-top: 0!important;
+    margin-bottom: 0!important;
+}
+.no-margin-left
+{
+    margin-left: 0!important;    
+}
+.no-margin-horiz
+{
+    margin-left:0!important;
+    margin-right:0!important;
+}
+.no-margin-top
+{
+    margin-top: 0!important;
+}
+.no-margin-top div.control
+{
+    margin-top: 0;
+}
+.small-margin-horiz
+{
+    margin-left: 7px!important;
+    margin-right: 7px!important;
+}
+.half-small-margin-top
+{
+    margin-top: 5px!important;
+}
+.small-margin-top
+{
+    margin-top: 10px!important;
+}
+.medium-margin-top
+{
+    margin-top: 20px!important;
+}
+.large-margin-top
+{
+    margin-top:100px!important;
+}
+/* Floating */
+.left
+{
+    float: left!important;
+    clear: none !important;
+}
+.right
+{
+    float: right!important;
+    clear: none !important;
+}
+.clear
+{
+    clear: both;
+}
+.text-align-center
+{
+    text-align: center;
+}
+/* To place a button aligned to the bottom of a control (considering its bottom padding/margin) in the same line */
+.relative
+{
+    position: relative!important;
+}
+.absolute-bottom-right
+{
+    position: absolute!important;
+    bottom: 10px!important;
+}
+/* Set a checkbox to be right below an input element. */
+div.input-and-check div.checkbox
+{
+    clear: both;
+    position: relative;
+    padding: 0;
+    top: -1em;
+}
+div.input-and-check
+{
+    float: left;
+}
+/* Align a group under a checkbox, useful for groups that depend of a setting */
+div.group-under-check
+{
+    padding-left: 21px;
+}
+/* Single lined controls, such as radio buttons or check boxes, when used
+ alone in a line don't need the vertical padding to match heights with other
+ labelled controls. */
+div.single-line div.control
+{
+    padding-top: 0!important;
+    padding-bottom: 0!important;
+}
+div.control.single-line
+{
+    padding-top: 0!important;
+    padding-bottom: 0!important;
+}
+/* Lined controls, such as radio buttons or check boxes, when used without
+ notes and need extra space on the bottom to clearly separate them from other
+ controls. */
+div.double-line div.control,
+div.control.double-line
+{
+    padding-top: 18px;
+    padding-bottom: 30px;
+}
+/* Doubles the regular width of form elements */
+body:not(.mobile) div.double-width.text,
+body:not(.mobile) div.double-width div.text,
+body:not(.mobile) div.double-width div.checkbox,
+body:not(.mobile) div.double-width.textarea,
+body:not(.mobile) div.double-width div.textarea,
+body:not(.mobile) div.double-width.select1,
+body:not(.mobile) div.double-width div.select1,
+body:not(.mobile) div.double-width.select,
+body:not(.mobile) div.double-width div.select,
+body:not(.mobile) div.double-width.file,
+body:not(.mobile) div.double-width.data,
+body:not(.mobile) div.double-width.control,
+body:not(.mobile) div.double-width.action-list
+{
+    width: 38.6em!important;
+	*width: 37.85em!important;
+}
+body:not(.mobile) div.double-width.action-list
+{
+	*width: 39.1em!important;
+}
+body:not(.mobile) div.double-width.select-full ul,
+body:not(.mobile) div.double-width.text input,
+body:not(.mobile) div.double-width div.text input,
+body:not(.mobile) div.double-width.textarea textarea,
+body:not(.mobile) div.double-width div.textarea textarea,
+body:not(.mobile) div.double-width.select1 select,
+body:not(.mobile) div.double-width div.select1 select,
+body:not(.mobile) div.double-width.select select,
+body:not(.mobile) div.double-width div.select select,
+body:not(.mobile) div.double-width div.grid table,
+body:not(.mobile) div.double-width.file input,
+body:not(.mobile) div.double-width.data p,
+body:not(.mobile) div.double-width div.action-list input.add-input,
+body:not(.mobile) div.double-width div.action-list ul,
+body:not(.mobile) div.double-width.action-list h3,
+body:not(.mobile) div.double-width.action-list ul
+{
+    width: 37.3em!important; /* 18em + 1.3em + 18em = 37.3em */
+	*width: 36.8em!important;
+}
+body:not(.mobile) div.double-width div.action-list ul,
+body:not(.mobile) div.double-width.action-list ul
+{
+	*width: 37.5em!important;
+}
+body:not(.mobile) div.double-width.select1 select,
+body:not(.mobile) div.double-width div.select1 select,
+body:not(.mobile) div.double-width.select select,
+body:not(.mobile) div.double-width div.select select
+{
+	*width: 37.7em!important;
+}
+div.quarter-width
+{
+    width:4.825em!important;
+}
+div.quarter-width.text input,
+div.quarter-width.select1 select
+{
+    width:3.525em!important;
+}
+div.half-width
+{
+    width:9.65em!important;
+	*width:8.5em!important;
+}
+div.half-width.text input,
+div.half-width.password input,
+div.half-width div.ui-timepicker
+{
+    width:8.35em!important; /* 8.35em + 1.3em + 8.35em = 18em */
+    *width: 7.5em!important;
+}
+div.half-width.select1 select
+{
+    width:8.35em!important;
+}
+/* Specify a basic height for textareas (the default height is not enough) */
+div.basic-height textarea
+{
+    height: 12em;
+    min-height: 12em;
+}
+div.textarea-height.data p
+{
+    height: 6em!important;
+    overflow: auto;
+	word-wrap: break-word;
+	white-space: normal;
+	text-overflow: inherit;
+}
+div.auto-width div.control,
+div.auto-width.control p
+{
+    width: auto;
+}
+div.custom-width div.control,
+div.custom-width.control p
+{
+    width: 1.5em;
+}
+div.auto-width,
+div.custom-width
+{
+    width: auto!important;
+}
+/* Static bullet lists */
+div.static-list ul
+{
+    padding-left: 30px;
+}
+/* Scroll box on a select full control */
+div.select-full.scroll-box ul
+{
+    clear: both;
+    border: 1px solid #ABADB3;
+    padding: 0 5px;
+    height:9.7em;
+    overflow: auto;
+}
+/* Custom control to render a label over a boxed unordered list (ul) with scroll
+<div.control.simple-list-view>
+    <label>TEXT</label> (optional)
+    <ul> (or OL)
+        <li>TEXT</li>
+        <li>TEXT</li>
+            <ul>
+                <li>TEXT</li>
+                <li>TEXT</li>
+            </ul>
+        <li>TEXT</li>
+        <li class="empty">EMPTY</li>
+    </ul>
+</div> */
+div.control.simple-list-view
+{
+    float:none!important;
+}
+div.control.simple-list-view ul,
+div.control.simple-list-view ol
+{
+    clear: both;
+    border: 1px solid #ABADB3;
+	padding:10px 30px;
+	height:19.4em;
+	overflow:auto;
+	margin:0;
+}
+div.control.simple-list-view ul ul,
+div.control.simple-list-view ol ol
+{
+	border:0;
+	padding:5px 30px;
+	height:auto;
+	overflow:visible;
+}
+div.control.simple-list-view li.empty
+{
+    font-style: italic;
+    color: #767676;
+    list-style-type: disc;
+}
+/* Stretch width and auto overflow */
+div.stretch-auto
+{
+    overflow:auto;
+    width:100%;
+}
+/* To hide anything */
+.hidden
+{
+    display: none!important;
+}
+.invisible
+{
+    position: absolute!important;
+    z-index: -1!important;
+    opacity: 0!important;
+    -moz-opacity: 0!important;
+    filter: alpha(opacity=0)!important;
+}
+/* Labels are usually in bold, use "label-normal" on a control to make its label appear normal.
+Example: radio buttons or checkboxes that should look like being inside a radio list or check list. */
+div.control.label-normal label
+{
+    font-weight: normal!important;
+}
+/* Custom control for date and time:
+it is actually create by putting 3 controls inside a div decorated with class control and data or time.
+<DIV.control.date>
+    <label>TEXT</label>
+    <DAY.date-day>
+    <MONTH.date-month>
+    <YEAR.date-year>
+</DIV>
+where day and year are text inputs and month is a select input.
+also, day, month and year can be in any order.
+<DIV.control.time>
+    <label>TEXT</label>
+    <HOUR>
+    <MINUTE>
+    <AM/PM>
+</DIV>
+where hour and minute are text inputs and am/pm is a select input.
+
+TIME:
+to fill the 19.3em width we had to set different dimensions for the controls
+[ 19.3em                                             ] the space for a single control
+[[ 6.5em         ][ 6.4em          ][ 6.4em         ]] select + text + text; select has +.1em to make the sum right
+but we have to consider the 1.3em margin to the right
+[[ 18m                                       ] 1.3em ] control + margin
+[[ 5.2em ] 1.3em ][[ 5.1em ] 1.3em ][[ 5.1em ] 1.3em ] select + margin + text + margin + text + margin
+
+DATE:
+[ 19.3em                                             ] the space for a single control
+[[ 8.7em         ][ 5.3em          ][ 5.3em         ]] select + text + text; select has +.1em to make the sum right
+but we have to consider the 1.3em margin to the right
+[[ 18m                                       ] 1.3em ] control + margin
+[[ 7.4em ] 1.3em ][[ 4em   ] 1.3em ][[ 4em   ] 1.3em ] select + margin + text + margin + text + margin
+ */
+div.control.date,
+div.control.time
+{
+
+    width: 19.3em!important;
+	*width: 19.6em!important;
+    padding-right: 0;
+}
+div.control.date div.control,
+div.control.time div.control
+{
+    width: 6.4em!important;
+    *width: 5.2em!important;
+    padding-top: 0!important;
+    padding-bottom: 0!important;
+}
+div.control.date div.control.select1,
+div.control.time div.control.select1
+{
+    width: 6.5em!important;
+    *width: 5.2em!important;
+}
+div.control.date input
+{
+    width: 7.1em!important;
+    *width: 4.2em!important;
+}
+div.control.time input
+{
+    width: 5.1em!important;
+	*width: 4.2em!important;
+}
+div.control.date select,
+div.control.time select
+{
+    width: 5.2em!important;
+	*width: 5em!important;
+}
+div.control.date div.control.date-day,
+div.control.date div.control.date-year
+{
+    width: 5.3em!important;
+}
+div.control.date div.control.date-day input,
+div.control.date div.control.date-year input
+{
+    width: 4em!important;
+}
+div.control.date div.control.select1.date-month
+{
+    width: 8.7em!important;
+}
+div.control.date div.control.select1.date-month select
+{
+    width: 7.4em!important;
+}
+/* Creates a line that separate two different sections */
+.section-separation
+{
+    margin: 10px 0px 10px 0px;
+    border-top: 1px solid #E5E8E8;
+}
+/* CONTROL - BUTTON action inside a grid */
+div.grid table span.button.action
+{
+    cursor: pointer;
+    background-image:none;
+    vertical-align: middle;
+}
+div.grid table span.button.action input:focus
+{
+    color:#006699;
+}
+div.grid table span.button.action input:hover
+{
+    background-color:#0096d6;
+    color:#fff;
+}
+div.grid table span.button.action input:active
+{
+	background-color:#006699;
+	color:#fff;
+}
+div.grid table span.button.action input
+{
+	color:#007dba;
+	background-image:none;
+	background-color:transparent;
+	padding:1px 8px;
+	margin:0;
+	text-decoration:underline;
+}	
+div.grid table span.button.action.disabled input
+{
+	background-color:transparent;
+}
+div.grid table span.button.action.disabled input:hover,
+div.grid table span.button.action.disabled input
+{
+	color:#b9b8b8;
+}
+div.control.label-nowrap label
+{
+    white-space: nowrap;
+}
+/*Break the line when the word is to much long*/
+div.grid td.word-break
+{
+    word-break: break-word;
+}
+/*APP BUTTON - The example of an Control Panel Application in the EWS
+Used in the quick set summary and in the wizard page
+The app-$APPLICATION informs which icon will be show and the title's background color
+Frame is the icon background
++-----------------------------+
+| |------| TITLE              |
++ | ICON |--------------------+
+| |------| CONTENT            |
++-----------------------------+
+<DIV.app-button.app-$APPLICATION">
+    <h2#ID>TITLE</h2>
+    <DIV.content#ID>DESCRIPTION</DIV>
+    <span.frame>
+        <span.icon></span>
+    </span>
+</DIV>
+Change it to be displayed as
++----------+
+| +------+ |
+| | ICON | |
+| +------+ |
+| TITLE    |
+| CONTENT  |
++----------+
+*/
+div.app-button
+{
+    position: relative;
+}
+div.app-button h2
+{
+    background-color: transparent;
+    padding-top: 140px;
+	font-size:1.6em;
+	font-weight:normal;
+}
+div.app-button div.content
+{
+	font-size:1.3em;
+}
+div.app-button span.frame
+{
+    display: block;
+	background-color:transparent;
+	width: 140px;
+	height: 140px;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+div.app-button span.icon
+{
+    display: block;
+    background-color:#6e6e6e;
+    background-repeat:no-repeat;
+    background-position:center;
+	height:140px;
+	width:140px;
+	margin:0;
+	border-radius: 0 6px;
+}
+div.app-button div.content span.button
+{
+    background: transparent;
+    margin: 0;
+    padding: 0;
+}
+div.app-button div.content span.button input
+{
+	background: transparent;
+    cursor: pointer;
+	color: #007dba;
+	text-decoration: underline;
+	text-align: left;
+	padding: 0;
+	height: auto;
+	white-space:normal;
+}
+/*Quicksets and OneTouch images are added "after" the icon*/
+div.app-button.quickset span.icon:after
+{
+    content: "";
+    width: 140px;
+    height: 140px;
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    background-image: url(/hp/device/controlpanel/Resources/Images/Misc/BadgeOptions.png);
+    display: block;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+}
+div.app-button.quickset.instant span.icon:after
+{
+    background-image: url(/hp/device/controlpanel/Resources/Images/Misc/BadgeStart.png);
+}
+/*app button Copy*/
+div.app-button.app-copy span.icon
+{
+	background-image:url(/hp/device/Theme/onehp/img/homescreen/AppIcons/Copy.png);
+}
+/*app button E-mail*/
+div.app-button.app-email span.icon
+{
+	background-image:url(/hp/device/Theme/onehp/img/homescreen/AppIcons/ScanToEmail.png);
+}
+/*app button Fax*/
+div.app-button.app-sendfax span.icon
+{
+	background-image:url(/hp/device/Theme/onehp/img/homescreen/AppIcons/ScanToFax.png);
+}
+/*app button Folder*/
+div.app-button.app-networkFolder span.icon
+{
+	background-image:url(/hp/device/Theme/onehp/img/homescreen/AppIcons/ScanToFolder.png);
+}
+/*app button SharePoint*/
+div.app-button.app-sharepoint span.icon
+{
+	background-image:url(/hp/device/Theme/onehp/img/homescreen/AppIcons/ScanToSharepoint.png);
+}
+/*app button OneDrive*/
+div.app-button.app-oneDrive span.icon
+{
+	background-image:url(/hp/device/Theme/onehp/img/homescreen/AppIcons/ScanToOnedrive.png);
+}
+/*app button USB*/
+div.app-button.app-sendUsb span.icon
+{
+	background-image:url(/hp/device/Theme/onehp/img/homescreen/AppIcons/ScanToUSB.png);
+}
+/*app button ScanPlus*/
+div.app-button.app-scanPlus span.icon
+{
+	background-image:url(/hp/device/Theme/onehp/img/homescreen/AppIcons/ScanPlus.png);
+}
+/******************************************************************************
+ * INPUT FILE HACK
+ *****************************************************************************/
+body.js div.control.file
+{
+    width: 30.6em!important;
+    *width: 29.6em!important;
+}
+body.js div.double-width.control.file
+{
+    width: 38.6em!important;
+    *width: 37.3em!important;
+}
+div.file-hack
+{
+    width: 29.3em!important;
+    *width: 29.6em!important;
+    position: relative;
+    display: block;
+    height: 1.85em;
+    overflow: hidden;
+}
+div.double-width div.file-hack
+{
+    width: 37.3em!important;
+}
+div.file-hack span.file-hack-text
+{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 18em!important;
+    *width: 17em!important;
+    height: 1.85em;
+    *height: 1.6em;
+    line-height: 1.85em;
+    padding: 0 .35em;
+    border: 2px solid #ccc;
+    display: block;
+    font-weight: normal;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+div.double-width div.file-hack span.file-hack-text
+{
+    width: 26em!important;
+    *width: 24.9em!important;
+}
+div.file-hack:hover span.file-hack-text,
+div.file-hack input:focus + span.file-hack-text
+{
+    border: 2px solid #767676;
+}
+div.file-hack span.file-hack-button
+{
+    position: absolute;
+    top: 0px;
+    left: 19.3em;
+    *left: 19.4em;
+    width: 10em!important;
+    *width: 8.5em!important;
+    height: 1.85em;
+    line-height:1.85em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    border: none;
+    color: #fff;
+    white-space: nowrap;
+    padding: 0 .75em;
+    display: block;
+    background: #767676;
+    text-align: center;
+    border-radius: 0 4px;
+    font-weight: normal;
+}
+div.double-width div.file-hack span.file-hack-button
+{
+    left: 27.3em;
+}
+div.file-hack:hover span.file-hack-button,
+div.file-hack input:focus + span.file-hack-text ~ span.file-hack-button
+{
+    background-color: #5a5a5a;
+}
+div.file-hack input[type=file]
+{
+    position: absolute;
+    top: -2em;
+    left: -2em;
+    height: 1em!important;
+    width: 1em!important;
+    cursor: pointer;
+    background: transparent;
+    border: 0;
+    opacity: 0;
+    -moz-opacity: 0;
+    filter: alpha(opacity=0);
+}
+div.control.disabled div.file-hack span.file-hack-text
+{
+    border-color: #b9b8b8;
+    background-color: #e5e8e8;
+    color: #b9b8b8;
+    -webkit-text-fill-color: #b9b8b8;
+}
+div.control.disabled div.file-hack span.file-hack-button
+{
+    background-color: #e5e8e8;
+}
+/******************************************************************************
+ * SELECT HACK
+ *****************************************************************************/
+div.select-hack
+{
+    width: 18em;
+    position: relative;
+    display: block;
+    height: 1.85em;
+    overflow: hidden;
+}
+div.select-hack span.select-hack-text
+{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 18em;
+    *width: 17em;
+    height: 1.85em;
+    *height: 1.6em;
+    line-height: 1.5em;
+    padding: 0 .35em;
+    border: 2px solid #ccc;
+    display: block;
+    font-weight: normal;
+	text-align: left;
+	background-color: #fff;
+	color: #000;
+}
+div.select-hack:hover span.select-hack-text,
+div.select-hack select:focus + span.select-hack-text
+{
+	background-color: #fff;
+    border: 2px solid #767676;
+}
+div.select-hack span.select-hack-button
+{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 1.85em;
+    height: 1.85em;
+    *height: 1.6em;
+    line-height:1.85em;
+    overflow: hidden;
+    border: 2px solid #ccc;
+	border-left-width: 1px;
+    display: block;
+	background-color: #fff;
+	background-position: -1px -29px;
+	*background-position: 0px -29px;
+	background-image: url(img/selects.png);
+}
+div.select-hack:hover span.select-hack-button,
+div.select-hack select:focus + span.select-hack-text ~ span.select-hack-button
+{
+    background-position: -1px -29px;
+    *background-position: 0px -29px;
+	border-color: #767676;
+}
+div.control.disabled div.select-hack span.select-hack-text
+{
+	background-color: #e5e8e8;
+	color: #b9b8b8;
+	border-color: #b9b8b8;
+}
+div.control.disabled div.select-hack span.select-hack-button
+{
+	background-position: -1px -83px;
+	*background-position: 0px -83px;
+	background-color: #e5e8e8;
+	border-color: #b9b8b8;
+}
+div.control.disabled div.select-hack select
+{
+    display: none;
+}
+div.control.error div.select-hack span.select-hack-button
+{
+	background-position: -1px -56px;
+	*background-position: 0px -56px;
+}
+
+body:not(.mobile) .double-width div.select-hack,
+body:not(.mobile) .double-width div.select-hack span.select-hack-text
+{
+	width: 37.3em!important;
+}
+
+.half-width div.select-hack,
+.half-width div.select-hack span.select-hack-text
+{
+	width: 8.35em!important;
+}
+
+.control.date div.select-hack,
+.control.date div.select-hack span.select-hack-text
+{
+    width: 7.4em!important;
+}
+.control.time div.select-hack,
+.control.time div.select-hack span.select-hack-text
+{
+	width: 5.2em!important;
+}
+
+div.select-hack select
+{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+	right: 0px;
+	bottom: 0px;
+    cursor: pointer;
+    background: transparent;
+    border: 0px;
+	outline: 0px;
+    opacity: 0;
+    -moz-opacity: 0;
+    filter: alpha(opacity=0);
+    z-index: 1000;
+}
+div.select-hack select option
+{
+	border: 0px;
+	outline: 0px;
+	padding: .2em .3em;
+}
+/*****************************************************************************
+* No menu - repositions content
+*****************************************************************************/
+body.noMenu div.column-content,
+body.noMenu div.column-content div.page-header,
+body.noMenu div.column-content div#content,
+body.noMenu div.column-content div#content div.buttons.fixed,
+body#PageSignIn div.column-content,
+body#PageSignIn div.column-content div.page-header,
+body#PageSignIn div.column-content div#content,
+body#PageSignIn div.column-content div#content div.buttons.fixed
+{
+    left: 0;
+}
+
+body.noMenu div.column-content,
+body.noMenu div.column-content div#content div.buttons.fixed,
+body#PageSignIn div.column-content,
+body#PageSignIn div.column-content div#content div.buttons.fixed
+{
+    bottom: 0;
+}
+
+body#PageSignIn #mobile-menu-content,
+body#PageSignIn #EwsLogin
+{
+    display: none;
+}
+/******************************************************************************
+ * ERROR PAGE
+ *****************************************************************************/
+#PageError pre
+{
+    padding-bottom: 10px;
+}
+.pre,
+#PageError pre,
+.message .content li label
+{
+    white-space: pre-wrap!important; /* css-3 */
+    white-space: -moz-pre-wrap!important; /* Mozilla, since 1999 */
+    white-space: -pre-wrap!important; /* Opera 4-6 */
+    white-space: -o-pre-wrap!important; /* Opera 7 */
+    word-wrap: break-word!important; /* Internet Explorer 5.5+ */
+}
+.mono,
+#PageError pre
+{
+    font-family: Monospace!important;
+}
+/*****************************************************************************
+* Required rule for all form elements
+*****************************************************************************/
+div.text.required label:after,
+div.textarea.required label:after,
+div.password.required label:after,
+div.radio.required label:after,
+div.checkbox.required label:after,
+div.data.required label:after,
+div.file.required label:after,
+div.grid.required div.empty:after,
+div.select.required span.required:after,
+div.select1.required span.required:after
+{
+    content: " *";
+    color: #ff0000;
+    font-weight: bold;
+}
+div.select span.required,
+div.select1 span.required
+{
+    display:none;
+}
+div.select.required span.required,
+div.select1.required span.required
+{
+    display:inline;
+}
+/*****************************************************************************
+* CONTROLS - SLIDER
+*  - This component is an extension of the select component and changes 
+*    its display using the slider component of the jQuery UI. 
+*    This component has 3 formats to be displayed based on the property 
+*    slidertype as below.
+* 
+* - Without SliderType
+*   <div.select1.slider">
+*      <label [for=ID]>TEXT</label>
+*      <select#ID slidertype="rangenote" [display:none]>
+*          <option>TEXT</option>
+*      </select>
+*      <div.slider-hack>
+*          <div.ui-slider>
+*              <div.ui-slider-range></div>
+*              <span.ui-slider-handle></span>
+*          </div>
+*      </div>
+*      <em.note.left>NOTE</em>
+*      <em.note.right>NOTE</em>
+*   </div>
+*
+* SliderType = RangeNote
+*   <div.select1.slider">
+*      <label [for=ID]>TEXT</label>
+*      <select#ID slidertype="rangenote" [display:none]>
+*          <option>TEXT</option>
+*      </select>
+*      <div.slider-hack>
+*          <div.ui-slider>
+*              <div.ui-slider-range></div>
+*              <span.ui-slider-handle></span>
+*          </div>
+*      </div>
+*      <em.note.left>NOTE</em>
+*      <em.note.right>NOTE</em>
+*   </div>
+*
+* SliderType = DynamicNote
+*   <div.select1.slider">
+*      <label [for=ID]>TEXT</label>
+*      <select#ID slidertype="dynamicnote" [display:none]>
+*          <option>TEXT</option>
+*      </select>
+*      <div.slider-hack>
+*          <div.ui-slider>
+*              <div.ui-slider-range></div>
+*              <span.ui-slider-handle></span>
+*          </div>
+*      </div>
+*      <em.note>NOTE</em>
+*   </div>
+*****************************************************************************/
+div.slider-hack
+{
+    height: 1.85em;
+}
+div.ui-slider
+{
+    position:relative;
+    background-color: #767676;
+    height: .429em;
+    top: .7105em;
+}
+div.slider.disabled div.ui-slider
+{
+    background-color: #e5e8e8; 
+}
+div.ui-slider:hover,
+div.ui-slider:active
+{
+    background-color: #5a5a5a;
+}
+span.ui-slider-handle
+{
+    position: absolute;
+    height: 22px;
+    width: 21px;
+    z-index: 2;
+    top: -7px;
+    margin-left: -10px;
+    background-image: url(img/slider.png);
+}
+span.ui-slider-handle.ui-state-active
+{
+    background-position: 0 -100px;
+}
+div.slider.error div.ui-slider
+{
+    background-color: #ff0000 !important;
+}
+div.slider.error div.ui-slider:hover
+{
+    background-color: #bc0000 !important;
+}
+div.slider.error span.ui-slider-handle
+{
+    background-position: 0 -200px;
+}
+div.slider.error span.ui-slider-handle.ui-state-active
+{
+    background-position: 0 -300px;
+}
+div.slider.disabled span.ui-slider-handle
+{
+    background-position: 0 -400px;
+    cursor: default;
+}
+div.slider.fullNote em.note
+{
+  display: inline-block;
+  float: left !important;
+  width: 6em;
+  clear: none !important;
+}
+div.slider.fullNote em.note.left
+{
+  text-align: left;
+}
+div.slider.fullNote em.note.center
+{
+  text-align: center;
+}
+div.slider.fullNote em.note.right
+{
+  text-align: right;
+}
+/*****************************************************************************
+* CONTROLS - Spinner
+*  - This component is an extension of the textbox component and changes 
+*    its display using the spinner component of the jQuery UI. 
+*
+*   <div.control.text.spinner>
+*       <label [for=ID]>TEXT</label>
+*       <span.ui.spinner>
+*           <input#ID [type=text]></input>
+*           <a.ui-spinner-button.ui-spinner-up>
+*               <span.ui-button-text>
+*                   <span.ui-icon.ui></span>
+*               </span>
+*           </a>
+*           <a.ui-spinner-button.ui-spinner-down>
+*               <span.ui-button-text>
+*                   <span.ui-icon.ui></span>
+*               </span>
+*           </a>
+*       </span>
+*   </div>
+*****************************************************************************/
+div.text.spinner span.ui-spinner
+{
+    position: relative;
+    display: block;
+}
+div.text.spinner a.ui-spinner-button
+{
+    position: absolute;
+    right: 0;
+    cursor: pointer;
+    width: 1.85em;
+    height: 13px;
+    padding: 0px;
+    background-color: Transparent;
+    border: none;
+}
+body.chrome div.text.spinner a.ui-spinner-button,
+body.firefox div.text.spinner a.ui-spinner-button
+{
+    height: .925em;
+}
+div.text.spinner span.ui-icon
+{
+    background-image: url(img/spinner.png);
+    background-repeat: repeat-y;
+    position: absolute;
+    width: 100%;
+    height: .925em;
+    border-left: 1px solid #ccc;
+    text-indent: -99999px;
+}
+div.text.spinner a.ui-spinner-button.ui-spinner-up
+{
+    top: 0px;
+}
+div.text.spinner a.ui-spinner-button.ui-spinner-down
+{
+    bottom: 0px;
+}
+div.text.spinner a.ui-spinner-up span.ui-icon
+{
+    background-position: 5px -2px;
+}
+div.text.spinner a.ui-spinner-down span.ui-icon
+{
+    background-position: 5px 97px;
+}
+/*****************************************************************************
+* Hover
+*****************************************************************************/
+div.text.spinner input[type=text]:hover,
+div.text.spinner input[type=text]:hover ~ a.ui-spinner-button span.ui-icon,
+div.text.spinner input[type=text]:focus ~ a.ui-spinner-button span.ui-icon,
+div.text.spinner:hover input[type=text],
+div.text.spinner:hover span.ui-icon
+{
+    border-color: #767676;
+}
+div.text.spinner a.ui-spinner-up:hover span.ui-icon,
+div.text.spinner a.ui-spinner-up:focus span.ui-icon
+{
+    background-position: 5px -22px;
+}
+div.text.spinner a.ui-spinner-down:hover span.ui-icon,
+div.text.spinner a.ui-spinner-down:focus span.ui-icon
+{
+    background-position: 5px 76px;
+}
+/*****************************************************************************
+* Disabled
+*****************************************************************************/
+div.text.spinner.disabled span.ui-icon
+{
+    border-color: #b9b8b8 !important;
+}
+div.text.spinner.disabled a.ui-spinner-up span.ui-icon
+{
+    background-position: 5px -41px;
+}
+div.text.spinner.disabled a.ui-spinner-down span.ui-icon
+{
+    background-position: 5px 57px;
+}
+div.text.spinner.disabled:hover input[type=text]
+{
+    border-color: #767676 !important;
+}
+div.text.spinner.disabled:hover span.ui-icon,
+div.text.spinner.disabled input[type=text]:focus ~ a.ui-spinner-button span.ui-icon
+{
+    border-color: #767676 !important;
+}
+/*****************************************************************************
+* Error
+*****************************************************************************/
+div.text.spinner.error span.ui-icon
+{
+    border-color: #ff0000 !important;
+}
+div.text.spinner.error:hover input[type=text]
+{
+    border-color: #bc0000 !important;
+}
+div.text.spinner.error:hover span.ui-icon,
+div.text.spinner.error input[type=text]:focus ~ a.ui-spinner-button span.ui-icon
+{
+    border-color: #bc0000 !important;
+}
+div.text.spinner.error a.ui-spinner-up span.ui-icon
+{
+    background-position: 5px -122px;
+}
+div.text.spinner.error a.ui-spinner-down span.ui-icon
+{
+    background-position: 5px -144px;
+}
+/******************************************************************************
+* Scroll bar fix for Mac OSX
+******************************************************************************/
+body.mac ::-webkit-scrollbar
+{
+    -webkit-appearance: none;
+}
+body.mac ::-webkit-scrollbar:vertical
+{
+    width: 11px;
+}
+body.mac ::-webkit-scrollbar:horizontal
+{
+    height: 11px;
+}
+body.mac ::-webkit-scrollbar-thumb
+{
+    border-radius: 8px;
+    border: 2px solid #fff;
+    background-color: #767676;
+}
+body.mac ::-webkit-scrollbar-track
+{
+    background-color: #fff;
+    border-radius: 8px;
+}
+/******************************************************************************
+* Scroll bar fix for Mac OSX
+******************************************************************************/
+div.ui-helper-hidden-accessible
+{
+    display: none;
+}
+/******************************************************************************
+* No javascript summary
+******************************************************************************/
+body.js div#NoScriptSummary
+{
+    display: none;
+}
+/******************************************************************************
+ * Specific behavior for non-mobiles
+ *****************************************************************************/
+
+body:not(.mobile) #headerMobileButtons
+{
+    display: none;
+}
+#localMenu .parent-menu .ArrowIcon
+{
+    display: none;
+}
+.openTabletMenu
+{
+    display:none;
+}
+#mobile-search,
+#mobile-sign-out,
+#mobile-info,
+#mobile-message-center
+{
+    border-bottom: solid 1px #5a5a5a;
+    padding: 10px 30px 10px 30px;
+    display: none;
+}
+#mobile-message-center
+{
+    padding: 0;
+}
+#OtherLinksHeader > span,
+#OtherLinksHeader > div,
+.unavailableWarning
+{
+    display: none;
+}
+
+/******************************************************************************
+ * Specific behavior for tablets
+ *****************************************************************************/
+/*Need to work "$('html').click()" to hide itens on safari mobile*/
+body.tablet 
+{
+    cursor: pointer;
+}
+body.tablet .openTabletMenu
+{
+    position: fixed;
+    display:block;
+    background-color: #fff;
+    background-image: url(img/menu-arrow-blue-r.png);
+    background-repeat: no-repeat;
+    padding: 0;
+    -webkit-box-shadow: 3px 0 6px 0 #ccc;
+    -moz-box-shadow: 3px 0 6px 0 #ccc;
+    box-shadow: 3px 0 6px 0 #ccc;
+    overflow: hidden;
+    z-index: 3000;
+    left: 0;
+    background-position: center;
+    border-radius: 0 8px 8px 0;
+    top: 50%;
+    bottom: 50%;
+    margin: -50px 0;
+    width: 25px;
+}
+body.tablet #page div.columns div.columns-content div.column.column-menu ul#localMenu
+{
+    background-image: none;
+    overflow-y: auto;
+    border-radius: 0;
+    top: 125px;
+    bottom: 50px;
+    margin: 0;
+    padding: 26px 8px 8px 14px;
+    width: 230px;
+    display:none;
+}
+body.tablet #SearchBox input[type=text]
+{
+    border-radius: 0px!important;
+}
+body.tablet div#content.fixed
+{
+    bottom: 50px;
+    padding: 30px 30px 45px 30px;
+}
+body.tablet #header div.p-info
+{
+    margin-top: 10px;
+}
+body.chrome.tablet div.device-status span.icon.error
+{
+    background-position: 0 -300px;
+}
+/******************************************************************************
+ * Specific behavior for mobiles
+ *****************************************************************************/
+
+@media (orientation: portrait)
+{
+    body.mobile .unavailableWarning
+    {
+        display: block;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        background-image: url(img/status-icons.png);
+        background-repeat: no-repeat;
+        padding-left: 25px;
+        margin: 25px 0;
+    }
+    body.mobile .hiddenPortrait
+    {
+        display: none!important;
+    }
+}
+body.mobile a.button, 
+body.mobile span.button
+{
+    margin: 0 0.6em 0 0;
+}
+body.mobile div.pagination
+{
+    margin: 0 -8px 0 -8px;
+    padding: 0 0 5px 0;
+}  
+body.mobile div.control  
+{
+    padding: 1.3em 0 1em 0;
+}
+body.mobile .command div.control
+{
+    padding: 0 0 1em 0;
+}
+body.mobile div.control.checkbox
+{
+    padding: 0.3em 0 0.3em 0;
+}
+body.mobile div.data p
+{
+    padding: 0px;
+}
+body.mobile div.control.data.status p
+{
+    padding-left: 21px;
+}
+body.mobile div.group-under-check
+{
+    padding-left: 14px;
+}  
+body.mobile div.grid td,
+body.mobile div.grid th
+{
+    white-space: nowrap;
+}
+body.mobile div.grid td:last-child
+{
+    cursor: default;
+    padding: 0 .75em 0 .75em;    
+}
+body.mobile div.grid .folder td
+{
+    padding-left: 40px;
+}
+body.mobile div.buttons
+{
+    text-align: right;
+}
+body.mobile div.sections div.section div.buttons span.button, 
+body.mobile div.sections div.section div.buttons a.button
+{
+    margin: 0 0.6em 0.6em 0;
+}
+body.mobile div.sections div.tabs
+{
+    overflow: visible;
+}
+body.mobile div.tabs ul li.current
+{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    display: block;
+}
+body.mobile div.tabs ul li.current a,
+body.mobile div.tabs ul li.current span
+{
+    background-color: #5a5a5a!important;
+    background-image: url(img/menu-buttons.png);
+    background-repeat: no-repeat;
+    background-position: 13px 11px;
+    background-attachment: scroll;
+    padding-left: 48px;
+}
+body.mobile div.tabs ul:hover li.current a,
+body.mobile div.tabs ul:hover li.current span,
+body.mobile div.tabs ul li.current a:hover
+{
+    background-position: 13px -39px;
+}
+body.mobile div.tabs ul
+{
+    -webkit-box-shadow: 3px 3px 6px 0 #ccc;
+    -moz-box-shadow: 3px 3px 6px 0 #ccc;
+    box-shadow: 3px 3px 6px 0 #ccc;
+    position: absolute;
+    height: 0;
+    width: 0;
+    top: 0;
+    left: 0;
+    display: block;
+    overflow: visible;
+}
+body.mobile div.tabs ul:hover
+{
+    left: 30px;
+    background-color: #5a5a5a;
+    height: auto;
+    min-width: 230px;
+    width: auto;
+    margin-top: 36px;
+    z-index: 2000;
+}
+body.mobile div.tabs ul li
+{
+    display: none;
+}
+body.mobile div.tabs ul:hover li.current
+{
+    top: -36px;
+    left: -30px;
+    min-width: 260px;
+}
+body.mobile div.tabs ul:hover li
+{
+    display: block;
+}
+body.mobile div.tabs ul li a,
+body.mobile div.tabs ul li input,
+body.mobile div.tabs ul li span
+{
+    width: 100%;
+    display: block;
+    text-align: left;
+}
+body.mobile div.tabs ul li a:hover,
+body.mobile div.tabs ul li input:hover,
+body.mobile div.tabs ul li span:hover
+{
+    background-color: #0096d6;
+}
+body.mobile #page, 
+body.mobile #header
+{
+    min-width: 100px!important;
+    height: auto !important;
+    top: auto !important;
+    bottom: auto !important;
+    position: relative !important;
+}
+body.mobile div.grid
+{
+    overflow-x: auto!important;
+}
+body.mobile #header
+{
+    position: relative!important;
+}
+body.mobile #header div.info strong
+{
+    position: relative!important;
+}
+body.mobile #header div.user
+{
+    position: relative!important;
+}
+body.mobile #header div.info
+{
+    position: relative!important;
+}
+body.mobile div.page-header h1
+{
+    padding-right: 35px;
+}
+body.mobile div.page-header a.help
+{
+    position: relative;
+    background-image: url(img/icons_mobile.png);
+    background-repeat: no-repeat;
+    width: 40px;
+    height: 40px;
+    float: right;
+    margin: -32px -5px 0 0;
+    _position: relative;
+    _display: block;
+    z-index: 99;
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+}
+body.mobile div.columns
+{
+    position: relative!important;
+    top: 0px!important;
+    bottom: 0px!important;
+}
+body.mobile div.columns-content
+{
+    position: relative !important;
+}
+body.mobile div.column-content
+{
+    position: relative!important;
+    top: 0px!important;
+    bottom: 0px!important;
+}
+body.mobile div.column-menu
+{
+    position: relative !important;
+}
+body.mobile div.column-menu ul#localMenu
+{
+    position: relative!important;
+    top: 0px!important;
+    bottom: 0px!important;
+    padding: 0px!important;
+    overflow: hidden!important;
+    margin: 0!important;
+    background-image: none!important;
+    border-radius: 0 0 0 0!important;
+}
+body.mobile div.other-links
+{
+    position: relative!important;
+}
+body.mobile div#content
+{
+    position: relative!important;
+    top: 0px!important;
+    bottom: 0px!important;
+    overflow: visible;
+    padding: 8px 30px 8px 30px;
+}
+body.mobile div.sections div.section div.buttons.bottom.relative,
+body.mobile div.buttons.relative
+{
+    position: relative!important;
+}
+body.mobile div.sections div.section div.buttons.bottom.fixed,
+body.mobile div.buttons.fixed
+{
+    position: relative!important;
+    bottom: 0px!important;
+}
+body.mobile div#content.fixed,
+body.mobile body.mac.safari div#content.fixed
+{
+    bottom: 0px!important;
+    padding-bottom: 0px!important;
+}
+body.mobile #localMenu
+{
+    top: 0px!important;
+    width: 100%!important;
+    height: auto;
+    display: block;
+    background-color: #fff;
+    border-right: 0!important;
+    bottom: auto!important;
+    padding: 0!important;
+}
+body.mobile #localMenu .MenuItem.collapsed > ul,
+body.mobile #OtherLinksHeader.collapsed > ul,
+body.mobile #localMenu .TreeIcon
+{
+    display: none;
+}
+body.mobile #localMenu .MenuItem.expanded > ul,
+body.mobile #OtherLinksHeader.expanded > ul
+{
+    display: block;
+}
+body.mobile #localMenu .MenuItem a
+{
+    height: 40px;
+    line-height: 32px;
+    display: inline-block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+body.mobile #localMenu li
+{
+    background-color: #0096d6;
+    border-bottom: solid 1px #fff;
+    float: none;
+    height: 40px;
+}
+body.mobile #localMenu li.expanded
+{
+    height: auto;
+}
+body.mobile #localMenu li a
+{
+    color: #fff;
+}
+body.mobile #localMenu .parent-menu a
+{
+    width: 80%;
+}
+body.mobile #localMenu .parent-menu .ArrowIcon
+{
+    height: 20px;
+    left: 0;
+    top: 9px;
+    background-image: url(img/icons_mobile.png);
+    background-repeat: no-repeat;
+    position: relative;
+    display: inline;
+    float: right;
+    padding-left: 26px!important;
+}
+body.mobile #localMenu .parent-menu.collapsed > .ArrowIcon
+{
+    background-position: -60px -100px;
+}
+body.mobile #localMenu .parent-menu.expanded > .ArrowIcon
+{
+    background-position: -10px -100px;
+}
+body.mobile #localMenu .parent-menu.collapsed:not(.sub-menu) > .ArrowIcon
+{
+    background-position: -155px -100px;
+}
+body.mobile #localMenu .parent-menu.expanded:not(.sub-menu) > .ArrowIcon
+{
+    background-position: -105px -100px;
+}
+body.mobile #localMenu .parent-menu li
+{
+    background-color: #fff;
+    border-bottom: solid 1px #aaaaaa;
+}
+body.mobile #localMenu .parent-menu li a
+{
+    color: #5a5a5a;
+}
+body.mobile #localMenu .sub-menu li
+{
+    background-color: #f2f2f2;
+    border-bottom: solid 1px #dddddd;
+    border-top: 0;
+}
+body.mobile #localMenu .sub-menu li a
+{
+    color: #5a5a5a;
+}
+body.mobile #localMenu .MenuItem li:last-child,
+body.mobile #localMenu .MenuItem.expanded
+{
+    border-bottom: 0;
+}
+body.mobile #localMenu .MenuItem:not(.parent-menu) a
+{
+    width: 100%;
+}
+body.mobile #localMenu .parent-menu.sub-menu a,
+body.mobile #localMenu .parent-menu.sub-menu span
+{
+    padding-left: 16px;
+}
+body.mobile #localMenu .parent-menu.sub-menu > ul
+{
+    border: solid 2px #0096D6;
+    border-width: 2px 0;
+}
+body.mobile #WelcomeHeader,
+body.mobile #EwsLogin,
+body.mobile #MessageCenter,
+body.mobile #header div.searchBox,
+body.mobile #menuTabs,
+body.mobile div.info
+{
+    display: none;
+}
+body.mobile #header
+{
+    border-bottom: solid 2px #0096d6;
+    min-width: 0!important;
+}
+body.mobile #header .user
+{
+    display: none;
+}
+body.mobile #headerMobileButtons
+{
+    display: block;
+}
+body.mobile #header > .product
+{
+    border-top: 0!important;
+    height: 90px!important;
+}
+body.mobile #brandLink a
+{
+    top: 21px!important;
+    left: 21px!important;
+}   
+body.mobile div.page-header
+{
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    padding: 22px 30px 22px 30px;
+}    
+body.mobile div#content
+{
+    top: 0!important;
+    left: 0!important;
+}
+body.mobile div#content > form
+{
+    width: 100%!important;
+    min-width: 0!important;
+}
+body.mobile #mobile-menu-content,
+body.mobile #mobile-search
+{
+    display: none;
+    width: auto !important;
+    position: relative !important;
+}
+
+/**
+ * Other Links for mobile
+ **/ 
+body.mobile div.other-links
+{
+    padding: 0;
+    height: auto;
+    border: 0;
+    bottom: 0px;
+}
+body.mobile div.other-links ul
+{
+    width: 100%;
+    text-align: left;
+}
+body.mobile div.other-links #OtherLinksHeader > span
+{
+    font-weight: bold;    
+    line-height: 40px;
+    padding-left: 16px;
+}
+body.mobile div.other-links ul li
+{
+    display: block;
+    border-top: solid 1px #898988;
+    border-left: 0!important;
+}
+body.mobile #OtherLinksHeader > span,
+body.mobile #OtherLinksHeader > div
+{
+    display: block;
+}
+body.mobile #OtherLinksHeader.expanded ul:last-child,
+body.mobile #OtherLinksHeader.collapsed
+{
+    border-bottom: solid 1px #898988;    
+}
+body.mobile #OtherLinksHeader > div
+{
+    position: absolute;
+    background: url(img/treeview.png) no-repeat;
+    background-position: 0 -100px;
+    right: 10px;
+    top: 10px;
+    height: 22px;
+    width: 22px;
+}
+body.mobile #OtherLinksHeader li > div
+{
+    position: relative;
+    background: url(img/external_link.png) no-repeat;
+    right: 6px;
+    top: 14px;
+    height: 22px;
+    width: 22px;
+    float: right;
+}
+body.mobile #OtherLinksHeader.expanded > div
+{
+    background-position: 0 -152px;
+}
+body.mobile div.other-links a
+{
+    height: 40px;
+    line-height: 40px;
+    padding-left: 16px!important;
+    width: 90%;
+    max-width: none;
+    text-align: left;
+    
+}
+body.mobile #footer div.copyright
+{
+    position: static;
+    width: 100%;
+    bottom: 0;
+    height: auto;
+    border-top: 1px solid #ccc;
+    background-color: #f2f2f2;
+    padding: 5px 15px;
+    color: #5a5a5a;
+    right: 0;
+    white-space:normal;
+}
+body.mobile #mobile-info .product
+{
+    display: block;
+    font-size: 1.8em;
+}
+body.mobile #mobile-info p
+{
+    display: inline;
+    font-size: 1.2em;
+}
+body.mobile #mobile-info p.ip-address
+{
+    padding-left: 1em;
+}
+body.mobile .MenuItem.state a
+{
+    background-position: 15px 11px!important;
+    padding-left: 45px!important;
+}
+body.mobile div.message-progress-inline
+{
+    max-width: 360px;
+    float: none;
+}
+body.mobile div.message-progress-inline div.content div.barber-pole
+{
+    width: 100%;
+}
+body.mobile div.message
+{
+    margin: 0 -30px 8px -30px;
+}
+body.mobile div.select-hack
+{
+    width: 100%;
+}
+body.js.mobile div.double-width.control.file,
+body.mobile div.double-width div.file-hack span.file-hack-text,
+body.mobile div.double-width div.file-hack
+{
+    width: 100%!important;
+}
+body.mobile div.double-width div.file-hack span.file-hack-button
+{
+    left:auto;
+    float: right;
+}
+body.mobile div.file-hack span.file-hack-text
+{
+    width: 100%!important;
+    position: relative;
+}
+body.mobile div.file-hack span.file-hack-button
+{
+    position: relative;
+    top: 4px;
+    left: 0px;
+    float: right;
+}
+body.mobile div.file-hack
+{
+    width: 100%!important;
+    height:auto;
+    overflow: visible;
+}
+body.mobile div.control.inline-note em, 
+body.mobile em.note.inline,
+body.mobile em.note
+{
+    display: block!important;
+    padding-left: 0!important;
+    padding-top: 0.3em!important;
+}
+body.mobile div.text input, 
+body.mobile div.textarea textarea, 
+body.mobile div.password input, 
+body.mobile div.select select, 
+body.mobile div.select1 select, 
+body.mobile div.data p, 
+body.mobile div.action-list input.add-input, 
+body.mobile div.spinner .spinner-hack
+{
+    width: 100%;
+}
+body.mobile input[type=date],
+body.mobile input[type=time]
+{
+    background-color: #fff;
+}
+body.mobile div.auto-width,
+body.mobile div.custom-width
+{
+    width: 100%!important;
+}
+body.mobile div.input-and-check
+{
+    float:none;
+}
+body.mobile div.text, 
+body.mobile div.textarea, 
+body.mobile div.password, 
+body.mobile div.select, 
+body.mobile div.select1, 
+body.mobile div.radio, 
+body.mobile div.checkbox, 
+body.mobile div.data, 
+body.mobile div.file, 
+body.js.mobile div.control.file,
+body.mobile div.action-list, 
+body.mobile div.action-list h3 div.control-column
+{
+    width: 100%!important;
+}
+body.mobile div.select-hack span.select-hack-text
+{
+    width: 100%;
+}
+body.mobile .right
+{
+    float: none!important;
+}
+body.mobile div.auto-width div.control, 
+body.mobile div.auto-width.control p,
+body.mobile div.custom-width div.control, 
+body.mobile div.custom-width.control p
+{
+    width: 100%!important;
+}
+
+body.mobile em.desc, 
+body.mobile p.desc, 
+body.mobile em.note, 
+body.mobile p.note, 
+body.mobile div.note, 
+body.mobile em.example, 
+body.mobile p.example, 
+body.mobile em.help, 
+body.mobile p.help,
+body.mobile div.content p.page-description,
+body.mobile div.form p
+{
+    text-align: justify;
+}
+
+body.mobile .text-align-center
+{
+    text-align: center!important;
+}
+
+body.mobile div.text-replace div.replace
+{
+    width: 100%;
+}
+/**
+ * Search for mobile
+ **/
+#mobile-search div.searchBox
+{
+    position: static;
+    display: inline-block;
+    width: 100%;
+}
+#mobile-search div.searchBox div.text
+{
+    position: relative;
+    background-color: #fff;
+    width: 100%;
+}
+#mobile-search div.searchBox div.text,
+#mobile-search div.searchBox div.text input[type=text]
+{
+    width:100%;
+    height:1.85em;
+    line-height:1.85em;
+}
+#mobile-search div.searchBox div.text input[type=text]
+{
+    padding-right: 26px;
+    background-color: transparent;
+    z-index: 3;
+    position: absolute;
+    right: 0;
+}
+#mobile-search div.searchBox div.text input[type=submit]
+{
+    border: 0;
+    position: absolute;
+    right:2px;
+    width:22px;
+    height:22px;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: 0px 2px;
+    cursor: pointer;
+    z-index: 4;
+    text-indent: -1000em;
+}
+#mobile-search div.searchBox div.text input.magnifier
+{
+    top:2px;
+    background-image: url(img/magnifier.png);
+}
+#mobile-search div.searchBox div.text input.progress
+{
+    top:4px;
+    background-image: url(img/snake_transparent.gif);
+}
+#mobile-search div.searchBox div.text input[type=text]:hover + input.magnifier,
+#mobile-search div.searchBox div.text input[type=text]:focus + input.magnifier,
+#mobile-search div.searchBox div.text input[type=text] + input.magnifier:hover
+{
+    background-position: 0px -98px;
+}
+#mobile-sign-out a.logoff,
+#mobile-sign-out a.home
+{
+    color: #000;
+    text-decoration: underline;
+    line-height: 1.85em;
+    vertical-align: middle;
+    margin-left: 10px;
+    font-size: 1em;
+    font-weight: bold;
+}
+#mobile-sign-out a.home 
+{
+    margin-left: 0px;
+}
+#mobile-sign-out a:focus
+{
+    color: #007dba;
+}
+#mobile-sign-out #mobile-userName
+{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+ 
+/******************************************************************************
+ * Mobile buttons
+ *****************************************************************************/
+
+#headerMobileButtons
+{
+    position: relative;
+    right: 10px;
+    top: 25px;
+    float: right;
+    display: none;
+}
+#headerMobileButtons li
+{
+    position: relative;
+    width: 40px;
+    height: 40px;
+    list-style: none;
+    display: inline-block;
+}
+#infoMobileButton
+{
+    background: url(img/icons_mobile.png) no-repeat;
+    background-position: -95px -45px;
+}
+#signInMobileButton
+{
+    background: url(img/icons_mobile.png) no-repeat;
+    background-position: -95px 0;
+}
+#searchMobileButton
+{
+    background: url(img/icons_mobile.png) no-repeat;
+    background-position: -145px 0;
+}
+#messageCenterMobileButton
+{
+    background: url(img/icons_mobile.png) no-repeat;
+    background-position: -145px -45px;
+    display: none!important;
+}
+#messageCenterMobileButton.message
+{
+	background-position: -145px -45px;
+    display: inline-block!important;
+}
+#messageCenterMobileButton.warning
+{
+	background-position: 0px -45px;
+    display: inline-block!important;
+}
+#messageCenterMobileButton.error
+{
+	background-position: -50px -45px;
+    display: inline-block!important;
+}
+#menuMobileButton
+{
+    background: url(img/icons_mobile.png) no-repeat;
+    background-position: -50px 0;
+}
+/******************************************************************************
+ * This css is used by the MasterPageNoMenu VM.
+ * The page is with blue header, white letters and logo.
+ * Doesn't have menu tab and left menu.
+ *****************************************************************************/
+/* Page Header */
+body.altHeader #header div.product
+{
+    background: #0096d6;
+}
+body.altHeader #header p.brand strong
+{
+    color: #FFF;
+}
+body.altHeader #header p.brand a
+{
+    background: url(img/hp_logo_white_48x48.png) no-repeat;
+}
+body.altHeader #header div.info
+{
+    color: #FFF;
+}
+body.noTopMenu div.page-header
+{
+    top: 90px;
+}
+body.noTopMenu div#content
+{
+    top: 170px;
+}
+body.noFooter div#content
+{
+    bottom: 0px;
+}
+
+/*****************************************************************************
+* Accessibility features
+*****************************************************************************/
+.sr-only {
+position: absolute;
+width: 1px;
+height: 1px;
+padding: 0;
+margin: -1px;
+overflow: hidden;
+clip: rect(0,0,0,0);
+border: 0;
+}
+
+@media screen and (-ms-high-contrast: active) {
+ ul.nav-local li.parent-menu span.TreeIcon
+  { 
+  background-image:url(img/treeview.png);
+  left:23px;
+   }
+   p.brand a
+   {
+      background: url(img/hp_logo.png); 
+   }
+ body.js div.checkbox  input+label,
+ body.js div.select li label
+ {
+     background-image: url(img/checkboxes.png);
+ }
+ #header div.user-content span.msg-center
+{
+    background-image: url(img/msg-center.png);
+}
+body.js div.radio label,
+body.js div.select1 li label
+{ 
+    
+    background-image: url(img/radiobuttons.png);
+    
+}
+
+
+ul.nav-local li.state a,
+ul.nav-local li.state.sub-menu a
+{
+    
+    background-image: url(img/status-icons.png);
+    
+}
+}@media screen and (-ms-high-contrast: active) 
+{
+div.tabs a:hover,
+div.tabs a:focus,
+.buttonTab:hover,
+.buttonTab:focus,
+div.content div#menuTabs a:hover,
+div.content div#menuTabs a:focus
+{
+    background-color: #767676;
+}
+div.tabs li.current a:hover,
+div.tabs li.current a:focus,
+div.tabs li.current span:hover,
+div.content div#menuTabs li.current a:hover,
+div.content div#menuTabs li.current a:focus,
+div.content div#menuTabs li.current span:hover
+{
+    background-color: #006699;
+}
+ul.nav-local li a:hover,
+ul.nav-local li span:hover,
+ul.nav-local li a:focus,
+ul.nav-local li a.open,
+ul.nav-local li span.open
+{
+   
+    background-color: #0096d6;
+}
+a:hover,
+a:focus
+{
+  
+ background-color: #0096d6;
+}
+}
+  

@@ -1,0 +1,488 @@
+/** Hide the header, the left menu and the buttons **/
+#header, 
+#menuTabs, 
+div.column-menu, 
+.buttons span, 
+.button, 
+div.buttons.fixed, 
+.menu
+{
+    display: none !important;
+}
+
+/** Hide the new input image for radio, checkbox and select inputs **/
+div.radio label span, 
+div.checkbox label span, 
+div.control a select + a
+{
+    display: none !important;
+}
+
+/** Remove the min-width of the page and remove blank pages after **/
+#page
+{
+    /**min-width: 0;**/
+    page-break-after: inherit !important;
+}
+#page, 
+#header
+{
+    position: inherit !important;
+}
+
+/** Remove position fixed for all div **/
+#page div,
+#footer div
+{
+    position: inherit !important;
+    
+}
+
+div#content
+{
+    padding: 10px 2px 2px 10px !important;
+}
+
+/** Remove the scroll bar for div.content **/
+div.content
+{
+    overflow: hidden !important;
+}
+
+div.group-under-check
+{
+    overflow: inherit !important;
+}
+
+/** Adjust the border of textbox, textareas and select to 1px **/
+div.data p, 
+input[type=text],
+input[type=password], 
+textarea, 
+select
+{
+    border: 1px solid #ccc !important;
+}
+
+/** Select **/
+div.select-hack select
+{
+    position: inherit !important;
+    opacity: initial !important;
+}
+div.select-hack span.select-hack-text,
+div.select-hack span.select-hack-button
+{
+    display: none !important;
+}
+
+/** Hide tooltip **/
+#tooltip
+{
+    display: none !important;
+}
+
+div.columns
+{
+    border: 0;
+}
+
+
+div.section div.title h2
+{
+    color: black;
+}
+
+div.section div.title
+{
+    border-bottom: 1px solid #B9B8B8;
+    padding-left: 0px !important;
+    margin: 0 !important;
+}
+
+/**  **/
+div.speed-dial-table
+{
+    height: auto !important;
+    overflow: visible !important;
+}
+
+table
+{
+    clear: none;
+    page-break-before: auto;
+    page-break-after: auto;
+    page-break-inside: auto;
+}
+
+div.consumable-block p.color-size strong
+{
+    text-indent: 0 !important;
+    text-align: right;
+}
+
+/** Returns the appearence of radio input **/
+input[type=radio]
+{
+    -webkit-appearance: radio !important;
+    position: inherit !important;
+    z-index: inherit !important;
+    opacity: inherit !important;
+}
+
+/** Returns the appearence of checkbox input **/
+input[type=checkbox]
+{
+    -webkit-appearance: checkbox !important;
+    position: inherit !important;
+    z-index: inherit !important;
+    opacity: inherit !important;
+}
+body.js div.checkbox label,
+body.js div.radio label,
+body.js div.select1 li label,
+div.apps-js table label.checkbox, 
+div.apps-js table span.checkbox
+{
+    padding: 0 !important;
+    background: none;
+}
+
+/** Expand the grid **/
+div .grid
+{
+    height: 100% !important;
+}
+
+div.message-information, 
+div.message, 
+div.message .content
+{
+    min-height: 20px !important;
+    padding: 0 !important;
+    background: none !important;
+}
+
+/** Return the appearence of select **/
+select
+{
+    -webkit-appearance: menulist-button !important;
+}
+
+/** Remove the status image and remove padding of the label status **/
+span.status
+{
+    background: none !important;
+    padding: 0 !important;
+}
+
+
+/** Remove the background icon of messages and adjust the height **/
+div.message div.icon
+{
+    background: none !important;
+    height: 0 !important;
+}
+
+/** Remove the status image and adjust padding-left of the label status **/
+div.control.data.status p
+{
+    background: none !important;
+    padding-left: 3px !important;
+}
+
+/** Hide the apps legend div **/
+div .apps-legend
+{
+    display: none !important;
+}
+
+h3.section
+{
+    border: 1px solid #B9B8B8 !important;
+}
+
+.note, .note-warning
+{
+    background: none !important;
+    padding: 0 !important;
+}
+
+/** Up the size of the inputs type text to show the border bottom **/
+div.text input[type=text]
+{
+    height: 1.86em !important;
+}
+
+/** Force the padding-left of the ul's to 16px **/
+ul.padding-left
+{
+  padding-left: 16px !important;
+}  
+
+/** Hide the input file **/
+div.file-hack input[type=file]
+{
+    display: none !important;
+}
+
+/** Adjust the position of span that represents the input file **/
+div.file-hack span
+{
+    display: inline-block !important;
+    position: inherit !important;
+}
+
+/** Hide the datepicker and timepicker **/
+div.ui-timepicker,
+div.ui-datepicker
+{
+    display: none !important;
+}
+
+/** Adjust padding of the components in the Add Group page **/
+#emailGroup div.half-width-column, 
+#folderGroup div.half-width-column,
+.wizard div.half-width-column
+{
+    padding: 0 10px 0 10px !important;
+}
+
+/** Hide a middle div used as spacement of other divs in the Add Group page **/
+#emailGroup div.thin-width-column, 
+#folderGroup div.thin-width-column,
+.wizard div.thin-width-column
+{
+    display: none !important;
+}
+
+div.ModuleFrame div.body div.control.grid
+{
+    page-break-inside: auto;
+}
+
+ /** Force to print all items that are div.control.grid in the same page **/
+ div.control.grid
+ {
+     page-break-inside: avoid;
+     overflow: hidden !important;
+ }
+
+/** Hide the progress bar **/
+.message-progress-inline, 
+.message-progress
+ {
+     display: none !important;
+ }
+
+ul.text-replace
+{
+    display: none !important;
+}
+
+/******************************************************************************
+ * Copy Settings
+ *****************************************************************************/
+
+/** Hide images and em's of the list in the left **/
+#boardMenu dd span, 
+#boardMenu dd em
+{
+    display: none !important;
+}
+
+/** Strongs **/
+#boardMenu dd strong
+{
+    padding: 0 !important;
+}
+
+/** Expand and remove the overflow of the list in the left. Adding the border right to print **/
+#boardMenu
+{
+    height: 100% !important;
+    overflow: hidden !important;
+    border-right: 1px solid #B9B8B8;
+}
+
+/** Hide checkbox images **/
+div.select1 li label span
+{
+    display: none !important;
+}
+/******************************************************************************
+ * Email Setup Wizard and Save to Network Folder Setup Wizard
+ *****************************************************************************/
+span.frame
+{
+    display: none !important;
+}
+div.app-email .content
+{
+    padding: 0 !important;
+}
+
+div.app-networkFolder,
+div.app-email
+{
+    min-height: 0 !important;
+    height: 38px !important;
+}
+
+ul.status-list li
+{
+    padding: 1px 0 5px 0 !important;
+    background: none !important;
+}
+
+div.app-button h2
+{
+    border-bottom: 2px solid #B9B8B8 !important;
+}
+
+/******************************************************************************
+ * Access Control
+ *****************************************************************************/
+div.apps td.label span
+{
+    background: none !important;
+    overflow: hidden !important;
+}
+
+div.apps select
+{
+    -webkit-appearance: none !important;
+    border: none !important;
+}
+
+div.apps td.label span,
+div.apps th.label
+{
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    white-space: nowrap !important;
+}
+
+#PermissonSets table tr *
+{
+    padding-left: 0 !important;
+    margin-left: 0 !important;
+}
+
+div.apps td.column-1 td.label
+{
+    max-width: 25px !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    white-space: nowrap !important;
+}
+
+#PermissionSetsViewSectionId div.apps-js table label.checkbox, 
+#PermissionSetsViewSectionId div.apps-js table span.checkbox
+	{
+	text-indent:0!important;
+	margin:0!important;
+	}
+#PermissionSetsViewSectionId div.apps-js table label.checkbox input, 
+#PermissionSetsViewSectionId div.apps-js table span.checkbox input
+	{
+	opacity:1;
+	}	
+	
+/******************************************************************************
+ * Access Control
+ *****************************************************************************/
+ 
+ /** Fix the size of the snapshot image **/
+#ControlPanelSnapshotImage
+{
+    height: 100% !important;
+    width: 100% !important;
+    display: block !important;
+}
+
+/******************************************************************************
+ * Control Panel Customization
+ *****************************************************************************/
+ 
+ /** Remove the images of Show Keyboard Layout and Show Homescreen Quick Language buttons **/
+div.ShowHomescreenQuickLanguageSelectButton label, 
+div.ShowKeyboardLayoutButton label
+{
+    background: none !important;
+}
+ 
+ /** Fix the margin-left of the em when remove the images of Show Keyboard Layout and Show Homescreen Quick Language buttons **/
+div.ShowKeyboardLayoutButton em, 
+div.ShowHomescreenQuickLanguageSelectButton em
+{
+    margin-left: 30px !important;
+}
+
+/** Add a border-bottom in the titles of Home Screen Customization **/
+.form .home-screen label.title
+{
+    border-bottom: 1px solid #CCC !important;
+}
+
+/******************************************************************************
+ * Auto Send
+ *****************************************************************************/
+ 
+ .EnableAutoSend 
+ {
+     padding-top: 10px !important;
+ }
+ 
+ /******************************************************************************
+ * LDAP
+ *****************************************************************************/
+ #LdapDataBaseSearchSettingsViewSectionId div.action-list
+ {
+     padding: 1.3em 1.3em 1em 0 !important;
+ }
+ 
+ /******************************************************************************
+ * Quick Set
+ *****************************************************************************/
+ div.app-button h2
+ {
+     border: none !important; 
+ }
+ 
+ #QuickSetDescription
+ {
+     padding-bottom: 30px !important;
+ }
+ 
+ div.app-button, div.app-button div.content
+ {
+     border: none !important;
+     padding: 0 !important;
+     min-height: 0 !important;
+ }
+ 
+ ul.status-list
+ {
+     padding-top: 15px !important;
+ }
+ 
+ /******************************************************************************
+ * Consumables
+ *****************************************************************************/
+ div.consumable h2,
+ div.consumable div.gauge span,
+ div.consumable span.plr,
+ div.consumable span.partNumber
+ {
+     position: inherit !important;
+     height:20% !important;
+ }
+ 
+ /******************************************************************************
+ * Message Center
+ *****************************************************************************/
+ div.device-status
+ {
+     display: none !important;
+ }

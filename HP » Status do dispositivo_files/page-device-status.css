@@ -1,0 +1,457 @@
+/******************************************************************************
+ * DeviceStatusMedia.vm
+ * DeviceStatusSupplies.vm
+ * TrayListView.vm
+ *****************************************************************************/
+div.status
+{
+    zoom: 1;
+    _height: 1%;
+}
+div.status:after
+{
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+div.device-status
+{
+    padding: 0 !important;
+}
+div.device-status label
+{
+    display: inline !important;
+    margin: 0 !important;
+}
+div.device-status span.status-message
+{
+    display: inline;
+    margin: 0 10px 0 0;
+}
+div.device-status a.help
+{
+    background: url(img/supplies-help-icon.gif) no-repeat right top;
+    padding: 2px 20px 2px 0;
+    text-decoration: none;
+}
+/****************************************************************************
+ *  Cartridges
+ ***************************************************************************/
+div.cartridges,
+div.cartridges div.consumable,
+div.cartridges div.gauge
+{
+    zoom: 1;
+    _height: 1%;
+}
+div.cartridges:after,
+div.cartridges div.consumable:after,
+div.cartridges div.gauge:after
+{
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+div.cartridges div.consumable
+{
+    padding: 0;
+    width: 23%;
+    margin: 5px 10px 5px 0;
+    position: relative;
+    height: 66px;
+    display: inline-block;
+}
+/****************************************************************************
+ *  Consumable
+ ***************************************************************************/
+div.consumable:empty
+{
+    display: none;
+}
+div.consumable
+{
+    float: left;
+}
+div.consumable h2
+{
+    font-size: 1em;
+    position: absolute;
+}
+div.consumable span.plr,
+div.consumable span.partNumber
+{
+    position: absolute;
+    top: 15px;
+}
+div.consumable span.plr
+{
+    margin: 0 0 0 0;
+    right: 0;
+    width: 45px;
+    text-align: right;
+}
+div.consumable span.partNumber
+{
+    padding-right: 45px;
+    left: 0px;  /* Firefox needs this */
+}
+div.consumable h2,
+div.consumable span.partNumber
+{
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+/****************************************************************************
+ *  Gauge or LPR (Life Percent Remaining)
+ ***************************************************************************/
+
+div.consumable div.reservetank  /* parent div for both the tank and the tube */
+{
+    position:relative;
+    float: left;
+    display: inline-block;
+    top: 35px;
+    width: 15%;
+    height: 31px;
+}
+div.consumable div.tank
+{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    border: 1px solid;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+    border-right-width: 0;
+}
+div.consumable div.tube
+{
+    position: absolute;
+    right: 0;
+    top: 10px;
+    width: 50%;
+    height: 11px;
+    margin: 0;
+}
+div.consumable div.gauge
+{
+    display: inline-block;
+    background: url(img/status-icons.png) no-repeat;
+    border: 1px solid #000;
+    float: left;
+    position: relative;
+    top: 35px;
+    width: 100%;
+    height: 31px;
+    border-radius: 3px;
+    overflow: hidden;
+}
+div.consumable div.gauge.WithReserveTank
+{
+    width: 85%;  /* reserve tank & tube take the other 15% */
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-left-width: 0;
+}
+div.consumable div.gauge span,
+div.consumable div.tank span
+{
+    background: #EAEAEA;
+    position: absolute;
+    height: 27px;
+    display: inline-block;
+    text-indent: -1000em;
+    margin: 0;
+    top: 1px;
+    left: 1px;
+    overflow: hidden;
+    border-radius: 3px 0 0 3px;
+}
+div.consumable div.gauge.WithReserveTank span
+{
+    left: 0;  /* make it flush with tube */
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-left-width: 0;
+}
+div.consumable div.gauge span:before
+{
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 18px;
+    height: 27px;
+    background-image: url(img/gauge-fade.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+/*
+ * Gauge Colors
+ */
+div.consumable div.gauge.Black span,
+div.consumable div.tank.Black span,
+div.consumable div.tube.Black
+{
+    background: #000;
+}
+div.consumable div.gauge.Cyan span,
+div.consumable div.tank.Cyan span,
+div.consumable div.tube.Cyan
+{
+    background: #00aeef;
+}
+div.consumable div.gauge.Magenta span,
+div.consumable div.tank.Magenta span,
+div.consumable div.tube.Magenta
+{
+    background: #ec008c;
+}
+div.consumable div.gauge.Yellow span,
+div.consumable div.tank.Yellow span,
+div.consumable div.tube.Yellow
+{
+    background: #ffd100;
+}
+div.consumable div.gauge.Gray span
+{
+    background: #808080;
+}
+div.consumable div.tank.White
+{
+    background: white;
+}
+div.consumable div.tube.White
+{
+    border-color: white;
+}
+/*
+ * Gauge Status
+ */
+div.consumable div.gauge.OK
+{
+    background-image: none;
+}
+div.consumable div.gauge.Attention,
+div.consumable div.gauge.AttentionEmpty
+{
+    background-position: 95% 6px;
+}
+div.consumable div.gauge.Stop
+{
+    background-position: 95% -1087px;
+}
+div.consumable div.gauge.Missing
+{
+    background-position: 50% -993px;
+}
+div.consumable div.gauge.WithReserveTank.AttentionEmpty,
+div.consumable div.gauge.WithReserveTank.Stop,
+div.consumable div.gauge.WithReserveTank.Missing
+{
+    border: 1px dashed #000;
+}
+/*
+ * Tank Status
+ */
+ div.consumable div.tank.Full span
+ {
+     width: 95%;  /* renders better than 100% */
+ }
+ div.consumable div.tank.Half span
+ {
+     width: 50%;
+ }
+ div.consumable div.tank.Empty span,
+ div.consumable div.tank.Unknown span
+ {
+     width: 0%;
+ }
+/****************************************************************************
+ *  Other Supply Information
+ ***************************************************************************/
+div.other-supply
+{
+    margin: 5px 0 5px 0;
+}
+div.other-supply li
+{
+    list-style-type: none;
+}
+/****************************************************************************
+ *  Media information grid
+ ***************************************************************************/
+div.media-settings span.status
+{
+    background: url(img/supplies-bin.png) no-repeat;
+    display: block;
+    padding: 0 0 0 30px;
+    text-indent: 0;
+    width: auto;
+}
+div.media-settings span.status-empty
+{
+    background-position: 0 7px;
+}
+div.media-settings span.status-low
+{
+    background-position: 0 -19px;
+}
+div.media-settings span.status-full
+{
+    background-position: 0 -71px;
+}
+div.media-settings span.status-unknow
+{
+    background-position: 0 -97px;
+}
+div.media-settings span.status-none
+{
+    background: none;
+}
+div.media-settings span.detailedstatus
+{
+    background: url(img/supplies-detail-bin.png) no-repeat;
+    display: block;
+    padding: 0 0 0 58px;
+    text-indent: 0;
+    width: auto;
+    height: 1.85em;
+}
+div.media-settings span.detailedstatus-empty
+{
+    background-position: 0 8px;
+}
+div.media-settings span.detailedstatus-lessthan10
+{
+    background-position: 0 -18px;
+}
+div.media-settings span.detailedstatus-between10and20
+{
+    background-position: 0 -44px;
+}
+div.media-settings span.detailedstatus-between20and40
+{
+    background-position: 0 -70px;
+}
+div.media-settings span.detailedstatus-morethan40
+{
+    background-position: 0 -96px;
+}
+div.media-settings span.detailedstatus-lessthan30
+{
+    background-position: 0 -122px;
+}
+div.media-settings span.detailedstatus-between30and70
+{
+    background-position: 0 -148px;
+}
+div.media-settings span.detailedstatus-morethan70
+{
+    background-position: 0 -174px;
+}
+div.media-settings span.detailedstatus-unknown
+{
+    background-position: 0 -200px;
+}
+/***************************************************************************
+ *	Home Screen for Network Scanners
+ **************************************************************************/
+div.section div.device-status-background
+{
+    background: url(img/device-status-image.jpg) no-repeat right top;
+    padding-bottom: 250px;
+}
+div.device-status-background p.device-status
+{
+    border: 0 !important;
+}
+/***************************************************************************
+ * DEVICE STATUS - status and help link
+ * DeviceStatusHeader.vm
+ ***************************************************************************/
+div.device-status
+{
+    font-size: 1.3em!important;
+}
+div.device-status span.back-arrow
+{
+    background-image: url(img/BackArrrow.gif);
+    background-repeat: no-repeat;
+    background-position: 4px center;
+    padding: 0 0 0 24px!important;
+}
+div.device-status span.icon
+{
+    background-image: url(img/msg-center.png);
+    background-repeat: no-repeat;
+    padding-left: 20px;
+}
+div.device-status span.icon.warning
+{
+	background-position: 0 -198px;
+}
+body.mac div.device-status span.icon.warning
+{
+	background-position: 0 -200px;
+}
+div.device-status span.icon.error
+{
+	background-position: 0 -297px;
+}
+body.mac div.device-status span.icon.error
+{
+	background-position: 0 -300px;
+}
+div.device-status span.icon.job-status,
+div.device-status span.icon.popup,
+div.device-status span.icon.notification,
+div.device-status span.icon.message
+{
+    display: none;
+}
+div.device-status.background
+{
+    background: url(img/device-status-image.jpg) no-repeat right top;
+    padding-bottom: 250px!important;
+}
+/***************************************************************************/
+
+ /******************************************************************************
+ * Specific behavior for mobiles
+ *****************************************************************************/
+ 
+body.mobile div.device-status span.icon.error
+{
+    background-position: 0 -300px;
+}
+ 
+@media (orientation:portrait)
+{
+    body.mobile div.cartridges div.consumable
+    {
+        width: 100%;
+    }
+}
+@media (orientation:landscape)
+{
+    body.mobile div.cartridges div.consumable
+    {
+        width: 47%;
+    }
+}
+@media screen and (-ms-high-contrast: active) 
+{
+  div.device-status span.icon
+{
+    background-image: url(img/msg-center.png);
+}
+}
