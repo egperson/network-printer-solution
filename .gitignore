@@ -1,0 +1,6 @@
+# Ignore all .log files
+*.log
+*.vscode/
+backend/data/
+backend/node_modules/
+frontend/node_modules/
