@@ -1,0 +1,40 @@
+{
+  "scan": {
+    "enabled": true,
+    "prefixes": [
+      {
+        "prefix": "10.12.86.",
+        "label": "Rio Claro"
+      },
+      {
+        "prefix": "10.12.63.",
+        "label": "Joinville"
+      },
+      {
+        "prefix": "10.12.64.",
+        "label": "USP"
+      },
+      {
+        "prefix": "10.12.146.",
+        "label": "Manaus"
+      },
+      {
+        "prefix": "10.12.111.",
+        "label": "Rio Claro"
+      },
+      {
+        "prefix": "10.12.191.",
+        "label": "Alhandra"
+      },
+      {
+        "prefix": "10.12.190.",
+        "label": "Cariacica"
+      }
+    ],
+    "start": 1,
+    "end": 254,
+    "protocol": "https",
+    "concurrency": 30
+  },
+  "threshold": 15
+}
