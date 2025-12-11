@@ -2,6 +2,10 @@
 
 Sistema de monitoramento para impressoras em rede: gestão de suprimentos e status de dispositivos HP.
 
+# Preview
+
+![Dashboard Preview](./preview/preview.jpeg)
+
 ## 📁 Estrutura do Projeto
 
 ```
