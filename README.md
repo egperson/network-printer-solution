@@ -4,7 +4,7 @@ Sistema de monitoramento para impressoras em rede: gestão de suprimentos e stat
 
 # Preview
 
-![Dashboard Preview](./preview/preview.jpeg)
+![Dashboard Preview](./preview/preview.png)
 
 ## 📁 Estrutura do Projeto
 
