@@ -198,10 +198,6 @@ body {
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.142);
 }
 
-.nav-item:hover {
-  border: 1px solid rgba(255, 255, 255, 0.5);
-}
-
 .btn-export {
   padding: 0.45rem 0.75rem;
   border-radius: 0.5rem;
