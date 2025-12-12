@@ -197,7 +197,7 @@ export default function Health({ devices = [], searchRef }) {
 
       {/* Devices Health Grid */}
       <div className="card">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 p-4">
+        <div className="columns-1 md:columns-2 lg:columns-3 gap-4 p-4 space-y-4">
           {pageItems.map((device, idx) => {
             const status = device.healthStatus;
             const borderColor = {
@@ -209,7 +209,7 @@ export default function Health({ devices = [], searchRef }) {
 
             // Re-using CustomCard inside grid
             return (
-              <div key={idx} className={`p-4 rounded border border-white/10 bg-white/5 relative overflow-hidden group hover:border-white/20 transition-all`}>
+              <div key={idx} className={`p-4 rounded border border-white/10 bg-white/5 relative overflow-hidden group hover:border-white/20 transition-all break-inside-avoid mb-4`}>
                 <div className={`absolute top-0 left-0 w-1 h-full bg-${status.color}-500`}></div>
                 <div className="flex items-start justify-between mb-4 pl-3">
                   <div className="flex-1">
@@ -250,8 +250,8 @@ export default function Health({ devices = [], searchRef }) {
                   </span>
                   <span
                     className={`px-2 py-1 rounded text-xs ${device.status === "ok"
-                        ? "bg-green-500/20 text-green-300"
-                        : "bg-red-500/20 text-red-300"
+                      ? "bg-green-500/20 text-green-300"
+                      : "bg-red-500/20 text-red-300"
                       }`}>
                     {device.status === "ok" ? "Online" : "Offline"}
                   </span>
@@ -275,10 +275,10 @@ export default function Health({ devices = [], searchRef }) {
                           <span className="text-white/60">{supply.name}</span>
                           <span
                             className={`font-bold ${level < 10
-                                ? "text-red-400"
-                                : level < 30
-                                  ? "text-yellow-400"
-                                  : "text-green-400"
+                              ? "text-red-400"
+                              : level < 30
+                                ? "text-yellow-400"
+                                : "text-green-400"
                               }`}>
                             {level}%
                           </span>

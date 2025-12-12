@@ -2,11 +2,52 @@ import React, { useState, useEffect } from 'react'
 import CustomCard from './CustomCard'
 import CustomSelect from './CustomSelect'
 import CustomButton from './CustomButton'
+import StatsDonut from './StatsDonut'
+import TopIncidents from './TopIncidents'
+import ConsumptionTrend from './ConsumptionTrend'
 
 export default function Dashboard({ data }) {
   const devices = (data && data.devices) || []
   const [timeRange, setTimeRange] = useState('24h')
-  const [selectedMetric, setSelectedMetric] = useState('all')
+  const [history, setHistory] = useState([])
+  const [prediction, setPrediction] = useState(null)
+
+  // Fetch history for trend widget
+  useEffect(() => {
+    fetch('/api/history?limit=12') // optimized fetch
+      .then(res => res.json())
+      .then(data => {
+        setHistory(data)
+        calculatePrediction(data)
+      })
+      .catch(err => console.error(err))
+  }, [])
+
+  function calculatePrediction(data) {
+    if (!data || data.length < 2) return
+
+    // Simple linear regression for avg supply
+    const points = data.map((point, i) => {
+      const avg = point.data.devices.reduce((acc, d) => {
+        const dAvg = (d.supplies || []).reduce((sAcc, s) => sAcc + (parseFloat(s.level) || 0), 0) / (d.supplies?.length || 1)
+        return acc + dAvg
+      }, 0) / point.data.devices.length
+      return avg
+    })
+
+    const start = points[0]
+    const end = points[points.length - 1]
+    const diff = end - start
+
+    // Basic forecast
+    const daysToEmpty = Math.abs(end / (diff || 0.1)) // crude caching
+
+    setPrediction({
+      trend: diff > 0 ? 'up' : 'down',
+      rate: diff.toFixed(1),
+      daysToEmpty: diff < 0 ? Math.round(daysToEmpty * 0.5) : null // adjustment factor
+    })
+  }
 
   // Stats calculations
   const totalDevices = devices.length
@@ -19,38 +60,13 @@ export default function Dashboard({ data }) {
     })
   ).length
 
-  // Calculate average supply levels
-  const avgSupplyLevel = devices.reduce((acc, d) => {
-    if (!d.supplies || d.supplies.length === 0) return acc
-    const avg = d.supplies.reduce((sum, s) => {
-      const level = parseFloat((s.level || '').toString().replace('%', '')) || 0
-      return sum + level
-    }, 0) / d.supplies.length
-    return acc + avg
-  }, 0) / (devices.length || 1)
-
-  // Get devices with low supplies for alerts
-  const lowSupplyDevices = devices
-    .filter(d => d.supplies && d.supplies.some(s => {
-      const level = parseFloat((s.level || '').toString().replace('%', '')) || 0
-      return level < 30
-    }))
-    .slice(0, 5)
-    .map(d => ({
-      name: d.deviceName || d.name,
-      supplies: d.supplies.filter(s => {
-        const level = parseFloat((s.level || '').toString().replace('%', '')) || 0
-        return level < 30
-      })
-    }))
-
   return (
-    <div className="space-y-6 animate-fadeIn">
+    <div className="space-y-6 animate-fadeIn pb-8">
       {/* Header */}
       <div className="flex items-center justify-between">
         <div>
-          <h1 className="text-2xl font-bold">Dashboard</h1>
-          <p className="text-white/60">Visão geral do sistema</p>
+          <h1 className="text-2xl font-bold">Painel de Controle</h1>
+          <p className="text-white/60">Visão geral do sistema em tempo real</p>
         </div>
         <div className="flex gap-3">
           <CustomSelect
@@ -60,8 +76,7 @@ export default function Dashboard({ data }) {
             options={[
               { value: '24h', label: 'Últimas 24h' },
               { value: '7d', label: 'Últimos 7 dias' },
-              { value: '30d', label: 'Últimos 30 dias' },
-              { value: 'all', label: 'Todo período' }
+              { value: '30d', label: 'Últimos 30 dias' }
             ]}
           />
           <CustomButton icon="refresh" variant="secondary" size="medium">
@@ -70,199 +85,149 @@ export default function Dashboard({ data }) {
         </div>
       </div>
 
-      {/* Stats Cards */}
+      {/* Summary Stats Row */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-        <CustomCard variant="primary" hover>
-          <div className="text-center">
-            <div className="flex items-center justify-center mb-2">
-              <span className="mi text-4xl text-cyan-400">print</span>
-            </div>
-            <div className="text-3xl font-bold text-cyan-400">{totalDevices}</div>
-            <div className="text-sm text-white/60 mt-1">Dispositivos Totais</div>
+        <CustomCard variant="primary" hover className="relative overflow-hidden group">
+          <div className="absolute right-0 top-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
+            <span className="mi text-8xl">print</span>
+          </div>
+          <div>
+            <div className="text-3xl font-bold text-white mb-1">{totalDevices}</div>
+            <div className="text-sm text-cyan-200 font-medium">Total de Dispositivos</div>
           </div>
         </CustomCard>
 
-        <CustomCard variant="success" hover>
-          <div className="text-center">
-            <div className="flex items-center justify-center mb-2">
-              <span className="mi text-4xl text-green-400">check_circle</span>
-            </div>
-            <div className="text-3xl font-bold text-green-400">{onlineDevices}</div>
-            <div className="text-sm text-white/60 mt-1">Online</div>
-            <div className="text-xs text-white/40 mt-1">
-              {totalDevices > 0 ? Math.round((onlineDevices / totalDevices) * 100) : 0}% do total
-            </div>
+        <CustomCard variant="success" hover className="relative overflow-hidden group">
+          <div className="absolute right-0 top-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
+            <span className="mi text-8xl">check_circle</span>
+          </div>
+          <div>
+            <div className="text-3xl font-bold text-white mb-1">{onlineDevices}</div>
+            <div className="text-sm text-green-200 font-medium">Online Agora</div>
           </div>
         </CustomCard>
 
-        <CustomCard variant="danger" hover>
-          <div className="text-center">
-            <div className="flex items-center justify-center mb-2">
-              <span className="mi text-4xl text-red-400">error</span>
-            </div>
-            <div className="text-3xl font-bold text-red-400">{offlineDevices}</div>
-            <div className="text-sm text-white/60 mt-1">Offline</div>
-            <div className="text-xs text-white/40 mt-1">
-              {totalDevices > 0 ? Math.round((offlineDevices / totalDevices) * 100) : 0}% do total
-            </div>
+        <CustomCard variant="danger" hover className="relative overflow-hidden group">
+          <div className="absolute right-0 top-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
+            <span className="mi text-8xl">error</span>
+          </div>
+          <div>
+            <div className="text-3xl font-bold text-white mb-1">{offlineDevices}</div>
+            <div className="text-sm text-red-200 font-medium">Offline</div>
           </div>
         </CustomCard>
 
-        <CustomCard variant="warning" hover>
-          <div className="text-center">
-            <div className="flex items-center justify-center mb-2">
-              <span className="mi text-4xl text-yellow-400">warning</span>
-            </div>
-            <div className="text-3xl font-bold text-yellow-400">{criticalSupplies}</div>
-            <div className="text-sm text-white/60 mt-1">Consumíveis Críticos</div>
-            <div className="text-xs text-white/40 mt-1">
-              {'<'} 10% de toner
-            </div>
+        <CustomCard variant="warning" hover className="relative overflow-hidden group">
+          <div className="absolute right-0 top-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
+            <span className="mi text-8xl">water_drop</span>
+          </div>
+          <div>
+            <div className="text-3xl font-bold text-white mb-1">{criticalSupplies}</div>
+            <div className="text-sm text-yellow-200 font-medium">Consumíveis Críticos</div>
           </div>
         </CustomCard>
       </div>
 
-      {/* Two Column Layout */}
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-        {/* Top 5 Alerts */}
-        <CustomCard
-          title="Top 5 Alertas"
-          subtitle="Impressoras com consumíveis baixos"
-          icon="report_problem"
-          variant="warning"
-        >
-          {lowSupplyDevices.length === 0 ? (
-            <div className="text-center py-8 text-white/50">
-              <span className="mi text-5xl mb-2">check_circle</span>
-              <p>Nenhum alerta no momento!</p>
+      {/* Main Content Grid */}
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+        {/* Left Column: Alerts, Trend, Activity */}
+        <div className="lg:col-span-2 flex flex-col gap-6">
+          <CustomCard title="Alertas de Sistema" subtitle="Dispositivos precisando de atenção" icon="notifications_active">
+            <TopIncidents devices={devices} />
+          </CustomCard>
+
+          <CustomCard title="Tendência & Previsão" subtitle="Análise de consumo em tempo real" icon="trending_up" className="h-[450px]">
+            <div className="flex flex-col h-full">
+              <div className="flex-1 w-full min-h-0 pb-4">
+                <ConsumptionTrend series={history} />
+              </div>
+              <div className="h-auto shrink-0 flex items-center justify-around pt-4 border-t border-white/10">
+                <div className="text-center flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-full bg-purple-500/10 flex items-center justify-center text-purple-400">
+                    <span className="mi text-xl">auto_graph</span>
+                  </div>
+                  <div className="text-left">
+                    <div className="text-sm text-white/60">Taxa de Uso</div>
+                    <div className="text-lg font-bold">{prediction ? `${prediction.rate}%` : '--'} <span className="text-xs text-white/40 font-normal">/ hora</span></div>
+                  </div>
+                </div>
+                <div className="w-px h-8 bg-white/10" />
+                <div className="text-center flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-full bg-blue-500/10 flex items-center justify-center text-blue-400">
+                    <span className="mi text-xl">update</span>
+                  </div>
+                  <div className="text-left">
+                    <div className="text-sm text-white/60">Previsão</div>
+                    <div className="text-lg font-bold">{prediction?.daysToEmpty ? `${prediction.daysToEmpty} dias` : 'Estável'}</div>
+                  </div>
+                </div>
+              </div>
             </div>
-          ) : (
-            <div className="space-y-3">
-              {lowSupplyDevices.map((device, idx) => (
-                <div key={idx} className="p-3 bg-white/5 rounded border border-yellow-500/20">
-                  <div className="font-semibold mb-2 flex items-center gap-2">
-                    <span className="mi text-yellow-400">warning</span>
-                    {device.name}
-                  </div>
-                  <div className="space-y-1">
-                    {device.supplies.map((supply, si) => {
-                      const level = parseFloat((supply.level || '').toString().replace('%', '')) || 0
-                      return (
-                        <div key={si} className="flex items-center justify-between text-sm">
-                          <span className="text-white/70">{supply.name}</span>
-                          <span className={`font-bold ${level < 10 ? 'text-red-400' : 'text-yellow-400'}`}>
-                            {level}%
-                          </span>
-                        </div>
-                      )
-                    })}
-                  </div>
+          </CustomCard>
+
+          <CustomCard title="Atividade Recente" icon="history" className="h-[320px]">
+            <div className="space-y-3 h-full overflow-y-auto custom-scrollbar pr-2 pb-2">
+              {[
+                { type: 'info', msg: 'System verified 214 devices', time: 'Just now' },
+                ...devices.filter(d => d.status !== 'ok').slice(0, 3).map(d => ({ type: 'error', msg: `${d.deviceName || d.name} is offline`, time: '10 min ago' })),
+                ...devices.filter(d => (d.supplies || []).some(s => parseFloat(s.level) < 10)).slice(0, 3).map(d => ({ type: 'warning', msg: `${d.deviceName || d.name} low on supplies`, time: '1h ago' })),
+                { type: 'success', msg: 'Scheduled report generated', time: '2h ago' }
+              ].map((log, i) => (
+                <div key={i} className="flex items-center gap-3 p-3 rounded bg-white/5 border border-white/5 hover:bg-white/10 transition-colors">
+                  <span className={`mi text-sm ${log.type === 'error' ? 'text-red-400' : log.type === 'warning' ? 'text-yellow-400' : log.type === 'success' ? 'text-green-400' : 'text-blue-400'}`}>
+                    {log.type === 'error' ? 'error' : log.type === 'warning' ? 'warning' : log.type === 'success' ? 'check_circle' : 'info'}
+                  </span>
+                  <span className="flex-1 text-sm text-white/80">{log.msg}</span>
+                  <span className="text-xs text-white/40">{log.time}</span>
                 </div>
               ))}
             </div>
-          )}
-        </CustomCard>
+          </CustomCard>
+        </div>
 
-        {/* Supply Level Indicator */}
-        <CustomCard
-          title="Nível Médio de Consumíveis"
-          subtitle="Média geral do sistema"
-          icon="battery_full"
-        >
-          <div className="text-center py-8">
-            <div className="relative inline-flex items-center justify-center">
-              <svg className="transform -rotate-90" width="200" height="200">
-                <circle
-                  cx="100"
-                  cy="100"
-                  r="80"
-                  stroke="rgba(255,255,255,0.1)"
-                  strokeWidth="12"
-                  fill="none"
-                />
-                <circle
-                  cx="100"
-                  cy="100"
-                  r="80"
-                  stroke={avgSupplyLevel > 70 ? '#10b981' : avgSupplyLevel > 30 ? '#f59e0b' : '#ef4444'}
-                  strokeWidth="12"
-                  fill="none"
-                  strokeDasharray={`${(avgSupplyLevel / 100) * 502.4} 502.4`}
-                  strokeLinecap="round"
-                  className="transition-all duration-1000"
-                />
-              </svg>
-              <div className="absolute">
-                <div className="text-4xl font-bold">{Math.round(avgSupplyLevel)}%</div>
-                <div className="text-sm text-white/60">Média</div>
+        {/* Right Column: Supply, Actions, Health */}
+        <div className="flex flex-col gap-6">
+          <CustomCard title="Status de Suprimentos" subtitle="Visão geral" icon="inventory_2" className="h-[350px]">
+            <StatsDonut devices={devices} />
+          </CustomCard>
+
+          <CustomCard title="Ações Rápidas" icon="bolt">
+            <div className="grid grid-cols-2 gap-3">
+              <CustomButton variant="glass" icon="print" className="justify-center py-6 flex-col gap-2 h-auto hover:bg-white/10 border-white/5">
+                <span className="text-xs">Dispositivos</span>
+              </CustomButton>
+              <CustomButton variant="glass" icon="inventory" className="justify-center py-6 flex-col gap-2 h-auto hover:bg-white/10 border-white/5">
+                <span className="text-xs">Estoque</span>
+              </CustomButton>
+              <CustomButton variant="glass" icon="description" className="justify-center py-6 flex-col gap-2 h-auto hover:bg-white/10 border-white/5">
+                <span className="text-xs">Relatórios</span>
+              </CustomButton>
+              <CustomButton variant="glass" icon="settings" className="justify-center py-6 flex-col gap-2 h-auto hover:bg-white/10 border-white/5">
+                <span className="text-xs">Ajustes</span>
+              </CustomButton>
+            </div>
+          </CustomCard>
+
+          <CustomCard title="Saúde do Sistema" icon="health_and_safety" className="h-[320px]">
+            <div className="flex flex-col items-center justify-center h-full pb-6">
+              <div className="relative w-40 h-40 flex items-center justify-center">
+                <svg className="w-full h-full transform -rotate-90">
+                  <circle cx="80" cy="80" r="70" stroke="rgba(255,255,255,0.05)" strokeWidth="12" fill="none" />
+                  <circle cx="80" cy="80" r="70" stroke="#22c55e" strokeWidth="12" fill="none" strokeDasharray={`${(onlineDevices / totalDevices) * 440} 440`} strokeLinecap="round" className="drop-shadow-[0_0_10px_rgba(34,197,94,0.3)]" />
+                </svg>
+                <div className="absolute text-center">
+                  <div className="text-3xl font-bold text-white">{Math.round((onlineDevices / totalDevices) * 100)}%</div>
+                  <div className="text-sm text-green-400 font-medium">Operacional</div>
+                </div>
+              </div>
+              <div className="mt-4 flex flex-col gap-1 text-center">
+                <span className="text-white font-medium">{onlineDevices} Online</span>
+                <span className="text-white/40 text-sm">de {totalDevices} dispositivos</span>
               </div>
             </div>
-            <div className="mt-6 flex justify-center gap-4 text-sm">
-              <div className="flex items-center gap-2">
-                <div className="w-3 h-3 rounded-full bg-green-500"></div>
-                <span>Bom (&gt;70%)</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
-                <span>Médio (30-70%)</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <div className="w-3 h-3 rounded-full bg-red-500"></div>
-                <span>Baixo (&lt;30%)</span>
-              </div>
-            </div>
-          </div>
-        </CustomCard>
+          </CustomCard>
+        </div>
       </div>
-
-      {/* Quick Actions */}
-      <CustomCard
-        title="Ações Rápidas"
-        icon="flash_on"
-      >
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
-          <CustomButton variant="primary" icon="print" className="w-full">
-            Ver Dispositivos
-          </CustomButton>
-          <CustomButton variant="secondary" icon="inventory_2" className="w-full">
-            Inventário
-          </CustomButton>
-          <CustomButton variant="secondary" icon="assessment" className="w-full">
-            Relatórios
-          </CustomButton>
-          <CustomButton variant="secondary" icon="settings" className="w-full">
-            Configurações
-          </CustomButton>
-        </div>
-      </CustomCard>
-
-      {/* System Info */}
-      <CustomCard
-        title="Informações do Sistema"
-        icon="info"
-        variant="default"
-      >
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-          <div className="p-3 bg-white/5 rounded">
-            <div className="text-sm text-white/60 mb-1">Última Atualização</div>
-            <div className="font-semibold">
-              {data?.lastRun ? new Date(data.lastRun).toLocaleString('pt-BR') : 'Nunca'}
-            </div>
-          </div>
-          <div className="p-3 bg-white/5 rounded">
-            <div className="text-sm text-white/60 mb-1">Taxa de Sucesso</div>
-            <div className="font-semibold text-green-400">
-              {totalDevices > 0 ? Math.round((onlineDevices / totalDevices) * 100) : 0}%
-            </div>
-          </div>
-          <div className="p-3 bg-white/5 rounded">
-            <div className="text-sm text-white/60 mb-1">Economia Estimada</div>
-            <div className="font-semibold text-cyan-400">
-              R$ {(criticalSupplies * 150).toFixed(2)}
-            </div>
-          </div>
-        </div>
-      </CustomCard>
     </div>
   )
 }

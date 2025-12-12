@@ -8,7 +8,7 @@ export default function Logs() {
   const [filterLevel, setFilterLevel] = useState('all')
   const [filterSource, setFilterSource] = useState('all')
   const [page, setPage] = useState(1)
-  const pageSize = 50
+  const pageSize = 10
 
   useEffect(() => {
     // Mock data - replace with actual API call
@@ -39,7 +39,12 @@ export default function Logs() {
   })
 
   const paginatedLogs = filteredLogs.slice((page - 1) * pageSize, page * pageSize)
-  const totalPages = Math.ceil(filteredLogs.length / pageSize)
+  // Ensure page is valid if filters change
+  useEffect(() => {
+    setPage(1)
+  }, [filterLevel, filterSource])
+
+  const totalPages = Math.max(1, Math.ceil(filteredLogs.length / pageSize))
 
   return (
     <div className="space-y-6 animate-fadeIn">
@@ -127,28 +132,11 @@ export default function Logs() {
         </div>
 
         {/* Pagination */}
-        <div className="flex items-center justify-between mt-4 pt-4 border-t border-white/10">
-          <div className="text-sm text-white/60">
-            Exibindo {((page - 1) * pageSize) + 1} - {Math.min(page * pageSize, filteredLogs.length)} de {filteredLogs.length}
-          </div>
+        <div className="mt-4 flex items-center justify-between p-4 border-t border-white/5">
+          <div className="text-sm text-white/50">Mostrando {paginatedLogs.length} de {filteredLogs.length} registros (Página {page} de {totalPages})</div>
           <div className="flex gap-2">
-            <CustomButton
-              size="small"
-              variant="secondary"
-              icon="chevron_left"
-              disabled={page <= 1}
-              onClick={() => setPage(p => Math.max(1, p - 1))}
-            />
-            <span className="px-3 py-1.5 text-sm">
-              Página {page} de {totalPages}
-            </span>
-            <CustomButton
-              size="small"
-              variant="secondary"
-              icon="chevron_right"
-              disabled={page >= totalPages}
-              onClick={() => setPage(p => Math.min(totalPages, p + 1))}
-            />
+            <button disabled={page <= 1} onClick={() => setPage(p => Math.max(1, p - 1))} className="px-3 py-1.5 text-sm rounded-lg border border-white/10 hover:bg-white/5 disabled:opacity-50 disabled:cursor-not-allowed transition">Anterior</button>
+            <button disabled={page >= totalPages} onClick={() => setPage(p => Math.min(totalPages, p + 1))} className="px-3 py-1.5 text-sm rounded-lg border border-white/10 hover:bg-white/5 disabled:opacity-50 disabled:cursor-not-allowed transition">Próxima</button>
           </div>
         </div>
       </CustomCard>

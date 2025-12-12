@@ -41,16 +41,16 @@ export default function ActivityBars({ devices, series, selectedDevice }) {
         r.ok_count !== undefined
           ? r.ok_count
           : r.data && r.data.devices
-          ? r.data.devices.filter((d) => d.status === "ok").length
-          : 0
+            ? r.data.devices.filter((d) => d.status === "ok").length
+            : 0
       );
       invalid = rev.map((r) =>
         r.error_count !== undefined
           ? r.error_count
           : r.data && r.data.devices
-          ? r.data.devices.length -
+            ? r.data.devices.length -
             r.data.devices.filter((d) => d.status === "ok").length
-          : 0
+            : 0
       );
     }
   } else {
@@ -73,16 +73,57 @@ export default function ActivityBars({ devices, series, selectedDevice }) {
   const data = {
     labels,
     datasets: selectedDevice
-      ? [{ label: "Status (1=OK)", data: valid, backgroundColor: "#34d399" }]
+      ? [{
+        label: "Status (1=OK)",
+        data: valid,
+        backgroundColor: "#22d3ee", // cyan-400
+        borderRadius: 4,
+        hoverBackgroundColor: "#67e8f9"
+      }]
       : [
-          { label: "Válidos", data: valid, backgroundColor: "#d1d5db" },
-          { label: "Inválidos", data: invalid, backgroundColor: "#9ca3af" },
-        ],
+        {
+          label: "Válidos",
+          data: valid,
+          backgroundColor: "#22d3ee", // cyan-400
+          borderRadius: 4,
+          hoverBackgroundColor: "#67e8f9"
+        },
+        {
+          label: "Inválidos",
+          data: invalid,
+          backgroundColor: "#f472b6", // pink-400
+          borderRadius: 4,
+          hoverBackgroundColor: "#f472b6"
+        },
+      ],
   };
-  const options = { responsive: true, plugins: { legend: { display: false } } };
+  const options = {
+    responsive: true,
+    maintainAspectRatio: false,
+    plugins: {
+      legend: { display: false },
+      tooltip: {
+        backgroundColor: 'rgba(0,0,0,0.8)',
+        padding: 12,
+        titleFont: { size: 13 },
+        bodyFont: { size: 13 },
+        cornerRadius: 8,
+        displayColors: true
+      }
+    },
+    scales: {
+      y: {
+        grid: { color: 'rgba(255,255,255,0.05)' },
+        ticks: { color: 'rgba(255,255,255,0.5)' }
+      },
+      x: {
+        grid: { display: false },
+        ticks: { color: 'rgba(255,255,255,0.5)' }
+      }
+    }
+  };
   return (
-    <div className="card">
-      <h4 className="text-sm font-semibold mb-2">Atividade</h4>
+    <div className="w-full h-[300px]">
       <Bar data={data} options={options} />
     </div>
   );

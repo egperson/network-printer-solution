@@ -297,24 +297,28 @@ export default function Devices({ data, pushToast, threshold, searchRef }) {
 
       <div className="card">
         {loading && <div className="p-6">Carregando...</div>}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 p-4">
+        <div className="columns-1 md:columns-2 lg:columns-3 gap-4 p-4 space-y-4">
           {!loading && pageItems.map((d, idx) => {
             const id = getId(d)
             const fav = getFavs().includes(id)
             const muted = getMuted().includes(id)
             const isMono = ((d.type || '').toLowerCase().includes('mono')) || ((d.deviceName || '').toLowerCase().includes('mono'))
+            const statusColor = d.status === 'ok' ? 'green' : 'red'
             return (
-              <div key={id || idx} className={`p-4 rounded border ${d.status === 'ok' ? 'border-green-500/30 bg-green-900/5' : 'border-red-500/20 bg-red-900/5'}`}>
-                <div className="flex items-start justify-between gap-3">
+              <div key={id || idx} className={`relative p-4 rounded-xl border border-white/10 bg-white/5 overflow-hidden group hover:border-white/20 transition-all hover:bg-white/10 break-inside-avoid mb-4`}>
+                <div className={`absolute top-0 left-0 w-1 h-full bg-${statusColor}-500`}></div>
+
+                {/* Header */}
+                <div className="flex items-start justify-between gap-3 pl-3 mb-4">
                   <div className="flex items-center gap-3">
-                    <div className="w-12 h-12 rounded bg-white/5 flex items-center justify-center text-xl" aria-hidden>
+                    <div className="w-12 h-12 rounded-xl bg-white/5 flex items-center justify-center text-xl shadow-inner" aria-hidden>
                       {isMono ? (
-                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="opacity-80">
                           <rect x="3" y="6" width="18" height="10" rx="2" fill="currentColor" />
                           <rect x="7" y="11" width="10" height="3" rx="1" fill="#08101a" />
                         </svg>
                       ) : (
-                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="opacity-80">
                           <rect x="3" y="4" width="18" height="12" rx="2" fill="currentColor" />
                           <circle cx="8" cy="16" r="1.6" fill="#ef4444" />
                           <circle cx="12" cy="16" r="1.6" fill="#f59e0b" />
@@ -323,123 +327,126 @@ export default function Devices({ data, pushToast, threshold, searchRef }) {
                       )}
                     </div>
                     <div>
-                      <div className="font-semibold">{d.deviceName || d.name}</div>
-                      <div className="text-xs text-white/60">{d.deviceIp || d.url}</div>
+                      <div className="font-semibold text-base leading-tight">{d.deviceName || d.name}</div>
+                      <div className="text-xs text-white/50 font-mono mt-1">{d.deviceIp || d.url}</div>
                       {d.location && (
-                        <div className="text-xs mt-1 inline-block px-2 py-0.5 rounded bg-cyan-600/20 text-cyan-300 border border-cyan-500/30">
-                          📍 {d.location}
+                        <div className="flex items-center gap-1 text-[10px] uppercase tracking-wider text-cyan-300/80 mt-1.5 font-semibold">
+                          <span className="mi text-xs">place</span> {d.location}
                         </div>
                       )}
                     </div>
                   </div>
-                  <div className="text-sm text-right">
-                    <div>{fav ? '★' : '☆'} {muted ? '🔕' : ''}</div>
-                    <div className="text-xs text-white/60">{d.status === 'ok' ? 'OK' : 'Erro'}</div>
+                  <div className="flex flex-col items-end gap-2">
+                    <button
+                      onClick={(e) => { e.stopPropagation(); toggleFav(id); }}
+                      className={`text-lg transition-colors ${fav ? 'text-yellow-400' : 'text-white/20 hover:text-white/50'}`}
+                      title={fav ? 'Remover dos favoritos' : 'Adicionar aos favoritos'}
+                    >
+                      <span className="mi">{fav ? 'star' : 'star_border'}</span>
+                    </button>
+                    {muted && <span className="mi text-white/40 text-sm" title="Silenciado">notifications_off</span>}
                   </div>
                 </div>
 
-                <div className="mt-3 space-y-2">
-                  {(d.supplies || []).length === 0 && <div className="text-xs text-white/60">Sem informações de consumíveis</div>}
-                  {(d.supplies || []).map((s, si) => {
-                    const raw = (s.level || '').toString().replace('%', '')
-                    const pct = Math.max(0, Math.min(100, parseFloat(raw) || 0))
-                    const inv = getInventoryQty(s.name)
-                    return (
-                      <div key={si}>
-                        <div className="flex items-center justify-between text-xs mb-1">
-                          <div className="font-medium">{s.name}</div>
-                          <div className="text-white/60">{pct}%</div>
+                {/* Supplies */}
+                <div className="pl-3 mb-4 space-y-3">
+                  {(d.supplies || []).length === 0 ? (
+                    <div className="p-3 rounded bg-white/5 text-xs text-center text-white/40 italic">
+                      Sem dados de consumíveis
+                    </div>
+                  ) : (
+                    (d.supplies || []).map((s, si) => {
+                      const raw = (s.level || '').toString().replace('%', '')
+                      const pct = Math.max(0, Math.min(100, parseFloat(raw) || 0))
+                      const inv = getInventoryQty(s.name)
+                      const colorClass = pct > 30 ? 'bg-green-500' : (pct > 10 ? 'bg-yellow-500' : 'bg-red-500')
+
+                      return (
+                        <div key={si} className="relative">
+                          <div className="flex items-end justify-between text-xs mb-1">
+                            <span className="font-medium text-white/80 truncate pr-2" title={s.name}>{s.name}</span>
+                            <div className="flex items-center gap-2">
+                              {inv > 0 && <span className="text-[10px] px-1.5 py-0.5 rounded bg-white/5 text-white/50" title={`Estoque: ${inv}`}>📦 {inv}</span>}
+                              <span className={pct < 10 ? 'text-red-400 font-bold' : 'text-white/70'}>{pct}%</span>
+                            </div>
+                          </div>
+                          <div className="h-1.5 w-full bg-white/5 rounded-full overflow-hidden">
+                            <div style={{ width: `${pct}%` }} className={`h-full rounded-full ${colorClass} opacity-80 shadow-[0_0_10px_rgba(0,0,0,0.3)]`}></div>
+                          </div>
                         </div>
-                        <div className="w-full bg-white/5 rounded h-2 overflow-hidden mb-1" title={`${s.name}: ${pct}% — Estoque: ${inv}`}>
-                          <div style={{ width: pct + '%' }} className={`h-2 ${pct > 30 ? 'bg-green-400' : 'bg-yellow-400'}`}></div>
-                        </div>
-                        <div className="text-xs text-white/60">Estoque: <b>{inv}</b></div>
-                      </div>
-                    )
-                  })}
+                      )
+                    })
+                  )}
                 </div>
 
-                <div className="mt-4 actions flex gap-2 items-center">
-                  <button onClick={() => pingDevice(d)} className="btn-sm">Testar</button>
-                  <button onClick={() => openPanel(d)} className="btn-sm">Abrir painel</button>
-                  <button onClick={() => { const blob = new Blob([JSON.stringify(d, null, 2)], { type: 'application/json' }); const url = URL.createObjectURL(blob); const a = document.createElement('a'); a.href = url; a.download = (d.deviceName || d.name || 'device') + '.json'; a.click(); a.remove(); URL.revokeObjectURL(url) }} className="btn-sm">Exportar</button>
-                  <button onClick={() => { toggleMuted(id) }} className="btn-sm">{muted ? 'Remover silêncio' : 'Silenciar'}</button>
-                  <button onClick={() => { toggleFav(id) }} className="btn-sm" aria-pressed={fav} aria-label={fav ? 'Remover favorito' : 'Favoritar'}>{fav ? '★' : '☆'}</button>
-                  <button onClick={async () => {
-                    setDetailDevice(d)
-                    setDetailOpen(true)
-                    try { const h = JSON.parse(localStorage.getItem('monitor.detailsHistory') || '[]'); h.unshift({ id: getId(d), ts: new Date().toISOString(), name: d.deviceName || d.name }); localStorage.setItem('monitor.detailsHistory', JSON.stringify(h.slice(0, 100))); } catch (e) { }
-                    try {
-                      const res = await fetch('/api/history?limit=12')
-                      const j = await res.json()
-                      if (j.ok && j.rows) {
-                        const arr = j.rows.map(r => {
-                          const dev = (r.data && r.data.devices) ? (r.data.devices.find(x => (x.deviceIp || x.url || x.deviceName || x.name) === (d.deviceIp || d.url || d.deviceName || d.name))) : null
-                          return { ts: r.ts, status: dev ? dev.status : 'missing' }
-                        })
-                        setDetailHistory(arr)
-                      } else setDetailHistory(null)
-                    } catch (e) { setDetailHistory(null) }
-                  }} className="ml-auto btn-sm" aria-label={`Detalhes de ${d.deviceName || d.name}`}>Detalhes</button>
+                {/* Footer / Actions */}
+                <div className="pl-3 mt-auto pt-3 border-t border-white/5 flex items-center justify-between">
+                  <div className="flex items-center gap-1">
+                    <button onClick={() => pingDevice(d)} className="w-8 h-8 rounded-lg flex items-center justify-center text-white/60 hover:text-white hover:bg-white/10 transition" title="Testar Conexão">
+                      <span className="mi text-lg">network_check</span>
+                    </button>
+                    <button onClick={() => openPanel(d)} className="w-8 h-8 rounded-lg flex items-center justify-center text-white/60 hover:text-white hover:bg-white/10 transition" title="Abrir Painel Web">
+                      <span className="mi text-lg">language</span>
+                    </button>
+                    <button onClick={() => { const blob = new Blob([JSON.stringify(d, null, 2)], { type: 'application/json' }); const url = URL.createObjectURL(blob); const a = document.createElement('a'); a.href = url; a.download = (d.deviceName || d.name || 'device') + '.json'; a.click(); a.remove(); URL.revokeObjectURL(url) }} className="w-8 h-8 rounded-lg flex items-center justify-center text-white/60 hover:text-white hover:bg-white/10 transition" title="Exportar JSON">
+                      <span className="mi text-lg">download</span>
+                    </button>
+                    <button onClick={() => toggleMuted(id)} className={`w-8 h-8 rounded-lg flex items-center justify-center transition ${muted ? 'text-red-400 bg-red-400/10' : 'text-white/60 hover:text-white hover:bg-white/10'}`} title={muted ? 'Ativar Notificações' : 'Silenciar'}>
+                      <span className="mi text-lg">{muted ? 'notifications_off' : 'notifications'}</span>
+                    </button>
+                  </div>
+
+                  <button
+                    onClick={async () => {
+                      setDetailDevice(d)
+                      setDetailOpen(true)
+                      try { const h = JSON.parse(localStorage.getItem('monitor.detailsHistory') || '[]'); h.unshift({ id: getId(d), ts: new Date().toISOString(), name: d.deviceName || d.name }); localStorage.setItem('monitor.detailsHistory', JSON.stringify(h.slice(0, 100))); } catch (e) { }
+                      try {
+                        const res = await fetch('/api/history?limit=12')
+                        const j = await res.json()
+                        if (j.ok && j.rows) {
+                          const arr = j.rows.map(r => {
+                            const dev = (r.data && r.data.devices) ? (r.data.devices.find(x => (x.deviceIp || x.url || x.deviceName || x.name) === (d.deviceIp || d.url || d.deviceName || d.name))) : null
+                            return { ts: r.ts, status: dev ? dev.status : 'missing' }
+                          })
+                          setDetailHistory(arr)
+                        } else setDetailHistory(null)
+                      } catch (e) { setDetailHistory(null) }
+                    }}
+                    className="px-3 py-1.5 rounded-lg bg-white/5 hover:bg-white/10 border border-white/10 text-xs font-semibold text-white/90 transition flex items-center gap-2 group-hover:border-white/20"
+                  >
+                    Detalhes
+                    <span className="mi text-sm">arrow_forward</span>
+                  </button>
                 </div>
               </div>
             )
           })}
         </div>
 
-        <div className="mt-4 flex items-center justify-between p-4">
-          <div className="text-sm text-white/60">Página {page} de {totalPages}</div>
+        <div className="mt-4 flex items-center justify-between p-4 border-t border-white/5">
+          <div className="text-sm text-white/50">Mostrando {pageItems.length} de {filteredList().length} dispositivos (Página {page} de {totalPages})</div>
           <div className="flex gap-2">
-            <button disabled={page <= 1} onClick={() => setPage(p => Math.max(1, p - 1))} className="px-3 py-1 rounded border border-white/6">Anterior</button>
-            <button disabled={page >= totalPages} onClick={() => setPage(p => Math.min(totalPages, p + 1))} className="px-3 py-1 rounded border border-white/6">Próxima</button>
+            <button disabled={page <= 1} onClick={() => setPage(p => Math.max(1, p - 1))} className="px-3 py-1.5 text-sm rounded-lg border border-white/10 hover:bg-white/5 disabled:opacity-50 disabled:cursor-not-allowed transition">Anterior</button>
+            <button disabled={page >= totalPages} onClick={() => setPage(p => Math.min(totalPages, p + 1))} className="px-3 py-1.5 text-sm rounded-lg border border-white/10 hover:bg-white/5 disabled:opacity-50 disabled:cursor-not-allowed transition">Próxima</button>
           </div>
         </div>
       </div>
 
-      <Modal open={detailOpen} title={detailDevice ? (detailDevice.deviceName || detailDevice.name) : 'Detalhes'} onClose={() => setDetailOpen(false)} footer={
-        <div className="flex gap-2">
-          <button onClick={() => setDetailOpen(false)} className="px-3 py-2 rounded border border-white/6">Fechar</button>
-          <button onClick={() => { if (detailDevice) { const blob = new Blob([JSON.stringify(detailDevice, null, 2)], { type: 'application/json' }); const url = URL.createObjectURL(blob); const a = document.createElement('a'); a.href = url; a.download = (detailDevice.deviceName || detailDevice.name || 'device') + '.json'; a.click(); a.remove(); URL.revokeObjectURL(url) } }} className="px-3 py-2 rounded bg-white/6">Exportar JSON</button>
-          <button onClick={() => {
-            // export device history CSV based on detailHistory
-            (async () => {
-              try {
-                if (!detailHistory) {
-                  const res = await fetch('/api/history?limit=200')
-                  const j = await res.json()
-                  if (j.ok && j.rows) {
-                    const arr = j.rows.map(r => ({ ts: r.ts, dev: (r.data && r.data.devices) ? r.data.devices.find(x => (x.deviceIp || x.url || x.deviceName || x.name) === (detailDevice.deviceIp || detailDevice.url || detailDevice.deviceName || detailDevice.name)) : null }))
-                    const rows = [['ts', 'status']]
-                    for (const a of arr) { if (a.dev) rows.push([`"${a.ts}"`, a.dev.status || '']) }
-                    const csv = rows.map(r => r.join(',')).join('\n')
-                    const blob = new Blob([csv], { type: 'text/csv' })
-                    const url = URL.createObjectURL(blob)
-                    const a = document.createElement('a'); a.href = url; a.download = `${(detailDevice.deviceName || detailDevice.name || 'device')}-history.csv`; a.click(); a.remove(); URL.revokeObjectURL(url)
-                  } else { pushToast({ title: 'Sem histórico', msg: 'Nenhum snapshot disponível', type: 'warning' }) }
-                } else {
-                  const rows = [['ts', 'status']]
-                  for (const h of detailHistory) { rows.push([`"${h.ts}"`, h.status || '']) }
-                  const csv = rows.map(r => r.join(',')).join('\n')
-                  const blob = new Blob([csv], { type: 'text/csv' })
-                  const url = URL.createObjectURL(blob)
-                  const a = document.createElement('a'); a.href = url; a.download = `${(detailDevice.deviceName || detailDevice.name || 'device')}-history.csv`; a.click(); a.remove(); URL.revokeObjectURL(url)
-                }
-              } catch (e) { pushToast({ title: 'Erro', msg: 'Não foi possível exportar histórico', type: 'error' }) }
-            })()
-          }} className="px-3 py-2 rounded btn-sm">Exportar CSV</button>
-        </div>
-      }>
+      <Modal open={detailOpen} title={detailDevice ? (detailDevice.deviceName || detailDevice.name) : 'Detalhes'} onClose={() => setDetailOpen(false)} footer={null}>
         {detailDevice && (
-          <div className="space-y-4">
-            <div className="flex items-center gap-4">
-              <div className="w-14 h-14 rounded bg-white/5 flex items-center justify-center">
+          <div className="space-y-6">
+
+            {/* Header / Main Info */}
+            <div className="flex items-start gap-5 p-4 rounded-2xl bg-white/5 border border-white/10">
+              <div className="w-20 h-20 rounded-2xl bg-black/20 flex items-center justify-center shrink-0">
                 {(((detailDevice.deviceName || detailDevice.name) || '').toLowerCase().includes('mono')) ? (
-                  <svg width="36" height="36" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden>
+                  <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="text-white/80">
                     <rect x="3" y="6" width="18" height="10" rx="2" fill="currentColor" />
                     <rect x="7" y="11" width="10" height="3" rx="1" fill="#08101a" />
                   </svg>
                 ) : (
-                  <svg width="36" height="36" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden>
+                  <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="text-white/80">
                     <rect x="3" y="4" width="18" height="12" rx="2" fill="currentColor" />
                     <circle cx="8" cy="16" r="1.6" fill="#ef4444" />
                     <circle cx="12" cy="16" r="1.6" fill="#f59e0b" />
@@ -447,95 +454,156 @@ export default function Devices({ data, pushToast, threshold, searchRef }) {
                   </svg>
                 )}
               </div>
-              <div>
-                <div className="text-lg font-semibold">{detailDevice.deviceName || detailDevice.name}</div>
-                <div className="text-sm text-white/60">{detailDevice.deviceIp || detailDevice.url}</div>
-              </div>
-              <div className="ml-auto">
-                <div className={`status-badge ${detailDevice.status === 'ok' ? 'status-ok' : 'status-err'}`}>{detailDevice.status === 'ok' ? 'OK' : 'Erro'}</div>
+              <div className="flex-1 min-w-0">
+                <div className="flex items-center justify-between">
+                  <h2 className="text-xl font-bold truncate pr-4">{detailDevice.deviceName || detailDevice.name}</h2>
+                  <span className={`px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wide ${detailDevice.status === 'ok' ? 'bg-green-500/20 text-green-300' : 'bg-red-500/20 text-red-300'}`}>
+                    {detailDevice.status === 'ok' ? 'ONLINE' : 'OFFLINE'}
+                  </span>
+                </div>
+                <div className="text-white/60 font-mono text-sm mt-1">{detailDevice.deviceIp || detailDevice.url}</div>
+
+                <div className="flex flex-wrap gap-3 mt-4">
+                  {detailDevice.location && (
+                    <div className="flex items-center gap-1.5 text-xs px-2 py-1 rounded-md bg-white/5 border border-white/5 text-white/70">
+                      <span className="mi text-sm">place</span> {detailDevice.location}
+                    </div>
+                  )}
+                  <div className="flex items-center gap-1.5 text-xs px-2 py-1 rounded-md bg-white/5 border border-white/5 text-white/70">
+                    <span className="mi text-sm">print</span> {detailDevice.type || 'Tipo desc.'}
+                  </div>
+                  <div className="flex items-center gap-1.5 text-xs px-2 py-1 rounded-md bg-white/5 border border-white/5 text-white/70">
+                    <span className="mi text-sm">sell</span> {detailDevice.model || 'Modelo desc.'}
+                  </div>
+                </div>
               </div>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <div className="p-2">
-                <div className="font-semibold text-sm mb-2">Informações</div>
-                <div className="text-xs text-white/60">Tipo: <b>{detailDevice.type || '—'}</b></div>
-                <div className="text-xs text-white/60">Última atualização: <b>{detailDevice.timestamp || '—'}</b></div>
-                <div className="text-xs text-white/60">Modelo: <b>{detailDevice.model || '—'}</b></div>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+              {/* Supplies Section */}
+              <div className="p-5 rounded-2xl bg-white/5 border border-white/10 h-full">
+                <h3 className="font-semibold text-lg mb-4 flex items-center gap-2">
+                  <span className="mi text-cyan-400">opacity</span>
+                  Níveis de Suprimento
+                </h3>
+
+                <div className="space-y-4">
+                  {(detailDevice.supplies || []).length === 0 && <div className="text-sm text-white/40 italic text-center py-4">Nenhum dado disponível</div>}
+                  {(detailDevice.supplies || []).map((s, si) => {
+                    const raw = (s.level || '').toString().replace('%', '')
+                    const pct = Math.max(0, Math.min(100, parseFloat(raw) || 0))
+                    const inv = getInventoryQty(s.name)
+                    const cls = pct > 30 ? 'bg-green-500' : (pct > 10 ? 'bg-yellow-500' : 'bg-red-500')
+
+                    return (
+                      <div key={si} className="bg-black/20 p-3 rounded-xl border border-white/5">
+                        <div className="flex items-center justify-between mb-2">
+                          <span className="font-medium text-sm">{s.name}</span>
+                          <div className="flex gap-2">
+                            <button className="text-[10px] bg-white/10 hover:bg-white/20 px-2 py-0.5 rounded transition" onClick={() => {
+                              const note = window.prompt('Observação para manutenção:')
+                              try {
+                                const m = JSON.parse(localStorage.getItem('monitor.maintenance') || '[]')
+                                m.unshift({ id: Date.now(), deviceId: getId(detailDevice), supply: s.name, note: note || '', ts: new Date().toISOString(), done: false })
+                                localStorage.setItem('monitor.maintenance', JSON.stringify(m))
+                                pushToast({ title: 'Agendado', msg: 'Manutenção criada', type: 'success' })
+                              } catch (e) { }
+                            }}>Manutenção</button>
+                          </div>
+                        </div>
+
+                        <div className="flex items-center gap-3">
+                          <div className="flex-1 h-2 bg-white/10 rounded-full overflow-hidden">
+                            <div className={`h-full ${cls} shadow-[0_0_10px_rgba(0,0,0,0.5)]`} style={{ width: `${pct}%` }}></div>
+                          </div>
+                          <span className={`text-sm font-bold w-10 text-right ${pct < 20 ? 'text-red-400' : ''}`}>{pct}%</span>
+                        </div>
+
+                        <div className="mt-3 flex items-center justify-between text-xs text-white/50">
+                          <div className="flex items-center gap-2">
+                            <span>Estoque: <b className="text-white">{inv}</b></span>
+                            {inv > 0 && <button className="text-cyan-300 hover:text-cyan-200 underline" onClick={() => {
+                              try {
+                                const raw = JSON.parse(localStorage.getItem('monitor.inventory') || '[]')
+                                const item = (raw || []).find(i => (i.name || '').toLowerCase() === (s.name || '').toLowerCase())
+                                if (!item || Number(item.qty) <= 0) return
+                                item.qty = Number(item.qty) - 1
+                                localStorage.setItem('monitor.inventory', JSON.stringify(raw))
+                                pushToast({ title: 'Estoque Atualizado', msg: `-1 ${s.name}`, type: 'success' })
+                                setDetailDevice(d => ({ ...d }))
+                              } catch (e) { }
+                            }}>Usar 1</button>}
+                          </div>
+                          <button
+                            onClick={() => {
+                              try {
+                                const key = JSON.stringify({ id: getId(detailDevice), supply: s.name })
+                                const raw = JSON.parse(localStorage.getItem('monitor.reorder') || '[]')
+                                const exists = (raw || []).some(r => r.id === getId(detailDevice) && (r.supply || '') === s.name)
+                                if (!exists) { raw.push({ id: getId(detailDevice), supply: s.name, created: new Date().toISOString() }); localStorage.setItem('monitor.reorder', JSON.stringify(raw)); pushToast({ title: 'Auto-reorder', msg: 'Ativado', type: 'success' }) }
+                                else { const nr = (raw || []).filter(r => !(r.id === getId(detailDevice) && (r.supply || '') === s.name)); localStorage.setItem('monitor.reorder', JSON.stringify(nr)); pushToast({ title: 'Auto-reorder', msg: 'Desativado', type: 'success' }) }
+                              } catch (e) { }
+                            }}
+                            className={`${(JSON.parse(localStorage.getItem('monitor.reorder') || '[]') || []).some(r => r.id === getId(detailDevice) && (r.supply || '') === s.name) ? 'text-green-400' : 'text-white/30 hover:text-white/60'}`}
+                            title="Auto-Reorder"
+                          >
+                            <span className="flex items-center gap-1"><span className="mi text-sm">autorenew</span> Auto</span>
+                          </button>
+                        </div>
+                      </div>
+                    )
+                  })}
+                </div>
               </div>
 
-              <div className="p-2">
-                <div className="font-semibold text-sm mb-2">Consumíveis</div>
-                {(detailDevice.supplies || []).length === 0 && <div className="text-xs text-white/60">Sem informações de consumíveis</div>}
-                {(detailDevice.supplies || []).map((s, si) => {
-                  const raw = (s.level || '').toString().replace('%', '')
-                  const pct = Math.max(0, Math.min(100, parseFloat(raw) || 0))
-                  const inv = getInventoryQty(s.name)
-                  const cls = pct > 30 ? 'supply-good' : (pct > 10 ? 'supply-warn' : 'supply-low')
-                  return (
-                    <div key={si} className="supply-row mb-3">
-                      <div className="supply-meta"><div className="font-medium">{s.name}</div><div className="text-white/60">{pct}% — Estoque: <b>{inv}</b></div></div>
-                      <div className={`supply-bar ${cls}`} title={`${s.name}: ${pct}% — Estoque: ${inv}`}>
-                        <div className="fill" style={{ width: pct + '%' }} />
+              {/* Info & History */}
+              <div className="space-y-6">
+                <div className="p-5 rounded-2xl bg-white/5 border border-white/10">
+                  <h3 className="font-semibold text-lg mb-4 flex items-center gap-2">
+                    <span className="mi text-purple-400">history</span>
+                    Histórico de Status
+                  </h3>
+                  {detailHistory ? (
+                    <div>
+                      <div className="flex items-end gap-1 h-12 mb-4 px-2">
+                        {detailHistory.slice(0, 20).reverse().map((h, i) => (
+                          <div
+                            key={i}
+                            className={`flex-1 rounded-sm ${h.status === 'ok' ? 'bg-green-500' : (h.status === 'missing' ? 'bg-white/10' : 'bg-red-500')}`}
+                            style={{ height: h.status === 'ok' ? '100%' : '60%', opacity: 0.5 + (i / 40) }}
+                            title={`${new Date(h.ts).toLocaleString()} - ${h.status}`}
+                          ></div>
+                        ))}
                       </div>
-                      <div className="mt-2 flex gap-2 items-center">
-                        <button className="btn-sm" onClick={() => {
-                          try {
-                            const raw = JSON.parse(localStorage.getItem('monitor.inventory') || '[]')
-                            const item = (raw || []).find(i => (i.name || '').toLowerCase() === (s.name || '').toLowerCase())
-                            if (!item || Number(item.qty) <= 0) { pushToast({ title: 'Sem estoque', msg: `Consumível ${s.name} sem estoque`, type: 'error' }); return }
-                            item.qty = Number(item.qty) - 1
-                            localStorage.setItem('monitor.inventory', JSON.stringify(raw))
-                            pushToast({ title: 'Consumível usado', msg: `1 unidade de ${s.name} removida do estoque`, type: 'success' })
-                            // refresh detailDevice inventory display
-                            setDetailDevice(d => ({ ...d }))
-                          } catch (e) { console.error(e); pushToast({ title: 'Erro', msg: 'Não foi possível atualizar o estoque', type: 'error' }) }
-                        }}>Usar 1</button>
-                        <button className="btn-sm" onClick={() => {
-                          const note = window.prompt('Observação para manutenção (opcional):')
-                          try {
-                            const m = JSON.parse(localStorage.getItem('monitor.maintenance') || '[]')
-                            m.unshift({ id: Date.now(), deviceId: getId(detailDevice), supply: s.name, note: note || '', ts: new Date().toISOString(), done: false })
-                            localStorage.setItem('monitor.maintenance', JSON.stringify(m))
-                            pushToast({ title: 'Manutenção agendada', msg: `Tarefa criada para ${s.name}`, type: 'success' })
-                          } catch (e) { pushToast({ title: 'Erro', msg: 'Não foi possível agendar manutenção', type: 'error' }) }
-                        }}>Agendar manutenção</button>
-                        <button className="btn-sm" onClick={() => {
-                          try {
-                            const key = JSON.stringify({ id: getId(detailDevice), supply: s.name })
-                            const raw = JSON.parse(localStorage.getItem('monitor.reorder') || '[]')
-                            const exists = (raw || []).some(r => r.id === getId(detailDevice) && (r.supply || '') === s.name)
-                            if (!exists) { raw.push({ id: getId(detailDevice), supply: s.name, created: new Date().toISOString() }); localStorage.setItem('monitor.reorder', JSON.stringify(raw)); pushToast({ title: 'Auto-reorder ativado', msg: `${s.name} será auto-encomendado quando estoque baixo`, type: 'success' }) }
-                            else { const nr = (raw || []).filter(r => !(r.id === getId(detailDevice) && (r.supply || '') === s.name)); localStorage.setItem('monitor.reorder', JSON.stringify(nr)); pushToast({ title: 'Auto-reorder desativado', msg: `${s.name} removido da lista de auto-encomenda`, type: 'success' }) }
-                          } catch (e) { pushToast({ title: 'Erro', msg: 'Não foi possível atualizar auto-reorder', type: 'error' }) }
-                        }}>{(JSON.parse(localStorage.getItem('monitor.reorder') || '[]') || []).some(r => r.id === getId(detailDevice) && (r.supply || '') === s.name) ? 'Auto (On)' : 'Auto (Off)'} </button>
-                      </div>
-                    </div>
-                  )
-                })}
-                {detailHistory && (
-                  <div>
-                    <div className="flex items-center justify-between">
-                      <div className="font-semibold text-sm mb-2">Histórico (últimos {detailHistory.length})</div>
-                      <button className="btn-sm" onClick={() => setShowFullHistory(s => !s)}>{showFullHistory ? 'Ocultar' : 'Ver histórico'}</button>
-                    </div>
-                    <div className="sparkline flex items-center gap-2 mb-2">
-                      {detailHistory.map((h, i) => (
-                        <div key={i} className={`dot ${h.status === 'ok' ? 'dot-ok' : (h.status === 'missing' ? 'dot-missing' : 'dot-err')}`} title={`${new Date(h.ts).toLocaleString()} — ${h.status}`} />
-                      ))}
-                    </div>
-                    {showFullHistory && (
-                      <div className="space-y-2 max-h-40 overflow-auto p-2 bg-white/5 rounded">
+                      <div className="max-h-40 overflow-y-auto pr-2 space-y-2 custom-scrollbar">
                         {detailHistory.map((h, i) => (
-                          <div key={i} className="text-xs flex items-center justify-between">
-                            <div>{new Date(h.ts).toLocaleString()}</div>
-                            <div className={`text-xs ${h.status === 'ok' ? 'text-green-300' : h.status === 'missing' ? 'text-white/60' : 'text-red-300'}`}>{h.status}</div>
+                          <div key={i} className="flex items-center justify-between text-xs p-2 rounded bg-white/5 border border-white/5">
+                            <span className="font-mono text-white/60">{new Date(h.ts).toLocaleString()}</span>
+                            <span className={`uppercase font-bold ${h.status === 'ok' ? 'text-green-400' : 'text-red-400'}`}>{h.status}</span>
                           </div>
                         ))}
                       </div>
-                    )}
+                    </div>
+                  ) : <div className="text-center text-white/40 py-4">Carregando histórico...</div>}
+                </div>
+
+                <div className="p-5 rounded-2xl bg-white/5 border border-white/10">
+                  <h3 className="font-semibold text-lg mb-4 flex items-center gap-2">
+                    <span className="mi text-orange-400">build</span>
+                    Ações
+                  </h3>
+                  <div className="grid grid-cols-2 gap-3">
+                    <button className="p-2 rounded-lg bg-white/5 hover:bg-white/10 border border-white/5 text-sm flex items-center justify-center gap-2 transition" onClick={() => pingDevice(detailDevice)}>
+                      <span className="mi">network_check</span> Ping
+                    </button>
+                    <button className="p-2 rounded-lg bg-white/5 hover:bg-white/10 border border-white/5 text-sm flex items-center justify-center gap-2 transition" onClick={() => openPanel(detailDevice)}>
+                      <span className="mi">open_in_new</span> Painel
+                    </button>
+                    <button className="p-2 rounded-lg bg-white/5 hover:bg-white/10 border border-white/5 text-sm flex items-center justify-center gap-2 transition col-span-2" onClick={() => setDetailOpen(false)}>
+                      Fechar
+                    </button>
                   </div>
-                )}
+                </div>
               </div>
             </div>
           </div>

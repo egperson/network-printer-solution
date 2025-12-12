@@ -273,13 +273,47 @@ app.get('/api/history/export', (req, res) => {
 app.get('/api/server/info', (req, res) => {
   const uptime = process.uptime();
   const data = readData();
+  let dbSize = 0;
+  try { dbSize = fs.statSync(PRINTERS_FILE).size; } catch (e) { }
+
+  const os = require('os'); // Lazy load os module
+
   res.json({
     ok: true,
     version: '1.0.0',
     uptime: Math.floor(uptime),
     lastCollection: data.lastRun,
-    nodeVersion: process.version
-  });
+    nodeVersion: process.version,
+    dbSize,
+    dbSize,
+    env: process.env.NODE_ENV || 'Localhost',
+    system: {
+      system: {
+        hostname: os.hostname(),
+        platform: os.platform(),
+        release: os.release(),
+        arch: os.arch(),
+        cpus: os.cpus().length,
+        loadavg: os.loadavg(),
+        totalmem: os.totalmem(),
+        freemem: os.freemem(),
+        cpuModel: os.cpus()[0] ? os.cpus()[0].model : 'Unknown',
+        network: (() => {
+          const nets = os.networkInterfaces();
+          for (const name of Object.keys(nets)) {
+            for (const net of nets[name]) {
+              if (net.family === 'IPv4' && !net.internal) {
+                return { ip: net.address, mac: net.mac, interface: name };
+              }
+            }
+          }
+          return { ip: '127.0.0.1', mac: '00:00:00:00:00:00', interface: 'lo' };
+        })()
+      },
+      process: {
+        memory: process.memoryUsage()
+      }
+    });
 });
 
 // Printers Config
