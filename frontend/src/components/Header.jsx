@@ -36,7 +36,7 @@ export default function Header({
         <button
           onClick={onRefresh}
           disabled={loading}
-          className="px-3 py-2 rounded border border-white/6 text-white"
+          className="px-3 py-2 rounded-xl border border-white/30 text-white"
           aria-pressed={loading}>
           {loading ? "Executando..." : "Atualizar"}
         </button>

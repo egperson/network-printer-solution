@@ -25,19 +25,19 @@ export default function Sidebar({ route, onNavigate }) {
         </div>
       </div>
 
-      <nav className="flex items-center flex-col gap-1 flex-1 ">
-        <div className="text-ls font-bold px-3">PRINCIPAL</div>
+      <nav className="flex items-center flex-col flex-1 ">
+        <div className="text-ls font-bold px-3 mb-2">PRINCIPAL</div>
         <NavBtn id="dashboard" icon="dashboard" label="Painel" />
         <NavBtn id="devices" icon="print" label="Dispositivos" />
 
-        <div className="text-ls font-bold px-3">MONITORAMENTO</div>
+        <div className="text-ls font-bold px-3 mb-2">MONITORAMENTO</div>
         <NavBtn id="health" icon="favorite" label="Saúde" />
         <NavBtn id="analytics" icon="trending_up" label="Análises" />
         <NavBtn id="reports" icon="assessment" label="Relatórios" />
         <NavBtn id="status" icon="info" label="Status" />
         <NavBtn id="support" icon="help" label="Suporte" />
 
-        <div className="text-ls font-bold px-3">GERENCIAMENTO</div>
+        <div className="text-ls font-bold px-3 mb-2">GERENCIAMENTO</div>
         <NavBtn id="alerts" icon="notification_important" label="Alertas" />
         <NavBtn id="inventory" icon="inventory" label="Inventário" />
         <NavBtn id="reorder" icon="shopping_cart" label="Auto-Reorder" />

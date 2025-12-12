@@ -60,7 +60,7 @@ export default function App() {
             {route === 'dashboard' && <Dashboard data={data} />}
             {route === 'devices' && <Devices data={data} pushToast={pushToast} searchRef={searchRef} />}
             {route === 'analytics' && <AnalyticsPage devices={(data && data.devices) || []} />}
-            {route === 'health' && <Health devices={(data && data.devices) || []} />}
+            {route === 'health' && <Health devices={(data && data.devices) || []} searchRef={searchRef} />}
             {route === 'reports' && <Reports devices={(data && data.devices) || []} />}
             {route === 'status' && <Status data={data} />}
             {route === 'support' && <Support />}

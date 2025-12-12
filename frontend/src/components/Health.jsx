@@ -3,9 +3,11 @@ import CustomCard from "./CustomCard";
 import CustomSelect from "./CustomSelect";
 import CustomButton from "./CustomButton";
 
-export default function Health({ devices = [] }) {
+export default function Health({ devices = [], searchRef }) {
   const [filterHealth, setFilterHealth] = useState("all");
   const [sortBy, setSortBy] = useState("health");
+  const [page, setPage] = useState(1);
+  const pageSize = 10;
 
   // Calculate health score for each device
   const getHealthScore = (device) => {
@@ -48,6 +50,14 @@ export default function Health({ devices = [] }) {
 
   const filteredDevices = devicesWithHealth
     .filter((d) => {
+      // Search Filter
+      const searchQuery = searchRef?.current?.value?.toLowerCase() || '';
+      if (searchQuery) {
+        const matchesName = (d.deviceName || d.name || '').toLowerCase().includes(searchQuery);
+        const matchesIp = (d.deviceIp || d.url || '').toLowerCase().includes(searchQuery);
+        if (!matchesName && !matchesIp) return false;
+      }
+
       if (filterHealth === "all") return true;
       if (filterHealth === "excellent") return d.healthScore >= 80;
       if (filterHealth === "good")
@@ -66,10 +76,13 @@ export default function Health({ devices = [] }) {
       return 0;
     });
 
+  const totalPages = Math.max(1, Math.ceil(filteredDevices.length / pageSize));
+  const pageItems = filteredDevices.slice((page - 1) * pageSize, page * pageSize);
+
   const avgHealth =
     devicesWithHealth.length > 0
       ? devicesWithHealth.reduce((sum, d) => sum + d.healthScore, 0) /
-        devicesWithHealth.length
+      devicesWithHealth.length
       : 0;
 
   const healthCounts = {
@@ -86,14 +99,14 @@ export default function Health({ devices = [] }) {
   return (
     <div className="space-y-6 animate-fadeIn">
       {/* Header */}
-      <div className="flex items-center justify-between">
+      <div className="card flex items-center justify-between p-4">
         <div>
-          <h1 className="text-2xl font-bold">Saúde dos Dispositivos</h1>
-          <p className="text-white/60">Monitoramento de saúde em tempo real</p>
+          <h2 className="text-lg font-semibold">Saúde dos Dispositivos</h2>
+          <div className="text-sm text-white/60">Monitoramento de saúde em tempo real</div>
         </div>
-        <CustomButton icon="refresh" variant="secondary">
-          Atualizar
-        </CustomButton>
+        <div className="flex items-center gap-2">
+          <CustomButton icon="refresh" variant="secondary">Atualizar</CustomButton>
+        </div>
       </div>
 
       {/* Summary Cards */}
@@ -137,142 +150,167 @@ export default function Health({ devices = [] }) {
       </div>
 
       {/* Filters */}
-      <div className="flex gap-4">
-        <CustomSelect
-          label="Filtrar por Saúde"
-          value={filterHealth}
-          onChange={setFilterHealth}
-          icon="filter_list"
-          options={[
-            { value: "all", label: "Todos" },
-            {
-              value: "excellent",
-              label: "Excelente (80-100%)",
-              icon: "check_circle",
-            },
-            { value: "good", label: "Bom (60-80%)", icon: "info" },
-            { value: "warning", label: "Atenção (40-60%)", icon: "warning" },
-            { value: "critical", label: "Crítico (0-40%)", icon: "error" },
-          ]}
-        />
+      <div className="card p-4">
+        <div className="flex items-center justify-between mb-4">
+          <h3 className="font-semibold text-lg">Filtros Avançados</h3>
+          <button
+            onClick={() => {
+              setFilterHealth("all");
+              setSortBy("health");
+            }}
+            className="px-3 py-1.5 text-sm rounded border border-white/10 hover:bg-white/5 transition"
+          >
+            Limpar Filtros
+          </button>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+          <CustomSelect
+            label="Filtrar por Saúde"
+            value={filterHealth}
+            onChange={setFilterHealth}
+            icon="filter_list"
+            options={[
+              { value: "all", label: "Todos" },
+              {
+                value: "excellent",
+                label: "Excelente (80-100%)",
+                icon: "check_circle",
+              },
+              { value: "good", label: "Bom (60-80%)", icon: "info" },
+              { value: "warning", label: "Atenção (40-60%)", icon: "warning" },
+              { value: "critical", label: "Crítico (0-40%)", icon: "error" },
+            ]}
+          />
 
-        <CustomSelect
-          label="Ordenar Por"
-          value={sortBy}
-          onChange={setSortBy}
-          icon="sort"
-          options={[
-            { value: "health", label: "Saúde (maior primeiro)" },
-            { value: "name", label: "Nome (A-Z)" },
-          ]}
-        />
+          <CustomSelect
+            label="Ordenar Por"
+            value={sortBy}
+            onChange={setSortBy}
+            icon="sort"
+            options={[
+              { value: "health", label: "Saúde (maior primeiro)" },
+              { value: "name", label: "Nome (A-Z)" },
+            ]}
+          />
+        </div>
       </div>
 
       {/* Devices Health Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-        {filteredDevices.map((device, idx) => {
-          const status = device.healthStatus;
-          const borderColor = {
-            green: "border-none",
-            blue: "border-none",
-            yellow: "boborder-none",
-            red: "border-none",
-          }[status.color];
+      <div className="card">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 p-4">
+          {pageItems.map((device, idx) => {
+            const status = device.healthStatus;
+            const borderColor = {
+              green: "border-none",
+              blue: "border-none",
+              yellow: "border-none",
+              red: "border-none",
+            }[status.color];
 
-          return (
-            <CustomCard key={idx} hover className={`border-l-4 ${borderColor}`}>
-              <div className="flex items-start justify-between mb-4">
-                <div className="flex-1">
-                  <h3 className="font-semibold text-base">
-                    {device.deviceName || device.name}
-                  </h3>
-                  <p className="text-xs text-white/50">
-                    {device.deviceIp || device.url}
-                  </p>
-                </div>
-                <span className={`mi text-2xl text-${status.color}-400`}>
-                  {status.icon}
-                </span>
-              </div>
-
-              {/* Health Score */}
-              <div className="mb-3">
-                <div className="flex justify-between items-center mb-2">
-                  <span className="text-sm text-white/70">Saúde Geral</span>
-                  <span
-                    className={`text-lg font-bold text-${status.color}-400`}>
-                    {device.healthScore}%
+            // Re-using CustomCard inside grid
+            return (
+              <div key={idx} className={`p-4 rounded border border-white/10 bg-white/5 relative overflow-hidden group hover:border-white/20 transition-all`}>
+                <div className={`absolute top-0 left-0 w-1 h-full bg-${status.color}-500`}></div>
+                <div className="flex items-start justify-between mb-4 pl-3">
+                  <div className="flex-1">
+                    <h3 className="font-semibold text-base">
+                      {device.deviceName || device.name}
+                    </h3>
+                    <p className="text-xs text-white/50">
+                      {device.deviceIp || device.url}
+                    </p>
+                  </div>
+                  <span className={`mi text-2xl text-${status.color}-400`}>
+                    {status.icon}
                   </span>
                 </div>
-                <div className="h-2 bg-white/10 rounded-full overflow-hidden">
-                  <div
-                    className={`h-full bg-${status.color}-500 transition-all duration-500`}
-                    style={{ width: `${device.healthScore}%` }}
-                  />
-                </div>
-              </div>
 
-              {/* Status Badge */}
-              <div className="flex items-center gap-2 mb-3">
-                <span
-                  className={`px-2 py-1 rounded text-xs font-semibold bg-${status.color}-500/20 text-${status.color}-300`}>
-                  {status.label}
-                </span>
-                <span
-                  className={`px-2 py-1 rounded text-xs ${
-                    device.status === "ok"
-                      ? "bg-green-500/20 text-green-300"
-                      : "bg-red-500/20 text-red-300"
-                  }`}>
-                  {device.status === "ok" ? "Online" : "Offline"}
-                </span>
-              </div>
-
-              {/* Supplies */}
-              {device.supplies && device.supplies.length > 0 && (
-                <div className="space-y-2">
-                  <div className="text-xs font-semibold text-white/70">
-                    Consumíveis:
+                {/* Health Score */}
+                <div className="mb-3 pl-3">
+                  <div className="flex justify-between items-center mb-2">
+                    <span className="text-sm text-white/70">Saúde Geral</span>
+                    <span
+                      className={`text-lg font-bold text-${status.color}-400`}>
+                      {device.healthScore}%
+                    </span>
                   </div>
-                  {device.supplies.map((supply, si) => {
-                    const level =
-                      parseFloat(
-                        (supply.level || "").toString().replace("%", "")
-                      ) || 0;
-                    return (
-                      <div
-                        key={si}
-                        className="flex justify-between items-center text-xs">
-                        <span className="text-white/60">{supply.name}</span>
-                        <span
-                          className={`font-bold ${
-                            level < 10
-                              ? "text-red-400"
-                              : level < 30
-                              ? "text-yellow-400"
-                              : "text-green-400"
-                          }`}>
-                          {level}%
-                        </span>
-                      </div>
-                    );
-                  })}
+                  <div className="h-2 bg-white/10 rounded-full overflow-hidden">
+                    <div
+                      className={`h-full bg-${status.color}-500 transition-all duration-500`}
+                      style={{ width: `${device.healthScore}%` }}
+                    />
+                  </div>
                 </div>
-              )}
-            </CustomCard>
-          );
-        })}
-      </div>
 
-      {filteredDevices.length === 0 && (
-        <CustomCard className="text-center py-12">
-          <span className="mi text-6xl text-white/20 mb-4">search_off</span>
-          <h3 className="text-xl font-semibold mb-2">
-            Nenhum dispositivo encontrado
-          </h3>
-          <p className="text-white/60">Tente ajustar os filtros</p>
-        </CustomCard>
-      )}
+                {/* Status Badge */}
+                <div className="flex items-center gap-2 mb-3 pl-3">
+                  <span
+                    className={`px-2 py-1 rounded text-xs font-semibold bg-${status.color}-500/20 text-${status.color}-300`}>
+                    {status.label}
+                  </span>
+                  <span
+                    className={`px-2 py-1 rounded text-xs ${device.status === "ok"
+                        ? "bg-green-500/20 text-green-300"
+                        : "bg-red-500/20 text-red-300"
+                      }`}>
+                    {device.status === "ok" ? "Online" : "Offline"}
+                  </span>
+                </div>
+
+                {/* Supplies */}
+                {device.supplies && device.supplies.length > 0 && (
+                  <div className="space-y-2 pl-3">
+                    <div className="text-xs font-semibold text-white/70">
+                      Consumíveis:
+                    </div>
+                    {device.supplies.map((supply, si) => {
+                      const level =
+                        parseFloat(
+                          (supply.level || "").toString().replace("%", "")
+                        ) || 0;
+                      return (
+                        <div
+                          key={si}
+                          className="flex justify-between items-center text-xs">
+                          <span className="text-white/60">{supply.name}</span>
+                          <span
+                            className={`font-bold ${level < 10
+                                ? "text-red-400"
+                                : level < 30
+                                  ? "text-yellow-400"
+                                  : "text-green-400"
+                              }`}>
+                            {level}%
+                          </span>
+                        </div>
+                      );
+                    })}
+                  </div>
+                )}
+              </div>
+            );
+          })}
+        </div>
+
+        {/* Global Pagination Controls */}
+        <div className="mt-4 flex items-center justify-between p-4 border-t border-white/10">
+          <div className="text-sm text-white/60">Página {page} de {totalPages}</div>
+          <div className="flex gap-2">
+            <button disabled={page <= 1} onClick={() => setPage(p => Math.max(1, p - 1))} className="px-3 py-1 rounded border border-white/10 hover:bg-white/5 disabled:opacity-50">Anterior</button>
+            <button disabled={page >= totalPages} onClick={() => setPage(p => Math.min(totalPages, p + 1))} className="px-3 py-1 rounded border border-white/10 hover:bg-white/5 disabled:opacity-50">Próxima</button>
+          </div>
+        </div>
+
+        {filteredDevices.length === 0 && (
+          <div className="text-center py-12">
+            <span className="mi text-6xl text-white/20 mb-4">search_off</span>
+            <h3 className="text-xl font-semibold mb-2">
+              Nenhum dispositivo encontrado
+            </h3>
+            <p className="text-white/60">Tente ajustar os filtros</p>
+          </div>
+        )}
+      </div>
     </div>
   );
 }
