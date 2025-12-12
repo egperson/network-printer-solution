@@ -7,24 +7,34 @@ export default function CustomCard({
   icon,
   actions,
   variant = "default",
+  glassVariant = "default",
   hover = false,
   className = "",
 }) {
-  const variants = {
-    default: "bg-white/3 border-white/10",
-    primary: "bg-cyan-500/10 border-cyan-500/30",
-    success: "bg-green-500/10 border-green-500/30",
-    warning: "bg-yellow-500/10 border-yellow-500/30",
-    danger: "bg-red-500/10 border-red-500/30",
+  const glassVariants = {
+    default: "glass-card",
+    dark: "glass-card dark",
+    light: "glass-card light",
+    intense: "glass-card intense",
   };
 
-  const variantClass = variants[variant] || variants.default;
+  const colorVariants = {
+    default: "",
+    primary: "card-primary",
+    success: "card-success",
+    warning: "card-warning",
+    danger: "card-danger",
+  };
+
+  const glassClass = glassVariants[glassVariant] || glassVariants.default;
+  const colorClass = colorVariants[variant] || colorVariants.default;
+
   const hoverClass = hover
-    ? "hover:transform hover:scale-[1.02] hover:shadow-lg transition-all duration-200"
+    ? "" // Hover is handled by CSS now for glass cards
     : "";
 
   return (
-    <div className={`card border ${variantClass} ${hoverClass} ${className}`}>
+    <div className={`${glassClass} ${colorClass} ${className}`}>
       {(title || icon || actions) && (
         <div className="card-header flex items-center justify-between p-4 border-b border-white/10">
           <div className="flex items-center gap-3">

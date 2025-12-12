@@ -1,10 +1,10 @@
 {
-  "lastRun": "2025-12-11T17:06:08.641Z",
+  "lastRun": "2025-12-12T15:06:06.059Z",
   "devices": [
     {
       "name": "https://10.12.86.83",
       "url": "https://10.12.86.83",
-      "timestamp": "2025-12-11T17:00:14.414Z",
+      "timestamp": "2025-12-12T15:00:14.439Z",
       "location": "Rio Claro",
       "status": "ok",
       "statusCode": 200,
@@ -13,7 +13,7 @@
     {
       "name": "https://10.12.86.92",
       "url": "https://10.12.86.92",
-      "timestamp": "2025-12-11T17:00:14.499Z",
+      "timestamp": "2025-12-12T15:00:14.543Z",
       "location": "Rio Claro",
       "status": "ok",
       "statusCode": 200,
@@ -22,7 +22,7 @@
     {
       "name": "https://10.12.86.130",
       "url": "https://10.12.86.130",
-      "timestamp": "2025-12-11T17:00:23.788Z",
+      "timestamp": "2025-12-12T15:00:23.836Z",
       "location": "Rio Claro",
       "status": "ok",
       "statusCode": 200,
@@ -33,11 +33,11 @@
       "supplies": [
         {
           "name": "Cartucho Preto",
-          "level": "50%*"
+          "level": "<10%*"
         },
         {
           "name": "Kit de Manutenção",
-          "level": "30%*"
+          "level": "20%*"
         }
       ],
       "type": "mono",
@@ -75,7 +75,7 @@
     {
       "name": "https://10.12.86.131",
       "url": "https://10.12.86.131",
-      "timestamp": "2025-12-11T17:00:24.583Z",
+      "timestamp": "2025-12-12T15:00:24.629Z",
       "location": "Rio Claro",
       "status": "ok",
       "statusCode": 200,
@@ -86,7 +86,7 @@
       "supplies": [
         {
           "name": "Cartucho Preto",
-          "level": "90%*"
+          "level": "80%*"
         },
         {
           "name": "Kit de Manutenção",
@@ -128,7 +128,7 @@
     {
       "name": "https://10.12.86.132",
       "url": "https://10.12.86.132",
-      "timestamp": "2025-12-11T17:00:24.699Z",
+      "timestamp": "2025-12-12T15:00:24.778Z",
       "location": "Rio Claro",
       "status": "ok",
       "statusCode": 200,
@@ -139,7 +139,7 @@
       "supplies": [
         {
           "name": "Cartucho Preto",
-          "level": "<10%*"
+          "level": "100%*"
         },
         {
           "name": "Kit de Manutenção",
@@ -174,7 +174,7 @@
     {
       "name": "https://10.12.86.133",
       "url": "https://10.12.86.133",
-      "timestamp": "2025-12-11T17:00:24.953Z",
+      "timestamp": "2025-12-12T15:00:25.154Z",
       "location": "Rio Claro",
       "status": "ok",
       "statusCode": 200,
@@ -216,7 +216,7 @@
     {
       "name": "https://10.12.86.134",
       "url": "https://10.12.86.134",
-      "timestamp": "2025-12-11T17:00:26.897Z",
+      "timestamp": "2025-12-12T15:00:25.913Z",
       "location": "Rio Claro",
       "status": "ok",
       "statusCode": 200,
@@ -262,7 +262,7 @@
     {
       "name": "https://10.12.86.135",
       "url": "https://10.12.86.135",
-      "timestamp": "2025-12-11T17:00:25.433Z",
+      "timestamp": "2025-12-12T15:00:25.639Z",
       "location": "Rio Claro",
       "status": "ok",
       "statusCode": 200,
@@ -308,7 +308,7 @@
     {
       "name": "https://10.12.86.136",
       "url": "https://10.12.86.136",
-      "timestamp": "2025-12-11T17:00:26.718Z",
+      "timestamp": "2025-12-12T15:00:27.986Z",
       "location": "Rio Claro",
       "status": "ok",
       "statusCode": 200,
@@ -350,7 +350,7 @@
     {
       "name": "https://10.12.86.137",
       "url": "https://10.12.86.137",
-      "timestamp": "2025-12-11T17:00:28.529Z",
+      "timestamp": "2025-12-12T15:00:26.838Z",
       "location": "Rio Claro",
       "status": "ok",
       "statusCode": 200,
@@ -392,7 +392,7 @@
     {
       "name": "https://10.12.86.138",
       "url": "https://10.12.86.138",
-      "timestamp": "2025-12-11T17:00:28.940Z",
+      "timestamp": "2025-12-12T15:00:27.180Z",
       "location": "Rio Claro",
       "status": "ok",
       "statusCode": 200,
@@ -438,7 +438,7 @@
     {
       "name": "https://10.12.86.139",
       "url": "https://10.12.86.139",
-      "timestamp": "2025-12-11T17:00:27.185Z",
+      "timestamp": "2025-12-12T15:00:27.297Z",
       "location": "Rio Claro",
       "status": "ok",
       "statusCode": 200,
@@ -484,7 +484,7 @@
     {
       "name": "https://10.12.86.141",
       "url": "https://10.12.86.141",
-      "timestamp": "2025-12-11T17:00:27.465Z",
+      "timestamp": "2025-12-12T15:00:27.389Z",
       "location": "Rio Claro",
       "status": "ok",
       "statusCode": 200,
@@ -530,18 +530,18 @@
     {
       "name": "https://10.12.86.142",
       "url": "https://10.12.86.142",
-      "timestamp": "2025-12-11T17:00:29.491Z",
+      "timestamp": "2025-12-12T15:00:29.713Z",
       "location": "Rio Claro",
       "status": "ok",
       "statusCode": 200,
       "title": "HP » Device Status",
       "deviceName": "RCL013 | RECEBIMENTO FISCAL",
       "deviceIp": "10.12.86.142",
-      "machineStatus": "Ready",
+      "machineStatus": "Sleep mode on",
       "supplies": [
         {
           "name": "Cartucho Preto",
-          "level": "20%*"
+          "level": "<10%*"
         },
         {
           "name": "Kit do Alimentador de Documentos",
@@ -576,7 +576,7 @@
     {
       "name": "https://10.12.86.143",
       "url": "https://10.12.86.143",
-      "timestamp": "2025-12-11T17:00:29.126Z",
+      "timestamp": "2025-12-12T15:00:29.918Z",
       "location": "Rio Claro",
       "status": "ok",
       "statusCode": 200,
@@ -622,7 +622,7 @@
     {
       "name": "https://10.12.86.144",
       "url": "https://10.12.86.144",
-      "timestamp": "2025-12-11T17:00:30.988Z",
+      "timestamp": "2025-12-12T15:00:30.047Z",
       "location": "Rio Claro",
       "status": "ok",
       "statusCode": 200,
@@ -668,14 +668,14 @@
     {
       "name": "https://10.12.86.145",
       "url": "https://10.12.86.145",
-      "timestamp": "2025-12-11T17:00:32.204Z",
+      "timestamp": "2025-12-12T15:00:28.468Z",
       "location": "Rio Claro",
       "status": "ok",
       "statusCode": 200,
       "title": "HP » Device Status",
       "deviceName": "RCL016 | ADM AMBULATORIO",
       "deviceIp": "10.12.86.145",
-      "machineStatus": "Ready",
+      "machineStatus": "Sleep mode on",
       "supplies": [
         {
           "name": "Não Original HP Cartucho Preto",
@@ -714,7 +714,7 @@
     {
       "name": "https://10.12.86.146",
       "url": "https://10.12.86.146",
-      "timestamp": "2025-12-11T17:00:29.549Z",
+      "timestamp": "2025-12-12T15:00:29.873Z",
       "location": "Rio Claro",
       "status": "ok",
       "statusCode": 200,
@@ -756,7 +756,7 @@
     {
       "name": "https://10.12.86.148",
       "url": "https://10.12.86.148",
-      "timestamp": "2025-12-11T17:00:29.581Z",
+      "timestamp": "2025-12-12T15:00:29.612Z",
       "location": "Rio Claro",
       "status": "ok",
       "statusCode": 200,
@@ -798,7 +798,7 @@
     {
       "name": "https://10.12.86.149",
       "url": "https://10.12.86.149",
-      "timestamp": "2025-12-11T17:00:30.971Z",
+      "timestamp": "2025-12-12T15:00:31.017Z",
       "location": "Rio Claro",
       "status": "ok",
       "statusCode": 200,
@@ -840,7 +840,7 @@
     {
       "name": "https://10.12.86.150",
       "url": "https://10.12.86.150",
-      "timestamp": "2025-12-11T17:00:29.704Z",
+      "timestamp": "2025-12-12T15:00:31.654Z",
       "location": "Rio Claro",
       "status": "ok",
       "statusCode": 200,
@@ -886,7 +886,7 @@
     {
       "name": "https://10.12.86.151",
       "url": "https://10.12.86.151",
-      "timestamp": "2025-12-11T17:00:29.696Z",
+      "timestamp": "2025-12-12T15:00:29.856Z",
       "location": "Rio Claro",
       "status": "ok",
       "statusCode": 200,
@@ -932,7 +932,7 @@
     {
       "name": "https://10.12.86.152",
       "url": "https://10.12.86.152",
-      "timestamp": "2025-12-11T17:00:30.948Z",
+      "timestamp": "2025-12-12T15:00:29.818Z",
       "location": "Rio Claro",
       "status": "ok",
       "statusCode": 200,
@@ -978,7 +978,7 @@
     {
       "name": "https://10.12.86.153",
       "url": "https://10.12.86.153",
-      "timestamp": "2025-12-11T17:00:28.936Z",
+      "timestamp": "2025-12-12T15:00:30.510Z",
       "location": "Rio Claro",
       "status": "ok",
       "statusCode": 200,
@@ -1040,7 +1040,7 @@
     {
       "name": "https://10.12.86.154",
       "url": "https://10.12.86.154",
-      "timestamp": "2025-12-11T17:00:29.538Z",
+      "timestamp": "2025-12-12T15:00:29.554Z",
       "location": "Rio Claro",
       "status": "ok",
       "statusCode": 200,
@@ -1132,7 +1132,7 @@
     {
       "name": "https://10.12.86.155",
       "url": "https://10.12.86.155",
-      "timestamp": "2025-12-11T17:00:29.876Z",
+      "timestamp": "2025-12-12T15:00:28.974Z",
       "location": "Rio Claro",
       "status": "ok",
       "statusCode": 200,
@@ -1194,14 +1194,14 @@
     {
       "name": "https://10.12.86.156",
       "url": "https://10.12.86.156",
-      "timestamp": "2025-12-11T17:00:29.114Z",
+      "timestamp": "2025-12-12T15:00:28.949Z",
       "location": "Rio Claro",
       "status": "ok",
       "statusCode": 200,
       "title": "HP » Device Status",
       "deviceName": "RCL027 | MEZANINO F2",
       "deviceIp": "10.12.86.156",
-      "machineStatus": "Ready",
+      "machineStatus": "Sleep mode on",
       "supplies": [
         {
           "name": "Cartucho Amarelo",
@@ -1217,7 +1217,7 @@
         },
         {
           "name": "Cartucho Preto",
-          "level": "60%*"
+          "level": "50%*"
         }
       ],
       "type": "color",
@@ -1255,7 +1255,7 @@
     {
       "name": "https://10.12.86.157",
       "url": "https://10.12.86.157",
-      "timestamp": "2025-12-11T17:00:30.555Z",
+      "timestamp": "2025-12-12T15:00:29.498Z",
       "location": "Rio Claro",
       "status": "ok",
       "statusCode": 200,
@@ -1297,7 +1297,7 @@
     {
       "name": "https://10.12.86.160",
       "url": "https://10.12.86.160",
-      "timestamp": "2025-12-11T17:00:28.729Z",
+      "timestamp": "2025-12-12T15:00:29.249Z",
       "location": "Rio Claro",
       "status": "ok",
       "statusCode": 200,
@@ -1339,7 +1339,7 @@
     {
       "name": "https://10.12.86.161",
       "url": "https://10.12.86.161",
-      "timestamp": "2025-12-11T17:00:28.846Z",
+      "timestamp": "2025-12-12T15:00:28.843Z",
       "location": "Rio Claro",
       "status": "ok",
       "statusCode": 200,
@@ -1385,7 +1385,7 @@
     {
       "name": "https://10.12.86.162",
       "url": "https://10.12.86.162",
-      "timestamp": "2025-12-11T17:00:30.646Z",
+      "timestamp": "2025-12-12T15:00:29.725Z",
       "location": "Rio Claro",
       "status": "ok",
       "statusCode": 200,
@@ -1431,7 +1431,7 @@
     {
       "name": "https://10.12.86.163",
       "url": "https://10.12.86.163",
-      "timestamp": "2025-12-11T17:00:28.913Z",
+      "timestamp": "2025-12-12T15:00:28.925Z",
       "location": "Rio Claro",
       "status": "ok",
       "statusCode": 200,
@@ -1493,7 +1493,7 @@
     {
       "name": "https://10.12.86.164",
       "url": "https://10.12.86.164",
-      "timestamp": "2025-12-11T17:00:31.181Z",
+      "timestamp": "2025-12-12T15:00:30.957Z",
       "location": "Rio Claro",
       "status": "ok",
       "statusCode": 200,
@@ -1539,7 +1539,7 @@
     {
       "name": "https://10.12.86.165",
       "url": "https://10.12.86.165",
-      "timestamp": "2025-12-11T17:00:29.039Z",
+      "timestamp": "2025-12-12T15:00:29.924Z",
       "location": "Rio Claro",
       "status": "ok",
       "statusCode": 200,
@@ -1585,14 +1585,14 @@
     {
       "name": "https://10.12.86.166",
       "url": "https://10.12.86.166",
-      "timestamp": "2025-12-11T17:00:30.117Z",
+      "timestamp": "2025-12-12T15:00:30.851Z",
       "location": "Rio Claro",
       "status": "ok",
       "statusCode": 200,
       "title": "HP » Device Status",
       "deviceName": "RCL037 | CLICK RH",
       "deviceIp": "10.12.86.166",
-      "machineStatus": "Sleep mode on",
+      "machineStatus": "Ready",
       "supplies": [
         {
           "name": "Cartucho Preto",
@@ -1627,7 +1627,7 @@
     {
       "name": "https://10.12.86.167",
       "url": "https://10.12.86.167",
-      "timestamp": "2025-12-11T17:00:29.322Z",
+      "timestamp": "2025-12-12T15:00:29.050Z",
       "location": "Rio Claro",
       "status": "ok",
       "statusCode": 200,
@@ -1673,7 +1673,7 @@
     {
       "name": "https://10.12.86.168",
       "url": "https://10.12.86.168",
-      "timestamp": "2025-12-11T17:00:31.301Z",
+      "timestamp": "2025-12-12T15:00:30.245Z",
       "location": "Rio Claro",
       "status": "ok",
       "statusCode": 200,
@@ -1719,7 +1719,7 @@
     {
       "name": "https://10.12.86.169",
       "url": "https://10.12.86.169",
-      "timestamp": "2025-12-11T17:00:30.249Z",
+      "timestamp": "2025-12-12T15:00:31.192Z",
       "location": "Rio Claro",
       "status": "ok",
       "statusCode": 200,
@@ -1765,7 +1765,7 @@
     {
       "name": "https://10.12.86.170",
       "url": "https://10.12.86.170",
-      "timestamp": "2025-12-11T17:00:31.703Z",
+      "timestamp": "2025-12-12T15:00:31.531Z",
       "location": "Rio Claro",
       "status": "ok",
       "statusCode": 200,
@@ -1826,7 +1826,7 @@
         },
         {
           "name": "Tray 2",
-          "status": "10 - 20%",
+          "status": "< 10%",
           "capacity": "550 sheets",
           "size": "A4 (210x297 mm)",
           "type": "Plain"
@@ -1843,7 +1843,7 @@
     {
       "name": "https://10.12.86.171",
       "url": "https://10.12.86.171",
-      "timestamp": "2025-12-11T17:00:29.677Z",
+      "timestamp": "2025-12-12T15:00:29.504Z",
       "location": "Rio Claro",
       "status": "ok",
       "statusCode": 200,
@@ -1906,7 +1906,7 @@
     {
       "name": "https://10.12.86.173",
       "url": "https://10.12.86.173",
-      "timestamp": "2025-12-11T17:00:31.499Z",
+      "timestamp": "2025-12-12T15:00:31.759Z",
       "location": "Rio Claro",
       "status": "ok",
       "statusCode": 200,
@@ -1952,18 +1952,18 @@
     {
       "name": "https://10.12.86.174",
       "url": "https://10.12.86.174",
-      "timestamp": "2025-12-11T17:00:29.627Z",
+      "timestamp": "2025-12-12T15:00:29.901Z",
       "location": "Rio Claro",
       "status": "ok",
       "statusCode": 200,
       "title": "HP » Device Status",
       "deviceName": "RCL045 | CDF EXPEDICAO | ZR51",
       "deviceIp": "10.12.86.174",
-      "machineStatus": "Ready",
+      "machineStatus": "Sleep mode on",
       "supplies": [
         {
           "name": "Cartucho Preto",
-          "level": "20%*"
+          "level": "<10%*"
         },
         {
           "name": "Kit de Manutenção",
@@ -1998,7 +1998,7 @@
     {
       "name": "https://10.12.86.175",
       "url": "https://10.12.86.175",
-      "timestamp": "2025-12-11T17:00:30.809Z",
+      "timestamp": "2025-12-12T15:00:31.135Z",
       "location": "Rio Claro",
       "status": "ok",
       "statusCode": 200,
@@ -2044,7 +2044,7 @@
     {
       "name": "https://10.12.86.177",
       "url": "https://10.12.86.177",
-      "timestamp": "2025-12-11T17:00:32.305Z",
+      "timestamp": "2025-12-12T15:00:31.045Z",
       "location": "Rio Claro",
       "status": "ok",
       "statusCode": 200,
@@ -2090,7 +2090,7 @@
     {
       "name": "https://10.12.86.178",
       "url": "https://10.12.86.178",
-      "timestamp": "2025-12-11T17:00:30.945Z",
+      "timestamp": "2025-12-12T15:00:31.097Z",
       "location": "Rio Claro",
       "status": "ok",
       "statusCode": 200,
@@ -2136,7 +2136,7 @@
     {
       "name": "https://10.12.86.179",
       "url": "https://10.12.86.179",
-      "timestamp": "2025-12-11T17:00:30.968Z",
+      "timestamp": "2025-12-12T15:00:31.110Z",
       "location": "Rio Claro",
       "status": "ok",
       "statusCode": 200,
@@ -2182,7 +2182,7 @@
     {
       "name": "https://10.12.86.180",
       "url": "https://10.12.86.180",
-      "timestamp": "2025-12-11T17:00:30.304Z",
+      "timestamp": "2025-12-12T15:00:30.396Z",
       "location": "Rio Claro",
       "status": "ok",
       "statusCode": 200,
@@ -2244,7 +2244,7 @@
     {
       "name": "https://10.12.86.181",
       "url": "https://10.12.86.181",
-      "timestamp": "2025-12-11T17:00:30.256Z",
+      "timestamp": "2025-12-12T15:00:30.368Z",
       "location": "Rio Claro",
       "status": "ok",
       "statusCode": 200,
@@ -2306,7 +2306,7 @@
     {
       "name": "https://10.12.86.182",
       "url": "https://10.12.86.182",
-      "timestamp": "2025-12-11T17:00:31.218Z",
+      "timestamp": "2025-12-12T15:00:31.184Z",
       "location": "Rio Claro",
       "status": "ok",
       "statusCode": 200,
@@ -2348,7 +2348,7 @@
     {
       "name": "https://10.12.86.183",
       "url": "https://10.12.86.183",
-      "timestamp": "2025-12-11T17:00:30.549Z",
+      "timestamp": "2025-12-12T15:00:30.600Z",
       "location": "Rio Claro",
       "status": "ok",
       "statusCode": 200,
@@ -2410,7 +2410,7 @@
     {
       "name": "https://10.12.86.184",
       "url": "https://10.12.86.184",
-      "timestamp": "2025-12-11T17:00:31.402Z",
+      "timestamp": "2025-12-12T15:00:31.408Z",
       "location": "Rio Claro",
       "status": "ok",
       "statusCode": 200,
@@ -2456,7 +2456,7 @@
     {
       "name": "https://10.12.86.185",
       "url": "https://10.12.86.185",
-      "timestamp": "2025-12-11T17:00:31.631Z",
+      "timestamp": "2025-12-12T15:00:31.443Z",
       "location": "Rio Claro",
       "status": "ok",
       "statusCode": 200,
@@ -2502,14 +2502,14 @@
     {
       "name": "https://10.12.86.186",
       "url": "https://10.12.86.186",
-      "timestamp": "2025-12-11T17:00:31.496Z",
+      "timestamp": "2025-12-12T15:00:32.344Z",
       "location": "Rio Claro",
       "status": "ok",
       "statusCode": 200,
       "title": "HP » Device Status",
       "deviceName": "RCL057 | PORTARIA CAMINHOES 2",
       "deviceIp": "10.12.86.186",
-      "machineStatus": "Sleep mode on",
+      "machineStatus": "Ready",
       "supplies": [
         {
           "name": "Cartucho Preto",
@@ -2544,7 +2544,7 @@
     {
       "name": "https://10.12.86.187",
       "url": "https://10.12.86.187",
-      "timestamp": "2025-12-11T17:00:31.562Z",
+      "timestamp": "2025-12-12T15:00:31.522Z",
       "location": "Rio Claro",
       "status": "ok",
       "statusCode": 200,
@@ -2586,7 +2586,7 @@
     {
       "name": "https://10.12.86.188",
       "url": "https://10.12.86.188",
-      "timestamp": "2025-12-11T17:00:31.611Z",
+      "timestamp": "2025-12-12T15:00:31.542Z",
       "location": "Rio Claro",
       "status": "ok",
       "statusCode": 200,
@@ -2628,7 +2628,7 @@
     {
       "name": "https://10.12.86.190",
       "url": "https://10.12.86.190",
-      "timestamp": "2025-12-11T17:00:31.712Z",
+      "timestamp": "2025-12-12T15:00:31.745Z",
       "location": "Rio Claro",
       "status": "ok",
       "statusCode": 200,
@@ -2670,7 +2670,7 @@
     {
       "name": "https://10.12.86.191",
       "url": "https://10.12.86.191",
-      "timestamp": "2025-12-11T17:00:32.335Z",
+      "timestamp": "2025-12-12T15:00:31.813Z",
       "location": "Rio Claro",
       "status": "ok",
       "statusCode": 200,
@@ -2693,7 +2693,7 @@
         },
         {
           "name": "Cartucho Preto",
-          "level": "80%*"
+          "level": "70%*"
         },
         {
           "name": "Kit do Alimentador de Documentos",
@@ -2735,14 +2735,14 @@
     {
       "name": "https://10.12.86.192",
       "url": "https://10.12.86.192",
-      "timestamp": "2025-12-11T17:00:31.639Z",
+      "timestamp": "2025-12-12T15:00:31.750Z",
       "location": "Rio Claro",
       "status": "ok",
       "statusCode": 200,
       "title": "HP » Device Status",
       "deviceName": "RCL063 | RECEBIMENTO FISCAL",
       "deviceIp": "10.12.86.192",
-      "machineStatus": "Ready",
+      "machineStatus": "Sleep mode on",
       "supplies": [
         {
           "name": "Cartucho Preto",
@@ -2788,7 +2788,7 @@
     {
       "name": "https://10.12.86.193",
       "url": "https://10.12.86.193",
-      "timestamp": "2025-12-11T17:00:31.083Z",
+      "timestamp": "2025-12-12T15:00:30.970Z",
       "location": "Rio Claro",
       "status": "ok",
       "statusCode": 200,
@@ -2811,7 +2811,7 @@
         },
         {
           "name": "Não Original HP Cartucho Preto",
-          "level": "70%*"
+          "level": "60%*"
         },
         {
           "name": "Kit Fusor",
@@ -2850,7 +2850,7 @@
     {
       "name": "https://10.12.63.36",
       "url": "https://10.12.63.36",
-      "timestamp": "2025-12-11T17:00:52.171Z",
+      "timestamp": "2025-12-12T15:00:52.199Z",
       "location": "Joinville",
       "status": "ok",
       "statusCode": 200,
@@ -2859,7 +2859,7 @@
     {
       "name": "https://10.12.63.70",
       "url": "https://10.12.63.70",
-      "timestamp": "2025-12-11T17:00:59.414Z",
+      "timestamp": "2025-12-12T15:00:59.355Z",
       "location": "Joinville",
       "status": "ok",
       "statusCode": 200,
@@ -2868,7 +2868,7 @@
     {
       "name": "https://10.12.63.83",
       "url": "https://10.12.63.83",
-      "timestamp": "2025-12-11T17:01:00.458Z",
+      "timestamp": "2025-12-12T15:00:59.996Z",
       "location": "Joinville",
       "status": "ok",
       "statusCode": 200,
@@ -2877,7 +2877,7 @@
     {
       "name": "https://10.12.63.85",
       "url": "https://10.12.63.85",
-      "timestamp": "2025-12-11T17:01:00.640Z",
+      "timestamp": "2025-12-12T15:01:00.574Z",
       "location": "Joinville",
       "status": "ok",
       "statusCode": 200,
@@ -2886,7 +2886,7 @@
     {
       "name": "https://10.12.63.89",
       "url": "https://10.12.63.89",
-      "timestamp": "2025-12-11T17:01:01.529Z",
+      "timestamp": "2025-12-12T15:01:01.306Z",
       "location": "Joinville",
       "status": "ok",
       "statusCode": 200,
@@ -2895,7 +2895,7 @@
     {
       "name": "https://10.12.63.97",
       "url": "https://10.12.63.97",
-      "timestamp": "2025-12-11T17:01:02.535Z",
+      "timestamp": "2025-12-12T15:01:02.074Z",
       "location": "Joinville",
       "status": "ok",
       "statusCode": 200,
@@ -2904,7 +2904,7 @@
     {
       "name": "https://10.12.63.130",
       "url": "https://10.12.63.130",
-      "timestamp": "2025-12-11T17:01:10.920Z",
+      "timestamp": "2025-12-12T15:01:10.608Z",
       "location": "Joinville",
       "status": "ok",
       "statusCode": 200,
@@ -2950,7 +2950,7 @@
     {
       "name": "https://10.12.63.131",
       "url": "https://10.12.63.131",
-      "timestamp": "2025-12-11T17:01:12.232Z",
+      "timestamp": "2025-12-12T15:01:11.730Z",
       "location": "Joinville",
       "status": "ok",
       "statusCode": 200,
@@ -2992,7 +2992,7 @@
     {
       "name": "https://10.12.63.132",
       "url": "https://10.12.63.132",
-      "timestamp": "2025-12-11T17:01:11.069Z",
+      "timestamp": "2025-12-12T15:01:11.087Z",
       "location": "Joinville",
       "status": "ok",
       "statusCode": 200,
@@ -3003,11 +3003,11 @@
       "supplies": [
         {
           "name": "Cartucho Amarelo",
-          "level": "60%*"
+          "level": "50%*"
         },
         {
           "name": "Cartucho Magenta",
-          "level": "<10%*"
+          "level": "--%*"
         },
         {
           "name": "Cartucho Ciano",
@@ -3054,7 +3054,7 @@
     {
       "name": "https://10.12.63.133",
       "url": "https://10.12.63.133",
-      "timestamp": "2025-12-11T17:01:10.897Z",
+      "timestamp": "2025-12-12T15:01:10.923Z",
       "location": "Joinville",
       "status": "ok",
       "statusCode": 200,
@@ -3065,7 +3065,7 @@
       "supplies": [
         {
           "name": "Cartucho Preto",
-          "level": "50%*"
+          "level": "40%*"
         },
         {
           "name": "Kit de Manutenção",
@@ -3107,7 +3107,7 @@
     {
       "name": "https://10.12.63.135",
       "url": "https://10.12.63.135",
-      "timestamp": "2025-12-11T17:01:11.385Z",
+      "timestamp": "2025-12-12T15:01:11.033Z",
       "location": "Joinville",
       "status": "ok",
       "statusCode": 200,
@@ -3118,7 +3118,7 @@
       "supplies": [
         {
           "name": "Cartucho Preto",
-          "level": "60%*"
+          "level": "50%*"
         },
         {
           "name": "Kit de Manutenção",
@@ -3160,14 +3160,14 @@
     {
       "name": "https://10.12.63.136",
       "url": "https://10.12.63.136",
-      "timestamp": "2025-12-11T17:01:13.339Z",
+      "timestamp": "2025-12-12T15:01:12.319Z",
       "location": "Joinville",
       "status": "ok",
       "statusCode": 200,
       "title": "HP » Device Status",
       "deviceName": "JOI007 | Recepção Fiscal",
       "deviceIp": "10.12.63.136",
-      "machineStatus": "Ready",
+      "machineStatus": "Sleep mode on",
       "supplies": [
         {
           "name": "Cartucho Preto",
@@ -3202,14 +3202,14 @@
     {
       "name": "https://10.12.63.137",
       "url": "https://10.12.63.137",
-      "timestamp": "2025-12-11T17:01:14.419Z",
+      "timestamp": "2025-12-12T15:01:14.977Z",
       "location": "Joinville",
       "status": "ok",
       "statusCode": 200,
       "title": "HP » Device Status",
       "deviceName": "JOI008 | Recepção Fiscal 02",
       "deviceIp": "10.12.63.137",
-      "machineStatus": "Ready",
+      "machineStatus": "Processing job from Tray 2...",
       "supplies": [
         {
           "name": "Cartucho Preto",
@@ -3248,7 +3248,7 @@
     {
       "name": "https://10.12.63.138",
       "url": "https://10.12.63.138",
-      "timestamp": "2025-12-11T17:01:14.190Z",
+      "timestamp": "2025-12-12T15:01:12.638Z",
       "location": "Joinville",
       "status": "ok",
       "statusCode": 200,
@@ -3294,7 +3294,7 @@
     {
       "name": "https://10.12.63.139",
       "url": "https://10.12.63.139",
-      "timestamp": "2025-12-11T17:01:13.124Z",
+      "timestamp": "2025-12-12T15:01:13.792Z",
       "location": "Joinville",
       "status": "ok",
       "statusCode": 200,
@@ -3340,14 +3340,14 @@
     {
       "name": "https://10.12.63.140",
       "url": "https://10.12.63.140",
-      "timestamp": "2025-12-11T17:01:17.945Z",
+      "timestamp": "2025-12-12T15:01:13.128Z",
       "location": "Joinville",
       "status": "ok",
       "statusCode": 200,
       "title": "HP » Device Status",
       "deviceName": "JOI011 | F2 Engenharia COR",
       "deviceIp": "10.12.63.140",
-      "machineStatus": "Ready",
+      "machineStatus": "Sleep mode on",
       "supplies": [
         {
           "name": "Cartucho Amarelo",
@@ -3359,7 +3359,7 @@
         },
         {
           "name": "Cartucho Ciano",
-          "level": "50%*"
+          "level": "40%*"
         },
         {
           "name": "Cartucho Preto",
@@ -3367,15 +3367,15 @@
         },
         {
           "name": "Cilindro 1",
-          "level": "20%*"
+          "level": "10%*"
         },
         {
           "name": "Cilindro 2",
-          "level": "20%*"
+          "level": "10%*"
         },
         {
           "name": "Cilindro 3",
-          "level": "20%*"
+          "level": "10%*"
         },
         {
           "name": "Cilindro 4",
@@ -3418,7 +3418,7 @@
     {
       "name": "https://10.12.63.141",
       "url": "https://10.12.63.141",
-      "timestamp": "2025-12-11T17:01:13.999Z",
+      "timestamp": "2025-12-12T15:01:14.322Z",
       "location": "Joinville",
       "status": "ok",
       "statusCode": 200,
@@ -3460,7 +3460,7 @@
     {
       "name": "https://10.12.63.142",
       "url": "https://10.12.63.142",
-      "timestamp": "2025-12-11T17:01:14.175Z",
+      "timestamp": "2025-12-12T15:01:13.942Z",
       "location": "Joinville",
       "status": "ok",
       "statusCode": 200,
@@ -3506,7 +3506,7 @@
     {
       "name": "https://10.12.63.143",
       "url": "https://10.12.63.143",
-      "timestamp": "2025-12-11T17:01:14.316Z",
+      "timestamp": "2025-12-12T15:01:15.199Z",
       "location": "Joinville",
       "status": "ok",
       "statusCode": 200,
@@ -3552,7 +3552,7 @@
     {
       "name": "https://10.12.63.144",
       "url": "https://10.12.63.144",
-      "timestamp": "2025-12-11T17:01:14.416Z",
+      "timestamp": "2025-12-12T15:01:13.971Z",
       "location": "Joinville",
       "status": "ok",
       "statusCode": 200,
@@ -3594,7 +3594,7 @@
     {
       "name": "https://10.12.63.145",
       "url": "https://10.12.63.145",
-      "timestamp": "2025-12-11T17:01:15.575Z",
+      "timestamp": "2025-12-12T15:01:14.165Z",
       "location": "Joinville",
       "status": "ok",
       "statusCode": 200,
@@ -3640,7 +3640,7 @@
     {
       "name": "https://10.12.63.146",
       "url": "https://10.12.63.146",
-      "timestamp": "2025-12-11T17:01:16.392Z",
+      "timestamp": "2025-12-12T15:01:16.434Z",
       "location": "Joinville",
       "status": "ok",
       "statusCode": 200,
@@ -3705,7 +3705,7 @@
     {
       "name": "https://10.12.63.147",
       "url": "https://10.12.63.147",
-      "timestamp": "2025-12-11T17:01:14.618Z",
+      "timestamp": "2025-12-12T15:01:14.657Z",
       "location": "Joinville",
       "status": "ok",
       "statusCode": 200,
@@ -3751,18 +3751,18 @@
     {
       "name": "https://10.12.63.148",
       "url": "https://10.12.63.148",
-      "timestamp": "2025-12-11T17:01:17.678Z",
+      "timestamp": "2025-12-12T15:01:15.494Z",
       "location": "Joinville",
       "status": "ok",
       "statusCode": 200,
       "title": "HP » Device Status",
       "deviceName": "JOI019 | Logística ZJ26",
       "deviceIp": "10.12.63.148",
-      "machineStatus": "Processing job from Tray 2...",
+      "machineStatus": "Tray 3 empty: Plain, A4",
       "supplies": [
         {
           "name": "Cartucho Preto",
-          "level": "90%*"
+          "level": "80%*"
         },
         {
           "name": "Kit de Manutenção",
@@ -3804,14 +3804,14 @@
     {
       "name": "https://10.12.63.149",
       "url": "https://10.12.63.149",
-      "timestamp": "2025-12-11T17:01:14.498Z",
+      "timestamp": "2025-12-12T15:01:13.749Z",
       "location": "Joinville",
       "status": "ok",
       "statusCode": 200,
       "title": "HP » Device Status",
       "deviceName": "JOI089 | Engenharia Ind.",
       "deviceIp": "10.12.63.149",
-      "machineStatus": "Load Tray 2: Plain, A4",
+      "machineStatus": "Ready",
       "supplies": [
         {
           "name": "Cartucho Amarelo",
@@ -3841,7 +3841,7 @@
         },
         {
           "name": "Tray 2",
-          "status": "Empty",
+          "status": "< 30%",
           "capacity": "520 sheets",
           "size": "A4 (210x297 mm)",
           "type": "Plain"
@@ -3865,7 +3865,7 @@
     {
       "name": "https://10.12.63.150",
       "url": "https://10.12.63.150",
-      "timestamp": "2025-12-11T17:01:13.936Z",
+      "timestamp": "2025-12-12T15:01:13.786Z",
       "location": "Joinville",
       "status": "ok",
       "statusCode": 200,
@@ -3914,14 +3914,14 @@
     {
       "name": "https://10.12.63.151",
       "url": "https://10.12.63.151",
-      "timestamp": "2025-12-11T17:01:14.748Z",
+      "timestamp": "2025-12-12T15:01:15.737Z",
       "location": "Joinville",
       "status": "ok",
       "statusCode": 200,
       "title": "HP » Device Status",
       "deviceName": "JOI022 | Bl. Terc. Sodexo",
       "deviceIp": "10.12.63.151",
-      "machineStatus": "Ready",
+      "machineStatus": "Sleep mode on",
       "supplies": [
         {
           "name": "Cartucho Preto",
@@ -3960,7 +3960,7 @@
     {
       "name": "https://10.12.63.152",
       "url": "https://10.12.63.152",
-      "timestamp": "2025-12-11T17:01:15.085Z",
+      "timestamp": "2025-12-12T15:01:15.817Z",
       "location": "Joinville",
       "status": "ok",
       "statusCode": 200,
@@ -4002,7 +4002,7 @@
     {
       "name": "https://10.12.63.154",
       "url": "https://10.12.63.154",
-      "timestamp": "2025-12-11T17:01:17.446Z",
+      "timestamp": "2025-12-12T15:01:17.525Z",
       "location": "Joinville",
       "status": "ok",
       "statusCode": 200,
@@ -4025,7 +4025,7 @@
         },
         {
           "name": "Cartucho Preto",
-          "level": "80%*"
+          "level": "70%*"
         },
         {
           "name": "Kit Fusor",
@@ -4060,7 +4060,7 @@
     {
       "name": "https://10.12.63.155",
       "url": "https://10.12.63.155",
-      "timestamp": "2025-12-11T17:01:15.088Z",
+      "timestamp": "2025-12-12T15:01:14.974Z",
       "location": "Joinville",
       "status": "ok",
       "statusCode": 200,
@@ -4100,9 +4100,65 @@
       ]
     },
     {
+      "name": "https://10.12.63.156",
+      "url": "https://10.12.63.156",
+      "timestamp": "2025-12-12T15:01:14.596Z",
+      "location": "Joinville",
+      "status": "ok",
+      "statusCode": 200,
+      "title": "HP » Device Status",
+      "deviceName": "JOI027 | F2 Engenharia",
+      "deviceIp": "10.12.63.156",
+      "machineStatus": "Sleep mode on",
+      "supplies": [
+        {
+          "name": "Cartucho Preto",
+          "level": "10%*"
+        }
+      ],
+      "type": "mono",
+      "trays": [
+        {
+          "name": "Tray 1",
+          "status": "Empty",
+          "capacity": "100 sheets",
+          "size": "Any Size",
+          "type": "Any Type"
+        },
+        {
+          "name": "Tray 2",
+          "status": "< 30%",
+          "capacity": "520 sheets",
+          "size": "A4 (210x297 mm)",
+          "type": "Plain"
+        },
+        {
+          "name": "Tray 3",
+          "status": "< 30%",
+          "capacity": "520 sheets",
+          "size": "A3 (297x420 mm)",
+          "type": "Plain"
+        },
+        {
+          "name": "Output bin 1",
+          "status": "OK",
+          "capacity": "550 sheets",
+          "size": "N/A",
+          "type": "N/A"
+        },
+        {
+          "name": "Alternate bin",
+          "status": "OK",
+          "capacity": "50 sheets",
+          "size": "N/A",
+          "type": "N/A"
+        }
+      ]
+    },
+    {
       "name": "https://10.12.63.157",
       "url": "https://10.12.63.157",
-      "timestamp": "2025-12-11T17:01:15.751Z",
+      "timestamp": "2025-12-12T15:01:15.672Z",
       "location": "Joinville",
       "status": "ok",
       "statusCode": 200,
@@ -4142,9 +4198,51 @@
       ]
     },
     {
+      "name": "https://10.12.63.158",
+      "url": "https://10.12.63.158",
+      "timestamp": "2025-12-12T15:01:15.182Z",
+      "location": "Joinville",
+      "status": "ok",
+      "statusCode": 200,
+      "title": "HP » Device Status",
+      "deviceName": "JOI029 | F2 Alm A/C Joinville 1",
+      "deviceIp": "10.12.63.158",
+      "machineStatus": "Sleep mode on",
+      "supplies": [
+        {
+          "name": "Cartucho Preto",
+          "level": "100%*"
+        }
+      ],
+      "type": "mono",
+      "trays": [
+        {
+          "name": "Tray 1",
+          "status": "Empty",
+          "capacity": "100 sheets",
+          "size": "Any Size",
+          "type": "Any Type"
+        },
+        {
+          "name": "Tray 2",
+          "status": "OK",
+          "capacity": "550 sheets",
+          "size": "A4",
+          "type": "Any Type"
+        },
+        {
+          "name": "Standard bin",
+          "status": "OK",
+          "capacity": "250 sheets",
+          "size": "N/A",
+          "type": "N/A"
+        }
+      ]
+    },
+    {
       "name": "https://10.12.63.161",
       "url": "https://10.12.63.161",
-      "timestamp": "2025-12-11T17:01:16.006Z",
+      "timestamp": "2025-12-12T15:01:14.358Z",
       "location": "Joinville",
       "status": "ok",
       "statusCode": 200,
@@ -4206,7 +4304,7 @@
     {
       "name": "https://10.12.63.162",
       "url": "https://10.12.63.162",
-      "timestamp": "2025-12-11T17:01:15.926Z",
+      "timestamp": "2025-12-12T15:01:15.573Z",
       "location": "Joinville",
       "status": "ok",
       "statusCode": 200,
@@ -4252,7 +4350,7 @@
     {
       "name": "https://10.12.63.163",
       "url": "https://10.12.63.163",
-      "timestamp": "2025-12-11T17:01:15.401Z",
+      "timestamp": "2025-12-12T15:01:14.961Z",
       "location": "Joinville",
       "status": "ok",
       "statusCode": 200,
@@ -4313,7 +4411,7 @@
     {
       "name": "https://10.12.63.164",
       "url": "https://10.12.63.164",
-      "timestamp": "2025-12-11T17:01:17.853Z",
+      "timestamp": "2025-12-12T15:01:16.932Z",
       "location": "Joinville",
       "status": "ok",
       "statusCode": 200,
@@ -4392,7 +4490,7 @@
     {
       "name": "https://10.12.63.165",
       "url": "https://10.12.63.165",
-      "timestamp": "2025-12-11T17:01:16.022Z",
+      "timestamp": "2025-12-12T15:01:15.694Z",
       "location": "Joinville",
       "status": "ok",
       "statusCode": 200,
@@ -4438,14 +4536,14 @@
     {
       "name": "https://10.12.63.166",
       "url": "https://10.12.63.166",
-      "timestamp": "2025-12-11T17:01:15.241Z",
+      "timestamp": "2025-12-12T15:01:17.622Z",
       "location": "Joinville",
       "status": "ok",
       "statusCode": 200,
       "title": "HP » Device Status",
       "deviceName": "JOI082 | Logística Interna",
       "deviceIp": "10.12.63.166",
-      "machineStatus": "Ready",
+      "machineStatus": "Sleep mode on",
       "supplies": [
         {
           "name": "Cartucho Amarelo",
@@ -4503,7 +4601,7 @@
     {
       "name": "https://10.12.63.167",
       "url": "https://10.12.63.167",
-      "timestamp": "2025-12-11T17:01:16.070Z",
+      "timestamp": "2025-12-12T15:01:15.785Z",
       "location": "Joinville",
       "status": "ok",
       "statusCode": 200,
@@ -4545,7 +4643,7 @@
     {
       "name": "https://10.12.63.168",
       "url": "https://10.12.63.168",
-      "timestamp": "2025-12-11T17:01:17.281Z",
+      "timestamp": "2025-12-12T15:01:17.192Z",
       "location": "Joinville",
       "status": "ok",
       "statusCode": 200,
@@ -4591,7 +4689,7 @@
     {
       "name": "https://10.12.63.169",
       "url": "https://10.12.63.169",
-      "timestamp": "2025-12-11T17:01:16.674Z",
+      "timestamp": "2025-12-12T15:01:15.964Z",
       "location": "Joinville",
       "status": "ok",
       "statusCode": 200,
@@ -4633,7 +4731,7 @@
     {
       "name": "https://10.12.63.170",
       "url": "https://10.12.63.170",
-      "timestamp": "2025-12-11T17:01:16.508Z",
+      "timestamp": "2025-12-12T15:01:17.239Z",
       "location": "Joinville",
       "status": "ok",
       "statusCode": 200,
@@ -4675,7 +4773,7 @@
     {
       "name": "https://10.12.63.171",
       "url": "https://10.12.63.171",
-      "timestamp": "2025-12-11T17:01:16.643Z",
+      "timestamp": "2025-12-12T15:01:16.330Z",
       "location": "Joinville",
       "status": "ok",
       "statusCode": 200,
@@ -4721,7 +4819,7 @@
     {
       "name": "https://10.12.63.172",
       "url": "https://10.12.63.172",
-      "timestamp": "2025-12-11T17:01:18.963Z",
+      "timestamp": "2025-12-12T15:01:17.768Z",
       "location": "Joinville",
       "status": "ok",
       "statusCode": 200,
@@ -4799,7 +4897,7 @@
     {
       "name": "https://10.12.63.173",
       "url": "https://10.12.63.173",
-      "timestamp": "2025-12-11T17:01:17.028Z",
+      "timestamp": "2025-12-12T15:01:15.568Z",
       "location": "Joinville",
       "status": "ok",
       "statusCode": 200,
@@ -4848,7 +4946,7 @@
     {
       "name": "https://10.12.63.174",
       "url": "https://10.12.63.174",
-      "timestamp": "2025-12-11T17:01:16.475Z",
+      "timestamp": "2025-12-12T15:01:15.577Z",
       "location": "Joinville",
       "status": "ok",
       "statusCode": 200,
@@ -4890,7 +4988,7 @@
     {
       "name": "https://10.12.63.175",
       "url": "https://10.12.63.175",
-      "timestamp": "2025-12-11T17:01:16.987Z",
+      "timestamp": "2025-12-12T15:01:16.503Z",
       "location": "Joinville",
       "status": "ok",
       "statusCode": 200,
@@ -4932,7 +5030,7 @@
     {
       "name": "https://10.12.63.176",
       "url": "https://10.12.63.176",
-      "timestamp": "2025-12-11T17:01:16.229Z",
+      "timestamp": "2025-12-12T15:01:15.768Z",
       "location": "Joinville",
       "status": "ok",
       "statusCode": 200,
@@ -4978,7 +5076,7 @@
     {
       "name": "https://10.12.63.177",
       "url": "https://10.12.63.177",
-      "timestamp": "2025-12-11T17:01:17.186Z",
+      "timestamp": "2025-12-12T15:01:16.620Z",
       "location": "Joinville",
       "status": "ok",
       "statusCode": 200,
@@ -5020,7 +5118,7 @@
     {
       "name": "https://10.12.63.178",
       "url": "https://10.12.63.178",
-      "timestamp": "2025-12-11T17:01:17.425Z",
+      "timestamp": "2025-12-12T15:01:16.016Z",
       "location": "Joinville",
       "status": "ok",
       "statusCode": 200,
@@ -5082,7 +5180,7 @@
     {
       "name": "https://10.12.63.179",
       "url": "https://10.12.63.179",
-      "timestamp": "2025-12-11T17:01:16.480Z",
+      "timestamp": "2025-12-12T15:01:15.971Z",
       "location": "Joinville",
       "status": "ok",
       "statusCode": 200,
@@ -5128,7 +5226,7 @@
     {
       "name": "https://10.12.63.180",
       "url": "https://10.12.63.180",
-      "timestamp": "2025-12-11T17:01:17.295Z",
+      "timestamp": "2025-12-12T15:01:18.010Z",
       "location": "Joinville",
       "status": "ok",
       "statusCode": 200,
@@ -5174,7 +5272,7 @@
     {
       "name": "https://10.12.63.182",
       "url": "https://10.12.63.182",
-      "timestamp": "2025-12-11T17:01:17.359Z",
+      "timestamp": "2025-12-12T15:01:17.450Z",
       "location": "Joinville",
       "status": "ok",
       "statusCode": 200,
@@ -5216,7 +5314,7 @@
     {
       "name": "https://10.12.63.183",
       "url": "https://10.12.63.183",
-      "timestamp": "2025-12-11T17:01:17.509Z",
+      "timestamp": "2025-12-12T15:01:17.113Z",
       "location": "Joinville",
       "status": "ok",
       "statusCode": 200,
@@ -5262,7 +5360,7 @@
     {
       "name": "https://10.12.63.184",
       "url": "https://10.12.63.184",
-      "timestamp": "2025-12-11T17:01:18.517Z",
+      "timestamp": "2025-12-12T15:01:16.119Z",
       "location": "Joinville",
       "status": "ok",
       "statusCode": 200,
@@ -5311,7 +5409,7 @@
     {
       "name": "https://10.12.63.185",
       "url": "https://10.12.63.185",
-      "timestamp": "2025-12-11T17:01:17.539Z",
+      "timestamp": "2025-12-12T15:01:17.127Z",
       "location": "Joinville",
       "status": "ok",
       "statusCode": 200,
@@ -5357,7 +5455,7 @@
     {
       "name": "https://10.12.63.186",
       "url": "https://10.12.63.186",
-      "timestamp": "2025-12-11T17:01:19.306Z",
+      "timestamp": "2025-12-12T15:01:18.089Z",
       "location": "Joinville",
       "status": "ok",
       "statusCode": 200,
@@ -5376,7 +5474,7 @@
         },
         {
           "name": "Cartucho Ciano",
-          "level": "80%*"
+          "level": "70%*"
         },
         {
           "name": "Cartucho Preto",
@@ -5398,7 +5496,7 @@
         },
         {
           "name": "Tray 2",
-          "status": "10 - 20%",
+          "status": "< 10%",
           "capacity": "550 sheets",
           "size": "A4",
           "type": "Plain"
@@ -5415,7 +5513,7 @@
     {
       "name": "https://10.12.63.187",
       "url": "https://10.12.63.187",
-      "timestamp": "2025-12-11T17:01:18.663Z",
+      "timestamp": "2025-12-12T15:01:18.115Z",
       "location": "Joinville",
       "status": "ok",
       "statusCode": 200,
@@ -5426,7 +5524,7 @@
       "supplies": [
         {
           "name": "Cartucho Preto",
-          "level": "100%*"
+          "level": "90%*"
         },
         {
           "name": "Kit do Alimentador de Documentos",
@@ -5461,7 +5559,7 @@
     {
       "name": "https://10.12.63.188",
       "url": "https://10.12.63.188",
-      "timestamp": "2025-12-11T17:01:17.953Z",
+      "timestamp": "2025-12-12T15:01:17.050Z",
       "location": "Joinville",
       "status": "ok",
       "statusCode": 200,
@@ -5503,7 +5601,7 @@
     {
       "name": "https://10.12.63.189",
       "url": "https://10.12.63.189",
-      "timestamp": "2025-12-11T17:01:18.031Z",
+      "timestamp": "2025-12-12T15:01:17.143Z",
       "location": "Joinville",
       "status": "ok",
       "statusCode": 200,
@@ -5545,7 +5643,7 @@
     {
       "name": "https://10.12.63.190",
       "url": "https://10.12.63.190",
-      "timestamp": "2025-12-11T17:01:18.027Z",
+      "timestamp": "2025-12-12T15:01:17.287Z",
       "location": "Joinville",
       "status": "ok",
       "statusCode": 200,
@@ -5591,7 +5689,7 @@
     {
       "name": "https://10.12.63.191",
       "url": "https://10.12.63.191",
-      "timestamp": "2025-12-11T17:01:18.137Z",
+      "timestamp": "2025-12-12T15:01:17.230Z",
       "location": "Joinville",
       "status": "ok",
       "statusCode": 200,
@@ -5635,9 +5733,51 @@
       ]
     },
     {
+      "name": "https://10.12.63.192",
+      "url": "https://10.12.63.192",
+      "timestamp": "2025-12-12T15:01:17.226Z",
+      "location": "Joinville",
+      "status": "ok",
+      "statusCode": 200,
+      "title": "HP » Device Status",
+      "deviceName": "JOI063 | F2 Alm A/C Joinville 2",
+      "deviceIp": "10.12.63.192",
+      "machineStatus": "Sleep mode on",
+      "supplies": [
+        {
+          "name": "Cartucho Preto",
+          "level": "100%*"
+        }
+      ],
+      "type": "mono",
+      "trays": [
+        {
+          "name": "Tray 1",
+          "status": "Empty",
+          "capacity": "100 sheets",
+          "size": "Any Size",
+          "type": "Any Type"
+        },
+        {
+          "name": "Tray 2",
+          "status": "OK",
+          "capacity": "550 sheets",
+          "size": "A4",
+          "type": "Plain"
+        },
+        {
+          "name": "Standard bin",
+          "status": "OK",
+          "capacity": "250 sheets",
+          "size": "N/A",
+          "type": "N/A"
+        }
+      ]
+    },
+    {
       "name": "https://10.12.63.193",
       "url": "https://10.12.63.193",
-      "timestamp": "2025-12-11T17:01:18.406Z",
+      "timestamp": "2025-12-12T15:01:17.436Z",
       "location": "Joinville",
       "status": "ok",
       "statusCode": 200,
@@ -5683,7 +5823,7 @@
     {
       "name": "https://10.12.63.194",
       "url": "https://10.12.63.194",
-      "timestamp": "2025-12-11T17:01:18.489Z",
+      "timestamp": "2025-12-12T15:01:17.371Z",
       "location": "Joinville",
       "status": "ok",
       "statusCode": 200,
@@ -5725,7 +5865,7 @@
     {
       "name": "https://10.12.63.195",
       "url": "https://10.12.63.195",
-      "timestamp": "2025-12-11T17:01:17.658Z",
+      "timestamp": "2025-12-12T15:01:16.524Z",
       "location": "Joinville",
       "status": "ok",
       "statusCode": 200,
@@ -5774,7 +5914,7 @@
     {
       "name": "https://10.12.63.196",
       "url": "https://10.12.63.196",
-      "timestamp": "2025-12-11T17:01:19.720Z",
+      "timestamp": "2025-12-12T15:01:17.606Z",
       "location": "Joinville",
       "status": "ok",
       "statusCode": 200,
@@ -5820,7 +5960,7 @@
     {
       "name": "https://10.12.63.198",
       "url": "https://10.12.63.198",
-      "timestamp": "2025-12-11T17:01:18.804Z",
+      "timestamp": "2025-12-12T15:01:17.987Z",
       "location": "Joinville",
       "status": "ok",
       "statusCode": 200,
@@ -5866,14 +6006,14 @@
     {
       "name": "https://10.12.63.199",
       "url": "https://10.12.63.199",
-      "timestamp": "2025-12-11T17:01:17.912Z",
+      "timestamp": "2025-12-12T15:01:17.005Z",
       "location": "Joinville",
       "status": "ok",
       "statusCode": 200,
       "title": "HP » Device Status",
       "deviceName": "JOI070 | ADM | N3 Refrigeracao",
       "deviceIp": "10.12.63.199",
-      "machineStatus": "Sleep mode on",
+      "machineStatus": "Ready",
       "supplies": [
         {
           "name": "Cartucho Preto",
@@ -5891,7 +6031,7 @@
         },
         {
           "name": "Tray 2",
-          "status": "30 - 70%",
+          "status": "< 30%",
           "capacity": "520 sheets",
           "size": "A4 (210x297 mm)",
           "type": "Plain"
@@ -5915,7 +6055,7 @@
     {
       "name": "https://10.12.63.201",
       "url": "https://10.12.63.201",
-      "timestamp": "2025-12-11T17:01:18.946Z",
+      "timestamp": "2025-12-12T15:01:18.066Z",
       "location": "Joinville",
       "status": "ok",
       "statusCode": 200,
@@ -5957,14 +6097,14 @@
     {
       "name": "https://10.12.63.202",
       "url": "https://10.12.63.202",
-      "timestamp": "2025-12-11T17:01:18.317Z",
+      "timestamp": "2025-12-12T15:01:17.520Z",
       "location": "Joinville",
       "status": "ok",
       "statusCode": 200,
       "title": "HP » Device Status",
       "deviceName": "JOI073 | F2 Manutenção | Mezan.",
       "deviceIp": "10.12.63.202",
-      "machineStatus": "Tray 3 empty: Plain, A4",
+      "machineStatus": "Sleep mode on",
       "supplies": [
         {
           "name": "Cartucho Amarelo",
@@ -5994,14 +6134,14 @@
         },
         {
           "name": "Tray 2",
-          "status": "< 30%",
+          "status": "30 - 70%",
           "capacity": "520 sheets",
           "size": "A4 (210x297 mm)",
           "type": "Plain"
         },
         {
           "name": "Tray 3",
-          "status": "Empty",
+          "status": "30 - 70%",
           "capacity": "520 sheets",
           "size": "A4 (210x297 mm)",
           "type": "Plain"
@@ -6032,14 +6172,14 @@
     {
       "name": "https://10.12.63.203",
       "url": "https://10.12.63.203",
-      "timestamp": "2025-12-11T17:01:19.741Z",
+      "timestamp": "2025-12-12T15:01:17.708Z",
       "location": "Joinville",
       "status": "ok",
       "statusCode": 200,
       "title": "HP » Device Status",
       "deviceName": "JOI090 | F2 Serigrafia",
       "deviceIp": "10.12.63.203",
-      "machineStatus": "Tray 3 empty: Plain, A3",
+      "machineStatus": "30.03.30 Scanner failure",
       "supplies": [
         {
           "name": "Cartucho Amarelo",
@@ -6097,7 +6237,7 @@
     {
       "name": "https://10.12.63.205",
       "url": "https://10.12.63.205",
-      "timestamp": "2025-12-11T17:01:19.106Z",
+      "timestamp": "2025-12-12T15:01:18.620Z",
       "location": "Joinville",
       "status": "ok",
       "statusCode": 200,
@@ -6143,7 +6283,7 @@
     {
       "name": "https://10.12.63.206",
       "url": "https://10.12.63.206",
-      "timestamp": "2025-12-11T17:01:19.625Z",
+      "timestamp": "2025-12-12T15:01:18.462Z",
       "location": "Joinville",
       "status": "ok",
       "statusCode": 200,
@@ -6185,7 +6325,7 @@
     {
       "name": "https://10.12.63.207",
       "url": "https://10.12.63.207",
-      "timestamp": "2025-12-11T17:01:19.486Z",
+      "timestamp": "2025-12-12T15:01:18.541Z",
       "location": "Joinville",
       "status": "ok",
       "statusCode": 200,
@@ -6227,14 +6367,14 @@
     {
       "name": "https://10.12.63.208",
       "url": "https://10.12.63.208",
-      "timestamp": "2025-12-11T17:01:18.630Z",
+      "timestamp": "2025-12-12T15:01:17.873Z",
       "location": "Joinville",
       "status": "ok",
       "statusCode": 200,
       "title": "HP » Device Status",
       "deviceName": "JOI079 | F3 Engenharia Sup.",
       "deviceIp": "10.12.63.208",
-      "machineStatus": "Tray 2 empty: Plain, A4 ▭",
+      "machineStatus": "Sleep mode on",
       "supplies": [
         {
           "name": "Cartucho Amarelo",
@@ -6264,7 +6404,7 @@
         },
         {
           "name": "Tray 2",
-          "status": "Empty",
+          "status": "< 30%",
           "capacity": "520 sheets",
           "size": "A4 ▭ (210x297 mm)",
           "type": "Plain"
@@ -6288,7 +6428,7 @@
     {
       "name": "https://10.12.63.209",
       "url": "https://10.12.63.209",
-      "timestamp": "2025-12-11T17:01:18.685Z",
+      "timestamp": "2025-12-12T15:01:18.866Z",
       "location": "Joinville",
       "status": "ok",
       "statusCode": 200,
@@ -6311,7 +6451,7 @@
         },
         {
           "name": "Não Original HP Cartucho Preto",
-          "level": "10%*"
+          "level": "<10%*"
         },
         {
           "name": "Kit Fusor",
@@ -6350,7 +6490,7 @@
     {
       "name": "https://10.12.63.210",
       "url": "https://10.12.63.210",
-      "timestamp": "2025-12-11T17:01:19.756Z",
+      "timestamp": "2025-12-12T15:01:17.939Z",
       "location": "Joinville",
       "status": "ok",
       "statusCode": 200,
@@ -6412,7 +6552,7 @@
     {
       "name": "https://10.12.63.211",
       "url": "https://10.12.63.211",
-      "timestamp": "2025-12-11T17:01:18.776Z",
+      "timestamp": "2025-12-12T15:01:18.942Z",
       "location": "Joinville",
       "status": "ok",
       "statusCode": 200,
@@ -6474,7 +6614,7 @@
     {
       "name": "https://10.12.63.212",
       "url": "https://10.12.63.212",
-      "timestamp": "2025-12-11T17:01:19.453Z",
+      "timestamp": "2025-12-12T15:01:17.894Z",
       "location": "Joinville",
       "status": "ok",
       "statusCode": 200,
@@ -6549,7 +6689,7 @@
     {
       "name": "https://10.12.63.213",
       "url": "https://10.12.63.213",
-      "timestamp": "2025-12-11T17:01:18.797Z",
+      "timestamp": "2025-12-12T15:01:18.055Z",
       "location": "Joinville",
       "status": "ok",
       "statusCode": 200,
@@ -6624,14 +6764,14 @@
     {
       "name": "https://10.12.63.214",
       "url": "https://10.12.63.214",
-      "timestamp": "2025-12-11T17:01:18.959Z",
+      "timestamp": "2025-12-12T15:01:18.006Z",
       "location": "Joinville",
       "status": "ok",
       "statusCode": 200,
       "title": "HP » Device Status",
       "deviceName": "JOI085 | ADM | N4 Design",
       "deviceIp": "10.12.63.214",
-      "machineStatus": "Tray 4 empty: Plain, A3",
+      "machineStatus": "Tray 3 empty: Plain, A4 ▭",
       "supplies": [
         {
           "name": "Cartucho Amarelo",
@@ -6647,7 +6787,7 @@
         },
         {
           "name": "Cartucho Preto",
-          "level": "40%*"
+          "level": "30%*"
         }
       ],
       "type": "color",
@@ -6668,7 +6808,7 @@
         },
         {
           "name": "Tray 3",
-          "status": "< 30%",
+          "status": "Empty",
           "capacity": "520 sheets",
           "size": "A4 ▭ (210x297 mm)",
           "type": "Plain"
@@ -6699,7 +6839,7 @@
     {
       "name": "https://10.12.63.215",
       "url": "https://10.12.63.215",
-      "timestamp": "2025-12-11T17:01:19.164Z",
+      "timestamp": "2025-12-12T15:01:18.109Z",
       "location": "Joinville",
       "status": "ok",
       "statusCode": 200,
@@ -6760,7 +6900,7 @@
     {
       "name": "https://10.12.63.216",
       "url": "https://10.12.63.216",
-      "timestamp": "2025-12-11T17:01:19.199Z",
+      "timestamp": "2025-12-12T15:01:18.101Z",
       "location": "Joinville",
       "status": "ok",
       "statusCode": 200,
@@ -6806,7 +6946,7 @@
     {
       "name": "https://10.12.63.217",
       "url": "https://10.12.63.217",
-      "timestamp": "2025-12-11T17:01:18.781Z",
+      "timestamp": "2025-12-12T15:01:17.702Z",
       "location": "Joinville",
       "status": "ok",
       "statusCode": 200,
@@ -6817,7 +6957,7 @@
     {
       "name": "https://10.12.63.219",
       "url": "https://10.12.63.219",
-      "timestamp": "2025-12-11T17:01:19.150Z",
+      "timestamp": "2025-12-12T15:01:18.291Z",
       "location": "Joinville",
       "status": "ok",
       "statusCode": 200,
@@ -6859,7 +6999,7 @@
     {
       "name": "https://10.12.64.66",
       "url": "https://10.12.64.66",
-      "timestamp": "2025-12-11T17:01:40.862Z",
+      "timestamp": "2025-12-12T15:01:39.581Z",
       "location": "USP",
       "status": "ok",
       "statusCode": 200,
@@ -6905,14 +7045,14 @@
     {
       "name": "https://10.12.64.67",
       "url": "https://10.12.64.67",
-      "timestamp": "2025-12-11T17:01:43.072Z",
+      "timestamp": "2025-12-12T15:01:40.295Z",
       "location": "USP",
       "status": "ok",
       "statusCode": 200,
       "title": "HP » Device Status",
       "deviceName": "USP002 | DF ZU14",
       "deviceIp": "10.12.64.67",
-      "machineStatus": "Sleep mode on",
+      "machineStatus": "Ready",
       "supplies": [
         {
           "name": "Cartucho Preto",
@@ -6951,7 +7091,7 @@
     {
       "name": "https://10.12.64.68",
       "url": "https://10.12.64.68",
-      "timestamp": "2025-12-11T17:01:40.831Z",
+      "timestamp": "2025-12-12T15:01:39.627Z",
       "location": "USP",
       "status": "ok",
       "statusCode": 200,
@@ -6997,7 +7137,7 @@
     {
       "name": "https://10.12.64.69",
       "url": "https://10.12.64.69",
-      "timestamp": "2025-12-11T17:01:40.870Z",
+      "timestamp": "2025-12-12T15:01:39.532Z",
       "location": "USP",
       "status": "ok",
       "statusCode": 200,
@@ -7008,7 +7148,7 @@
       "supplies": [
         {
           "name": "Cartucho Preto",
-          "level": "20%*"
+          "level": "<10%*"
         }
       ],
       "type": "mono",
@@ -7039,7 +7179,7 @@
     {
       "name": "https://10.12.64.70",
       "url": "https://10.12.64.70",
-      "timestamp": "2025-12-11T17:01:41.084Z",
+      "timestamp": "2025-12-12T15:01:39.775Z",
       "location": "USP",
       "status": "ok",
       "statusCode": 200,
@@ -7101,7 +7241,7 @@
     {
       "name": "https://10.12.64.71",
       "url": "https://10.12.64.71",
-      "timestamp": "2025-12-11T17:01:42.051Z",
+      "timestamp": "2025-12-12T15:01:39.739Z",
       "location": "USP",
       "status": "ok",
       "statusCode": 200,
@@ -7147,7 +7287,7 @@
     {
       "name": "https://10.12.64.72",
       "url": "https://10.12.64.72",
-      "timestamp": "2025-12-11T17:01:44.175Z",
+      "timestamp": "2025-12-12T15:01:42.966Z",
       "location": "USP",
       "status": "ok",
       "statusCode": 200,
@@ -7193,7 +7333,7 @@
     {
       "name": "https://10.12.64.74",
       "url": "https://10.12.64.74",
-      "timestamp": "2025-12-11T17:01:43.746Z",
+      "timestamp": "2025-12-12T15:01:42.287Z",
       "location": "USP",
       "status": "ok",
       "statusCode": 200,
@@ -7271,7 +7411,7 @@
     {
       "name": "https://10.12.64.75",
       "url": "https://10.12.64.75",
-      "timestamp": "2025-12-11T17:01:43.484Z",
+      "timestamp": "2025-12-12T15:01:40.968Z",
       "location": "USP",
       "status": "ok",
       "statusCode": 200,
@@ -7317,7 +7457,7 @@
     {
       "name": "https://10.12.64.76",
       "url": "https://10.12.64.76",
-      "timestamp": "2025-12-11T17:01:43.628Z",
+      "timestamp": "2025-12-12T15:01:43.318Z",
       "location": "USP",
       "status": "ok",
       "statusCode": 200,
@@ -7363,14 +7503,14 @@
     {
       "name": "https://10.12.64.77",
       "url": "https://10.12.64.77",
-      "timestamp": "2025-12-11T17:01:41.439Z",
+      "timestamp": "2025-12-12T15:01:40.211Z",
       "location": "USP",
       "status": "ok",
       "statusCode": 200,
       "title": "HP » Device Status",
       "deviceName": "USP012 | Adm. Manutenção",
       "deviceIp": "10.12.64.77",
-      "machineStatus": "Sleep mode on",
+      "machineStatus": "Black Cartridge very low",
       "supplies": [
         {
           "name": "Cartucho Preto",
@@ -7409,7 +7549,7 @@
     {
       "name": "https://10.12.64.78",
       "url": "https://10.12.64.78",
-      "timestamp": "2025-12-11T17:01:41.708Z",
+      "timestamp": "2025-12-12T15:01:40.140Z",
       "location": "USP",
       "status": "ok",
       "statusCode": 200,
@@ -7455,14 +7595,14 @@
     {
       "name": "https://10.12.64.81",
       "url": "https://10.12.64.81",
-      "timestamp": "2025-12-11T17:01:44.079Z",
+      "timestamp": "2025-12-12T15:01:41.378Z",
       "location": "USP",
       "status": "ok",
       "statusCode": 200,
       "title": "HP » Device Status",
       "deviceName": "USP016 | Ambulatório",
       "deviceIp": "10.12.64.81",
-      "machineStatus": "Ready",
+      "machineStatus": "Sleep mode on",
       "supplies": [
         {
           "name": "Cartucho Preto",
@@ -7501,7 +7641,7 @@
     {
       "name": "https://10.12.64.82",
       "url": "https://10.12.64.82",
-      "timestamp": "2025-12-11T17:01:42.411Z",
+      "timestamp": "2025-12-12T15:01:40.572Z",
       "location": "USP",
       "status": "ok",
       "statusCode": 200,
@@ -7539,7 +7679,7 @@
       "trays": [
         {
           "name": "Tray 1",
-          "status": "OK",
+          "status": "Empty",
           "capacity": "100 sheets",
           "size": "Any Size",
           "type": "Any Type"
@@ -7563,7 +7703,7 @@
     {
       "name": "https://10.12.64.83",
       "url": "https://10.12.64.83",
-      "timestamp": "2025-12-11T17:01:42.480Z",
+      "timestamp": "2025-12-12T15:01:40.682Z",
       "location": "USP",
       "status": "ok",
       "statusCode": 200,
@@ -7609,7 +7749,7 @@
     {
       "name": "https://10.12.64.84",
       "url": "https://10.12.64.84",
-      "timestamp": "2025-12-11T17:01:42.593Z",
+      "timestamp": "2025-12-12T15:01:40.777Z",
       "location": "USP",
       "status": "ok",
       "statusCode": 200,
@@ -7671,7 +7811,7 @@
     {
       "name": "https://10.12.64.86",
       "url": "https://10.12.64.86",
-      "timestamp": "2025-12-11T17:01:42.657Z",
+      "timestamp": "2025-12-12T15:01:41.256Z",
       "location": "USP",
       "status": "ok",
       "statusCode": 200,
@@ -7733,7 +7873,7 @@
     {
       "name": "https://10.12.64.87",
       "url": "https://10.12.64.87",
-      "timestamp": "2025-12-11T17:01:42.672Z",
+      "timestamp": "2025-12-12T15:01:41.391Z",
       "location": "USP",
       "status": "ok",
       "statusCode": 200,
@@ -7795,7 +7935,7 @@
     {
       "name": "https://10.12.64.88",
       "url": "https://10.12.64.88",
-      "timestamp": "2025-12-11T17:01:42.801Z",
+      "timestamp": "2025-12-12T15:01:41.284Z",
       "location": "USP",
       "status": "ok",
       "statusCode": 200,
@@ -7841,14 +7981,14 @@
     {
       "name": "https://10.12.64.89",
       "url": "https://10.12.64.89",
-      "timestamp": "2025-12-11T17:01:42.816Z",
+      "timestamp": "2025-12-12T15:01:41.508Z",
       "location": "USP",
       "status": "ok",
       "statusCode": 200,
       "title": "HP » Device Status",
       "deviceName": "USP025 | Berçário WHouse",
       "deviceIp": "10.12.64.89",
-      "machineStatus": "Sleep mode on",
+      "machineStatus": "Ready",
       "supplies": [
         {
           "name": "Não Original HP Cartucho Amarelo",
@@ -7903,14 +8043,14 @@
     {
       "name": "https://10.12.64.91",
       "url": "https://10.12.64.91",
-      "timestamp": "2025-12-11T17:01:44.901Z",
+      "timestamp": "2025-12-12T15:01:42.482Z",
       "location": "USP",
       "status": "ok",
       "statusCode": 200,
       "title": "HP » Device Status",
       "deviceName": "USP028 | Refeitorio | Nutric.",
       "deviceIp": "10.12.64.91",
-      "machineStatus": "Ready",
+      "machineStatus": "Sleep mode on",
       "supplies": [
         {
           "name": "Cartucho Preto",
@@ -7945,7 +8085,7 @@
     {
       "name": "https://10.12.64.126",
       "url": "https://10.12.64.126",
-      "timestamp": "2025-12-11T17:01:50.211Z",
+      "timestamp": "2025-12-12T15:01:48.790Z",
       "location": "USP",
       "status": "ok",
       "statusCode": 200,
@@ -7987,7 +8127,7 @@
     {
       "name": "https://10.12.64.130",
       "url": "https://10.12.64.130",
-      "timestamp": "2025-12-11T17:01:50.707Z",
+      "timestamp": "2025-12-12T15:01:48.906Z",
       "location": "USP",
       "status": "ok",
       "statusCode": 200,
@@ -7996,16 +8136,62 @@
     {
       "name": "https://10.12.64.148",
       "url": "https://10.12.64.148",
-      "timestamp": "2025-12-11T17:01:55.410Z",
+      "timestamp": "2025-12-12T15:01:54.487Z",
       "location": "USP",
       "status": "ok",
       "statusCode": 200,
       "title": null
     },
     {
+      "name": "https://10.12.146.66",
+      "url": "https://10.12.146.66",
+      "timestamp": "2025-12-12T15:02:31.658Z",
+      "location": "Manaus",
+      "status": "ok",
+      "statusCode": 200,
+      "title": "HP » Device Status",
+      "deviceName": "MAN001 | Administração ADM",
+      "deviceIp": "10.12.146.66",
+      "machineStatus": "Sleep mode on",
+      "supplies": [
+        {
+          "name": "Cartucho Preto",
+          "level": "10%*"
+        },
+        {
+          "name": "Kit do Alimentador de Documentos",
+          "level": "40%*"
+        }
+      ],
+      "type": "mono",
+      "trays": [
+        {
+          "name": "Tray 1",
+          "status": "Empty",
+          "capacity": "100 sheets",
+          "size": "Any Size",
+          "type": "Any Type"
+        },
+        {
+          "name": "Tray 2",
+          "status": "OK",
+          "capacity": "550 sheets",
+          "size": "A4 (210x297 mm)",
+          "type": "Plain"
+        },
+        {
+          "name": "Standard bin",
+          "status": "OK",
+          "capacity": "250 sheets",
+          "size": "N/A",
+          "type": "N/A"
+        }
+      ]
+    },
+    {
       "name": "https://10.12.146.67",
       "url": "https://10.12.146.67",
-      "timestamp": "2025-12-11T17:02:30.270Z",
+      "timestamp": "2025-12-12T15:02:28.630Z",
       "location": "Manaus",
       "status": "ok",
       "statusCode": 200,
@@ -8051,7 +8237,7 @@
     {
       "name": "https://10.12.146.68",
       "url": "https://10.12.146.68",
-      "timestamp": "2025-12-11T17:02:30.206Z",
+      "timestamp": "2025-12-12T15:02:29.059Z",
       "location": "Manaus",
       "status": "ok",
       "statusCode": 200,
@@ -8093,14 +8279,14 @@
     {
       "name": "https://10.12.146.69",
       "url": "https://10.12.146.69",
-      "timestamp": "2025-12-11T17:02:30.640Z",
+      "timestamp": "2025-12-12T15:02:29.638Z",
       "location": "Manaus",
       "status": "ok",
       "statusCode": 200,
       "title": "HP » Device Status",
       "deviceName": "MAN004 | Fab Distribuição Fisica",
       "deviceIp": "10.12.146.69",
-      "machineStatus": "Sleep mode on",
+      "machineStatus": "Processing job from Tray 2...",
       "supplies": [
         {
           "name": "Cartucho Preto",
@@ -8139,7 +8325,7 @@
     {
       "name": "https://10.12.146.70",
       "url": "https://10.12.146.70",
-      "timestamp": "2025-12-11T17:02:30.814Z",
+      "timestamp": "2025-12-12T15:02:29.456Z",
       "location": "Manaus",
       "status": "ok",
       "statusCode": 200,
@@ -8193,7 +8379,7 @@
       "trays": [
         {
           "name": "Tray 1",
-          "status": "OK",
+          "status": "Empty",
           "capacity": "100 sheets",
           "size": "Any Size",
           "type": "Any Type"
@@ -8217,7 +8403,7 @@
     {
       "name": "https://10.12.146.71",
       "url": "https://10.12.146.71",
-      "timestamp": "2025-12-11T17:02:30.987Z",
+      "timestamp": "2025-12-12T15:02:29.486Z",
       "location": "Manaus",
       "status": "ok",
       "statusCode": 200,
@@ -8263,7 +8449,7 @@
     {
       "name": "https://10.12.146.72",
       "url": "https://10.12.146.72",
-      "timestamp": "2025-12-11T17:02:31.084Z",
+      "timestamp": "2025-12-12T15:02:29.596Z",
       "location": "Manaus",
       "status": "ok",
       "statusCode": 200,
@@ -8309,7 +8495,7 @@
     {
       "name": "https://10.12.146.73",
       "url": "https://10.12.146.73",
-      "timestamp": "2025-12-11T17:02:33.291Z",
+      "timestamp": "2025-12-12T15:02:30.378Z",
       "location": "Manaus",
       "status": "ok",
       "statusCode": 200,
@@ -8351,14 +8537,14 @@
     {
       "name": "https://10.12.146.74",
       "url": "https://10.12.146.74",
-      "timestamp": "2025-12-11T17:02:31.307Z",
+      "timestamp": "2025-12-12T15:02:29.756Z",
       "location": "Manaus",
       "status": "ok",
       "statusCode": 200,
       "title": "HP » Device Status",
       "deviceName": "MAN009 | Fábrica inventário 2",
       "deviceIp": "10.12.146.74",
-      "machineStatus": "Sleep mode on",
+      "machineStatus": "Ready",
       "supplies": [
         {
           "name": "Cartucho Preto",
@@ -8397,7 +8583,7 @@
     {
       "name": "https://10.12.146.75",
       "url": "https://10.12.146.75",
-      "timestamp": "2025-12-11T17:02:31.345Z",
+      "timestamp": "2025-12-12T15:02:29.797Z",
       "location": "Manaus",
       "status": "ok",
       "statusCode": 200,
@@ -8439,14 +8625,14 @@
     {
       "name": "https://10.12.146.76",
       "url": "https://10.12.146.76",
-      "timestamp": "2025-12-11T17:02:32.546Z",
+      "timestamp": "2025-12-12T15:02:30.019Z",
       "location": "Manaus",
       "status": "ok",
       "statusCode": 200,
       "title": "HP » Device Status",
       "deviceName": "MAN011 | Fab Sonhos Almoxarifado",
       "deviceIp": "10.12.146.76",
-      "machineStatus": "Sleep mode on",
+      "machineStatus": "Ready",
       "supplies": [
         {
           "name": "Cartucho Preto",
@@ -8485,7 +8671,7 @@
     {
       "name": "https://10.12.146.77",
       "url": "https://10.12.146.77",
-      "timestamp": "2025-12-11T17:02:31.533Z",
+      "timestamp": "2025-12-12T15:02:30.198Z",
       "location": "Manaus",
       "status": "ok",
       "statusCode": 200,
@@ -8531,7 +8717,7 @@
     {
       "name": "https://10.12.146.78",
       "url": "https://10.12.146.78",
-      "timestamp": "2025-12-11T17:02:32.549Z",
+      "timestamp": "2025-12-12T15:02:30.998Z",
       "location": "Manaus",
       "status": "ok",
       "statusCode": 200,
@@ -8573,7 +8759,7 @@
     {
       "name": "https://10.12.146.79",
       "url": "https://10.12.146.79",
-      "timestamp": "2025-12-11T17:02:33.758Z",
+      "timestamp": "2025-12-12T15:02:31.154Z",
       "location": "Manaus",
       "status": "ok",
       "statusCode": 200,
@@ -8619,7 +8805,7 @@
     {
       "name": "https://10.12.146.80",
       "url": "https://10.12.146.80",
-      "timestamp": "2025-12-11T17:02:32.185Z",
+      "timestamp": "2025-12-12T15:02:31.509Z",
       "location": "Manaus",
       "status": "ok",
       "statusCode": 200,
@@ -8681,7 +8867,7 @@
     {
       "name": "https://10.12.146.81",
       "url": "https://10.12.146.81",
-      "timestamp": "2025-12-11T17:02:32.181Z",
+      "timestamp": "2025-12-12T15:02:30.449Z",
       "location": "Manaus",
       "status": "ok",
       "statusCode": 200,
@@ -8734,7 +8920,7 @@
     {
       "name": "https://10.12.146.82",
       "url": "https://10.12.146.82",
-      "timestamp": "2025-12-11T17:02:31.936Z",
+      "timestamp": "2025-12-12T15:02:30.396Z",
       "location": "Manaus",
       "status": "ok",
       "statusCode": 200,
@@ -8776,7 +8962,7 @@
     {
       "name": "https://10.12.146.83",
       "url": "https://10.12.146.83",
-      "timestamp": "2025-12-11T17:02:32.199Z",
+      "timestamp": "2025-12-12T15:02:30.832Z",
       "location": "Manaus",
       "status": "ok",
       "statusCode": 200,
@@ -8818,7 +9004,7 @@
     {
       "name": "https://10.12.146.84",
       "url": "https://10.12.146.84",
-      "timestamp": "2025-12-11T17:02:32.307Z",
+      "timestamp": "2025-12-12T15:02:30.468Z",
       "location": "Manaus",
       "status": "ok",
       "statusCode": 200,
@@ -8860,7 +9046,7 @@
     {
       "name": "https://10.12.146.85",
       "url": "https://10.12.146.85",
-      "timestamp": "2025-12-11T17:02:32.943Z",
+      "timestamp": "2025-12-12T15:02:31.385Z",
       "location": "Manaus",
       "status": "ok",
       "statusCode": 200,
@@ -8902,7 +9088,7 @@
     {
       "name": "https://10.12.146.86",
       "url": "https://10.12.146.86",
-      "timestamp": "2025-12-11T17:02:32.211Z",
+      "timestamp": "2025-12-12T15:02:30.839Z",
       "location": "Manaus",
       "status": "ok",
       "statusCode": 200,
@@ -8944,7 +9130,7 @@
     {
       "name": "https://10.12.146.87",
       "url": "https://10.12.146.87",
-      "timestamp": "2025-12-11T17:02:34.231Z",
+      "timestamp": "2025-12-12T15:02:32.856Z",
       "location": "Manaus",
       "status": "ok",
       "statusCode": 200,
@@ -8986,7 +9172,7 @@
     {
       "name": "https://10.12.146.88",
       "url": "https://10.12.146.88",
-      "timestamp": "2025-12-11T17:02:32.551Z",
+      "timestamp": "2025-12-12T15:02:30.975Z",
       "location": "Manaus",
       "status": "ok",
       "statusCode": 200,
@@ -9032,7 +9218,7 @@
     {
       "name": "https://10.12.146.91",
       "url": "https://10.12.146.91",
-      "timestamp": "2025-12-11T17:02:33.020Z",
+      "timestamp": "2025-12-12T15:02:31.191Z",
       "location": "Manaus",
       "status": "ok",
       "statusCode": 200,
@@ -9078,7 +9264,7 @@
     {
       "name": "https://10.12.146.92",
       "url": "https://10.12.146.92",
-      "timestamp": "2025-12-11T17:02:33.129Z",
+      "timestamp": "2025-12-12T15:02:31.380Z",
       "location": "Manaus",
       "status": "ok",
       "statusCode": 200,
@@ -9140,7 +9326,7 @@
     {
       "name": "https://10.12.146.93",
       "url": "https://10.12.146.93",
-      "timestamp": "2025-12-11T17:02:33.049Z",
+      "timestamp": "2025-12-12T15:02:31.280Z",
       "location": "Manaus",
       "status": "ok",
       "statusCode": 200,
@@ -9215,7 +9401,7 @@
     {
       "name": "https://10.12.146.94",
       "url": "https://10.12.146.94",
-      "timestamp": "2025-12-11T17:02:36.644Z",
+      "timestamp": "2025-12-12T15:02:34.307Z",
       "location": "Manaus",
       "status": "ok",
       "statusCode": 200,
@@ -9230,7 +9416,7 @@
         },
         {
           "name": "Cartucho Magenta",
-          "level": "90%*"
+          "level": "80%*"
         },
         {
           "name": "Cartucho Ciano",
@@ -9277,7 +9463,7 @@
     {
       "name": "https://10.12.146.95",
       "url": "https://10.12.146.95",
-      "timestamp": "2025-12-11T17:02:33.371Z",
+      "timestamp": "2025-12-12T15:02:30.872Z",
       "location": "Manaus",
       "status": "ok",
       "statusCode": 200,
@@ -9286,7 +9472,7 @@
     {
       "name": "https://10.12.146.96",
       "url": "https://10.12.146.96",
-      "timestamp": "2025-12-11T17:02:35.089Z",
+      "timestamp": "2025-12-12T15:02:33.654Z",
       "location": "Manaus",
       "status": "ok",
       "statusCode": 200,
@@ -9328,7 +9514,7 @@
     {
       "name": "https://10.12.111.133",
       "url": "https://10.12.111.133",
-      "timestamp": "2025-12-11T17:03:39.594Z",
+      "timestamp": "2025-12-12T15:03:38.938Z",
       "location": "Rio Claro",
       "status": "ok",
       "statusCode": 200,
@@ -9370,7 +9556,7 @@
     {
       "name": "https://10.12.111.134",
       "url": "https://10.12.111.134",
-      "timestamp": "2025-12-11T17:03:39.684Z",
+      "timestamp": "2025-12-12T15:03:37.795Z",
       "location": "Rio Claro",
       "status": "ok",
       "statusCode": 200,
@@ -9412,7 +9598,7 @@
     {
       "name": "https://10.12.111.141",
       "url": "https://10.12.111.141",
-      "timestamp": "2025-12-11T17:03:41.597Z",
+      "timestamp": "2025-12-12T15:03:38.794Z",
       "location": "Rio Claro",
       "status": "ok",
       "statusCode": 200,
@@ -9454,7 +9640,7 @@
     {
       "name": "https://10.12.111.142",
       "url": "https://10.12.111.142",
-      "timestamp": "2025-12-11T17:03:40.391Z",
+      "timestamp": "2025-12-12T15:03:38.784Z",
       "location": "Rio Claro",
       "status": "ok",
       "statusCode": 200,
@@ -9496,7 +9682,7 @@
     {
       "name": "https://10.12.191.18",
       "url": "https://10.12.191.18",
-      "timestamp": "2025-12-11T17:04:11.151Z",
+      "timestamp": "2025-12-12T15:04:09.381Z",
       "location": "Alhandra",
       "status": "ok",
       "statusCode": 200,
@@ -9505,7 +9691,7 @@
     {
       "name": "https://10.12.191.19",
       "url": "https://10.12.191.19",
-      "timestamp": "2025-12-11T17:04:11.825Z",
+      "timestamp": "2025-12-12T15:04:09.485Z",
       "location": "Alhandra",
       "status": "ok",
       "statusCode": 200,
@@ -9514,18 +9700,18 @@
     {
       "name": "https://10.12.191.66",
       "url": "https://10.12.191.66",
-      "timestamp": "2025-12-11T17:04:22.972Z",
+      "timestamp": "2025-12-12T15:04:20.233Z",
       "location": "Alhandra",
       "status": "ok",
       "statusCode": 200,
       "title": "HP » Device Status",
       "deviceName": "ALH001 | Expedição 01",
       "deviceIp": "10.12.191.66",
-      "machineStatus": "Ready",
+      "machineStatus": "Sleep mode on",
       "supplies": [
         {
           "name": "Cartucho Preto",
-          "level": "100%*"
+          "level": "90%*"
         },
         {
           "name": "Kit de Manutenção",
@@ -9560,7 +9746,7 @@
     {
       "name": "https://10.12.191.67",
       "url": "https://10.12.191.67",
-      "timestamp": "2025-12-11T17:04:22.374Z",
+      "timestamp": "2025-12-12T15:04:20.492Z",
       "location": "Alhandra",
       "status": "ok",
       "statusCode": 200,
@@ -9571,7 +9757,7 @@
       "supplies": [
         {
           "name": "Cartucho Preto",
-          "level": "90%*"
+          "level": "80%*"
         },
         {
           "name": "Kit de Manutenção",
@@ -9606,7 +9792,7 @@
     {
       "name": "https://10.12.191.68",
       "url": "https://10.12.191.68",
-      "timestamp": "2025-12-11T17:04:23.780Z",
+      "timestamp": "2025-12-12T15:04:21.585Z",
       "location": "Alhandra",
       "status": "ok",
       "statusCode": 200,
@@ -9652,7 +9838,7 @@
     {
       "name": "https://10.12.190.18",
       "url": "https://10.12.190.18",
-      "timestamp": "2025-12-11T17:05:08.626Z",
+      "timestamp": "2025-12-12T15:05:06.434Z",
       "location": "Cariacica",
       "status": "ok",
       "statusCode": 200,
@@ -9661,7 +9847,7 @@
     {
       "name": "https://10.12.190.19",
       "url": "https://10.12.190.19",
-      "timestamp": "2025-12-11T17:05:08.677Z",
+      "timestamp": "2025-12-12T15:05:06.602Z",
       "location": "Cariacica",
       "status": "ok",
       "statusCode": 200,
@@ -9670,17 +9856,17 @@
     {
       "name": "https://10.12.190.66",
       "url": "https://10.12.190.66",
-      "timestamp": "2025-12-11T17:05:18.747Z",
+      "timestamp": "2025-12-12T15:05:16.514Z",
       "location": "Cariacica",
       "status": "ok",
       "statusCode": 200,
       "title": "HP » Device Status",
       "deviceName": "CAR001 | Nota Fiscal 01",
       "deviceIp": "10.12.190.66",
-      "machineStatus": "Close front door",
+      "machineStatus": "Used Black Cartridge in use",
       "supplies": [
         {
-          "name": "Cartucho Preto",
+          "name": "Used Cartucho Preto",
           "level": "*"
         },
         {
@@ -9692,7 +9878,7 @@
       "trays": [
         {
           "name": "Tray 1",
-          "status": "Empty",
+          "status": "OK",
           "capacity": "100 sheets",
           "size": "Any Size",
           "type": "Any Type"
@@ -9716,14 +9902,14 @@
     {
       "name": "https://10.12.190.67",
       "url": "https://10.12.190.67",
-      "timestamp": "2025-12-11T17:05:18.845Z",
+      "timestamp": "2025-12-12T15:05:16.966Z",
       "location": "Cariacica",
       "status": "ok",
       "statusCode": 200,
       "title": "HP » Device Status",
       "deviceName": "CAR002 | Nota Fiscal 02",
       "deviceIp": "10.12.190.67",
-      "machineStatus": "13.B9.A2 Fuser area jam",
+      "machineStatus": "Sleep mode on",
       "supplies": [
         {
           "name": "Cartucho Preto",
@@ -9762,7 +9948,7 @@
     {
       "name": "https://10.12.190.68",
       "url": "https://10.12.190.68",
-      "timestamp": "2025-12-11T17:05:20.386Z",
+      "timestamp": "2025-12-12T15:05:17.253Z",
       "location": "Cariacica",
       "status": "ok",
       "statusCode": 200,
@@ -9824,14 +10010,14 @@
     {
       "name": "https://10.12.190.69",
       "url": "https://10.12.190.69",
-      "timestamp": "2025-12-11T17:05:19.562Z",
+      "timestamp": "2025-12-12T15:05:17.084Z",
       "location": "Cariacica",
       "status": "ok",
       "statusCode": 200,
       "title": "HP » Device Status",
       "deviceName": "CAR004 | Nota Fiscal 04",
       "deviceIp": "10.12.190.69",
-      "machineStatus": "Sleep mode on",
+      "machineStatus": "13.B2.A2 Jam in standard rear door",
       "supplies": [
         {
           "name": "Cartucho Preto",
@@ -9839,7 +10025,7 @@
         },
         {
           "name": "Kit de Manutenção",
-          "level": "60%*"
+          "level": "*"
         }
       ],
       "type": "mono",
