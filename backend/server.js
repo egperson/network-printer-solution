@@ -284,36 +284,34 @@ app.get('/api/server/info', (req, res) => {
     uptime: Math.floor(uptime),
     lastCollection: data.lastRun,
     nodeVersion: process.version,
-    dbSize,
-    dbSize,
+    dbSize, // Removida duplicação
     env: process.env.NODE_ENV || 'Localhost',
     system: {
-      system: {
-        hostname: os.hostname(),
-        platform: os.platform(),
-        release: os.release(),
-        arch: os.arch(),
-        cpus: os.cpus().length,
-        loadavg: os.loadavg(),
-        totalmem: os.totalmem(),
-        freemem: os.freemem(),
-        cpuModel: os.cpus()[0] ? os.cpus()[0].model : 'Unknown',
-        network: (() => {
-          const nets = os.networkInterfaces();
-          for (const name of Object.keys(nets)) {
-            for (const net of nets[name]) {
-              if (net.family === 'IPv4' && !net.internal) {
-                return { ip: net.address, mac: net.mac, interface: name };
-              }
+      hostname: os.hostname(),
+      platform: os.platform(),
+      release: os.release(),
+      arch: os.arch(),
+      cpus: os.cpus().length,
+      loadavg: os.loadavg(),
+      totalmem: os.totalmem(),
+      freemem: os.freemem(),
+      cpuModel: os.cpus()[0] ? os.cpus()[0].model : 'Unknown',
+      network: (() => {
+        const nets = os.networkInterfaces();
+        for (const name of Object.keys(nets)) {
+          for (const net of nets[name]) {
+            if (net.family === 'IPv4' && !net.internal) {
+              return { ip: net.address, mac: net.mac, interface: name };
             }
           }
-          return { ip: '127.0.0.1', mac: '00:00:00:00:00:00', interface: 'lo' };
-        })()
-      },
-      process: {
-        memory: process.memoryUsage()
-      }
-    });
+        }
+        return { ip: '127.0.0.1', mac: '00:00:00:00:00:00', interface: 'lo' };
+      })()
+    },
+    process: {
+      memory: process.memoryUsage()
+    }
+  });
 });
 
 // Printers Config

@@ -1,5 +1,4 @@
 *.log
 .vscode/
-.backend/data/
-.backend/node_modules/
-.frontend/node_modules/
+backend/data/
+**/node_modules/
